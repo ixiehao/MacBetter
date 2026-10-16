@@ -343,7 +343,7 @@
     "github": "https://github.com/sw33tLie/macshot",
     "download": "https://github.com/sw33tLie/macshot/releases",
     "license": "GPL-3.0",
-    "status": { "level": "verified" },
+    "status": { "level": "tested" },
     "compatibility": "项目提供原生 macOS Release；请以当前版本要求为准",
     "permissions": "截取屏幕或录屏时，macOS 会要求授予“屏幕录制”权限。",
     "permissionKey": "screenRecording",
