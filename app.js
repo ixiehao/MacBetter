@@ -44,7 +44,7 @@ const copy = {
     metadataLabel: "项目属性",
     iconAlt: "{name} 图标",
     projectSite: "项目主页",
-    sourceCode: "源代码",
+    download: "下载",
     status: {
       made: { label: "iXiehao 出品", note: "源码与发布由 iXiehao 维护。" },
       tested: { label: "io 实测", note: "已在 iXiehao 的实际使用环境中运行；不等同于安全审计，也不保证适配所有 macOS 版本。" },
@@ -114,7 +114,7 @@ const copy = {
     metadataLabel: "App metadata",
     iconAlt: "{name} icon",
     projectSite: "Project site",
-    sourceCode: "Source code",
+    download: "Download",
     status: {
       made: { label: "Built by iXiehao", note: "The source and release channels are maintained by iXiehao." },
       tested: { label: "Tested by io", note: "Used in iXiehao’s day-to-day environment. This is not a security audit and does not guarantee compatibility with every macOS version." },
@@ -184,7 +184,7 @@ const copy = {
     metadataLabel: "アプリの属性",
     iconAlt: "{name}のアイコン",
     projectSite: "プロジェクトページ",
-    sourceCode: "ソースコード",
+    download: "ダウンロード",
     status: {
       made: { label: "iXiehao製", note: "ソースコードと配布先は iXiehao が管理しています。" },
       tested: { label: "io 使用中", note: "iXiehaoの日常用Macで使用を確認済みです。セキュリティ監査ではなく、すべてのmacOSバージョンでの互換性を保証するものではありません。" },
@@ -343,7 +343,7 @@ function cardTemplate(app) {
     </div>
     <div class="app-links">
       ${link(app.homepage, t("projectSite"))}
-      ${link(app.github, t("sourceCode"))}
+      ${link(app.download, t("download"))}
     </div>
   </article>`;
 }
