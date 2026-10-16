@@ -12,11 +12,13 @@ const workflowOrder = {
   privacy: ["keepassxc", "cryptomator", "lulu"],
   efficiency: ["github-desktop", "vscodium", "zed", "codeedit", "xcodes", "alacritty", "dbeaver", "tablepro", "utm", "espanso", "hammerspoon", "swiftbar"]
 };
+const siteURL = "https://ixiehao.github.io/mac-better/";
+const ogLocales = { zh: "zh_CN", en: "en_US", ja: "ja_JP" };
 
 const copy = {
   zh: {
     pageTitle: "让 Mac 更好用 · 开源 Mac 软件库",
-    pageDescription: "一个由 Mac 用户共同维护的开源 macOS 软件目录。",
+    pageDescription: "一个由 Mac 用户共同维护的开源 macOS 软件目录：免费、开源、实用，并标明许可证、项目入口与关键权限。",
     htmlLang: "zh-CN",
     skipLink: "跳到软件目录",
     wordmark: "Mac 软件库",
@@ -84,7 +86,7 @@ const copy = {
   },
   en: {
     pageTitle: "Make Your Mac Better · Open-Source macOS Apps",
-    pageDescription: "A maintained directory of open-source macOS apps, built with Mac users.",
+    pageDescription: "A maintained, practical directory of free and open-source macOS apps, with licenses, official links, and key permission notes.",
     htmlLang: "en",
     skipLink: "Skip to app directory",
     wordmark: "Mac App Directory",
@@ -152,7 +154,7 @@ const copy = {
   },
   ja: {
     pageTitle: "Macを、もっと使いやすく。｜オープンソースアプリ集",
-    pageDescription: "継続的に更新する、Macユーザーと作るオープンソースのmacOSアプリ集。",
+    pageDescription: "Macユーザーと育てる、無料・オープンソースのmacOSアプリ集。ライセンス、公式リンク、主な権限を確認できます。",
     htmlLang: "ja",
     skipLink: "アプリ一覧へ移動",
     wordmark: "Macアプリ集",
@@ -538,10 +540,51 @@ function resetFilters() {
   renderCatalog();
 }
 
+function setMetaContent(selector, value) {
+  const element = document.querySelector(selector);
+  if (element) element.setAttribute("content", value);
+}
+
+function updateMetadata() {
+  const canonicalURL = new URL(siteURL);
+  if (activeLanguage !== "zh") canonicalURL.searchParams.set("lang", activeLanguage);
+  const canonical = canonicalURL.toString();
+  const title = t("pageTitle");
+  const description = t("pageDescription");
+  const siteName = activeLanguage === "en" ? "Make Your Mac Better" : activeLanguage === "ja" ? "Macアプリ集" : "让 Mac 更好用";
+
+  document.querySelector('link[rel="canonical"]')?.setAttribute("href", canonical);
+  setMetaContent('meta[property="og:url"]', canonical);
+  setMetaContent('meta[property="og:locale"]', ogLocales[activeLanguage]);
+  setMetaContent('meta[property="og:site_name"]', siteName);
+  setMetaContent('meta[property="og:title"]', title);
+  setMetaContent('meta[property="og:description"]', description);
+  setMetaContent('meta[property="og:image:alt"]', title);
+  setMetaContent('meta[name="twitter:title"]', title);
+  setMetaContent('meta[name="twitter:description"]', description);
+  setMetaContent('meta[name="twitter:image:alt"]', title);
+
+  const schema = document.querySelector("#site-schema");
+  if (schema) {
+    schema.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": `${siteURL}#website`,
+      url: siteURL,
+      name: siteName,
+      alternateName: ["让 Mac 更好用", "Make Your Mac Better", "Macアプリ集"],
+      description,
+      inLanguage: activeLanguage === "zh" ? "zh-CN" : activeLanguage,
+      publisher: { "@type": "Person", name: "iXiehao", url: "https://github.com/ixiehao" }
+    });
+  }
+}
+
 function applyStaticCopy() {
   document.documentElement.lang = t("htmlLang");
   document.title = t("pageTitle");
   document.querySelector('meta[name="description"]').content = t("pageDescription");
+  updateMetadata();
   document.querySelectorAll("[data-i18n]").forEach(element => { element.textContent = t(element.dataset.i18n); });
   document.querySelectorAll("[data-i18n-placeholder]").forEach(element => { element.placeholder = t(element.dataset.i18nPlaceholder); });
   document.querySelectorAll("[data-i18n-aria-label]").forEach(element => { element.setAttribute("aria-label", t(element.dataset.i18nAriaLabel)); });

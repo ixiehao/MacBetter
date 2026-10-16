@@ -1,8 +1,22 @@
-# 让 Mac 更好用
+# 让 Mac 更好用 · Make Your Mac Better
 
-一份持续维护的开源 macOS 软件清单：免费可用、源码可审查、安装路径清楚。
+[中文](https://ixiehao.github.io/mac-better/) · [English](https://ixiehao.github.io/mac-better/?lang=en) · [日本語](https://ixiehao.github.io/mac-better/?lang=ja) · [在线目录](https://ixiehao.github.io/mac-better/)
 
-线上页面：<https://ixiehao.github.io/mac-better/>
+一份由 Mac 用户共同维护的开源 macOS 软件目录。它不追逐“软件越多越好”，而是帮助人们快速找到免费、开源、安装路径清楚的实用工具，并看清许可证与关键权限。
+
+> A practical, community-maintained directory of free and open-source macOS apps — with clear licenses, official links, and permission notes.
+
+## 为什么值得收藏
+
+- 80+ 款按用途整理的 macOS 工具，支持中文、English、日本語；
+- 每个条目链接到项目主页与官方下载页，而非第三方下载站；
+- 标明开源许可证；涉及辅助功能、屏幕录制、文件访问等权限时会给出说明；
+- `io 实测` 只代表维护者在日常 Mac 上实际使用过，不是安全审计或兼容性保证；
+- 欢迎通过 [Issue 模板](https://github.com/ixiehao/mac-better/issues/new?template=recommend-an-app.yml) 推荐真正解决问题的新工具。
+
+## Share it
+
+If this directory saves someone a search, share the link or recommend one app through an issue. The collection becomes more useful through specific, first-hand recommendations — not promotional claims.
 
 ## 这份清单如何表达推荐
 
