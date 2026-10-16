@@ -1,4 +1,5 @@
 const categories = ["all", "office", "video", "image", "launcher", "menu", "maintenance", "files", "privacy", "efficiency"];
+const licenseOrder = ["MIT", "GPL-2.0", "GPL-3.0", "AGPL-3.0", "MPL-2.0", "Apache-2.0", "Unlicense", "LGPL-2.1", "BSD-2-Clause", "BSD-3-Clause"];
 
 const copy = {
   zh: {
@@ -49,10 +50,13 @@ const copy = {
       "AGPL-3.0": "AGPL-3.0：在 GPL-3.0 基础上，向用户提供网络服务的修改版也须提供对应源码。",
       "MPL-2.0": "MPL-2.0：可使用和修改；发布修改过的 MPL 文件时，须公开这些文件的源码。",
       "Apache-2.0": "Apache-2.0：可使用、修改和再发布；需保留许可证、版权与专利声明。",
+      "LGPL-2.1": "LGPL-2.1：可使用和修改；修改过的 LGPL 库需以 LGPL 提供源码，其他代码可在满足条件下保持独立。",
+      "BSD-3-Clause": "BSD-3-Clause：可使用、修改和再发布；需保留版权与免责声明，且不得借作者或贡献者名称作背书。",
       Unlicense: "Unlicense：作者尽可能放弃版权；仍需遵守第三方组件许可与适用法律。"
     },
     standardsEyebrow: "开源说明",
     standardsHeading: "常见许可证，怎么理解",
+    standardsCopy: "下列为当前目录实际出现的许可证；具体权利与义务以项目仓库中的 LICENSE 为准。",
     standard: {
       oneTitle: "MIT", oneCopy: "可使用、修改和再发布；保留许可证与版权声明即可。",
       twoTitle: "GPL", twoCopy: "公开发布修改版时，需要以 GPL 提供对应源码。",
@@ -110,10 +114,13 @@ const copy = {
       "AGPL-3.0": "AGPL-3.0: In addition to GPL-3.0 obligations, modified versions used to provide a network service must offer corresponding source to users.",
       "MPL-2.0": "MPL-2.0: You may use and modify it; changes to existing MPL-covered files must be made available under the MPL.",
       "Apache-2.0": "Apache-2.0: You may use, modify, and redistribute it; retain the license, copyright, and patent notices.",
+      "LGPL-2.1": "LGPL-2.1: You may use and modify it. Changes to the LGPL-covered library must remain under LGPL; separate code may remain independent under its conditions.",
+      "BSD-3-Clause": "BSD-3-Clause: You may use, modify, and redistribute it; retain copyright and disclaimer notices, and do not use contributor names for endorsement.",
       Unlicense: "Unlicense: The author waives copyright as far as possible; third-party licenses and applicable law still apply."
     },
     standardsEyebrow: "Open-source basics",
     standardsHeading: "Common licenses, plainly explained",
+    standardsCopy: "These are the licenses currently used by apps in this directory. Always defer to each project’s LICENSE for the exact terms.",
     standard: {
       oneTitle: "MIT", oneCopy: "Use, modify, and redistribute it; keep the license and copyright notice.",
       twoTitle: "GPL", twoCopy: "When distributing a modified version, provide its corresponding source under GPL.",
@@ -171,10 +178,13 @@ const copy = {
       "AGPL-3.0": "AGPL-3.0：GPL-3.0に加え、ネットワークサービスとして提供する改変版も利用者に対応するソースコードを提供する必要があります。",
       "MPL-2.0": "MPL-2.0：利用・改変が可能です。MPL対象の既存ファイルを改変して配布する場合、そのファイルのソースコードを公開する必要があります。",
       "Apache-2.0": "Apache-2.0：利用・改変・再配布が可能です。ライセンス、著作権、特許に関する表示を残してください。",
+      "LGPL-2.1": "LGPL-2.1：利用・改変が可能です。改変したLGPL対象ライブラリはLGPLでソースを提供し、別のコードは条件を満たせば分けて扱えます。",
+      "BSD-3-Clause": "BSD-3-Clause：利用・改変・再配布が可能です。著作権表示と免責表示を残し、作者・貢献者名での推奨表明はできません。",
       Unlicense: "Unlicense：作者は可能な限り著作権を放棄しています。第三者のライセンスと適用法令には従ってください。"
     },
     standardsEyebrow: "オープンソースの説明",
     standardsHeading: "よくあるライセンスの見方",
+    standardsCopy: "この一覧にあるアプリで使われているライセンスです。正確な条件は各プロジェクトの LICENSE を確認してください。",
     standard: {
       oneTitle: "MIT", oneCopy: "利用・改変・再配布が可能。ライセンスと著作権表示を残します。",
       twoTitle: "GPL", twoCopy: "改変版を公開配布する場合、対応するソースを GPL で提供します。",
@@ -242,7 +252,26 @@ const appCopy = {
     alacritty: { summary: "A fast, clearly configured cross-platform terminal for people who live in the command line.", recommendation: "A terminal should be fast, not flashy.", tags: ["Terminal", "Development", "GPU rendering"] },
     espanso: { summary: "Expand short phrases into templates, dates, and reusable text to avoid repetitive typing.", recommendation: "Do not type the same thing twice.", tags: ["Text expansion", "Templates", "Automation"] },
     hammerspoon: { summary: "Use Lua to connect shortcuts, windows, menu-bar items, and system actions into your own workflow.", recommendation: "Give repetitive actions to a script.", tags: ["Lua", "Automation", "Shortcuts"], permissions: "Automation scripts can request Accessibility, file, or network access. Run only configurations you have reviewed." },
-    swiftbar: { summary: "Turn script output into menu-bar tools for status, reminders, and custom quick actions.", recommendation: "Keep useful information out of the terminal.", tags: ["Menu bar", "Scripts", "Automation"] }
+    swiftbar: { summary: "Turn script output into menu-bar tools for status, reminders, and custom quick actions.", recommendation: "Keep useful information out of the terminal.", tags: ["Menu bar", "Scripts", "Automation"] },
+    anki: { summary: "Build durable knowledge with spaced repetition, flexible card templates, and optional sync for your own study material.", recommendation: "To remember longer, do not just review once.", tags: ["Flashcards", "Spaced repetition", "Learning"] },
+    "super-productivity": { summary: "A local-first workspace for tasks, time tracking, Pomodoro sessions, and project rhythm.", recommendation: "Today’s work should not live in four apps.", tags: ["Tasks", "Time tracking", "Pomodoro"] },
+    tablepro: { summary: "A native Mac database client for browsing, editing, and querying common SQL databases.", recommendation: "Checking one record should not require a full IDE.", tags: ["Databases", "SQL", "Native Mac"] },
+    kap: { summary: "A lightweight screen recorder made for macOS, ideal for quick, polished demonstrations.", recommendation: "Record a demo without opening a broadcast studio.", tags: ["Screen recording", "GIF", "Demos"] },
+    "jellyfin-media-player": { summary: "Connect to a self-hosted Jellyfin library and play your own films, music, and shows on your Mac.", recommendation: "Your library deserves its own player.", tags: ["Media center", "Jellyfin", "Personal library"] },
+    godot: { summary: "A complete, approachable open-source engine for making 2D, 3D, and interactive work on a Mac.", recommendation: "Make the playable idea before buying an engine.", tags: ["Game engine", "2D", "3D"] },
+    freecad: { summary: "Parametric 3D modeling for parts, technical drawings, and designs that need to change cleanly.", recommendation: "A model worth making should survive a dimension change.", tags: ["3D modeling", "CAD", "Parametric"] },
+    keepassxc: { summary: "Keep passwords in an encrypted database you control, with offline use and optional browser integration.", recommendation: "Your password vault belongs in your hands.", tags: ["Password manager", "Offline-first", "Encryption"] },
+    cyberduck: { summary: "A native client for SFTP, WebDAV, S3, and many cloud stores, with bookmarks and straightforward transfers.", recommendation: "Managing server files can feel like using Finder.", tags: ["SFTP", "Cloud storage", "File transfer"] },
+    finetune: { summary: "Put practical system controls in the menu bar, so useful Mac settings are easier to reach.", recommendation: "Useful switches should not be buried in Settings.", tags: ["Menu bar", "System controls", "Quick actions"] },
+    onlyswitch: { summary: "Put common macOS controls—such as hidden files, appearance, and low-power mode—in the menu bar.", recommendation: "One switch should not take three layers of Settings.", tags: ["Menu bar", "System controls", "Productivity"] },
+    sloth: { summary: "See which processes hold files, listen on ports, or keep network connections open.", recommendation: "You should see who is holding a file at a glance.", tags: ["Process diagnostics", "Open files", "Network connections"] },
+    applite: { summary: "A graphical way to browse, install, and update Homebrew formulae and Casks.", recommendation: "Homebrew is useful; memorizing commands is optional.", tags: ["Homebrew", "App updates", "GUI"] },
+    "github-desktop": { summary: "Use a clear visual workflow for commits, branches, comparisons, and pull requests in everyday Git work.", recommendation: "Git should be powerful without feeling punishing.", tags: ["Git", "Version control", "Development"] },
+    vscodium: { summary: "A community-built, open-source code editor distribution with familiar extensions and debugging workflows.", recommendation: "Keep your editor capable, with less telemetry.", tags: ["Code editor", "Extensions", "Development"] },
+    dbeaver: { summary: "A universal database client for queries, schema browsing, and data import or export across many engines.", recommendation: "One database tool should cover the common connections.", tags: ["Databases", "SQL", "Data management"] },
+    zed: { summary: "A fast native code editor focused on collaboration, language tooling, and a fluid daily coding experience.", recommendation: "A fast editor should not interrupt your thought.", tags: ["Code editor", "Collaboration", "Native performance"] },
+    codeedit: { summary: "An open-source native Mac code editor with a clean interface for lightweight project browsing and editing.", recommendation: "A few lines of code should not require a giant tool.", tags: ["Code editor", "Swift-native", "Lightweight"] },
+    xcodes: { summary: "Download, switch, and manage multiple Xcode versions in one place for different projects and systems.", recommendation: "Do not manage multi-version Xcode by hunting installers.", tags: ["Xcode", "Dev environment", "Version management"] }
   },
   ja: {
     shotmap: { summary: "ローカル動画からキーフレームを抽出し、調整可能なストーリーボードとコンタクトシートを生成。PNG / JPGで書き出せます。", recommendation: "長い動画を、一枚で見返せる。", tags: ["Swiftネイティブ", "オフライン処理", "動画", "画像"] },
@@ -299,7 +328,26 @@ const appCopy = {
     alacritty: { summary: "応答が速く、設定も明快なクロスプラットフォーム端末。コマンドラインを日常的に使う人向けです。", recommendation: "端末は速く、派手でなくていい。", tags: ["ターミナル", "開発", "GPUレンダリング"] },
     espanso: { summary: "短い入力からテンプレート、日付、定型文を展開し、繰り返し入力を減らします。", recommendation: "いつもの言葉を、何度も打たない。", tags: ["テキスト展開", "テンプレート", "自動化"] },
     hammerspoon: { summary: "Luaでショートカット、ウインドウ、メニューバー、システム操作を自分のワークフローにつなげます。", recommendation: "繰り返す操作は、スクリプトへ。", tags: ["Lua", "自動化", "ショートカット"], permissions: "自動化スクリプトは「アクセシビリティ」、ファイル、ネットワークへのアクセスを求めることがあります。確認済みの設定だけを実行してください。" },
-    swiftbar: { summary: "スクリプトの出力をメニューバーツールに変え、状態表示、リマインダー、独自の操作を置けます。", recommendation: "よく見る情報を、ターミナルの外へ。", tags: ["メニューバー", "スクリプト", "自動化"] }
+    swiftbar: { summary: "スクリプトの出力をメニューバーツールに変え、状態表示、リマインダー、独自の操作を置けます。", recommendation: "よく見る情報を、ターミナルの外へ。", tags: ["メニューバー", "スクリプト", "自動化"] },
+    anki: { summary: "間隔反復と柔軟なカードで、学習内容を長く記憶に残せます。必要に応じて自分の教材を同期できます。", recommendation: "長く覚えるなら、一度読むだけにしない。", tags: ["暗記カード", "間隔反復", "学習"] },
+    "super-productivity": { summary: "タスク、時間記録、ポモドーロ、プロジェクトのリズムを一か所で扱うローカル優先の作業台です。", recommendation: "今日の仕事を、四つのアプリに散らさない。", tags: ["タスク", "時間記録", "ポモドーロ"] },
+    tablepro: { summary: "よく使うSQLデータベースを、Macネイティブの画面で閲覧、編集、クエリできるクライアントです。", recommendation: "一件のデータ確認に、重いIDEは要らない。", tags: ["データベース", "SQL", "Macネイティブ"] },
+    kap: { summary: "macOS向けの軽量な画面収録ツール。手早く見やすいデモを作るのに向いています。", recommendation: "デモを撮るだけなら、配信スタジオは要らない。", tags: ["画面収録", "GIF", "デモ"] },
+    "jellyfin-media-player": { summary: "自分で運用するJellyfinライブラリに接続し、映画、音楽、番組をMacで再生できます。", recommendation: "自分のライブラリには、自分のプレーヤーを。", tags: ["メディアセンター", "Jellyfin", "自前のライブラリ"] },
+    godot: { summary: "2D、3D、インタラクティブ作品をMacで作れる、親しみやすく本格的なオープンソースゲームエンジンです。", recommendation: "エンジンを買う前に、遊べるアイデアを作る。", tags: ["ゲームエンジン", "2D", "3D"] },
+    freecad: { summary: "部品、技術図面、変更に強い設計のためのパラメトリック3Dモデラーです。", recommendation: "寸法変更に耐えるモデルこそ、きちんと作る価値がある。", tags: ["3Dモデリング", "CAD", "パラメトリック"] },
+    keepassxc: { summary: "自分で管理する暗号化データベースにパスワードを保存。オフライン利用とブラウザー連携に対応します。", recommendation: "パスワード保管庫は、自分の手元に。", tags: ["パスワード管理", "オフライン優先", "暗号化"] },
+    cyberduck: { summary: "SFTP、WebDAV、S3、各種クラウドストレージを、ブックマークと分かりやすい転送画面で扱えます。", recommendation: "サーバーのファイルも、Finderのように扱える。", tags: ["SFTP", "クラウドストレージ", "ファイル転送"] },
+    finetune: { summary: "実用的なシステム設定をメニューバーに集め、よく使うMacの操作をすぐ呼び出せます。", recommendation: "よく使う切り替えを、設定の奥に隠さない。", tags: ["メニューバー", "システム設定", "クイック操作"] },
+    onlyswitch: { summary: "隠しファイル、外観、低電力モードなど、よく使うmacOSの切り替えをメニューバーに置けます。", recommendation: "一つの切り替えに、設定を三階層たどらない。", tags: ["メニューバー", "システム設定", "効率化"] },
+    sloth: { summary: "どのプロセスがファイルを開き、ポートを待ち受け、ネットワーク接続を維持しているか確認できます。", recommendation: "どのプロセスがファイルを掴んでいるか、ひと目で分かる。", tags: ["プロセス診断", "開いているファイル", "ネットワーク接続"] },
+    applite: { summary: "HomebrewのFormulaとCaskを、グラフィカルに探し、インストール、更新できるツールです。", recommendation: "Homebrewは便利。コマンドを暗記しなくてもいい。", tags: ["Homebrew", "アプリ更新", "GUI"] },
+    "github-desktop": { summary: "コミット、ブランチ、比較、プルリクエストを視覚的な流れで扱える、日常のGit作業向けアプリです。", recommendation: "Gitは強力であっても、怖くなくていい。", tags: ["Git", "バージョン管理", "開発"] },
+    vscodium: { summary: "馴染みある拡張機能とデバッグの流れを備えた、コミュニティビルドのオープンソースコードエディタです。", recommendation: "便利なエディタを、より少ないテレメトリーで。", tags: ["コードエディタ", "拡張機能", "開発"] },
+    dbeaver: { summary: "多様なDBに対応する汎用クライアント。クエリ、スキーマ閲覧、データ入出力をまとめて扱えます。", recommendation: "よく使う接続を、一つのDBツールで。", tags: ["データベース", "SQL", "データ管理"] },
+    zed: { summary: "共同作業、言語ツール、日々の滑らかなコーディング体験に焦点を当てた高速ネイティブコードエディタです。", recommendation: "速いエディタは、思考を止めない。", tags: ["コードエディタ", "共同作業", "ネイティブ性能"] },
+    codeedit: { summary: "軽いプロジェクトの閲覧と編集に適した、すっきりした画面のオープンソースMacネイティブコードエディタです。", recommendation: "数行直すだけなら、巨大なツールは要らない。", tags: ["コードエディタ", "Swiftネイティブ", "軽量"] },
+    xcodes: { summary: "異なるプロジェクトやOS向けに、複数のXcodeを一か所でダウンロード、切り替え、管理できます。", recommendation: "複数のXcodeを、インストーラー探しで管理しない。", tags: ["Xcode", "開発環境", "バージョン管理"] }
   }
 };
 
@@ -311,6 +359,7 @@ let apps = [];
 
 const appGrid = document.querySelector("#app-grid");
 const filters = document.querySelector("#category-filters");
+const standardsList = document.querySelector("#standards-list");
 const searchInput = document.querySelector("#search-input");
 const testedFilter = document.querySelector("#tested-filter");
 const resultCount = document.querySelector("#result-count");
@@ -349,6 +398,15 @@ function categoryName(id) {
 
 function licenseDescription(id) {
   return copy[activeLanguage]?.license?.[id] ?? copy.zh.license?.[id] ?? id;
+}
+
+function renderStandards() {
+  const licenses = [...new Set(apps.map(app => app.license))].sort((a, b) => {
+    const aIndex = licenseOrder.indexOf(a);
+    const bIndex = licenseOrder.indexOf(b);
+    return (aIndex === -1 ? licenseOrder.length : aIndex) - (bIndex === -1 ? licenseOrder.length : bIndex) || a.localeCompare(b);
+  });
+  standardsList.innerHTML = licenses.map((license, index) => `<li><span>${String(index + 1).padStart(2, "0")}</span><div><h3>${escapeHTML(license)}</h3><p>${escapeHTML(licenseDescription(license))}</p></div></li>`).join("");
 }
 
 function cardTemplate(app) {
@@ -431,6 +489,7 @@ function applyLanguage(language) {
   if (apps.length) {
     renderFilters();
     renderCatalog();
+    renderStandards();
   }
 }
 
@@ -439,7 +498,7 @@ async function init() {
   document.querySelectorAll("[data-language]").forEach(button => button.addEventListener("click", () => applyLanguage(button.dataset.language)));
   try {
     const dataURL = new URL("data/apps.json", import.meta.url);
-    dataURL.searchParams.set("v", "20261016.10");
+    dataURL.searchParams.set("v", "20261016.13");
     const response = await fetch(dataURL, { cache: "no-store" });
     if (!response.ok) throw new Error("Unable to load app data");
     apps = await response.json();
@@ -447,6 +506,7 @@ async function init() {
     testedFilter.checked = new URLSearchParams(location.search).get("tested") === "1";
     renderFilters();
     renderCatalog();
+    renderStandards();
   } catch (error) {
     resultCount.textContent = t("dataError");
     console.error(error);
