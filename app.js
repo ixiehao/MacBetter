@@ -426,7 +426,9 @@ async function init() {
   applyStaticCopy();
   document.querySelectorAll("[data-language]").forEach(button => button.addEventListener("click", () => applyLanguage(button.dataset.language)));
   try {
-    const response = await fetch("data/apps.json");
+    const dataURL = new URL("data/apps.json", import.meta.url);
+    dataURL.searchParams.set("v", "20261016.2");
+    const response = await fetch(dataURL, { cache: "no-store" });
     if (!response.ok) throw new Error("Unable to load app data");
     apps = await response.json();
     apps.sort((a, b) => a.sortOrder - b.sortOrder);
