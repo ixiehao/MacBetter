@@ -51,6 +51,7 @@ const copy = {
       "MPL-2.0": "MPL-2.0：可使用和修改；发布修改过的 MPL 文件时，须公开这些文件的源码。",
       "Apache-2.0": "Apache-2.0：可使用、修改和再发布；需保留许可证、版权与专利声明。",
       "LGPL-2.1": "LGPL-2.1：可使用和修改；修改过的 LGPL 库需以 LGPL 提供源码，其他代码可在满足条件下保持独立。",
+      "BSD-2-Clause": "BSD-2-Clause：可使用、修改和再发布；需保留版权与免责声明。",
       "BSD-3-Clause": "BSD-3-Clause：可使用、修改和再发布；需保留版权与免责声明，且不得借作者或贡献者名称作背书。",
       Unlicense: "Unlicense：作者尽可能放弃版权；仍需遵守第三方组件许可与适用法律。"
     },
@@ -115,6 +116,7 @@ const copy = {
       "MPL-2.0": "MPL-2.0: You may use and modify it; changes to existing MPL-covered files must be made available under the MPL.",
       "Apache-2.0": "Apache-2.0: You may use, modify, and redistribute it; retain the license, copyright, and patent notices.",
       "LGPL-2.1": "LGPL-2.1: You may use and modify it. Changes to the LGPL-covered library must remain under LGPL; separate code may remain independent under its conditions.",
+      "BSD-2-Clause": "BSD-2-Clause: You may use, modify, and redistribute it; retain copyright and disclaimer notices.",
       "BSD-3-Clause": "BSD-3-Clause: You may use, modify, and redistribute it; retain copyright and disclaimer notices, and do not use contributor names for endorsement.",
       Unlicense: "Unlicense: The author waives copyright as far as possible; third-party licenses and applicable law still apply."
     },
@@ -179,6 +181,7 @@ const copy = {
       "MPL-2.0": "MPL-2.0：利用・改変が可能です。MPL対象の既存ファイルを改変して配布する場合、そのファイルのソースコードを公開する必要があります。",
       "Apache-2.0": "Apache-2.0：利用・改変・再配布が可能です。ライセンス、著作権、特許に関する表示を残してください。",
       "LGPL-2.1": "LGPL-2.1：利用・改変が可能です。改変したLGPL対象ライブラリはLGPLでソースを提供し、別のコードは条件を満たせば分けて扱えます。",
+      "BSD-2-Clause": "BSD-2-Clause：利用・改変・再配布が可能です。著作権表示と免責表示を残してください。",
       "BSD-3-Clause": "BSD-3-Clause：利用・改変・再配布が可能です。著作権表示と免責表示を残し、作者・貢献者名での推奨表明はできません。",
       Unlicense: "Unlicense：作者は可能な限り著作権を放棄しています。第三者のライセンスと適用法令には従ってください。"
     },
@@ -271,7 +274,13 @@ const appCopy = {
     dbeaver: { summary: "A universal database client for queries, schema browsing, and data import or export across many engines.", recommendation: "One database tool should cover the common connections.", tags: ["Databases", "SQL", "Data management"] },
     zed: { summary: "A fast native code editor focused on collaboration, language tooling, and a fluid daily coding experience.", recommendation: "A fast editor should not interrupt your thought.", tags: ["Code editor", "Collaboration", "Native performance"] },
     codeedit: { summary: "An open-source native Mac code editor with a clean interface for lightweight project browsing and editing.", recommendation: "A few lines of code should not require a giant tool.", tags: ["Code editor", "Swift-native", "Lightweight"] },
-    xcodes: { summary: "Download, switch, and manage multiple Xcode versions in one place for different projects and systems.", recommendation: "Do not manage multi-version Xcode by hunting installers.", tags: ["Xcode", "Dev environment", "Version management"] }
+    xcodes: { summary: "Download, switch, and manage multiple Xcode versions in one place for different projects and systems.", recommendation: "Do not manage multi-version Xcode by hunting installers.", tags: ["Xcode", "Dev environment", "Version management"] },
+    vlc: { summary: "The classic play-anything media player for local files, discs, streams, and less common codecs.", recommendation: "If a video will not open, try VLC first.", tags: ["Media player", "Wide format support", "Streaming"] },
+    "subtitle-edit": { summary: "A complete subtitle editor for writing, proofreading, translating, and syncing subtitles with waveforms and spectrograms.", recommendation: "When subtitles drift, do not drag them by eye.", tags: ["Subtitles", "Timeline", "Speech recognition"] },
+    subler: { summary: "A native MP4/M4V packaging and metadata tool for organizing subtitles, audio tracks, artwork, and media details.", recommendation: "Put the subtitles and artwork into the delivered file.", tags: ["MP4", "Subtitle muxing", "Metadata"] },
+    mediainfo: { summary: "Inspect codecs, bit rates, tracks, colour, subtitles, and other technical facts inside media containers.", recommendation: "Before delivery, know exactly what is in the file.", tags: ["Codec details", "Media inspection", "Metadata"] },
+    mixxx: { summary: "Free open-source DJ software with dual-deck mixing, controller mapping, beat sync, and music-library tools.", recommendation: "Serious mixing does not require a subscription.", tags: ["DJ", "Mixing", "Music library"] },
+    musescore: { summary: "Create, edit, and engrave sheet music with MIDI, import/export, and a complete notation workflow.", recommendation: "Write a score without renting notation software.", tags: ["Sheet music", "MIDI", "Music creation"] }
   },
   ja: {
     shotmap: { summary: "ローカル動画からキーフレームを抽出し、調整可能なストーリーボードとコンタクトシートを生成。PNG / JPGで書き出せます。", recommendation: "長い動画を、一枚で見返せる。", tags: ["Swiftネイティブ", "オフライン処理", "動画", "画像"] },
@@ -347,7 +356,13 @@ const appCopy = {
     dbeaver: { summary: "多様なDBに対応する汎用クライアント。クエリ、スキーマ閲覧、データ入出力をまとめて扱えます。", recommendation: "よく使う接続を、一つのDBツールで。", tags: ["データベース", "SQL", "データ管理"] },
     zed: { summary: "共同作業、言語ツール、日々の滑らかなコーディング体験に焦点を当てた高速ネイティブコードエディタです。", recommendation: "速いエディタは、思考を止めない。", tags: ["コードエディタ", "共同作業", "ネイティブ性能"] },
     codeedit: { summary: "軽いプロジェクトの閲覧と編集に適した、すっきりした画面のオープンソースMacネイティブコードエディタです。", recommendation: "数行直すだけなら、巨大なツールは要らない。", tags: ["コードエディタ", "Swiftネイティブ", "軽量"] },
-    xcodes: { summary: "異なるプロジェクトやOS向けに、複数のXcodeを一か所でダウンロード、切り替え、管理できます。", recommendation: "複数のXcodeを、インストーラー探しで管理しない。", tags: ["Xcode", "開発環境", "バージョン管理"] }
+    xcodes: { summary: "異なるプロジェクトやOS向けに、複数のXcodeを一か所でダウンロード、切り替え、管理できます。", recommendation: "複数のXcodeを、インストーラー探しで管理しない。", tags: ["Xcode", "開発環境", "バージョン管理"] },
+    vlc: { summary: "ローカルファイル、ディスク、ストリーム、珍しいコーデックまで扱える、定番の万能メディアプレーヤーです。", recommendation: "開けない動画があれば、まずVLC。", tags: ["メディアプレーヤー", "幅広い形式", "ストリーミング"] },
+    "subtitle-edit": { summary: "波形やスペクトログラムを見ながら、字幕の作成、校正、翻訳、同期まで行える総合エディタです。", recommendation: "字幕のずれを、目だけで直さない。", tags: ["字幕", "タイムライン", "音声認識"] },
+    subler: { summary: "字幕、音声トラック、アートワーク、メタデータを整理できる、MP4/M4V向けネイティブ編集ツールです。", recommendation: "納品前に、字幕と表紙を一つのファイルへ。", tags: ["MP4", "字幕mux", "メタデータ"] },
+    mediainfo: { summary: "映像・音声コンテナ内のコーデック、ビットレート、トラック、色、字幕などの技術情報を確認できます。", recommendation: "納品前に、ファイルの中身を正確に知る。", tags: ["コーデック情報", "メディア検査", "メタデータ"] },
+    mixxx: { summary: "2デッキミックス、コントローラー割り当て、ビート同期、音楽ライブラリ管理を備えた自由なDJソフトです。", recommendation: "本格的なミックスに、サブスクは要らない。", tags: ["DJ", "ミキシング", "音楽ライブラリ"] },
+    musescore: { summary: "MIDI、読み書き、出力を備えた本格的なワークフローで、楽譜の作成、編集、レイアウトができます。", recommendation: "楽譜を書くのに、制譜ソフトを借りなくていい。", tags: ["楽譜", "MIDI", "音楽制作"] }
   }
 };
 
@@ -498,7 +513,7 @@ async function init() {
   document.querySelectorAll("[data-language]").forEach(button => button.addEventListener("click", () => applyLanguage(button.dataset.language)));
   try {
     const dataURL = new URL("data/apps.json", import.meta.url);
-    dataURL.searchParams.set("v", "20261016.13");
+    dataURL.searchParams.set("v", "20261016.14");
     const response = await fetch(dataURL, { cache: "no-store" });
     if (!response.ok) throw new Error("Unable to load app data");
     apps = await response.json();
