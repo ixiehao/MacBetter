@@ -20,8 +20,9 @@
           <span>让 Mac 更好用</span>
         </a>
         <nav aria-label="页面导航">
-          <a href="#featured">精选</a>
-          <a href="#catalog">软件</a>
+          <a href="#featured">我的软件</a>
+          <a href="#categories">分类</a>
+          <a href="#catalog">全部软件</a>
           <a href="#standards">收录标准</a>
           <a class="nav-github" href="https://github.com/ixiehao/mac-better" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
         </nav>
@@ -34,27 +35,40 @@
           <div>
             <p class="eyebrow">macOS · open source directory</p>
             <h1>让 Mac<br />更好用。</h1>
-            <p class="hero-copy">一份持续维护的开源 Mac 软件清单。只收录免费可用、源码可审查、安装路径清楚的工具。</p>
+            <p class="hero-copy">按场景整理的开源 Mac 软件导航。每一项都给出源码、许可证、官方入口与必要权限。</p>
             <div class="hero-actions">
-              <a class="button button-primary" href="#catalog">开始探索 <span aria-hidden="true">↓</span></a>
-              <a class="button button-quiet" href="#standards">为什么值得信任？</a>
+              <a class="button button-primary" href="#catalog">浏览全部 <span aria-hidden="true">↓</span></a>
+              <a class="button button-quiet" href="#standards">收录规则</a>
             </div>
           </div>
-          <aside class="hero-note" aria-label="收录说明">
-            <span class="hero-note-label">编辑原则</span>
-            <p>不是“最全榜单”。来源、许可证和官方下载入口都会明确写出；“io 实测”也只指明确定的使用事实。</p>
+          <aside class="review-panel" aria-label="最近核验的软件">
+            <div class="review-heading"><span class="hero-note-label">最近核验</span><time datetime="2026-10">2026.10</time></div>
+            <ul class="review-list">
+              <li><a href="?category=launcher#catalog">Launchpad_Back</a><span>io 实测 · 启动器</span></li>
+              <li><a href="?category=maintenance#catalog">PureMac</a><span>来源已核验 · 存储清理</span></li>
+              <li><a href="?category=office#catalog">LibreOffice</a><span>来源已核验 · 办公套件</span></li>
+            </ul>
             <div class="hero-stats">
               <div><strong id="app-count">—</strong><span>已收录</span></div>
               <div><strong>01</strong><span>io 实测</span></div>
-              <div><strong>2026.10</strong><span>最近复核</span></div>
+              <div><strong>6</strong><span>场景分类</span></div>
             </div>
           </aside>
         </div>
       </section>
 
-      <section class="trust-strip" aria-label="收录条件">
-        <div class="shell trust-list">
-          <span>免费可用</span><span>源码公开</span><span>官方安装入口</span><span>权限说明</span><span>持续维护</span>
+      <section class="category-rail" id="categories" aria-label="按场景浏览">
+        <div class="shell category-rail-inner">
+          <span class="rail-label">按场景直达</span>
+          <div class="rail-links">
+            <a href="?category=office#catalog">办公与创作</a>
+            <a href="?category=video#catalog">视频与音频</a>
+            <a href="?category=image#catalog">图片与图像</a>
+            <a href="?category=launcher#catalog">窗口与启动</a>
+            <a href="?category=menu#catalog">菜单栏与硬件</a>
+            <a href="?category=maintenance#catalog">Mac 优化与维护</a>
+          </div>
+          <a class="rail-all" href="#catalog">全部 <span id="rail-app-count">—</span> 款 <span aria-hidden="true">→</span></a>
         </div>
       </section>
 
@@ -63,9 +77,9 @@
           <div class="section-heading section-heading-split">
             <div>
               <p class="eyebrow">iXiehao builds</p>
-              <h2>三款为 Mac 而生的原生工具</h2>
+              <h2>三款原生工具</h2>
             </div>
-            <p>它们是这份清单的起点：更快、更私密，也更少打扰。</p>
+            <p>本地优先、少一点打扰。</p>
           </div>
           <div class="featured-grid" id="featured-grid" aria-live="polite"></div>
         </div>
@@ -75,10 +89,10 @@
         <div class="shell catalog-shell">
           <div class="section-heading catalog-heading">
             <div>
-              <p class="eyebrow">editor's selection</p>
-              <h2>按你真正要做的事来找</h2>
+              <p class="eyebrow">open-source mac apps</p>
+              <h2>全部软件</h2>
             </div>
-            <p>软件不分“神”和“普通”；先看它是否解决你的具体问题。</p>
+            <p>按场景筛选；每项附许可证、来源状态与权限提醒。</p>
           </div>
 
           <div class="catalog-controls" role="search">
@@ -101,15 +115,15 @@
       </section>
 
       <section class="method section" id="standards">
-        <div class="shell method-grid">
+        <div class="shell standards-compact">
           <div class="method-intro">
             <p class="eyebrow">how it is selected</p>
-            <h2>把推荐说清楚，<br />比说得响亮更重要。</h2>
+            <h2>收录标准</h2>
           </div>
           <ol class="standards-list">
-            <li><span>01</span><div><h3>先看来源与许可证</h3><p>项目应有可访问的源代码、清楚的开源许可证，并能回到作者或项目的官方安装入口。</p></div></li>
-            <li><span>02</span><div><h3>再看使用边界</h3><p>涉及辅助功能、完整磁盘访问、网络或剪贴板等权限时，会明确提醒。开源不等于已经过独立安全审计。</p></div></li>
-            <li><span>03</span><div><h3>最后才是推荐语</h3><p>“来源已核验”指 GitHub、许可证与发布入口已复核；“io 实测”只表示 iXiehao 在日常设备中实际使用过。</p></div></li>
+            <li><span>01</span><div><h3>来源可追溯</h3><p>源码、许可证、官方入口均可回查。</p></div></li>
+            <li><span>02</span><div><h3>边界写清楚</h3><p>重要权限、兼容性与删除风险会提示。</p></div></li>
+            <li><span>03</span><div><h3>状态不混用</h3><p>核验、实测与自研项目分别标识。</p></div></li>
           </ol>
         </div>
       </section>
@@ -118,8 +132,8 @@
         <div class="shell contribute-inner">
           <div>
             <p class="eyebrow">keep it useful</p>
-            <h2>发现值得放进来的工具？</h2>
-            <p>欢迎提交项目。请一并给出源码、许可证、官方下载入口、系统要求和必要权限；每一项都会保留判断依据。</p>
+            <h2>推荐一款软件</h2>
+            <p>附上源码、许可证、官方入口与权限说明即可。</p>
           </div>
           <a class="button button-light" href="https://github.com/ixiehao/mac-better/issues/new?template=recommend-an-app.yml" target="_blank" rel="noreferrer">推荐一个软件 <span aria-hidden="true">↗</span></a>
         </div>

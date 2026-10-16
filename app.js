@@ -8,7 +8,14 @@ const categories = [
   ["maintenance", "Mac 优化与维护"]
 ];
 
+const licenseExplainers = {
+  "MIT": "MIT：可自由使用、修改和再发布；保留原许可证即可。",
+  "GPL-3.0": "GPL-3.0：可自由使用；发布修改版时需同样开源并提供源码。",
+  "MPL-2.0": "MPL-2.0：可自由使用；修改到原文件的部分需公开源码。"
+};
+
 const appCount = document.querySelector("#app-count");
+const railAppCount = document.querySelector("#rail-app-count");
 const featuredGrid = document.querySelector("#featured-grid");
 const appGrid = document.querySelector("#app-grid");
 const filters = document.querySelector("#category-filters");
@@ -50,7 +57,7 @@ function cardTemplate(app) {
   return `<article class="app-card">
     <img class="app-icon" src="${escapeHTML(app.icon)}" alt="${escapeHTML(app.name)} 图标" />
     <div class="app-card-main">
-      <div class="app-card-head"><div><h3>${escapeHTML(app.name)}</h3><span class="app-type">${escapeHTML(app.categoryLabel)}</span></div><span class="license">${escapeHTML(app.license)}</span></div>
+      <div class="app-card-head"><div><h3>${escapeHTML(app.name)}</h3><span class="app-type">${escapeHTML(app.categoryLabel)}</span></div><span class="license" title="${escapeHTML(licenseExplainers[app.license] || app.license)}" aria-label="${escapeHTML(licenseExplainers[app.license] || app.license)}">${escapeHTML(app.license)}</span></div>
       <p class="card-summary">${escapeHTML(app.summary)}</p>
       <p class="recommendation">“${escapeHTML(app.recommendation)}”</p>
     </div>
@@ -114,6 +121,7 @@ async function init() {
     apps = await response.json();
     apps.sort((a, b) => a.sortOrder - b.sortOrder);
     appCount.textContent = String(apps.length).padStart(2, "0");
+    railAppCount.textContent = String(apps.length);
     featuredGrid.innerHTML = apps.filter(app => app.featured).map(featuredTemplate).join("");
     testedFilter.checked = new URLSearchParams(location.search).get("tested") === "1";
     renderFilters();
