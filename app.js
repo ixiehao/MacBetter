@@ -3,14 +3,14 @@ const licenseOrder = ["MIT", "GPL-2.0", "GPL-3.0", "AGPL-3.0", "MPL-2.0", "Apach
 const categoryOrder = ["video", "image", "launcher", "menu", "office", "files", "maintenance", "privacy", "efficiency"];
 const workflowOrder = {
   video: ["mp4flow", "handbrake", "lossless-cut", "subler", "mediainfo", "subtitle-edit", "iina", "vlc", "jellyfin-media-player", "kap", "obs-studio", "audacity", "mixxx", "musescore", "yt-dlp"],
-  image: ["lumaview", "macshot", "imageoptim", "darktable", "rawtherapee", "krita", "godot", "freecad"],
+  image: ["lumaview", "macshot", "imageoptim", "darktable", "rawtherapee", "krita", "blender", "godot", "freecad"],
   launcher: ["launchpad-back", "loop", "rectangle", "alt-tab", "aerospace", "amethyst"],
   menu: ["ice", "thaw", "stats", "monitorcontrol", "linearmouse", "karabiner-elements", "maccy", "finetune", "onlyswitch", "keeping-you-awake", "background-music"],
-  office: ["libreoffice", "onlyoffice", "zettlr", "qownnotes", "joplin", "logseq", "anki", "koodo-reader", "netnewswire", "appflowy", "super-productivity", "drawio-desktop"],
+  office: ["libreoffice", "onlyoffice", "thunderbird", "zettlr", "qownnotes", "joplin", "logseq", "anki", "koodo-reader", "netnewswire", "appflowy", "super-productivity", "drawio-desktop"],
   files: ["localsend", "openmtp", "cyberduck", "syncthing", "kopia"],
   maintenance: ["puremac", "purge", "mangodisk", "dupeguru", "latest", "applite", "sloth"],
-  privacy: ["keepassxc", "cryptomator", "lulu"],
-  efficiency: ["github-desktop", "vscodium", "zed", "codeedit", "xcodes", "alacritty", "dbeaver", "tablepro", "utm", "espanso", "hammerspoon", "swiftbar"]
+  privacy: ["signal", "keepassxc", "cryptomator", "lulu"],
+  efficiency: ["firefox", "zen-browser", "github-desktop", "vscodium", "zed", "codeedit", "xcodes", "alacritty", "dbeaver", "tablepro", "bruno", "utm", "espanso", "hammerspoon", "swiftbar"]
 };
 const siteURL = "https://ixiehao.github.io/mac-better/";
 const ogLocales = { zh: "zh_CN", en: "en_US", ja: "ja_JP" };
@@ -303,7 +303,13 @@ const appCopy = {
     subler: { summary: "A native MP4/M4V packaging and metadata tool for organizing subtitles, audio tracks, artwork, and media details.", recommendation: "Put the subtitles and artwork into the delivered file.", tags: ["MP4", "Subtitle muxing", "Metadata"] },
     mediainfo: { summary: "Inspect codecs, bit rates, tracks, colour, subtitles, and other technical facts inside media containers.", recommendation: "Before delivery, know exactly what is in the file.", tags: ["Codec details", "Media inspection", "Metadata"] },
     mixxx: { summary: "Free open-source DJ software with dual-deck mixing, controller mapping, beat sync, and music-library tools.", recommendation: "Serious mixing does not require a subscription.", tags: ["DJ", "Mixing", "Music library"] },
-    musescore: { summary: "Create, edit, and engrave sheet music with MIDI, import/export, and a complete notation workflow.", recommendation: "Write a score without renting notation software.", tags: ["Sheet music", "MIDI", "Music creation"] }
+    musescore: { summary: "Create, edit, and engrave sheet music with MIDI, import/export, and a complete notation workflow.", recommendation: "Write a score without renting notation software.", tags: ["Sheet music", "MIDI", "Music creation"] },
+    firefox: { summary: "A mature open-source browser with sync, extensions, privacy controls, and capable developer tools.", recommendation: "For a dependable browser, Firefox remains a first choice.", tags: ["Browser", "Extensions", "Privacy"] },
+    "zen-browser": { summary: "An open-source Firefox-based browser that emphasizes workspaces, split views, and organized tabs for focused browsing.", recommendation: "Lots of tabs still deserve room to focus.", tags: ["Browser", "Workspaces", "Tab management"] },
+    thunderbird: { summary: "An open-source desktop email client that brings multiple accounts, calendars, contacts, RSS, and local search together.", recommendation: "Bring multiple inboxes into one quiet desktop.", tags: ["Email", "Calendar", "RSS"] },
+    signal: { summary: "An open-source private messenger for messages and calls, with optional history transfer from a linked phone.", recommendation: "Private conversations deserve verifiable end-to-end encryption.", tags: ["Private messaging", "End-to-end encryption", "Cross-platform"] },
+    blender: { summary: "A complete 3D creation suite for modeling, materials, animation, rendering, and even video editing.", recommendation: "Model, animate, and render in one capable tool.", tags: ["3D creation", "Modeling", "Rendering"] },
+    bruno: { summary: "An open-source, offline-first API client that stores collections as local files and works well with Git.", recommendation: "Test APIs without handing your work to a cloud first.", tags: ["API testing", "Offline-first", "Git"] }
   },
   ja: {
     shotmap: { summary: "ローカル動画からキーフレームを抽出し、調整可能なストーリーボードとコンタクトシートを生成。PNG / JPGで書き出せます。", recommendation: "長い動画を、一枚で見返せる。", tags: ["Swiftネイティブ", "オフライン処理", "動画", "画像"] },
@@ -385,7 +391,13 @@ const appCopy = {
     subler: { summary: "字幕、音声トラック、アートワーク、メタデータを整理できる、MP4/M4V向けネイティブ編集ツールです。", recommendation: "納品前に、字幕と表紙を一つのファイルへ。", tags: ["MP4", "字幕mux", "メタデータ"] },
     mediainfo: { summary: "映像・音声コンテナ内のコーデック、ビットレート、トラック、色、字幕などの技術情報を確認できます。", recommendation: "納品前に、ファイルの中身を正確に知る。", tags: ["コーデック情報", "メディア検査", "メタデータ"] },
     mixxx: { summary: "2デッキミックス、コントローラー割り当て、ビート同期、音楽ライブラリ管理を備えた自由なDJソフトです。", recommendation: "本格的なミックスに、サブスクは要らない。", tags: ["DJ", "ミキシング", "音楽ライブラリ"] },
-    musescore: { summary: "MIDI、読み書き、出力を備えた本格的なワークフローで、楽譜の作成、編集、レイアウトができます。", recommendation: "楽譜を書くのに、制譜ソフトを借りなくていい。", tags: ["楽譜", "MIDI", "音楽制作"] }
+    musescore: { summary: "MIDI、読み書き、出力を備えた本格的なワークフローで、楽譜の作成、編集、レイアウトができます。", recommendation: "楽譜を書くのに、制譜ソフトを借りなくていい。", tags: ["楽譜", "MIDI", "音楽制作"] },
+    firefox: { summary: "同期、拡張機能、プライバシー設定、開発者ツールを備えた、成熟したオープンソースブラウザーです。", recommendation: "信頼できるブラウザーなら、Firefoxがまず候補。", tags: ["ブラウザー", "拡張機能", "プライバシー"] },
+    "zen-browser": { summary: "Firefoxを基盤に、ワークスペース、分割表示、タブ整理に力を入れたオープンソースブラウザーです。", recommendation: "タブが多くても、集中できる場所を。", tags: ["ブラウザー", "ワークスペース", "タブ管理"] },
+    thunderbird: { summary: "複数のメール、カレンダー、連絡先、RSS、ローカル検索をまとめて扱えるオープンソースのメールクライアントです。", recommendation: "複数の受信箱を、一つの静かなデスクトップへ。", tags: ["メール", "カレンダー", "RSS"] },
+    signal: { summary: "メッセージと通話に対応するオープンソースのプライベートメッセンジャー。連携したスマートフォンから履歴も移せます。", recommendation: "私的な会話には、検証できるエンドツーエンド暗号化を。", tags: ["プライベートメッセージ", "エンドツーエンド暗号化", "クロスプラットフォーム"] },
+    blender: { summary: "モデリング、マテリアル、アニメーション、レンダリング、動画編集まで扱える、統合型の3D制作スイートです。", recommendation: "モデリングからレンダリングまで、一つで。", tags: ["3D制作", "モデリング", "レンダリング"] },
+    bruno: { summary: "APIコレクションをローカルファイルとして保存し、Gitとも相性がよいオープンソースのオフライン優先APIクライアントです。", recommendation: "APIを試す前に、仕事をクラウドへ渡さない。", tags: ["APIテスト", "オフライン優先", "Git"] }
   }
 };
 
@@ -612,7 +624,7 @@ async function init() {
   document.querySelectorAll("[data-language]").forEach(button => button.addEventListener("click", () => applyLanguage(button.dataset.language)));
   try {
     const dataURL = new URL("data/apps.json", import.meta.url);
-    dataURL.searchParams.set("v", "20261016.17");
+    dataURL.searchParams.set("v", "20261016.18");
     const response = await fetch(dataURL, { cache: "no-store" });
     if (!response.ok) throw new Error("Unable to load app data");
     apps = await response.json();
