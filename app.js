@@ -10,9 +10,8 @@ const copy = {
     wordmarkAria: "Mac 软件库，返回顶部",
     navLabel: "主导航",
     navContribute: "推荐软件",
-    navCategories: "分类浏览",
     navCatalog: "软件目录",
-    navStandards: "收录说明",
+    navStandards: "开源说明",
     navGithub: "在 GitHub 共建 ↗",
     languageLabel: "选择语言",
     category: { all: "全部", office: "办公与创作", video: "视频与音频", image: "图片与图像", launcher: "窗口与启动", menu: "菜单栏与硬件", maintenance: "Mac 优化与维护" },
@@ -26,7 +25,7 @@ const copy = {
     contribution: { sourceTitle: "项目地址", sourceDetail: "作者仓库或官网", licenseTitle: "开源许可证", licenseDetail: "例如 MIT、GPL-3.0", reasonTitle: "推荐理由", reasonDetail: "它具体解决什么问题" },
     catalogEyebrow: "开源 Mac 软件",
     catalogHeading: "软件目录",
-    catalogCopy: "按用途查找；每项标明许可证、实测状态和必要权限。",
+    catalogCopy: "按用途查找；每项标明许可证与 io 实测状态。",
     searchPlaceholder: "搜索名称、用途或标签",
     testedFilter: "仅显示 io 实测",
     appCategoriesLabel: "软件分类",
@@ -39,7 +38,6 @@ const copy = {
     projectSite: "项目主页",
     download: "下载",
     status: {
-      made: { label: "iXiehao 出品", note: "源码与发布由 iXiehao 维护。" },
       tested: { label: "io 实测", note: "已在 iXiehao 的实际使用环境中运行；不等同于安全审计，也不保证适配所有 macOS 版本。" }
     },
     requires: "需：{permission}",
@@ -52,12 +50,12 @@ const copy = {
       "MPL-2.0": "MPL-2.0：可使用和修改；发布修改过的 MPL 文件时，须公开这些文件的源码。",
       Unlicense: "Unlicense：作者尽可能放弃版权；仍需遵守第三方组件许可与适用法律。"
     },
-    standardsEyebrow: "收录原则",
-    standardsHeading: "为什么会出现在这里",
+    standardsEyebrow: "开源说明",
+    standardsHeading: "常见许可证，怎么理解",
     standard: {
-      oneTitle: "来源可查", oneCopy: "源码、许可证和官方入口都可回查。",
-      twoTitle: "边界明确", twoCopy: "明显的权限、兼容性与数据风险会直接写明。",
-      threeTitle: "标记不混用", threeCopy: "来源核验是收录前提；iXiehao 出品与 io 实测会另行标注。"
+      oneTitle: "MIT", oneCopy: "可使用、修改和再发布；保留许可证与版权声明即可。",
+      twoTitle: "GPL", twoCopy: "公开发布修改版时，需要以 GPL 提供对应源码。",
+      threeTitle: "MPL", threeCopy: "改动到的 MPL 文件需开源，可与其他代码组合。"
     },
     footerMaintained: "由 iXiehao 维护，欢迎通过 GitHub 一起完善。",
     footerRights: "第三方商标、名称和图标归各自权利人所有。",
@@ -72,9 +70,8 @@ const copy = {
     wordmarkAria: "Mac app directory — back to top",
     navLabel: "Page navigation",
     navContribute: "Recommend an app",
-    navCategories: "Categories",
     navCatalog: "All apps",
-    navStandards: "Selection criteria",
+    navStandards: "Open-source guide",
     navGithub: "Build it on GitHub ↗",
     languageLabel: "Choose language",
     category: { all: "All", office: "Work & Create", video: "Video & Audio", image: "Images & Graphics", launcher: "Windows & Launchers", menu: "Menu Bar & Hardware", maintenance: "Mac Care & Maintenance" },
@@ -88,7 +85,7 @@ const copy = {
     contribution: { sourceTitle: "Project source", sourceDetail: "Author’s repository or official site", licenseTitle: "Open-source license", licenseDetail: "e.g. MIT or GPL-3.0", reasonTitle: "Why you recommend it", reasonDetail: "What problem it solves" },
     catalogEyebrow: "Open-source Mac apps",
     catalogHeading: "App directory",
-    catalogCopy: "Browse by task. Every entry includes its license, hands-on status, and essential system-access requirements.",
+    catalogCopy: "Browse by task. Every entry shows its license and io hands-on status.",
     searchPlaceholder: "Search apps, features, or tags",
     testedFilter: "Only show apps tested by io",
     appCategoriesLabel: "App categories",
@@ -101,7 +98,6 @@ const copy = {
     projectSite: "Project site",
     download: "Download",
     status: {
-      made: { label: "Built by iXiehao", note: "The source and release channels are maintained by iXiehao." },
       tested: { label: "Tested by io", note: "Used in iXiehao’s day-to-day environment. This is not a security audit and does not guarantee compatibility with every macOS version." }
     },
     requires: "Requires: {permission}",
@@ -114,12 +110,12 @@ const copy = {
       "MPL-2.0": "MPL-2.0: You may use and modify it; changes to existing MPL-covered files must be made available under the MPL.",
       Unlicense: "Unlicense: The author waives copyright as far as possible; third-party licenses and applicable law still apply."
     },
-    standardsEyebrow: "Selection principles",
-    standardsHeading: "Why it is listed",
+    standardsEyebrow: "Open-source basics",
+    standardsHeading: "Common licenses, plainly explained",
     standard: {
-      oneTitle: "Traceable sources", oneCopy: "The source code, license, and official entry point can all be checked.",
-      twoTitle: "Clear caveats", twoCopy: "Notable permissions, compatibility notes, and data risks are stated plainly.",
-      threeTitle: "Labels stay distinct", threeCopy: "Source checks are required for inclusion; in-house apps and hands-on testing are labeled separately."
+      oneTitle: "MIT", oneCopy: "Use, modify, and redistribute it; keep the license and copyright notice.",
+      twoTitle: "GPL", twoCopy: "When distributing a modified version, provide its corresponding source under GPL.",
+      threeTitle: "MPL", threeCopy: "Changes to MPL-covered files stay open; other code can remain separate."
     },
     footerMaintained: "Maintained by iXiehao. Help improve it on GitHub.",
     footerRights: "All third-party names, trademarks, and icons belong to their respective owners.",
@@ -134,9 +130,8 @@ const copy = {
     wordmarkAria: "Macアプリ集、ページ上部へ戻る",
     navLabel: "ページ内ナビゲーション",
     navContribute: "アプリを紹介",
-    navCategories: "カテゴリー",
     navCatalog: "すべてのアプリ",
-    navStandards: "掲載基準",
+    navStandards: "オープンソースの説明",
     navGithub: "GitHubで参加する ↗",
     languageLabel: "言語を選択",
     category: { all: "すべて", office: "仕事・クリエイティブ", video: "動画・オーディオ", image: "写真・画像", launcher: "ウインドウ・起動", menu: "メニューバー・周辺機器", maintenance: "Macの最適化・メンテナンス" },
@@ -150,7 +145,7 @@ const copy = {
     contribution: { sourceTitle: "プロジェクトの出所", sourceDetail: "作者のリポジトリまたは公式サイト", licenseTitle: "オープンソースライセンス", licenseDetail: "例：MIT / GPL-3.0", reasonTitle: "おすすめの理由", reasonDetail: "どんな課題を解決するか" },
     catalogEyebrow: "オープンソースのMacアプリ",
     catalogHeading: "アプリ一覧",
-    catalogCopy: "用途で絞り込めます。各アプリにライセンス、実使用の状況、必要なアクセス許可を記載しています。",
+    catalogCopy: "用途で絞り込めます。各アプリにライセンスとioの実使用状況を記載しています。",
     searchPlaceholder: "名前・機能・タグで検索",
     testedFilter: "io 使用中のみ",
     appCategoriesLabel: "アプリのカテゴリー",
@@ -163,7 +158,6 @@ const copy = {
     projectSite: "プロジェクトページ",
     download: "ダウンロード",
     status: {
-      made: { label: "iXiehao製", note: "ソースコードと配布先は iXiehao が管理しています。" },
       tested: { label: "io 使用中", note: "iXiehaoの日常用Macで使用を確認済みです。セキュリティ監査ではなく、すべてのmacOSバージョンでの互換性を保証するものではありません。" }
     },
     requires: "要：{permission}",
@@ -176,12 +170,12 @@ const copy = {
       "MPL-2.0": "MPL-2.0：利用・改変が可能です。MPL対象の既存ファイルを改変して配布する場合、そのファイルのソースコードを公開する必要があります。",
       Unlicense: "Unlicense：作者は可能な限り著作権を放棄しています。第三者のライセンスと適用法令には従ってください。"
     },
-    standardsEyebrow: "掲載の考え方",
-    standardsHeading: "ここに掲載する理由",
+    standardsEyebrow: "オープンソースの説明",
+    standardsHeading: "よくあるライセンスの見方",
     standard: {
-      oneTitle: "出所を確認できる", oneCopy: "ソースコード、ライセンス、公式ページを確認できます。",
-      twoTitle: "注意点を明記する", twoCopy: "必要なアクセス許可、互換性、データに関するリスクを明記します。",
-      threeTitle: "ラベルを混同しない", threeCopy: "出所の確認は掲載条件です。iXiehao製とioの実使用は別に表示します。"
+      oneTitle: "MIT", oneCopy: "利用・改変・再配布が可能。ライセンスと著作権表示を残します。",
+      twoTitle: "GPL", twoCopy: "改変版を公開配布する場合、対応するソースを GPL で提供します。",
+      threeTitle: "MPL", threeCopy: "改変した MPL 対象ファイルを公開し、他のコードは分けて扱えます。"
     },
     footerMaintained: "iXiehaoが継続して管理しています。GitHubで一緒に改善できます。",
     footerRights: "第三者の商標、名称、アイコンは各権利者に帰属します。",
@@ -215,7 +209,13 @@ const appCopy = {
     aerospace: { summary: "An i3-style tiling window manager for macOS, driven by keyboard shortcuts and a plain-text configuration file.", recommendation: "Make window layout a keyboard habit.", tags: ["Tiling window manager", "Keyboard-first", "Config file"], permissions: "Requires Accessibility permission to control windows. The project is not notarized; review its official installation instructions before opening it." },
     maccy: { summary: "A lightweight menu-bar clipboard manager that keeps a searchable history of what you copy.", recommendation: "Never lose a copied snippet again.", tags: ["Clipboard history", "Menu bar", "Lightweight"] },
     "karabiner-elements": { summary: "A powerful macOS keyboard customizer for remapping keys, building complex rules, and configuring devices.", recommendation: "Remap the keys macOS will not.", tags: ["Keyboard remapping", "Complex rules", "Input devices"], permissions: "Requires Input Monitoring and a system extension, and may request Accessibility and background-service approval. Review these elevated system changes before installing." },
-    dupeguru: { summary: "Finds duplicate files using filenames or file contents, with separate modes for pictures and music.", recommendation: "Find duplicates before deciding what to remove.", tags: ["Duplicate finder", "File cleanup", "Images & music"] }
+    dupeguru: { summary: "Finds duplicate files using filenames or file contents, with separate modes for pictures and music.", recommendation: "Find duplicates before deciding what to remove.", tags: ["Duplicate finder", "File cleanup", "Images & music"] },
+    logseq: { summary: "A local-first knowledge base for linked notes, tasks, and long-term research, built around blocks and Markdown.", recommendation: "Keep growing knowledge in your own files.", tags: ["Notes", "Local-first", "Knowledge base"] },
+    "drawio-desktop": { summary: "Create flowcharts, architecture diagrams, UML, and more offline, with import and export for common formats.", recommendation: "Diagram without sending the file to a whiteboard.", tags: ["Diagrams", "Flowcharts", "Offline"] },
+    "obs-studio": { summary: "An open-source studio for recording and streaming, with scenes, sources, audio mixing, and local capture.", recommendation: "Record and stream from one capable workspace.", tags: ["Recording", "Live streaming", "Scenes"], permissions: "Screen Recording access is required to capture your display. Grant only the camera and microphone access you need." },
+    "lossless-cut": { summary: "Trim, join, and extract video or audio quickly around keyframes, avoiding re-encoding when possible.", recommendation: "Cut a clip without re-encoding the whole video.", tags: ["Lossless trim", "Video", "FFmpeg"] },
+    audacity: { summary: "A mature multitrack audio editor for recording, editing, noise reduction, and format conversion.", recommendation: "Use a proper timeline when audio needs detail.", tags: ["Audio editing", "Recording", "Noise reduction"] },
+    mangodisk: { summary: "Inspect disk use, duplicates, and uninstallable apps before choosing what to remove.", recommendation: "Understand each item before you clean it.", tags: ["Disk analysis", "Uninstaller", "Duplicates"] }
   },
   ja: {
     shotmap: { summary: "ローカル動画からキーフレームを抽出し、調整可能なストーリーボードとコンタクトシートを生成。PNG / JPGで書き出せます。", recommendation: "長い動画を、一枚で見返せる。", tags: ["Swiftネイティブ", "オフライン処理", "動画", "画像"] },
@@ -242,7 +242,13 @@ const appCopy = {
     aerospace: { summary: "i3のようなキーボード中心の操作で、ウインドウをタイル状に配置するmacOS向けウインドウマネージャです。", recommendation: "キーボードで、ウインドウを整列。", tags: ["タイル型WM", "キーボード操作", "ワークスペース"], permissions: "ウインドウ操作に「アクセシビリティ」へのアクセスが必要です。公式バイナリは未公証と明記されているため、配布元と更新情報を確認して導入してください。" },
     maccy: { summary: "コピー履歴を軽量に保存し、必要な内容をすばやく呼び出せるクリップボードマネージャです。", recommendation: "さっきコピーしたものを、すぐ戻せる。", tags: ["クリップボード", "履歴", "軽量"] },
     "karabiner-elements": { summary: "キーの入れ替え、複合キー、デバイス別設定まで扱える、macOS向けの高機能キーボードカスタマイザーです。", recommendation: "合わないキー配置を、自分で変える。", tags: ["キーリマップ", "キーボード", "高度な設定"], permissions: "キー入力を扱うため、「入力監視」と「アクセシビリティ」、システム拡張の許可が必要です。公式配布パッケージから導入し、設定内容を確認してください。" },
-    dupeguru: { summary: "ファイル名や内容を比較して重複ファイルを探し、削除候補を自分で確認できるツールです。類似画像の検索にも対応します。", recommendation: "重複を見つけてから、削除を決める。", tags: ["重複ファイル", "類似画像", "ストレージ整理"] }
+    dupeguru: { summary: "ファイル名や内容を比較して重複ファイルを探し、削除候補を自分で確認できるツールです。類似画像の検索にも対応します。", recommendation: "重複を見つけてから、削除を決める。", tags: ["重複ファイル", "類似画像", "ストレージ整理"] },
+    logseq: { summary: "ブロックとMarkdownを軸に、ノート、タスク、長期的な知識を自分のファイルで整理するローカル優先のツールです。", recommendation: "増える知識を、自分のファイルに残せる。", tags: ["ノート", "ローカル優先", "ナレッジ管理"] },
+    "drawio-desktop": { summary: "フローチャート、構成図、UMLなどをオフラインで作成。一般的な形式の読み込みと書き出しに対応します。", recommendation: "図はオンラインのホワイトボードに預けなくていい。", tags: ["図表作成", "フローチャート", "オフライン"] },
+    "obs-studio": { summary: "シーン、映像・音声ソース、ミキサーをまとめて扱える、録画・配信向けのオープンソーススタジオです。", recommendation: "録画も配信も、一つの作業場所で。", tags: ["画面収録", "ライブ配信", "シーン"], permissions: "画面を取り込むには「画面収録」が必要です。カメラとマイクは使う機能に応じて許可してください。" },
+    "lossless-cut": { summary: "キーフレームを基準に動画・音声をすばやく切り出し、可能な限り再エンコードを避けます。", recommendation: "一部を切るだけなら、全編を再エンコードしない。", tags: ["ロスレスカット", "動画", "FFmpeg"] },
+    audacity: { summary: "録音、編集、ノイズ除去、形式変換まで対応する、定番のマルチトラック音声エディタです。", recommendation: "音声を詰めるなら、きちんとしたタイムラインで。", tags: ["音声編集", "録音", "ノイズ除去"] },
+    mangodisk: { summary: "ディスク使用量、重複ファイル、削除可能なアプリを確認してから、整理の対象を選べます。", recommendation: "掃除の前に、一つずつ正体を見る。", tags: ["ディスク分析", "アンインストール", "重複ファイル"] }
   }
 };
 
@@ -291,12 +297,10 @@ function categoryName(id) {
 }
 
 function cardTemplate(app) {
-  const permission = app.permissionKey ? t(`permission.${app.permissionKey}`) : "";
-  const permissionWarning = permission ? `<span class="tag warning" title="${escapeHTML(localized(app, "permissions") || "")}">${escapeHTML(t("requires", { permission }))}</span>` : "";
   const status = app.status.level === "verified" ? null : (valueAt(copy[activeLanguage], `status.${app.status.level}`) ?? valueAt(copy.zh, `status.${app.status.level}`));
   return `<article class="app-card">
     <img class="app-icon" src="${escapeHTML(app.icon)}" alt="${escapeHTML(t("iconAlt", { name: app.name }))}" />
-    <div class="app-card-head"><div><h3>${escapeHTML(app.name)}</h3><span class="app-type">${escapeHTML(categoryName(app.category))}</span></div><div class="app-card-meta" aria-label="${escapeHTML(t("metadataLabel"))}"><span class="license" title="${escapeHTML(t(`license.${app.license}`))}" aria-label="${escapeHTML(t(`license.${app.license}`))}">${escapeHTML(app.license)}</span>${status ? `<span class="tag ${statusClass(app.status.level)}" title="${escapeHTML(status.note)}">${escapeHTML(status.label)}</span>` : ""}${permissionWarning}</div></div>
+    <div class="app-card-head"><div><h3>${escapeHTML(app.name)}</h3><span class="app-type">${escapeHTML(categoryName(app.category))}</span></div><div class="app-card-meta" aria-label="${escapeHTML(t("metadataLabel"))}"><span class="license" title="${escapeHTML(t(`license.${app.license}`))}" aria-label="${escapeHTML(t(`license.${app.license}`))}">${escapeHTML(app.license)}</span>${status ? `<span class="tag ${statusClass(app.status.level)}" title="${escapeHTML(status.note)}">${escapeHTML(status.label)}</span>` : ""}</div></div>
     <p class="card-summary">${escapeHTML(localized(app, "summary"))}</p>
     <p class="recommendation" title="${escapeHTML(localized(app, "recommendation"))}">${escapeHTML(localized(app, "recommendation"))}</p>
     <div class="tags" aria-label="${escapeHTML(t("metadataLabel"))}">
@@ -379,7 +383,7 @@ async function init() {
   document.querySelectorAll("[data-language]").forEach(button => button.addEventListener("click", () => applyLanguage(button.dataset.language)));
   try {
     const dataURL = new URL("data/apps.json", import.meta.url);
-    dataURL.searchParams.set("v", "20261016.4");
+    dataURL.searchParams.set("v", "20261016.6");
     const response = await fetch(dataURL, { cache: "no-store" });
     if (!response.ok) throw new Error("Unable to load app data");
     apps = await response.json();

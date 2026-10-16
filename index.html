@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#173a32" />
+    <meta name="theme-color" content="#655be7" />
     <meta name="description" content="一个由 Mac 用户共同维护的开源 macOS 软件目录。" />
     <title>让 Mac 更好用 · 开源 Mac 软件库</title>
     <link rel="icon" href="assets/site-mark.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://github.com" />
-    <link rel="preload" href="assets/fonts/InterVariable.woff2?v=20261016.4" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="styles.css?v=20261016.4" />
+    <link rel="preload" href="assets/fonts/InterVariable.woff2?v=20261016.6" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="styles.css?v=20261016.6" />
   </head>
   <body>
     <a class="skip-link" href="#catalog" data-i18n="skipLink">跳到软件目录</a>
@@ -22,9 +22,8 @@
         </a>
         <nav aria-label="主导航" data-i18n-aria-label="navLabel">
           <a class="nav-contribute" href="#contribute" data-i18n="navContribute">推荐软件</a>
-          <a href="#catalog" data-i18n="navCategories">分类浏览</a>
           <a href="#catalog" data-i18n="navCatalog">软件目录</a>
-          <a href="#standards" data-i18n="navStandards">收录说明</a>
+          <a href="#standards" data-i18n="navStandards">开源说明</a>
           <a class="nav-github" href="https://github.com/ixiehao/mac-better" target="_blank" rel="noreferrer" data-i18n="navGithub">在 GitHub 共建 ↗</a>
         </nav>
         <div class="language-switcher" role="group" aria-label="选择语言" data-i18n-aria-label="languageLabel">
@@ -63,7 +62,7 @@
               <p class="eyebrow" data-i18n="catalogEyebrow">开源 Mac 软件</p>
               <h2 data-i18n="catalogHeading">软件目录</h2>
             </div>
-            <p data-i18n="catalogCopy">按用途查找；每项都标明许可证、核验状态和必要权限。</p>
+            <p data-i18n="catalogCopy">按用途查找；每项标明许可证与 io 实测状态。</p>
           </div>
 
           <div class="catalog-controls" role="search">
@@ -88,13 +87,13 @@
       <section class="method section" id="standards">
         <div class="shell standards-compact">
           <div class="method-intro">
-            <p class="eyebrow" data-i18n="standardsEyebrow">收录原则</p>
-            <h2 data-i18n="standardsHeading">为什么会出现在这里</h2>
+            <p class="eyebrow" data-i18n="standardsEyebrow">开源说明</p>
+            <h2 data-i18n="standardsHeading">常见许可证，怎么理解</h2>
           </div>
           <ol class="standards-list">
-            <li><span>01</span><div><h3 data-i18n="standard.oneTitle">来源可查</h3><p data-i18n="standard.oneCopy">源码、许可证和官方入口都可回查。</p></div></li>
-            <li><span>02</span><div><h3 data-i18n="standard.twoTitle">边界明确</h3><p data-i18n="standard.twoCopy">明显的权限、兼容性与数据风险会直接写明。</p></div></li>
-            <li><span>03</span><div><h3 data-i18n="standard.threeTitle">状态分开</h3><p data-i18n="standard.threeCopy">自研、io 实测和来源核验分别标注，不能互相替代。</p></div></li>
+            <li><span>01</span><div><h3 data-i18n="standard.oneTitle">MIT</h3><p data-i18n="standard.oneCopy">可使用、修改和再发布；保留许可证与版权声明即可。</p></div></li>
+            <li><span>02</span><div><h3 data-i18n="standard.twoTitle">GPL</h3><p data-i18n="standard.twoCopy">公开发布修改版时，需要以 GPL 提供对应源码。</p></div></li>
+            <li><span>03</span><div><h3 data-i18n="standard.threeTitle">MPL</h3><p data-i18n="standard.threeCopy">改动到的 MPL 文件需开源，可与其他代码组合。</p></div></li>
           </ol>
         </div>
       </section>
@@ -107,6 +106,6 @@
         <p><span data-i18n="footerRights">第三方商标、名称和图标归各自权利人所有。</span><a href="https://github.com/ixiehao/mac-better" target="_blank" rel="noreferrer" data-i18n="footerSource">查看源代码 ↗</a></p>
       </div>
     </footer>
-    <script type="module" src="app.js?v=20261016.4"></script>
+    <script type="module" src="app.js?v=20261016.6"></script>
   </body>
 </html>
