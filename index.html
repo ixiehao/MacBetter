@@ -8,8 +8,8 @@
     <title>让 Mac 更好用 · 开源 Mac 软件库</title>
     <link rel="icon" href="assets/site-mark.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://github.com" />
-    <link rel="preload" href="assets/fonts/InterVariable.woff2?v=20261016.3" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="styles.css?v=20261016.3" />
+    <link rel="preload" href="assets/fonts/InterVariable.woff2?v=20261016.4" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="styles.css?v=20261016.4" />
   </head>
   <body>
     <a class="skip-link" href="#catalog" data-i18n="skipLink">跳到软件目录</a>
@@ -22,9 +22,8 @@
         </a>
         <nav aria-label="主导航" data-i18n-aria-label="navLabel">
           <a class="nav-contribute" href="#contribute" data-i18n="navContribute">推荐软件</a>
-          <a href="#categories" data-i18n="navCategories">分类浏览</a>
+          <a href="#catalog" data-i18n="navCategories">分类浏览</a>
           <a href="#catalog" data-i18n="navCatalog">软件目录</a>
-          <a href="#featured" data-i18n="navFeatured">iXiehao 出品</a>
           <a href="#standards" data-i18n="navStandards">收录说明</a>
           <a class="nav-github" href="https://github.com/ixiehao/mac-better" target="_blank" rel="noreferrer" data-i18n="navGithub">在 GitHub 共建 ↗</a>
         </nav>
@@ -37,21 +36,6 @@
     </header>
 
     <main id="top">
-      <section class="category-rail" id="categories" aria-label="按场景浏览">
-        <div class="shell category-rail-inner">
-          <span class="rail-label" data-i18n="railLabel">按用途浏览</span>
-          <div class="rail-links">
-            <a href="?category=office#catalog" data-i18n="category.office">办公与创作</a>
-            <a href="?category=video#catalog" data-i18n="category.video">视频与音频</a>
-            <a href="?category=image#catalog" data-i18n="category.image">图片与图像</a>
-            <a href="?category=launcher#catalog" data-i18n="category.launcher">窗口与启动</a>
-            <a href="?category=menu#catalog" data-i18n="category.menu">菜单栏与硬件</a>
-            <a href="?category=maintenance#catalog" data-i18n="category.maintenance">Mac 优化与维护</a>
-          </div>
-          <a class="rail-all" href="#catalog"><span data-i18n="railAllPrefix">查看全部</span> <span id="rail-app-count">—</span> <span data-i18n="railAllSuffix">款</span> <span aria-hidden="true">→</span></a>
-        </div>
-      </section>
-
       <section class="community-callout" id="contribute">
         <div class="shell community-grid">
           <div>
@@ -69,19 +53,6 @@
             <li><span>02</span><strong data-i18n="contribution.licenseTitle">开源许可证</strong><small data-i18n="contribution.licenseDetail">例如 MIT、GPL-3.0</small></li>
             <li><span>03</span><strong data-i18n="contribution.reasonTitle">推荐理由</strong><small data-i18n="contribution.reasonDetail">它具体解决什么问题</small></li>
           </ul>
-        </div>
-      </section>
-
-      <section class="featured section" id="featured">
-        <div class="shell">
-          <div class="section-heading section-heading-split">
-            <div>
-              <p class="eyebrow" data-i18n="featuredEyebrow">iXiehao 出品</p>
-              <h2 data-i18n="featuredHeading">原生 Mac 工具</h2>
-            </div>
-            <p data-i18n="featuredCopy">本地优先，减少打扰。</p>
-          </div>
-          <div class="featured-grid" id="featured-grid" aria-live="polite"></div>
         </div>
       </section>
 
@@ -136,6 +107,6 @@
         <p><span data-i18n="footerRights">第三方商标、名称和图标归各自权利人所有。</span><a href="https://github.com/ixiehao/mac-better" target="_blank" rel="noreferrer" data-i18n="footerSource">查看源代码 ↗</a></p>
       </div>
     </footer>
-    <script type="module" src="app.js?v=20261016.3"></script>
+    <script type="module" src="app.js?v=20261016.4"></script>
   </body>
 </html>
