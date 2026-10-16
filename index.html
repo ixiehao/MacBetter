@@ -9,7 +9,7 @@
     <link rel="icon" href="assets/site-mark.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://github.com" />
     <link rel="preload" href="assets/fonts/InterVariable.woff2?v=20261016.8" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="styles.css?v=20261016.14" />
+    <link rel="stylesheet" href="styles.css?v=20261016.16" />
   </head>
   <body>
     <a class="skip-link" href="#catalog" data-i18n="skipLink">跳到软件目录</a>
@@ -27,10 +27,11 @@
           <a class="nav-github" href="https://github.com/ixiehao/mac-better" target="_blank" rel="noreferrer" data-i18n="navGithub">在 GitHub 共建 ↗</a>
         </nav>
         <div class="language-switcher" role="group" aria-label="选择语言" data-i18n-aria-label="languageLabel">
-          <button type="button" data-language="zh" aria-pressed="true">中</button>
-          <button type="button" data-language="en" aria-pressed="false">EN</button>
-          <button type="button" data-language="ja" aria-pressed="false">日</button>
+          <button type="button" data-language="zh" lang="zh-CN" aria-pressed="true">中</button>
+          <button type="button" data-language="en" lang="en" aria-pressed="false">EN</button>
+          <button type="button" data-language="ja" lang="ja" aria-pressed="false">日</button>
         </div>
+        <p class="visually-hidden" id="language-status" aria-live="polite"></p>
       </div>
     </header>
 
@@ -68,7 +69,7 @@
           <div class="catalog-controls" role="search">
             <label class="search-box" for="search-input">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.4-4.4m2.4-5.6a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z" /></svg>
-              <input id="search-input" type="search" autocomplete="off" placeholder="搜索名称、用途或标签" data-i18n-placeholder="searchPlaceholder" />
+              <input id="search-input" type="search" autocomplete="off" placeholder="搜索名称、用途或标签" aria-label="搜索软件目录" data-i18n-placeholder="searchPlaceholder" data-i18n-aria-label="searchLabel" />
               <kbd>⌘ K</kbd>
             </label>
             <label class="status-filter" for="tested-filter"><input id="tested-filter" type="checkbox" /> <span data-i18n="testedFilter">仅显示 io 实测</span></label>
@@ -103,6 +104,6 @@
         <p><span data-i18n="footerRights">第三方商标、名称和图标归各自权利人所有。</span><a href="https://github.com/ixiehao/mac-better" target="_blank" rel="noreferrer" data-i18n="footerSource">查看源代码 ↗</a></p>
       </div>
     </footer>
-    <script type="module" src="app.js?v=20261016.14"></script>
+    <script type="module" src="app.js?v=20261016.17"></script>
   </body>
 </html>

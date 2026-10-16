@@ -1068,7 +1068,7 @@
     "name": "TablePro",
     "summary": "原生 Mac 数据库客户端，直接浏览、编辑和查询常见 SQL 数据库。",
     "recommendation": "查一条数据，不必先打开一整套 IDE。",
-    "category": "office",
+    "category": "efficiency",
     "tags": ["数据库", "SQL", "原生 Mac"],
     "homepage": "https://www.tablepro.app/",
     "github": "https://github.com/TableProApp/TablePro",
@@ -1221,7 +1221,7 @@
     "status": { "level": "verified" },
     "compatibility": "项目 Release 提供 macOS .dmg 安装包；开关可用性取决于系统版本",
     "permissions": "少数功能会调用系统服务或要求授权；只启用自己理解的项目。",
-    "icon": "https://github.com/jacklandrin.png?size=128",
+    "icon": "https://raw.githubusercontent.com/jacklandrin/OnlySwitch/main/OnlySwitch/Assets.xcassets/AppIcon.appiconset/icon_128x128@2x.png",
     "featured": false,
     "sortOrder": 66
   },

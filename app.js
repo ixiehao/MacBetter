@@ -1,5 +1,17 @@
 const categories = ["all", "office", "video", "image", "launcher", "menu", "maintenance", "files", "privacy", "efficiency"];
 const licenseOrder = ["MIT", "GPL-2.0", "GPL-3.0", "AGPL-3.0", "MPL-2.0", "Apache-2.0", "Unlicense", "LGPL-2.1", "BSD-2-Clause", "BSD-3-Clause"];
+const categoryOrder = ["video", "image", "launcher", "menu", "office", "files", "maintenance", "privacy", "efficiency"];
+const workflowOrder = {
+  video: ["mp4flow", "handbrake", "lossless-cut", "subler", "mediainfo", "subtitle-edit", "iina", "vlc", "jellyfin-media-player", "kap", "obs-studio", "audacity", "mixxx", "musescore", "yt-dlp"],
+  image: ["lumaview", "macshot", "imageoptim", "darktable", "rawtherapee", "krita", "godot", "freecad"],
+  launcher: ["launchpad-back", "loop", "rectangle", "alt-tab", "aerospace", "amethyst"],
+  menu: ["ice", "thaw", "stats", "monitorcontrol", "linearmouse", "karabiner-elements", "maccy", "finetune", "onlyswitch", "keeping-you-awake", "background-music"],
+  office: ["libreoffice", "onlyoffice", "zettlr", "qownnotes", "joplin", "logseq", "anki", "koodo-reader", "netnewswire", "appflowy", "super-productivity", "drawio-desktop"],
+  files: ["localsend", "openmtp", "cyberduck", "syncthing", "kopia"],
+  maintenance: ["puremac", "purge", "mangodisk", "dupeguru", "latest", "applite", "sloth"],
+  privacy: ["keepassxc", "cryptomator", "lulu"],
+  efficiency: ["github-desktop", "vscodium", "zed", "codeedit", "xcodes", "alacritty", "dbeaver", "tablepro", "utm", "espanso", "hammerspoon", "swiftbar"]
+};
 
 const copy = {
   zh: {
@@ -15,6 +27,8 @@ const copy = {
     navStandards: "开源说明",
     navGithub: "在 GitHub 共建 ↗",
     languageLabel: "选择语言",
+    languageOption: { zh: "切换为中文", en: "切换为 English", ja: "切换为日本語" },
+    languageChanged: "已切换为中文",
     category: { all: "全部", office: "办公与创作", video: "视频与音频", image: "图片与图像", launcher: "窗口与启动", menu: "菜单栏与硬件", maintenance: "Mac 优化与维护", files: "文件与备份", privacy: "隐私与网络", efficiency: "开发与效率" },
     communityEyebrow: "共同推荐",
     communityHeading: "让 Mac 更好用",
@@ -28,6 +42,7 @@ const copy = {
     catalogHeading: "软件目录",
     catalogCopy: "按用途查找；每项标明许可证与 io 实测状态。",
     searchPlaceholder: "搜索名称、用途或标签",
+    searchLabel: "搜索软件目录",
     testedFilter: "仅显示 io 实测",
     appCategoriesLabel: "软件分类",
     foundCount: "找到 {count} 款软件",
@@ -78,22 +93,25 @@ const copy = {
     navContribute: "Recommend an app",
     navCatalog: "All apps",
     navStandards: "Open-source guide",
-    navGithub: "Build it on GitHub ↗",
+    navGithub: "Contribute on GitHub ↗",
     languageLabel: "Choose language",
+    languageOption: { zh: "Switch to Chinese", en: "Switch to English", ja: "Switch to Japanese" },
+    languageChanged: "Language changed to English",
     category: { all: "All", office: "Work & Create", video: "Video & Audio", image: "Images & Graphics", launcher: "Windows & Launchers", menu: "Menu Bar & Hardware", maintenance: "Mac Care & Maintenance", files: "Files & Backup", privacy: "Privacy & Network", efficiency: "Developer & Productivity" },
     communityEyebrow: "Community picks",
     communityHeading: "Make your Mac better",
-    communityCopy: "Start by recommending an open-source app you actually use.",
+    communityCopy: "Start with an open-source app you genuinely use.",
     recommendApp: "Recommend an app",
     viewCriteria: "View submission criteria",
-    communityInstructions: "Submit through a GitHub Issue with the project link, open-source license, and a real use case. Public information is checked before listing.",
+    communityInstructions: "Open a GitHub Issue with the project link, open-source license, and a real use case. Public information is checked before listing.",
     contributionStepsLabel: "What to include with an app recommendation",
     contribution: { sourceTitle: "Project source", sourceDetail: "Author’s repository or official site", licenseTitle: "Open-source license", licenseDetail: "e.g. MIT or GPL-3.0", reasonTitle: "Why you recommend it", reasonDetail: "What problem it solves" },
     catalogEyebrow: "Open-source Mac apps",
     catalogHeading: "App directory",
-    catalogCopy: "Browse by task. Every entry shows its license and io hands-on status.",
+    catalogCopy: "Browse by task. Each listing includes its license and io testing status.",
     searchPlaceholder: "Search apps, features, or tags",
-    testedFilter: "Only show apps tested by io",
+    searchLabel: "Search the app directory",
+    testedFilter: "Show io-tested only",
     appCategoriesLabel: "App categories",
     foundCount: "{count} apps found",
     dataError: "The app directory could not be loaded. View it on GitHub instead.",
@@ -145,7 +163,9 @@ const copy = {
     navStandards: "オープンソースの説明",
     navGithub: "GitHubで参加する ↗",
     languageLabel: "言語を選択",
-    category: { all: "すべて", office: "仕事・クリエイティブ", video: "動画・オーディオ", image: "写真・画像", launcher: "ウインドウ・起動", menu: "メニューバー・周辺機器", maintenance: "Macの最適化・メンテナンス", files: "ファイル・バックアップ", privacy: "プライバシー・ネットワーク", efficiency: "開発・効率化" },
+    languageOption: { zh: "中国語に切り替え", en: "英語に切り替え", ja: "日本語に切り替え" },
+    languageChanged: "表示言語を日本語に切り替えました",
+    category: { all: "すべて", office: "仕事・創作", video: "動画・オーディオ", image: "写真・画像", launcher: "ウインドウ・ランチャー", menu: "メニューバー・周辺機器", maintenance: "Macの最適化・メンテナンス", files: "ファイル・バックアップ", privacy: "プライバシー・ネットワーク", efficiency: "開発・効率化" },
     communityEyebrow: "コミュニティのおすすめ",
     communityHeading: "Macを、もっと使いやすく。",
     communityCopy: "実際に使っているオープンソースのアプリを、一つ紹介するところから。",
@@ -158,7 +178,8 @@ const copy = {
     catalogHeading: "アプリ一覧",
     catalogCopy: "用途で絞り込めます。各アプリにライセンスとioの実使用状況を記載しています。",
     searchPlaceholder: "名前・機能・タグで検索",
-    testedFilter: "io 使用中のみ",
+    searchLabel: "アプリ一覧を検索",
+    testedFilter: "io 使用確認済みのみ",
     appCategoriesLabel: "アプリのカテゴリー",
     foundCount: "{count} 件のアプリ",
     dataError: "アプリ情報を読み込めません。GitHubでご確認ください。",
@@ -169,7 +190,7 @@ const copy = {
     projectSite: "プロジェクトページ",
     download: "ダウンロード",
     status: {
-      tested: { label: "io 使用中", note: "iXiehaoの日常用Macで使用を確認済みです。セキュリティ監査ではなく、すべてのmacOSバージョンでの互換性を保証するものではありません。" }
+      tested: { label: "io 使用確認済み", note: "iXiehaoの日常用Macで使用を確認済みです。セキュリティ監査ではなく、すべてのmacOSバージョンでの互換性を保証するものではありません。" }
     },
     requires: "要：{permission}",
     permission: { accessibility: "アクセシビリティ", files: "ファイルアクセス", fullDiskOptional: "フルディスクアクセス（任意）", screenRecording: "画面収録", inputMonitoring: "入力監視" },
@@ -380,6 +401,7 @@ const testedFilter = document.querySelector("#tested-filter");
 const resultCount = document.querySelector("#result-count");
 const emptyState = document.querySelector("#empty-state");
 const clearFilters = document.querySelector("#clear-filters");
+const languageStatus = document.querySelector("#language-status");
 
 function valueAt(object, path) {
   return path.split(".").reduce((value, key) => value?.[key], object);
@@ -411,6 +433,36 @@ function categoryName(id) {
   return t(`category.${id}`);
 }
 
+function appCategoryIds(app) {
+  return app.categories || [app.category];
+}
+
+function buildSearchIndex(app) {
+  const variants = [app, ...Object.values(appCopy).map(localeCopy => localeCopy[app.id] || {})];
+  const categoryLabels = Object.values(copy).flatMap(localeCopy => appCategoryIds(app).map(id => localeCopy.category?.[id] || ""));
+  return [
+    app.name,
+    app.license,
+    ...categoryLabels,
+    ...variants.flatMap(variant => [variant.summary, variant.recommendation, ...(variant.tags || [])])
+  ].filter(Boolean).join(" ");
+}
+
+function compareApps(a, b) {
+  const featuredDifference = Number(Boolean(b.featured)) - Number(Boolean(a.featured));
+  if (featuredDifference) return featuredDifference;
+  if (a.featured && b.featured) return a.sortOrder - b.sortOrder;
+
+  const categoryDifference = categoryOrder.indexOf(a.category) - categoryOrder.indexOf(b.category);
+  if (categoryDifference) return categoryDifference;
+
+  const withinCategory = workflowOrder[a.category] || [];
+  const aRank = withinCategory.indexOf(a.id);
+  const bRank = withinCategory.indexOf(b.id);
+  const workflowDifference = (aRank === -1 ? Number.MAX_SAFE_INTEGER : aRank) - (bRank === -1 ? Number.MAX_SAFE_INTEGER : bRank);
+  return workflowDifference || a.sortOrder - b.sortOrder;
+}
+
 function licenseDescription(id) {
   return copy[activeLanguage]?.license?.[id] ?? copy.zh.license?.[id] ?? id;
 }
@@ -421,15 +473,15 @@ function renderStandards() {
     const bIndex = licenseOrder.indexOf(b);
     return (aIndex === -1 ? licenseOrder.length : aIndex) - (bIndex === -1 ? licenseOrder.length : bIndex) || a.localeCompare(b);
   });
-  standardsList.innerHTML = licenses.map((license, index) => `<li><span>${String(index + 1).padStart(2, "0")}</span><div><h3>${escapeHTML(license)}</h3><p>${escapeHTML(licenseDescription(license))}</p></div></li>`).join("");
+  standardsList.innerHTML = licenses.map((license, index) => `<li><span>${String(index + 1).padStart(2, "0")}</span><div><h3 lang="en">${escapeHTML(license)}</h3><p>${escapeHTML(licenseDescription(license))}</p></div></li>`).join("");
 }
 
 function cardTemplate(app) {
   const status = app.status.level === "verified" ? null : (valueAt(copy[activeLanguage], `status.${app.status.level}`) ?? valueAt(copy.zh, `status.${app.status.level}`));
   const license = licenseDescription(app.license);
   return `<article class="app-card">
-    <img class="app-icon" src="${escapeHTML(app.icon)}" alt="${escapeHTML(t("iconAlt", { name: app.name }))}" />
-    <div class="app-card-head"><div><h3>${escapeHTML(app.name)}</h3><span class="app-type">${escapeHTML(categoryName(app.category))}</span></div><div class="app-card-meta" aria-label="${escapeHTML(t("metadataLabel"))}"><span class="license" title="${escapeHTML(license)}" aria-label="${escapeHTML(license)}">${escapeHTML(app.license)}</span>${status ? `<span class="tag ${statusClass(app.status.level)}" title="${escapeHTML(status.note)}">${escapeHTML(status.label)}</span>` : ""}</div></div>
+    <img class="app-icon" src="${escapeHTML(app.icon)}" alt="${escapeHTML(t("iconAlt", { name: app.name }))}" width="46" height="46" loading="lazy" decoding="async" />
+    <div class="app-card-head"><div><h3 lang="en">${escapeHTML(app.name)}</h3><span class="app-type">${escapeHTML(categoryName(app.category))}</span></div><div class="app-card-meta" aria-label="${escapeHTML(t("metadataLabel"))}"><span class="license" lang="en" title="${escapeHTML(license)}" aria-label="${escapeHTML(license)}">${escapeHTML(app.license)}</span>${status ? `<span class="tag ${statusClass(app.status.level)}" title="${escapeHTML(status.note)}">${escapeHTML(status.label)}</span>` : ""}</div></div>
     <p class="card-summary">${escapeHTML(localized(app, "summary"))}</p>
     <p class="recommendation" title="${escapeHTML(localized(app, "recommendation"))}">${escapeHTML(localized(app, "recommendation"))}</p>
     <div class="tags" aria-label="${escapeHTML(t("metadataLabel"))}">
@@ -466,9 +518,8 @@ function renderCatalog() {
   const locale = activeLanguage === "ja" ? "ja-JP" : activeLanguage === "en" ? "en-US" : "zh-CN";
   const query = searchInput.value.trim().toLocaleLowerCase(locale);
   const list = apps.filter(app => {
-    const tags = localized(app, "tags") || [];
-    const searchText = [app.name, localized(app, "summary"), localized(app, "recommendation"), categoryName(app.category), ...tags].join(" ").toLocaleLowerCase(locale);
-    const appCategories = app.categories || [app.category];
+    const searchText = app.searchIndex.toLocaleLowerCase(locale);
+    const appCategories = appCategoryIds(app);
     const categoryMatch = activeCategory === "all" || appCategories.includes(activeCategory);
     const testedMatch = !testedFilter.checked || app.status.level === "tested";
     return categoryMatch && testedMatch && searchText.includes(query);
@@ -494,13 +545,18 @@ function applyStaticCopy() {
   document.querySelectorAll("[data-i18n]").forEach(element => { element.textContent = t(element.dataset.i18n); });
   document.querySelectorAll("[data-i18n-placeholder]").forEach(element => { element.placeholder = t(element.dataset.i18nPlaceholder); });
   document.querySelectorAll("[data-i18n-aria-label]").forEach(element => { element.setAttribute("aria-label", t(element.dataset.i18nAriaLabel)); });
-  document.querySelectorAll("[data-language]").forEach(button => { button.setAttribute("aria-pressed", String(button.dataset.language === activeLanguage)); });
+  document.querySelectorAll("[data-language]").forEach(button => {
+    button.setAttribute("aria-pressed", String(button.dataset.language === activeLanguage));
+    button.setAttribute("aria-label", t(`languageOption.${button.dataset.language}`));
+    button.title = t(`languageOption.${button.dataset.language}`);
+  });
 }
 
 function applyLanguage(language) {
   activeLanguage = language;
   localStorage.setItem("mac-better-language", activeLanguage);
   applyStaticCopy();
+  languageStatus.textContent = t("languageChanged");
   if (apps.length) {
     renderFilters();
     renderCatalog();
@@ -513,11 +569,12 @@ async function init() {
   document.querySelectorAll("[data-language]").forEach(button => button.addEventListener("click", () => applyLanguage(button.dataset.language)));
   try {
     const dataURL = new URL("data/apps.json", import.meta.url);
-    dataURL.searchParams.set("v", "20261016.14");
+    dataURL.searchParams.set("v", "20261016.17");
     const response = await fetch(dataURL, { cache: "no-store" });
     if (!response.ok) throw new Error("Unable to load app data");
     apps = await response.json();
-    apps.sort((a, b) => a.sortOrder - b.sortOrder);
+    apps.forEach(app => { app.searchIndex = buildSearchIndex(app); });
+    apps.sort(compareApps);
     testedFilter.checked = new URLSearchParams(location.search).get("tested") === "1";
     renderFilters();
     renderCatalog();
@@ -539,6 +596,10 @@ document.addEventListener("keydown", event => {
   if (event.key === "/" && document.activeElement?.tagName !== "INPUT") {
     event.preventDefault();
     searchInput.focus();
+  }
+  if (event.key === "Escape" && document.activeElement === searchInput && searchInput.value) {
+    searchInput.value = "";
+    renderCatalog();
   }
 });
 
