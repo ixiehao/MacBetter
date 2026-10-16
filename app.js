@@ -333,13 +333,11 @@ function cardTemplate(app) {
   const status = valueAt(copy[activeLanguage], `status.${app.status.level}`) ?? valueAt(copy.zh, `status.${app.status.level}`);
   return `<article class="app-card">
     <img class="app-icon" src="${escapeHTML(app.icon)}" alt="${escapeHTML(t("iconAlt", { name: app.name }))}" />
-    <div class="app-card-head"><div><h3>${escapeHTML(app.name)}</h3><span class="app-type">${escapeHTML(categoryName(app.category))}</span></div><span class="license" title="${escapeHTML(t(`license.${app.license}`))}" aria-label="${escapeHTML(t(`license.${app.license}`))}">${escapeHTML(app.license)}</span></div>
+    <div class="app-card-head"><div><h3>${escapeHTML(app.name)}</h3><span class="app-type">${escapeHTML(categoryName(app.category))}</span></div><div class="app-card-meta" aria-label="${escapeHTML(t("metadataLabel"))}"><span class="license" title="${escapeHTML(t(`license.${app.license}`))}" aria-label="${escapeHTML(t(`license.${app.license}`))}">${escapeHTML(app.license)}</span><span class="tag ${statusClass(app.status.level)}" title="${escapeHTML(status.note)}">${escapeHTML(status.label)}</span>${permissionWarning}</div></div>
     <p class="card-summary">${escapeHTML(localized(app, "summary"))}</p>
     <p class="recommendation">“${escapeHTML(localized(app, "recommendation"))}”</p>
     <div class="tags" aria-label="${escapeHTML(t("metadataLabel"))}">
-      <span class="tag ${statusClass(app.status.level)}" title="${escapeHTML(status.note)}">${escapeHTML(status.label)}</span>
       ${(localized(app, "tags") || []).map(tag => `<span class="tag">${escapeHTML(tag)}</span>`).join("")}
-      ${permissionWarning}
     </div>
     <div class="app-links">
       ${link(app.homepage, t("projectSite"))}
@@ -427,7 +425,7 @@ async function init() {
   document.querySelectorAll("[data-language]").forEach(button => button.addEventListener("click", () => applyLanguage(button.dataset.language)));
   try {
     const dataURL = new URL("data/apps.json", import.meta.url);
-    dataURL.searchParams.set("v", "20261016.2");
+    dataURL.searchParams.set("v", "20261016.3");
     const response = await fetch(dataURL, { cache: "no-store" });
     if (!response.ok) throw new Error("Unable to load app data");
     apps = await response.json();
