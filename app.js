@@ -36,7 +36,7 @@ function statusClass(level) {
 
 function featuredTemplate(app) {
   return `<article class="featured-card">
-    <img class="app-icon" src="${escapeHTML(app.icon)}" alt="${escapeHTML(app.name)} 图标" loading="lazy" />
+    <img class="app-icon" src="${escapeHTML(app.icon)}" alt="${escapeHTML(app.name)} 图标" />
     <span class="app-type">${escapeHTML(app.categoryLabel)}</span>
     <h3>${escapeHTML(app.name)}</h3>
     <p class="card-summary">${escapeHTML(app.summary)}</p>
@@ -48,7 +48,7 @@ function featuredTemplate(app) {
 function cardTemplate(app) {
   const permissionWarning = app.permissions ? `<span class="tag warning" title="${escapeHTML(app.permissions)}">权限说明</span>` : "";
   return `<article class="app-card">
-    <img class="app-icon" src="${escapeHTML(app.icon)}" alt="${escapeHTML(app.name)} 图标" loading="lazy" />
+    <img class="app-icon" src="${escapeHTML(app.icon)}" alt="${escapeHTML(app.name)} 图标" />
     <div class="app-card-main">
       <div class="app-card-head"><div><h3>${escapeHTML(app.name)}</h3><span class="app-type">${escapeHTML(app.categoryLabel)}</span></div><span class="license">${escapeHTML(app.license)}</span></div>
       <p class="card-summary">${escapeHTML(app.summary)}</p>
