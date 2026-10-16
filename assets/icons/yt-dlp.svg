@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="yt-dlp command-line icon">
+  <rect width="256" height="256" rx="54" fill="#142b3a"/>
+  <path d="M62 87 104 128 62 169" fill="none" stroke="#74d9f8" stroke-linecap="round" stroke-linejoin="round" stroke-width="19"/>
+  <path d="M125 174h68" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="17"/>
+  <circle cx="191" cy="82" r="12" fill="#6ed9ad"/>
+</svg>

@@ -38,6 +38,10 @@
 
 页面中的第三方软件名称、商标与图标归相应权利人所有。图标仅用于识别和链接到其官方项目，不表示项目作者对本清单的认可。
 
+## 字体
+
+站点随源码自托管 [Inter](https://github.com/rsms/inter)、[Noto Sans SC](https://github.com/google/fonts/tree/main/ofl/notosanssc) 与 [Noto Sans JP](https://github.com/google/fonts/tree/main/ofl/notosansjp) 的页面字符子集，均采用 SIL Open Font License 1.1，可免费用于商业项目。完整许可证与来源说明见 [`assets/fonts/README.md`](assets/fonts/README.md)。
+
 ## 许可
 
 本站源码采用 [MIT License](LICENSE)。软件条目本身保留各项目原有许可证与权利归属。

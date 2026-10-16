@@ -3,72 +3,72 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#082d45" />
-    <meta name="description" content="让 Mac 更好用：一份持续维护的开源 macOS 软件清单。" />
-    <title>让 Mac 更好用 · 开源软件清单</title>
+    <meta name="theme-color" content="#173a32" />
+    <meta name="description" content="一个由 Mac 用户共同维护的开源 macOS 软件目录。" />
+    <title>让 Mac 更好用 · 开源 Mac 软件库</title>
     <link rel="icon" href="assets/site-mark.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://github.com" />
+    <link rel="preload" href="assets/fonts/InterVariable.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <a class="skip-link" href="#catalog">跳到软件清单</a>
+    <a class="skip-link" href="#catalog" data-i18n="skipLink">跳到软件目录</a>
 
     <header class="site-header">
       <div class="shell nav-wrap">
-        <a class="wordmark" href="#top" aria-label="让 Mac 更好用，回到首页">
+        <a class="wordmark" href="#top" aria-label="Mac 软件库，回到首页" data-i18n-aria-label="wordmarkAria">
           <span class="wordmark-mark">io</span>
-          <span>让 Mac 更好用</span>
+          <span data-i18n="wordmark">Mac 软件库</span>
         </a>
-        <nav aria-label="页面导航">
-          <a href="#featured">我的软件</a>
-          <a href="#categories">分类</a>
-          <a href="#catalog">全部软件</a>
-          <a href="#standards">收录标准</a>
-          <a class="nav-github" href="https://github.com/ixiehao/mac-better" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+        <nav aria-label="主导航" data-i18n-aria-label="navLabel">
+          <a class="nav-contribute" href="#contribute" data-i18n="navContribute">推荐软件</a>
+          <a href="#categories" data-i18n="navCategories">分类浏览</a>
+          <a href="#catalog" data-i18n="navCatalog">软件目录</a>
+          <a href="#featured" data-i18n="navFeatured">iXiehao 出品</a>
+          <a href="#standards" data-i18n="navStandards">收录说明</a>
+          <a class="nav-github" href="https://github.com/ixiehao/mac-better" target="_blank" rel="noreferrer" data-i18n="navGithub">在 GitHub 共建 ↗</a>
         </nav>
+        <div class="language-switcher" role="group" aria-label="选择语言" data-i18n-aria-label="languageLabel">
+          <button type="button" data-language="zh" aria-pressed="true">中</button>
+          <button type="button" data-language="en" aria-pressed="false">EN</button>
+          <button type="button" data-language="ja" aria-pressed="false">日</button>
+        </div>
       </div>
     </header>
 
     <main id="top">
-      <section class="hero">
-        <div class="shell hero-grid">
-          <div>
-            <p class="eyebrow">macOS · open source directory</p>
-            <h1>让 Mac<br />更好用。</h1>
-            <p class="hero-copy">按场景整理的开源 Mac 软件导航。每一项都给出源码、许可证、官方入口与必要权限。</p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="#catalog">浏览全部 <span aria-hidden="true">↓</span></a>
-              <a class="button button-quiet" href="#standards">收录规则</a>
-            </div>
+      <section class="category-rail" id="categories" aria-label="按场景浏览">
+        <div class="shell category-rail-inner">
+          <span class="rail-label" data-i18n="railLabel">按用途浏览</span>
+          <div class="rail-links">
+            <a href="?category=office#catalog" data-i18n="category.office">办公与创作</a>
+            <a href="?category=video#catalog" data-i18n="category.video">视频与音频</a>
+            <a href="?category=image#catalog" data-i18n="category.image">图片与图像</a>
+            <a href="?category=launcher#catalog" data-i18n="category.launcher">窗口与启动</a>
+            <a href="?category=menu#catalog" data-i18n="category.menu">菜单栏与硬件</a>
+            <a href="?category=maintenance#catalog" data-i18n="category.maintenance">Mac 优化与维护</a>
           </div>
-          <aside class="review-panel" aria-label="最近核验的软件">
-            <div class="review-heading"><span class="hero-note-label">最近核验</span><time datetime="2026-10">2026.10</time></div>
-            <ul class="review-list">
-              <li><a href="?category=launcher#catalog">Launchpad_Back</a><span>io 实测 · 启动器</span></li>
-              <li><a href="?category=maintenance#catalog">PureMac</a><span>来源已核验 · 存储清理</span></li>
-              <li><a href="?category=office#catalog">LibreOffice</a><span>来源已核验 · 办公套件</span></li>
-            </ul>
-            <div class="hero-stats">
-              <div><strong id="app-count">—</strong><span>已收录</span></div>
-              <div><strong>01</strong><span>io 实测</span></div>
-              <div><strong>6</strong><span>场景分类</span></div>
-            </div>
-          </aside>
+          <a class="rail-all" href="#catalog"><span data-i18n="railAllPrefix">查看全部</span> <span id="rail-app-count">—</span> <span data-i18n="railAllSuffix">款</span> <span aria-hidden="true">→</span></a>
         </div>
       </section>
 
-      <section class="category-rail" id="categories" aria-label="按场景浏览">
-        <div class="shell category-rail-inner">
-          <span class="rail-label">按场景直达</span>
-          <div class="rail-links">
-            <a href="?category=office#catalog">办公与创作</a>
-            <a href="?category=video#catalog">视频与音频</a>
-            <a href="?category=image#catalog">图片与图像</a>
-            <a href="?category=launcher#catalog">窗口与启动</a>
-            <a href="?category=menu#catalog">菜单栏与硬件</a>
-            <a href="?category=maintenance#catalog">Mac 优化与维护</a>
+      <section class="community-callout" id="contribute">
+        <div class="shell community-grid">
+          <div>
+            <p class="eyebrow" data-i18n="communityEyebrow">共同推荐</p>
+            <h1 data-i18n="communityHeading">让 Mac 更好用</h1>
+            <p class="community-copy" data-i18n="communityCopy">从推荐一款你真正用过的开源软件开始。</p>
           </div>
-          <a class="rail-all" href="#catalog">全部 <span id="rail-app-count">—</span> 款 <span aria-hidden="true">→</span></a>
+          <div class="community-action">
+            <a class="button button-community" href="https://github.com/ixiehao/mac-better/issues/new?template=recommend-an-app.yml" target="_blank" rel="noreferrer"><span data-i18n="recommendApp">推荐一款软件</span> <span aria-hidden="true">↗</span></a>
+            <a class="community-rules" href="https://github.com/ixiehao/mac-better/blob/main/CONTRIBUTING.md" target="_blank" rel="noreferrer"><span data-i18n="viewCriteria">了解收录方式</span> <span aria-hidden="true">↗</span></a>
+            <p data-i18n="communityInstructions">在 GitHub Issue 中提交项目链接、开源许可证和适用场景。收录前会核对公开信息。</p>
+          </div>
+          <ul class="contribution-steps" aria-label="推荐软件需要的信息" data-i18n-aria-label="contributionStepsLabel">
+            <li><span>01</span><strong data-i18n="contribution.sourceTitle">项目地址</strong><small data-i18n="contribution.sourceDetail">作者仓库或官网</small></li>
+            <li><span>02</span><strong data-i18n="contribution.licenseTitle">开源许可证</strong><small data-i18n="contribution.licenseDetail">例如 MIT、GPL-3.0</small></li>
+            <li><span>03</span><strong data-i18n="contribution.reasonTitle">推荐理由</strong><small data-i18n="contribution.reasonDetail">它具体解决什么问题</small></li>
+          </ul>
         </div>
       </section>
 
@@ -76,10 +76,10 @@
         <div class="shell">
           <div class="section-heading section-heading-split">
             <div>
-              <p class="eyebrow">iXiehao builds</p>
-              <h2>三款原生工具</h2>
+              <p class="eyebrow" data-i18n="featuredEyebrow">iXiehao 出品</p>
+              <h2 data-i18n="featuredHeading">原生 Mac 工具</h2>
             </div>
-            <p>本地优先、少一点打扰。</p>
+            <p data-i18n="featuredCopy">本地优先，减少打扰。</p>
           </div>
           <div class="featured-grid" id="featured-grid" aria-live="polite"></div>
         </div>
@@ -89,27 +89,27 @@
         <div class="shell catalog-shell">
           <div class="section-heading catalog-heading">
             <div>
-              <p class="eyebrow">open-source mac apps</p>
-              <h2>全部软件</h2>
+              <p class="eyebrow" data-i18n="catalogEyebrow">开源 Mac 软件</p>
+              <h2 data-i18n="catalogHeading">软件目录</h2>
             </div>
-            <p>按场景筛选；每项附许可证、来源状态与权限提醒。</p>
+            <p data-i18n="catalogCopy">按用途查找；每项都标明许可证、核验状态和必要权限。</p>
           </div>
 
           <div class="catalog-controls" role="search">
             <label class="search-box" for="search-input">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.4-4.4m2.4-5.6a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z" /></svg>
-              <input id="search-input" type="search" autocomplete="off" placeholder="搜索名称、功能或标签…" />
+              <input id="search-input" type="search" autocomplete="off" placeholder="搜索名称、用途或标签" data-i18n-placeholder="searchPlaceholder" />
               <kbd>⌘ K</kbd>
             </label>
-            <label class="status-filter" for="tested-filter"><input id="tested-filter" type="checkbox" /> 只看 io 实测</label>
+            <label class="status-filter" for="tested-filter"><input id="tested-filter" type="checkbox" /> <span data-i18n="testedFilter">仅显示 io 实测</span></label>
           </div>
 
-          <div class="filter-row" id="category-filters" aria-label="软件分类"></div>
+          <div class="filter-row" id="category-filters" aria-label="软件分类" data-i18n-aria-label="appCategoriesLabel"></div>
           <p class="result-count" id="result-count" aria-live="polite"></p>
           <div class="app-grid" id="app-grid" aria-live="polite"></div>
           <div class="empty-state" id="empty-state" hidden>
-            <p>没有找到相符的软件。</p>
-            <button class="text-button" id="clear-filters">清除筛选</button>
+            <p data-i18n="emptyState">没有找到匹配的软件。</p>
+            <button class="text-button" id="clear-filters" data-i18n="clearFilters">清除筛选条件</button>
           </div>
         </div>
       </section>
@@ -117,33 +117,23 @@
       <section class="method section" id="standards">
         <div class="shell standards-compact">
           <div class="method-intro">
-            <p class="eyebrow">how it is selected</p>
-            <h2>收录标准</h2>
+            <p class="eyebrow" data-i18n="standardsEyebrow">收录原则</p>
+            <h2 data-i18n="standardsHeading">为什么会出现在这里</h2>
           </div>
           <ol class="standards-list">
-            <li><span>01</span><div><h3>来源可追溯</h3><p>源码、许可证、官方入口均可回查。</p></div></li>
-            <li><span>02</span><div><h3>边界写清楚</h3><p>重要权限、兼容性与删除风险会提示。</p></div></li>
-            <li><span>03</span><div><h3>状态不混用</h3><p>核验、实测与自研项目分别标识。</p></div></li>
+            <li><span>01</span><div><h3 data-i18n="standard.oneTitle">来源可查</h3><p data-i18n="standard.oneCopy">源码、许可证和官方入口都可回查。</p></div></li>
+            <li><span>02</span><div><h3 data-i18n="standard.twoTitle">边界明确</h3><p data-i18n="standard.twoCopy">明显的权限、兼容性与数据风险会直接写明。</p></div></li>
+            <li><span>03</span><div><h3 data-i18n="standard.threeTitle">状态分开</h3><p data-i18n="standard.threeCopy">自研、io 实测和来源核验分别标注，不能互相替代。</p></div></li>
           </ol>
         </div>
       </section>
 
-      <section class="contribute">
-        <div class="shell contribute-inner">
-          <div>
-            <p class="eyebrow">keep it useful</p>
-            <h2>推荐一款软件</h2>
-            <p>附上源码、许可证、官方入口与权限说明即可。</p>
-          </div>
-          <a class="button button-light" href="https://github.com/ixiehao/mac-better/issues/new?template=recommend-an-app.yml" target="_blank" rel="noreferrer">推荐一个软件 <span aria-hidden="true">↗</span></a>
-        </div>
-      </section>
     </main>
 
     <footer class="site-footer">
       <div class="shell footer-inner">
-        <p><span class="wordmark-mark">io</span> 由 <a href="https://ixiehao.github.io/" target="_blank" rel="noreferrer">iXiehao</a> 持续维护</p>
-        <p>所有第三方商标、名称与图标归各自权利人所有。<a href="https://github.com/ixiehao/mac-better" target="_blank" rel="noreferrer">查看源代码 ↗</a></p>
+        <p><span class="wordmark-mark">io</span> <span data-i18n="footerMaintained">由 iXiehao 维护，欢迎通过 GitHub 一起完善。</span></p>
+        <p><span data-i18n="footerRights">第三方商标、名称和图标归各自权利人所有。</span><a href="https://github.com/ixiehao/mac-better" target="_blank" rel="noreferrer" data-i18n="footerSource">查看源代码 ↗</a></p>
       </div>
     </footer>
     <script type="module" src="app.js"></script>
