@@ -1,6 +1,6 @@
-@font-face { font-family: "Inter Site"; src: url("assets/fonts/InterVariable.woff2?v=20261016.7") format("woff2"); font-style: normal; font-weight: 100 900; font-display: swap; }
-@font-face { font-family: "Noto Sans SC Site"; src: url("assets/fonts/NotoSansSC-subset.woff2?v=20261016.7") format("woff2"); font-style: normal; font-weight: 100 900; font-display: swap; }
-@font-face { font-family: "Noto Sans JP Site"; src: url("assets/fonts/NotoSansJP-subset.woff2?v=20261016.7") format("woff2"); font-style: normal; font-weight: 100 900; font-display: swap; }
+@font-face { font-family: "Inter Site"; src: url("assets/fonts/InterVariable.woff2?v=20261016.8") format("woff2"); font-style: normal; font-weight: 100 900; font-display: swap; }
+@font-face { font-family: "Noto Sans SC Site"; src: url("assets/fonts/NotoSansSC-subset.woff2?v=20261016.8") format("woff2"); font-style: normal; font-weight: 100 900; font-display: swap; }
+@font-face { font-family: "Noto Sans JP Site"; src: url("assets/fonts/NotoSansJP-subset.woff2?v=20261016.8") format("woff2"); font-style: normal; font-weight: 100 900; font-display: swap; }
 
 :root {
   color-scheme: light;
@@ -74,7 +74,7 @@ h2 { margin-bottom: 0; font-size: clamp(34px, 3.3vw, 48px); font-weight: 770; le
 .community-callout .eyebrow { margin-bottom: 13px; color: var(--forest); }
 .community-callout h1 { color: var(--ink); }
 .community-copy { max-width: 510px; margin: 0; color: var(--ink-soft); font-size: 15px; line-height: 1.62; }
-.community-action { grid-area: action; align-self: center; justify-self: start; padding: 0; }
+.community-action { grid-area: action; align-self: center; justify-self: start; display: flex; flex-direction: column; align-items: flex-start; padding: 0; }
 .button-community { width: auto; min-height: 42px; padding: 0 15px; color: #fff; background: var(--coral); border-radius: 10px; box-shadow: 0 5px 12px rgba(80,70,204,.16); font-size: 13px; }
 .button-community:hover { background: var(--coral-hover); box-shadow: 0 8px 18px rgba(80,70,204,.2); }
 .community-rules { display: inline-flex; margin: 14px 0 10px; color: var(--forest-deep); font-size: 12px; font-weight: 750; }
