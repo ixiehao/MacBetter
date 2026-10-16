@@ -1,0 +1,49 @@
+name: 推荐一款 Mac 软件
+description: 推荐一个值得收录的免费、开源 macOS 项目
+title: "推荐："
+labels: ["recommendation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢推荐。请提供可核验的信息；“开源”不自动代表已经过安全审计。
+  - type: input
+    id: project
+    attributes:
+      label: 项目名称
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: 源码仓库
+      description: 请给出作者或组织的官方仓库链接。
+    validations:
+      required: true
+  - type: input
+    id: license
+    attributes:
+      label: 开源许可证
+      placeholder: 例如 MIT、Apache-2.0、GPL-3.0
+    validations:
+      required: true
+  - type: input
+    id: install
+    attributes:
+      label: 官方安装或发布入口
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: 它解决什么问题？你为什么推荐？
+      description: 请写一个具体场景，而不是只写“好用”。
+    validations:
+      required: true
+  - type: textarea
+    id: permissions
+    attributes:
+      label: 已知权限、数据或兼容性注意事项
+      description: 例如辅助功能、完整磁盘访问、是否删除文件、系统版本要求等。
+    validations:
+      required: true

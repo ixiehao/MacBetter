@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#082d45" />
+    <meta name="description" content="让 Mac 更好用：一份持续维护的开源 macOS 软件清单。" />
+    <title>让 Mac 更好用 · 开源软件清单</title>
+    <link rel="icon" href="assets/site-mark.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://github.com" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#catalog">跳到软件清单</a>
+
+    <header class="site-header">
+      <div class="shell nav-wrap">
+        <a class="wordmark" href="#top" aria-label="让 Mac 更好用，回到首页">
+          <span class="wordmark-mark">io</span>
+          <span>让 Mac 更好用</span>
+        </a>
+        <nav aria-label="页面导航">
+          <a href="#featured">精选</a>
+          <a href="#catalog">软件</a>
+          <a href="#standards">收录标准</a>
+          <a class="nav-github" href="https://github.com/ixiehao/mac-better" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="shell hero-grid">
+          <div>
+            <p class="eyebrow">macOS · open source directory</p>
+            <h1>让 Mac<br />更好用。</h1>
+            <p class="hero-copy">一份持续维护的开源 Mac 软件清单。只收录免费可用、源码可审查、安装路径清楚的工具。</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#catalog">开始探索 <span aria-hidden="true">↓</span></a>
+              <a class="button button-quiet" href="#standards">为什么值得信任？</a>
+            </div>
+          </div>
+          <aside class="hero-note" aria-label="收录说明">
+            <span class="hero-note-label">编辑原则</span>
+            <p>不是“最全榜单”。来源、许可证和官方下载入口都会明确写出；“io 实测”也只指明确定的使用事实。</p>
+            <div class="hero-stats">
+              <div><strong id="app-count">—</strong><span>已收录</span></div>
+              <div><strong>01</strong><span>io 实测</span></div>
+              <div><strong>2026.10</strong><span>最近复核</span></div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="trust-strip" aria-label="收录条件">
+        <div class="shell trust-list">
+          <span>免费可用</span><span>源码公开</span><span>官方安装入口</span><span>权限说明</span><span>持续维护</span>
+        </div>
+      </section>
+
+      <section class="featured section" id="featured">
+        <div class="shell">
+          <div class="section-heading section-heading-split">
+            <div>
+              <p class="eyebrow">iXiehao builds</p>
+              <h2>三款为 Mac 而生的原生工具</h2>
+            </div>
+            <p>它们是这份清单的起点：更快、更私密，也更少打扰。</p>
+          </div>
+          <div class="featured-grid" id="featured-grid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="catalog-band" id="catalog">
+        <div class="shell catalog-shell">
+          <div class="section-heading catalog-heading">
+            <div>
+              <p class="eyebrow">editor's selection</p>
+              <h2>按你真正要做的事来找</h2>
+            </div>
+            <p>软件不分“神”和“普通”；先看它是否解决你的具体问题。</p>
+          </div>
+
+          <div class="catalog-controls" role="search">
+            <label class="search-box" for="search-input">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.4-4.4m2.4-5.6a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z" /></svg>
+              <input id="search-input" type="search" autocomplete="off" placeholder="搜索名称、功能或标签…" />
+              <kbd>⌘ K</kbd>
+            </label>
+            <label class="status-filter" for="tested-filter"><input id="tested-filter" type="checkbox" /> 只看 io 实测</label>
+          </div>
+
+          <div class="filter-row" id="category-filters" aria-label="软件分类"></div>
+          <p class="result-count" id="result-count" aria-live="polite"></p>
+          <div class="app-grid" id="app-grid" aria-live="polite"></div>
+          <div class="empty-state" id="empty-state" hidden>
+            <p>没有找到相符的软件。</p>
+            <button class="text-button" id="clear-filters">清除筛选</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="method section" id="standards">
+        <div class="shell method-grid">
+          <div class="method-intro">
+            <p class="eyebrow">how it is selected</p>
+            <h2>把推荐说清楚，<br />比说得响亮更重要。</h2>
+          </div>
+          <ol class="standards-list">
+            <li><span>01</span><div><h3>先看来源与许可证</h3><p>项目应有可访问的源代码、清楚的开源许可证，并能回到作者或项目的官方安装入口。</p></div></li>
+            <li><span>02</span><div><h3>再看使用边界</h3><p>涉及辅助功能、完整磁盘访问、网络或剪贴板等权限时，会明确提醒。开源不等于已经过独立安全审计。</p></div></li>
+            <li><span>03</span><div><h3>最后才是推荐语</h3><p>“来源已核验”指 GitHub、许可证与发布入口已复核；“io 实测”只表示 iXiehao 在日常设备中实际使用过。</p></div></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="contribute">
+        <div class="shell contribute-inner">
+          <div>
+            <p class="eyebrow">keep it useful</p>
+            <h2>发现值得放进来的工具？</h2>
+            <p>欢迎提交项目。请一并给出源码、许可证、官方下载入口、系统要求和必要权限；每一项都会保留判断依据。</p>
+          </div>
+          <a class="button button-light" href="https://github.com/ixiehao/mac-better/issues/new?template=recommend-an-app.yml" target="_blank" rel="noreferrer">推荐一个软件 <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <p><span class="wordmark-mark">io</span> 由 <a href="https://ixiehao.github.io/" target="_blank" rel="noreferrer">iXiehao</a> 持续维护</p>
+        <p>所有第三方商标、名称与图标归各自权利人所有。<a href="https://github.com/ixiehao/mac-better" target="_blank" rel="noreferrer">查看源代码 ↗</a></p>
+      </div>
+    </footer>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
