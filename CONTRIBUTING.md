@@ -11,3 +11,7 @@
 5. 软件定位是否足够具体，避免加入功能重叠的大杂烩。
 
 如果某个项目停止维护、出现安全事件、改变许可证，或与新版 macOS 明显不兼容，请提交 Issue；条目会被复核、标记或下架。
+
+## 修改网站或软件库
+
+官网源码在 `website/`，条目在 `website/data/apps.json`。请先读[文档索引](docs/README.md)，按[开发指南](docs/DEVELOPMENT.md)更新三语内容并验证，再按[官网维护说明](docs/WEBSITE.md)预览。不要把 `docs/` 当作官网源码目录。

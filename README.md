@@ -45,7 +45,15 @@ If this directory saves someone a search, share the link or recommend one app th
 
 ## 本地预览
 
-这是不依赖构建工具的静态站点。运行任何静态 HTTP 服务后打开 `index.html` 即可；软件条目维护在 [`data/apps.json`](data/apps.json)。
+这是不依赖构建工具的静态站点，官网源码统一在 `website/`；软件条目维护在 [`website/data/apps.json`](website/data/apps.json)。
+
+从仓库根目录运行：
+
+```sh
+python3 -m http.server 8000 --bind 127.0.0.1 --directory website
+```
+
+打开 <http://127.0.0.1:8000/>。开发、验证与发布步骤见[文档索引](docs/README.md)。
 
 ## 第三方标识
 
@@ -53,7 +61,7 @@ If this directory saves someone a search, share the link or recommend one app th
 
 ## 字体
 
-站点随源码自托管 [Inter](https://github.com/rsms/inter)、[Noto Sans SC](https://github.com/google/fonts/tree/main/ofl/notosanssc) 与 [Noto Sans JP](https://github.com/google/fonts/tree/main/ofl/notosansjp) 的页面字符子集，均采用 SIL Open Font License 1.1，可免费用于商业项目。完整许可证与来源说明见 [`assets/fonts/README.md`](assets/fonts/README.md)。
+站点随源码自托管 [Inter](https://github.com/rsms/inter)、[Noto Sans SC](https://github.com/google/fonts/tree/main/ofl/notosanssc) 与 [Noto Sans JP](https://github.com/google/fonts/tree/main/ofl/notosansjp) 的页面字符子集，均采用 SIL Open Font License 1.1，可免费用于商业项目。完整许可证与来源说明见 [`website/assets/fonts/README.md`](website/assets/fonts/README.md)。
 
 ## 许可
 
