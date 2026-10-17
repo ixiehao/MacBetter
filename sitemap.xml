@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://ixiehao.github.io/mac-better/</loc>
+    <loc>https://ixiehao.github.io/MacBetter/</loc>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ixiehao.github.io/mac-better/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ixiehao.github.io/mac-better/?lang=en" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://ixiehao.github.io/mac-better/?lang=ja" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ixiehao.github.io/mac-better/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ixiehao.github.io/MacBetter/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ixiehao.github.io/MacBetter/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ixiehao.github.io/MacBetter/?lang=ja" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ixiehao.github.io/MacBetter/" />
   </url>
   <url>
-    <loc>https://ixiehao.github.io/mac-better/?lang=en</loc>
+    <loc>https://ixiehao.github.io/MacBetter/?lang=en</loc>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ixiehao.github.io/mac-better/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ixiehao.github.io/mac-better/?lang=en" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://ixiehao.github.io/mac-better/?lang=ja" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ixiehao.github.io/mac-better/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ixiehao.github.io/MacBetter/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ixiehao.github.io/MacBetter/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ixiehao.github.io/MacBetter/?lang=ja" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ixiehao.github.io/MacBetter/" />
   </url>
   <url>
-    <loc>https://ixiehao.github.io/mac-better/?lang=ja</loc>
+    <loc>https://ixiehao.github.io/MacBetter/?lang=ja</loc>
     <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ixiehao.github.io/mac-better/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ixiehao.github.io/mac-better/?lang=en" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://ixiehao.github.io/mac-better/?lang=ja" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ixiehao.github.io/mac-better/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ixiehao.github.io/MacBetter/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ixiehao.github.io/MacBetter/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ixiehao.github.io/MacBetter/?lang=ja" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ixiehao.github.io/MacBetter/" />
   </url>
 </urlset>

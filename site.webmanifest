@@ -2,7 +2,7 @@
   "name": "让 Mac 更好用",
   "short_name": "Mac Better",
   "description": "免费、开源、实用的 macOS 软件目录。",
-  "start_url": "/mac-better/",
+  "start_url": "/MacBetter/",
   "display": "browser",
   "background_color": "#fbfbfd",
   "theme_color": "#655be7",

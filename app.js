@@ -12,7 +12,9 @@ const workflowOrder = {
   privacy: ["signal", "keepassxc", "cryptomator", "lulu"],
   efficiency: ["firefox", "zen-browser", "github-desktop", "vscodium", "zed", "codeedit", "xcodes", "alacritty", "dbeaver", "tablepro", "bruno", "utm", "espanso", "hammerspoon", "swiftbar"]
 };
-const siteURL = "https://ixiehao.github.io/mac-better/";
+const siteURL = "https://ixiehao.github.io/MacBetter/";
+const languageStorageKey = "MacBetter-language";
+const legacyLanguageStorageKey = "mac-better-language";
 const ogLocales = { zh: "zh_CN", en: "en_US", ja: "ja_JP" };
 
 const copy = {
@@ -401,7 +403,7 @@ const appCopy = {
   }
 };
 
-let activeLanguage = new URLSearchParams(location.search).get("lang") || localStorage.getItem("mac-better-language") || "zh";
+let activeLanguage = new URLSearchParams(location.search).get("lang") || localStorage.getItem(languageStorageKey) || localStorage.getItem(legacyLanguageStorageKey) || "zh";
 if (!copy[activeLanguage]) activeLanguage = "zh";
 let activeCategory = new URLSearchParams(location.search).get("category") || "all";
 if (!categories.includes(activeCategory)) activeCategory = "all";
@@ -609,7 +611,7 @@ function applyStaticCopy() {
 
 function applyLanguage(language) {
   activeLanguage = language;
-  localStorage.setItem("mac-better-language", activeLanguage);
+  localStorage.setItem(languageStorageKey, activeLanguage);
   applyStaticCopy();
   languageStatus.textContent = t("languageChanged");
   if (apps.length) {
