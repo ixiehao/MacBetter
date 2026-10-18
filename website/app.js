@@ -31,12 +31,12 @@ const ogLocales = { zh: "zh_CN", en: "en_US", ja: "ja_JP" };
 
 const copy = {
   zh: {
-    pageTitle: "让 Mac 更好用 · 开源 Mac 软件库",
+    pageTitle: "让 Mac 更好用 · MAC免费开源软件",
     pageDescription: "一个由 Mac 用户共同维护的开源 macOS 软件目录：免费、开源、实用，并标明许可证、项目入口与关键权限。",
     htmlLang: "zh-CN",
     skipLink: "跳到软件目录",
-    wordmark: "Mac 软件库",
-    wordmarkAria: "Mac 软件库，返回顶部",
+    wordmark: "MAC免费开源软件",
+    wordmarkAria: "MAC免费开源软件，返回顶部",
     navLabel: "主导航",
     navContribute: "推荐软件",
     navCatalog: "软件目录",
