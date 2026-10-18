@@ -82,7 +82,7 @@ const copy = {
     compatibilityLabel: "系统要求",
     permissionsLabel: "权限与安全提示",
     licenseFor: "查看 {license} 许可证说明（{name}）",
-    licenseMore: "在开源说明中查看",
+    licenseNote: "通俗摘要，不构成法律意见。项目可能包含第三方组件；实际使用或分发时，请核对仓库中的 LICENSE，以及如有的 NOTICE 文件。",
     projectSiteFor: "打开 {name} 项目主页",
     downloadFor: "下载 {name}",
     iconAlt: "{name} 图标",
@@ -94,16 +94,16 @@ const copy = {
     requires: "需：{permission}",
     permission: { accessibility: "辅助功能", files: "文件访问", fullDiskOptional: "完整磁盘访问（可选）", screenRecording: "屏幕录制", inputMonitoring: "输入监控" },
     license: {
-      MIT: "MIT：可使用、修改和再发布；需保留许可证与版权声明。",
-      "GPL-2.0": "GPL-2.0：可使用和修改；公开发布修改版时，须以 GPL-2.0 提供对应源码。",
-      "GPL-3.0": "GPL-3.0：可使用和修改；公开发布修改版时，须以 GPL-3.0 提供对应源码。",
-      "AGPL-3.0": "AGPL-3.0：在 GPL-3.0 基础上，向用户提供网络服务的修改版也须提供对应源码。",
-      "MPL-2.0": "MPL-2.0：可使用和修改；发布修改过的 MPL 文件时，须公开这些文件的源码。",
-      "Apache-2.0": "Apache-2.0：可使用、修改和再发布；需保留许可证、版权与专利声明。",
-      "LGPL-2.1": "LGPL-2.1：可使用和修改；修改过的 LGPL 库需以 LGPL 提供源码，其他代码可在满足条件下保持独立。",
-      "BSD-2-Clause": "BSD-2-Clause：可使用、修改和再发布；需保留版权与免责声明。",
-      "BSD-3-Clause": "BSD-3-Clause：可使用、修改和再发布；需保留版权与免责声明，且不得借作者或贡献者名称作背书。",
-      Unlicense: "Unlicense：作者尽可能放弃版权；仍需遵守第三方组件许可与适用法律。"
+      MIT: "MIT：个人或商业使用、修改和再发布都可以；分发时保留许可证与版权声明即可，通常不要求公开自己的修改版源码。",
+      "GPL-2.0": "GPL-2.0：可自由使用和修改；若向他人分发程序或修改版，须按 GPL-2.0 提供对应源码，并保留许可与版权声明。",
+      "GPL-3.0": "GPL-3.0：可自由使用和修改；分发程序或修改版时，须按 GPL-3.0 提供对应源码。它还包含明确的专利条款。",
+      "AGPL-3.0": "AGPL-3.0：若修改后的软件通过网络服务供他人使用，也须向这些用户提供对应源码；这比 GPL 多了网络服务场景的要求。",
+      "MPL-2.0": "MPL-2.0：对外发布时，修改过的 MPL 覆盖文件须提供源码并继续按 MPL 授权；独立的新文件可使用其他许可证。",
+      "Apache-2.0": "Apache-2.0：宽松许可，可用于闭源组合和再发布；需保留许可证、版权与专利声明，并按要求附带 NOTICE 文件内容。",
+      "LGPL-2.1": "LGPL-2.1：主要用于库；修改该库并分发时须提供库源码。应用可采用其他许可证，但需让用户能按许可条件替换或重新链接该库。",
+      "BSD-2-Clause": "BSD-2-Clause：宽松许可，可用于闭源项目；再发布时保留版权、许可条件和免责声明即可。",
+      "BSD-3-Clause": "BSD-3-Clause：与 BSD-2-Clause 类似；除保留版权与免责声明外，不得未经许可用作者或贡献者姓名为衍生产品背书。",
+      Unlicense: "Unlicense：作者尽可能将作品贡献到公有领域，并放弃保证；适用范围仍受当地法律及第三方组件许可影响。"
     },
     standardsEyebrow: "开源说明",
     standardsHeading: "常见许可证，怎么理解",
@@ -169,7 +169,7 @@ const copy = {
     compatibilityLabel: "System requirements",
     permissionsLabel: "Permissions & safety",
     licenseFor: "View the {license} license notes for {name}",
-    licenseMore: "Read the open-source guide",
+    licenseNote: "Plain-language summary, not legal advice. Projects may include third-party components; check the repository’s LICENSE and any NOTICE file for actual terms.",
     projectSiteFor: "Open the {name} project site",
     downloadFor: "Download {name}",
     iconAlt: "{name} icon",
@@ -181,16 +181,16 @@ const copy = {
     requires: "Requires: {permission}",
     permission: { accessibility: "Accessibility", files: "File access", fullDiskOptional: "Full Disk Access (optional)", screenRecording: "Screen Recording", inputMonitoring: "Input Monitoring" },
     license: {
-      MIT: "MIT: You may use, modify, and redistribute it; retain the license and copyright notice.",
-      "GPL-2.0": "GPL-2.0: You may use and modify it. If you distribute a modified version, you must release the corresponding source under GPL-2.0.",
-      "GPL-3.0": "GPL-3.0: You may use and modify it. If you distribute a modified version, you must release the corresponding source under GPL-3.0.",
-      "AGPL-3.0": "AGPL-3.0: In addition to GPL-3.0 obligations, modified versions used to provide a network service must offer corresponding source to users.",
-      "MPL-2.0": "MPL-2.0: You may use and modify it; changes to existing MPL-covered files must be made available under the MPL.",
-      "Apache-2.0": "Apache-2.0: You may use, modify, and redistribute it; retain the license, copyright, and patent notices.",
-      "LGPL-2.1": "LGPL-2.1: You may use and modify it. Changes to the LGPL-covered library must remain under LGPL; separate code may remain independent under its conditions.",
-      "BSD-2-Clause": "BSD-2-Clause: You may use, modify, and redistribute it; retain copyright and disclaimer notices.",
-      "BSD-3-Clause": "BSD-3-Clause: You may use, modify, and redistribute it; retain copyright and disclaimer notices, and do not use contributor names for endorsement.",
-      Unlicense: "Unlicense: The author waives copyright as far as possible; third-party licenses and applicable law still apply."
+      MIT: "MIT: Free to use, modify, and redistribute, including commercially. Keep the license and copyright notice; it generally does not require publishing your own modified source.",
+      "GPL-2.0": "GPL-2.0: You may use and modify it. If you distribute the program or a modified version, provide the corresponding source under GPL-2.0 and preserve its notices.",
+      "GPL-3.0": "GPL-3.0: You may use and modify it. Distribution of the program or a modified version requires corresponding source under GPL-3.0; it also includes express patent terms.",
+      "AGPL-3.0": "AGPL-3.0: If you modify the software and let others use it over a network, you must offer those users the corresponding source—a requirement beyond the usual GPL distribution trigger.",
+      "MPL-2.0": "MPL-2.0: When distributing it, publish changes to MPL-covered files under the MPL. Independent new files may use other licenses.",
+      "Apache-2.0": "Apache-2.0: A permissive license that allows closed-source combinations. Preserve license, copyright, and patent notices, and include any required NOTICE content.",
+      "LGPL-2.1": "LGPL-2.1: Mainly intended for libraries. If you distribute a modified library, provide its source; an application may use another license if users can replace or relink the library under the license terms.",
+      "BSD-2-Clause": "BSD-2-Clause: A permissive license that can be used in closed-source projects. Keep the copyright, license conditions, and disclaimer when redistributing.",
+      "BSD-3-Clause": "BSD-3-Clause: Similar to BSD-2-Clause, with an added rule against using authors’ or contributors’ names to endorse derived products without permission.",
+      Unlicense: "Unlicense: The author dedicates the work to the public domain as far as possible and disclaims warranties; local law and third-party component licenses still matter."
     },
     standardsEyebrow: "Open-source basics",
     standardsHeading: "Common licenses, plainly explained",
@@ -256,7 +256,7 @@ const copy = {
     compatibilityLabel: "システム要件",
     permissionsLabel: "権限と安全に関する注意",
     licenseFor: "{name} の {license} ライセンス説明を見る",
-    licenseMore: "オープンソースの説明を見る",
+    licenseNote: "平易な要約であり、法的助言ではありません。第三者のコードを含む場合があります。実際の条件はリポジトリの LICENSE と、NOTICE がある場合はその内容を確認してください。",
     projectSiteFor: "{name} のプロジェクトページを開く",
     downloadFor: "{name} をダウンロード",
     iconAlt: "{name}のアイコン",
@@ -268,16 +268,16 @@ const copy = {
     requires: "要：{permission}",
     permission: { accessibility: "アクセシビリティ", files: "ファイルアクセス", fullDiskOptional: "フルディスクアクセス（任意）", screenRecording: "画面収録", inputMonitoring: "入力監視" },
     license: {
-      MIT: "MIT：利用・改変・再配布が可能です。元のライセンス表示と著作権表示を残してください。",
-      "GPL-2.0": "GPL-2.0：利用・改変が可能です。改変版を配布する場合、GPL-2.0で対応するソースコードを提供する必要があります。",
-      "GPL-3.0": "GPL-3.0：利用・改変が可能です。改変版を配布する場合、GPL-3.0で対応するソースコードを提供する必要があります。",
-      "AGPL-3.0": "AGPL-3.0：GPL-3.0に加え、ネットワークサービスとして提供する改変版も利用者に対応するソースコードを提供する必要があります。",
-      "MPL-2.0": "MPL-2.0：利用・改変が可能です。MPL対象の既存ファイルを改変して配布する場合、そのファイルのソースコードを公開する必要があります。",
-      "Apache-2.0": "Apache-2.0：利用・改変・再配布が可能です。ライセンス、著作権、特許に関する表示を残してください。",
-      "LGPL-2.1": "LGPL-2.1：利用・改変が可能です。改変したLGPL対象ライブラリはLGPLでソースを提供し、別のコードは条件を満たせば分けて扱えます。",
-      "BSD-2-Clause": "BSD-2-Clause：利用・改変・再配布が可能です。著作権表示と免責表示を残してください。",
-      "BSD-3-Clause": "BSD-3-Clause：利用・改変・再配布が可能です。著作権表示と免責表示を残し、作者・貢献者名での推奨表明はできません。",
-      Unlicense: "Unlicense：作者は可能な限り著作権を放棄しています。第三者のライセンスと適用法令には従ってください。"
+      MIT: "MIT：商用を含め、自由に利用・改変・再配布できます。ライセンスと著作権表示を残します。通常、独自の改変ソースを公開する義務はありません。",
+      "GPL-2.0": "GPL-2.0：利用・改変は自由です。プログラムや改変版を配布する場合、GPL-2.0で対応するソースコードを提供し、表示を保持する必要があります。",
+      "GPL-3.0": "GPL-3.0：利用・改変は自由です。プログラムや改変版の配布時はGPL-3.0で対応するソースコードを提供します。特許に関する条項も含まれます。",
+      "AGPL-3.0": "AGPL-3.0：改変したソフトをネットワーク経由で他者に使わせる場合も、利用者に対応するソースコードを提供する必要があります。通常のGPLよりネットワーク利用の条件が加わります。",
+      "MPL-2.0": "MPL-2.0：配布する場合、MPL対象ファイルへの変更はMPLで公開します。独立した新規ファイルには別のライセンスを適用できます。",
+      "Apache-2.0": "Apache-2.0：寛容なライセンスで、クローズドソースの製品にも組み込めます。ライセンス・著作権・特許表示を残し、必要な場合はNOTICEも含めます。",
+      "LGPL-2.1": "LGPL-2.1：主にライブラリ向けです。改変したライブラリを配布する場合はソースを提供します。アプリ側は、利用者が条件に従ってライブラリを交換・再リンクできれば別のライセンスにできます。",
+      "BSD-2-Clause": "BSD-2-Clause：クローズドソースの製品にも使える寛容なライセンスです。再配布時は著作権表示、条件、免責表示を残します。",
+      "BSD-3-Clause": "BSD-3-Clause：BSD-2-Clauseと同様ですが、許可なく作者や貢献者の名前を派生製品の推奨・宣伝に使えない条件が加わります。",
+      Unlicense: "Unlicense：可能な範囲で著作権を放棄し、公有領域に置くことを意図しています。保証はなく、各地域の法律や第三者コードのライセンスも関係します。"
     },
     standardsEyebrow: "オープンソースの説明",
     standardsHeading: "よくあるライセンスの見方",
@@ -573,7 +573,7 @@ function cardTemplate(app) {
   const permissions = localized(app, "permissions") || app.permissions;
   const compatibilityLanguage = appCopy[activeLanguage]?.[app.id]?.compatibility ? (activeLanguage === "ja" ? "ja" : "en") : "zh-CN";
   const permissionsLanguage = appCopy[activeLanguage]?.[app.id]?.permissions ? (activeLanguage === "ja" ? "ja" : "en") : "zh-CN";
-  const licensePopover = `<details class="license-details card-popover"><summary class="license" aria-label="${escapeHTML(t("licenseFor", { license: app.license, name: app.name }))}" title="${escapeHTML(t("licenseFor", { license: app.license, name: app.name }))}" lang="en">${escapeHTML(app.license)}</summary><div class="license-popover"><strong lang="en">${escapeHTML(app.license)}</strong><p>${escapeHTML(licenseExplanation)}</p><a class="license-more" href="#standards">${escapeHTML(t("licenseMore"))}<span aria-hidden="true">↗</span></a></div></details>`;
+  const licensePopover = `<details class="license-details card-popover"><summary class="license" aria-label="${escapeHTML(t("licenseFor", { license: app.license, name: app.name }))}" title="${escapeHTML(t("licenseFor", { license: app.license, name: app.name }))}" lang="en">${escapeHTML(app.license)}</summary><div class="license-popover"><strong lang="en">${escapeHTML(app.license)}</strong><p>${escapeHTML(licenseExplanation)}</p><p class="license-note">${escapeHTML(t("licenseNote"))}</p></div></details>`;
   const details = compatibility || permissions ? `<details class="app-details card-popover"><summary aria-label="${escapeHTML(t("detailsSummary"))}" title="${escapeHTML(t("detailsSummary"))}"><span aria-hidden="true">i</span></summary><dl>${compatibility ? `<div><dt>${escapeHTML(t("compatibilityLabel"))}</dt><dd lang="${compatibilityLanguage}">${escapeHTML(compatibility)}</dd></div>` : ""}${permissions ? `<div><dt>${escapeHTML(t("permissionsLabel"))}</dt><dd lang="${permissionsLanguage}">${escapeHTML(permissions)}</dd></div>` : ""}</dl></details>` : "";
   return `<article class="app-card${app.featured ? " app-card-featured" : ""}">
     <img class="app-icon" src="${escapeHTML(app.icon)}" alt="${escapeHTML(t("iconAlt", { name: app.name }))}" width="46" height="46" loading="lazy" decoding="async" />
@@ -779,7 +779,7 @@ appGrid.addEventListener("click", event => {
   });
 });
 document.addEventListener("click", event => {
-  if (!event.target.closest(".card-popover") || event.target.closest(".license-more")) {
+  if (!event.target.closest(".card-popover")) {
     appGrid.querySelectorAll(".card-popover[open]").forEach(popover => { popover.open = false; });
   }
 });
