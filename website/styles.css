@@ -136,11 +136,9 @@ kbd { min-width: 42px; padding: 4px 6px; color: #718195; background: #fff; borde
 .app-card-meta .tag { max-width: 120px; line-height: 1.15; text-align: right; white-space: nowrap; }
 .license { color: #738296; font-size: 10px; font-weight: 760; letter-spacing: .04em; text-transform: uppercase; white-space: nowrap; }
 .license-details { position: relative; min-width: 0; }
-.license-details summary { min-height: 30px; display: inline-flex; align-items: center; gap: 5px; padding: 0 8px; color: #566b7f; background: #f7f9fc; border: 1px solid #e1e8ef; border-radius: 7px; cursor: pointer; list-style: none; transition: color .16s ease, background .16s ease, border-color .16s ease; }
-.license-details summary::after { color: #8595a6; content: "⌄"; font-size: 9px; transition: transform .16s ease; }
+.license-details summary { display: inline-flex; align-items: center; padding: 0 2px; color: #738296; background: transparent; border: 0; border-radius: 0; cursor: pointer; list-style: none; text-decoration: underline dotted #aab8c7; text-underline-offset: 3px; transition: color .16s ease; }
 .license-details summary::-webkit-details-marker { display: none; }
-.license-details summary:hover, .license-details[open] summary { color: var(--brand-deep); background: var(--brand-soft); border-color: #c8def5; }
-.license-details[open] summary::after { transform: rotate(180deg); }
+.license-details summary:hover, .license-details[open] summary { color: var(--brand); text-decoration-color: currentColor; }
 .license-popover { position: absolute; z-index: 6; bottom: calc(100% + 8px); top: auto; right: 0; width: min(300px, calc(100vw - 50px)); padding: 12px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 12px 32px rgb(23 40 61 / 16%); }
 .license-popover::after { position: absolute; right: 10px; bottom: -6px; width: 10px; height: 10px; background: var(--surface); border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); content: ""; transform: rotate(45deg); }
 .license-popover > strong { display: block; margin-bottom: 5px; color: var(--ink); font-size: 11px; }
@@ -173,7 +171,6 @@ html[lang="en"] .app-type { text-transform: uppercase; }
 .app-links .download-link { color: #fff; background: var(--brand); border-color: var(--brand); }
 .app-links .download-link:hover { color: #fff; background: var(--brand-deep); text-decoration: none; }
 .app-links .license-details { flex: 0 0 auto; margin-left: auto; }
-.app-links .license-details summary { min-height: 30px; }
 .app-links .license-popover .license-more { min-height: 0; display: inline-flex; gap: 4px; padding: 0; color: var(--link); background: transparent; border: 0; border-radius: 0; font-size: 10px; }
 .app-links .license-popover .license-more:hover { color: var(--link-hover); text-decoration: underline; transform: none; }
 .empty-state { padding: 56px 20px; text-align: center; background: var(--surface); border: 1px dashed #ccd7e2; border-radius: 13px; }
@@ -269,7 +266,7 @@ html[lang="en"] .app-type { text-transform: uppercase; }
   .results-share, .results-recommend { padding-inline: 6px; font-size: 9px; }
   .app-links { gap: 4px; }
   .app-links a { min-height: 28px; gap: 3px; padding-inline: 6px; font-size: 10px; }
-  .app-links .license-details summary { min-height: 28px; gap: 3px; padding-inline: 6px; font-size: 9px; }
+  .app-links .license-details summary { padding-inline: 2px; font-size: 9px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
