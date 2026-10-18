@@ -65,6 +65,9 @@ const copy = {
     catalogCopy: "按用途查找；每项标明许可证与 io 实测状态。",
     catalogControlsLabel: "搜索和筛选软件",
     recommendInline: "推荐一款好软件",
+    shareDirectory: "分享目录",
+    shareCopied: "目录链接已复制，可以分享给朋友。",
+    shareFailed: "暂时无法分享，请从地址栏复制当前页面地址。",
     searchPlaceholder: "搜索名称、用途或标签",
     searchLabel: "搜索软件目录",
     testedFilter: "仅显示 io 实测",
@@ -79,6 +82,7 @@ const copy = {
     compatibilityLabel: "系统要求",
     permissionsLabel: "权限与安全提示",
     licenseFor: "查看 {license} 许可证说明（{name}）",
+    licenseMore: "在开源说明中查看",
     projectSiteFor: "打开 {name} 项目主页",
     downloadFor: "下载 {name}",
     iconAlt: "{name} 图标",
@@ -148,6 +152,9 @@ const copy = {
     catalogCopy: "Browse by task. Each listing includes its license and io testing status.",
     catalogControlsLabel: "Search and filter apps",
     recommendInline: "Recommend an app",
+    shareDirectory: "Share directory",
+    shareCopied: "Directory link copied. It is ready to share.",
+    shareFailed: "Sharing is unavailable. Copy this page address from your browser.",
     searchPlaceholder: "Search apps, features, or tags",
     searchLabel: "Search the app directory",
     testedFilter: "Show io-tested only",
@@ -162,6 +169,7 @@ const copy = {
     compatibilityLabel: "System requirements",
     permissionsLabel: "Permissions & safety",
     licenseFor: "View the {license} license notes for {name}",
+    licenseMore: "Read the open-source guide",
     projectSiteFor: "Open the {name} project site",
     downloadFor: "Download {name}",
     iconAlt: "{name} icon",
@@ -231,6 +239,9 @@ const copy = {
     catalogCopy: "用途で絞り込めます。各アプリにライセンスとioの実使用状況を記載しています。",
     catalogControlsLabel: "アプリを検索・絞り込み",
     recommendInline: "アプリを紹介する",
+    shareDirectory: "一覧を共有",
+    shareCopied: "一覧のリンクをコピーしました。共有できます。",
+    shareFailed: "共有できません。ブラウザーのアドレスをコピーしてください。",
     searchPlaceholder: "名前・機能・タグで検索",
     searchLabel: "アプリ一覧を検索",
     testedFilter: "io 使用確認済みのみ",
@@ -245,10 +256,11 @@ const copy = {
     compatibilityLabel: "システム要件",
     permissionsLabel: "権限と安全に関する注意",
     licenseFor: "{name} の {license} ライセンス説明を見る",
+    licenseMore: "オープンソースの説明を見る",
     projectSiteFor: "{name} のプロジェクトページを開く",
     downloadFor: "{name} をダウンロード",
     iconAlt: "{name}のアイコン",
-    projectSite: "プロジェクトページ",
+    projectSite: "公式サイト",
     download: "ダウンロード",
     status: {
       tested: { label: "io 使用確認済み", note: "iXiehaoの日常用Macで使用を確認済みです。セキュリティ監査ではなく、すべてのmacOSバージョンでの互換性を保証するものではありません。" }
@@ -475,6 +487,8 @@ const resultCount = document.querySelector("#result-count");
 const emptyState = document.querySelector("#empty-state");
 const clearFilters = document.querySelector("#clear-filters");
 const languageStatus = document.querySelector("#language-status");
+const shareButton = document.querySelector("#share-directory");
+const shareStatus = document.querySelector("#share-status");
 
 function valueAt(object, path) {
   return path.split(".").reduce((value, key) => value?.[key], object);
@@ -554,14 +568,16 @@ function renderStandards() {
 function cardTemplate(app) {
   const status = app.status.level === "verified" ? null : (valueAt(copy[activeLanguage], `status.${app.status.level}`) ?? valueAt(copy.zh, `status.${app.status.level}`));
   const license = licenseDescription(app.license);
+  const licenseExplanation = license.slice(app.license.length).replace(/^[：:]\s*/, "");
   const compatibility = localized(app, "compatibility") || app.compatibility;
   const permissions = localized(app, "permissions") || app.permissions;
   const compatibilityLanguage = appCopy[activeLanguage]?.[app.id]?.compatibility ? (activeLanguage === "ja" ? "ja" : "en") : "zh-CN";
   const permissionsLanguage = appCopy[activeLanguage]?.[app.id]?.permissions ? (activeLanguage === "ja" ? "ja" : "en") : "zh-CN";
-  const details = compatibility || permissions ? `<details class="app-details"><summary aria-label="${escapeHTML(t("detailsSummary"))}" title="${escapeHTML(t("detailsSummary"))}"><span aria-hidden="true">i</span></summary><dl>${compatibility ? `<div><dt>${escapeHTML(t("compatibilityLabel"))}</dt><dd lang="${compatibilityLanguage}">${escapeHTML(compatibility)}</dd></div>` : ""}${permissions ? `<div><dt>${escapeHTML(t("permissionsLabel"))}</dt><dd lang="${permissionsLanguage}">${escapeHTML(permissions)}</dd></div>` : ""}</dl></details>` : "";
+  const licensePopover = `<details class="license-details card-popover"><summary class="license" aria-label="${escapeHTML(t("licenseFor", { license: app.license, name: app.name }))}" title="${escapeHTML(t("licenseFor", { license: app.license, name: app.name }))}" lang="en">${escapeHTML(app.license)}</summary><div class="license-popover"><strong lang="en">${escapeHTML(app.license)}</strong><p>${escapeHTML(licenseExplanation)}</p><a class="license-more" href="#standards">${escapeHTML(t("licenseMore"))}<span aria-hidden="true">↗</span></a></div></details>`;
+  const details = compatibility || permissions ? `<details class="app-details card-popover"><summary aria-label="${escapeHTML(t("detailsSummary"))}" title="${escapeHTML(t("detailsSummary"))}"><span aria-hidden="true">i</span></summary><dl>${compatibility ? `<div><dt>${escapeHTML(t("compatibilityLabel"))}</dt><dd lang="${compatibilityLanguage}">${escapeHTML(compatibility)}</dd></div>` : ""}${permissions ? `<div><dt>${escapeHTML(t("permissionsLabel"))}</dt><dd lang="${permissionsLanguage}">${escapeHTML(permissions)}</dd></div>` : ""}</dl></details>` : "";
   return `<article class="app-card${app.featured ? " app-card-featured" : ""}">
     <img class="app-icon" src="${escapeHTML(app.icon)}" alt="${escapeHTML(t("iconAlt", { name: app.name }))}" width="46" height="46" loading="lazy" decoding="async" />
-    <div class="app-card-head"><div><h3 lang="en">${escapeHTML(app.name)}</h3><span class="app-type">${escapeHTML(categoryName(app.category))}</span></div><div class="app-card-meta" aria-label="${escapeHTML(t("metadataLabel"))}"><a class="license" href="#standards" lang="en" title="${escapeHTML(license)}" aria-label="${escapeHTML(t("licenseFor", { license: app.license, name: app.name }))}">${escapeHTML(app.license)}</a>${status ? `<span class="tag ${statusClass(app.status.level)}" aria-label="${escapeHTML(`${status.label}: ${status.note}`)}"><span class="status-check" aria-hidden="true">✓</span>${escapeHTML(status.label)}</span>` : ""}${details}</div></div>
+    <div class="app-card-head"><div><h3 lang="en">${escapeHTML(app.name)}</h3><span class="app-type">${escapeHTML(categoryName(app.category))}</span></div><div class="app-card-meta" aria-label="${escapeHTML(t("metadataLabel"))}">${status ? `<span class="tag ${statusClass(app.status.level)}" aria-label="${escapeHTML(`${status.label}: ${status.note}`)}"><span class="status-check" aria-hidden="true">✓</span>${escapeHTML(status.label)}</span>` : ""}${details}</div></div>
     <p class="card-summary">${escapeHTML(localized(app, "summary"))}</p>
     <p class="recommendation" title="${escapeHTML(localized(app, "recommendation"))}">${escapeHTML(localized(app, "recommendation"))}</p>
     <div class="tags" aria-label="${escapeHTML(t("metadataLabel"))}">
@@ -570,6 +586,7 @@ function cardTemplate(app) {
     <div class="app-links">
       ${link(app.homepage, t("projectSite"), "project-link", t("projectSiteFor", { name: app.name }))}
       ${link(app.download, t("download"), "download-link", t("downloadFor", { name: app.name }))}
+      ${licensePopover}
     </div>
   </article>`;
 }
@@ -733,22 +750,41 @@ async function init() {
   }
 }
 
+async function shareDirectory() {
+  const url = location.href;
+  if (navigator.share) {
+    try {
+      await navigator.share({ title: t("pageTitle"), text: t("pageDescription"), url });
+      return;
+    } catch (error) {
+      if (error.name === "AbortError") return;
+    }
+  }
+  try {
+    await navigator.clipboard.writeText(url);
+    shareStatus.textContent = t("shareCopied");
+  } catch {
+    shareStatus.textContent = t("shareFailed");
+  }
+}
+
 searchInput.addEventListener("input", renderCatalog);
 testedFilter.addEventListener("change", renderCatalog);
 clearFilters.addEventListener("click", resetFilters);
+shareButton.addEventListener("click", shareDirectory);
 appGrid.addEventListener("click", event => {
-  const activeDetails = event.target.closest(".app-details");
-  appGrid.querySelectorAll(".app-details[open]").forEach(details => {
-    if (details !== activeDetails) details.open = false;
+  const activePopover = event.target.closest(".card-popover");
+  appGrid.querySelectorAll(".card-popover[open]").forEach(popover => {
+    if (popover !== activePopover) popover.open = false;
   });
 });
 document.addEventListener("click", event => {
-  if (!event.target.closest(".app-details")) {
-    appGrid.querySelectorAll(".app-details[open]").forEach(details => { details.open = false; });
+  if (!event.target.closest(".card-popover") || event.target.closest(".license-more")) {
+    appGrid.querySelectorAll(".card-popover[open]").forEach(popover => { popover.open = false; });
   }
 });
 document.addEventListener("keydown", event => {
-  if (event.key === "Escape") appGrid.querySelectorAll(".app-details[open]").forEach(details => { details.open = false; });
+  if (event.key === "Escape") appGrid.querySelectorAll(".card-popover[open]").forEach(popover => { popover.open = false; });
   const target = event.target;
   const isEditable = target?.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(target?.tagName || "");
   if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k" && (!isEditable || target === searchInput)) {
