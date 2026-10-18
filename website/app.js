@@ -508,8 +508,8 @@ function escapeHTML(value) {
   return String(value).replace(/[&<>'"]/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" })[char]);
 }
 
-function link(url, text, className = "", accessibleName = text) {
-  return `<a class="${className}" href="${escapeHTML(url)}" aria-label="${escapeHTML(accessibleName)}" target="_blank" rel="noreferrer">${escapeHTML(text)}<svg class="ui-icon ui-icon-external" aria-hidden="true"><use href="assets/tabler-icons.svg#external-link"></use></svg></a>`;
+function link(url, text, className, accessibleName, iconName) {
+  return `<a class="${className}" href="${escapeHTML(url)}" aria-label="${escapeHTML(accessibleName)}" target="_blank" rel="noreferrer">${escapeHTML(text)}<svg class="ui-icon" aria-hidden="true"><use href="assets/tabler-icons.svg#${iconName}"></use></svg></a>`;
 }
 
 function statusClass(level) {
@@ -584,8 +584,8 @@ function cardTemplate(app) {
       ${(localized(app, "tags") || []).map(tag => `<span class="tag">${escapeHTML(tag)}</span>`).join("")}
     </div>
     <div class="app-links">
-      ${link(app.homepage, t("projectSite"), "project-link", t("projectSiteFor", { name: app.name }))}
-      ${link(app.download, t("download"), "download-link", t("downloadFor", { name: app.name }))}
+      ${link(app.homepage, t("projectSite"), "project-link", t("projectSiteFor", { name: app.name }), "world-www")}
+      ${link(app.download, t("download"), "download-link", t("downloadFor", { name: app.name }), "download")}
       ${licensePopover}
     </div>
   </article>`;
