@@ -48,11 +48,11 @@ const copy = {
     category: { all: "全部", office: "办公与创作", video: "视频与音频", image: "图片与图像", launcher: "窗口与启动", menu: "菜单栏与硬件", maintenance: "Mac 优化与维护", files: "文件与备份", privacy: "隐私与网络", efficiency: "开发与效率" },
     communityEyebrow: "MACOS · 开源软件导航",
     communityHeading: "让 Mac 更好用",
+    brandMeaning: "i 代表独立开发者，o 代表开源建设者。",
     communityCopy: "免费、开源、按用途整理。官方入口、许可证和 io 实测状态，一眼看清。",
     heroStatsLabel: "目录概况",
     statApps: "款开源软件",
     statCategories: "个用途分类",
-    statLanguages: "种界面语言",
     submitKicker: "社区共建",
     submitHeading: "好工具，等你推荐。",
     recommendApp: "推荐一款软件",
@@ -131,11 +131,11 @@ const copy = {
     category: { all: "All", office: "Work & Create", video: "Video & Audio", image: "Images & Graphics", launcher: "Windows & Launchers", menu: "Menu Bar & Hardware", maintenance: "Mac Care & Maintenance", files: "Files & Backup", privacy: "Privacy & Network", efficiency: "Developer & Productivity" },
     communityEyebrow: "MACOS · OPEN-SOURCE APP DIRECTORY",
     communityHeading: "Make your Mac better",
+    brandMeaning: "i stands for Independent developer; o for Open-source builder.",
     communityCopy: "Free, open-source apps organized by task—with official links, licenses, and real-world notes.",
     heroStatsLabel: "Directory overview",
     statApps: "open-source apps",
     statCategories: "useful categories",
-    statLanguages: "languages",
     submitKicker: "COMMUNITY PICKS",
     submitHeading: "Know a good Mac app?",
     recommendApp: "Recommend an app",
@@ -214,11 +214,11 @@ const copy = {
     category: { all: "すべて", office: "仕事・創作", video: "動画・オーディオ", image: "写真・画像", launcher: "ウインドウ・ランチャー", menu: "メニューバー・周辺機器", maintenance: "Macの最適化・メンテナンス", files: "ファイル・バックアップ", privacy: "プライバシー・ネットワーク", efficiency: "開発・効率化" },
     communityEyebrow: "MACOS · オープンソースアプリガイド",
     communityHeading: "Macを、もっと使いやすく。",
+    brandMeaning: "i は独立開発者、o はオープンソースを育てる人。",
     communityCopy: "無料のオープンソースアプリを用途別に整理。公式リンク、ライセンス、実使用メモを確認できます。",
     heroStatsLabel: "ディレクトリの概要",
     statApps: "個のアプリ",
     statCategories: "のカテゴリー",
-    statLanguages: "言語",
     submitKicker: "コミュニティのおすすめ",
     submitHeading: "便利なMacアプリ、教えてください。",
     recommendApp: "おすすめのアプリを紹介する",
@@ -558,13 +558,12 @@ function cardTemplate(app) {
   const permissions = localized(app, "permissions") || app.permissions;
   const compatibilityLanguage = appCopy[activeLanguage]?.[app.id]?.compatibility ? (activeLanguage === "ja" ? "ja" : "en") : "zh-CN";
   const permissionsLanguage = appCopy[activeLanguage]?.[app.id]?.permissions ? (activeLanguage === "ja" ? "ja" : "en") : "zh-CN";
-  const details = compatibility || permissions ? `<details class="app-details"><summary>${escapeHTML(t("detailsSummary"))}</summary><dl>${compatibility ? `<div><dt>${escapeHTML(t("compatibilityLabel"))}</dt><dd lang="${compatibilityLanguage}">${escapeHTML(compatibility)}</dd></div>` : ""}${permissions ? `<div><dt>${escapeHTML(t("permissionsLabel"))}</dt><dd lang="${permissionsLanguage}">${escapeHTML(permissions)}</dd></div>` : ""}</dl></details>` : "";
+  const details = compatibility || permissions ? `<details class="app-details"><summary aria-label="${escapeHTML(t("detailsSummary"))}" title="${escapeHTML(t("detailsSummary"))}"><span aria-hidden="true">i</span></summary><dl>${compatibility ? `<div><dt>${escapeHTML(t("compatibilityLabel"))}</dt><dd lang="${compatibilityLanguage}">${escapeHTML(compatibility)}</dd></div>` : ""}${permissions ? `<div><dt>${escapeHTML(t("permissionsLabel"))}</dt><dd lang="${permissionsLanguage}">${escapeHTML(permissions)}</dd></div>` : ""}</dl></details>` : "";
   return `<article class="app-card${app.featured ? " app-card-featured" : ""}">
     <img class="app-icon" src="${escapeHTML(app.icon)}" alt="${escapeHTML(t("iconAlt", { name: app.name }))}" width="46" height="46" loading="lazy" decoding="async" />
-    <div class="app-card-head"><div><h3 lang="en">${escapeHTML(app.name)}</h3><span class="app-type">${escapeHTML(categoryName(app.category))}</span></div><div class="app-card-meta" aria-label="${escapeHTML(t("metadataLabel"))}"><a class="license" href="#standards" lang="en" title="${escapeHTML(license)}" aria-label="${escapeHTML(t("licenseFor", { license: app.license, name: app.name }))}">${escapeHTML(app.license)}</a>${status ? `<span class="tag ${statusClass(app.status.level)}" aria-label="${escapeHTML(`${status.label}: ${status.note}`)}"><span class="status-check" aria-hidden="true">✓</span>${escapeHTML(status.label)}</span>` : ""}</div></div>
+    <div class="app-card-head"><div><h3 lang="en">${escapeHTML(app.name)}</h3><span class="app-type">${escapeHTML(categoryName(app.category))}</span></div><div class="app-card-meta" aria-label="${escapeHTML(t("metadataLabel"))}"><a class="license" href="#standards" lang="en" title="${escapeHTML(license)}" aria-label="${escapeHTML(t("licenseFor", { license: app.license, name: app.name }))}">${escapeHTML(app.license)}</a>${status ? `<span class="tag ${statusClass(app.status.level)}" aria-label="${escapeHTML(`${status.label}: ${status.note}`)}"><span class="status-check" aria-hidden="true">✓</span>${escapeHTML(status.label)}</span>` : ""}${details}</div></div>
     <p class="card-summary">${escapeHTML(localized(app, "summary"))}</p>
     <p class="recommendation" title="${escapeHTML(localized(app, "recommendation"))}">${escapeHTML(localized(app, "recommendation"))}</p>
-    ${details}
     <div class="tags" aria-label="${escapeHTML(t("metadataLabel"))}">
       ${(localized(app, "tags") || []).map(tag => `<span class="tag">${escapeHTML(tag)}</span>`).join("")}
     </div>
@@ -737,7 +736,19 @@ async function init() {
 searchInput.addEventListener("input", renderCatalog);
 testedFilter.addEventListener("change", renderCatalog);
 clearFilters.addEventListener("click", resetFilters);
+appGrid.addEventListener("click", event => {
+  const activeDetails = event.target.closest(".app-details");
+  appGrid.querySelectorAll(".app-details[open]").forEach(details => {
+    if (details !== activeDetails) details.open = false;
+  });
+});
+document.addEventListener("click", event => {
+  if (!event.target.closest(".app-details")) {
+    appGrid.querySelectorAll(".app-details[open]").forEach(details => { details.open = false; });
+  }
+});
 document.addEventListener("keydown", event => {
+  if (event.key === "Escape") appGrid.querySelectorAll(".app-details[open]").forEach(details => { details.open = false; });
   const target = event.target;
   const isEditable = target?.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(target?.tagName || "");
   if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k" && (!isEditable || target === searchInput)) {
