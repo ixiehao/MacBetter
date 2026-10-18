@@ -1,4 +1,16 @@
 const categories = ["all", "office", "video", "image", "launcher", "menu", "maintenance", "files", "privacy", "efficiency"];
+const categoryIconPaths = {
+  all: '<rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/>',
+  office: '<path d="M7 3h7l5 5v13H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"/><path d="M14 3v5h5M9 13h6M9 17h6"/>',
+  video: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m10 9 5 3-5 3z"/>',
+  image: '<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9" r="1.5"/><path d="m21 15-5-5L5 20"/>',
+  launcher: '<rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/>',
+  menu: '<path d="M4 6h16M4 12h16M4 18h10"/><circle cx="19" cy="18" r="2"/>',
+  maintenance: '<path d="m14.7 6.3 3 3M4 20l9.5-9.5M13 5a5 5 0 0 0 6 6l-4 4-6-6 4-4Z"/><path d="m5 19 2-2"/>',
+  files: '<path d="M3 7a2 2 0 0 1 2-2h5l2 2h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/>',
+  privacy: '<path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"/><path d="m9 12 2 2 4-4"/>',
+  efficiency: '<path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 4l-4 16"/>'
+};
 const licenseOrder = ["MIT", "GPL-2.0", "GPL-3.0", "AGPL-3.0", "MPL-2.0", "Apache-2.0", "Unlicense", "LGPL-2.1", "BSD-2-Clause", "BSD-3-Clause"];
 const categoryOrder = ["video", "image", "launcher", "menu", "office", "files", "maintenance", "privacy", "efficiency"];
 const workflowOrder = {
@@ -34,26 +46,41 @@ const copy = {
     languageOption: { zh: "切换为中文", en: "切换为 English", ja: "切换为日本語" },
     languageChanged: "已切换为中文",
     category: { all: "全部", office: "办公与创作", video: "视频与音频", image: "图片与图像", launcher: "窗口与启动", menu: "菜单栏与硬件", maintenance: "Mac 优化与维护", files: "文件与备份", privacy: "隐私与网络", efficiency: "开发与效率" },
-    communityEyebrow: "共同推荐",
+    communityEyebrow: "MACOS · 开源软件导航",
     communityHeading: "让 Mac 更好用",
-    communityCopy: "从推荐一款你真正用过的开源软件开始。",
+    communityCopy: "免费、开源、按用途整理。官方入口、许可证和 io 实测状态，一眼看清。",
+    heroStatsLabel: "目录概况",
+    statApps: "款开源软件",
+    statCategories: "个用途分类",
+    statLanguages: "种界面语言",
+    submitKicker: "社区共建",
+    submitHeading: "好工具，等你推荐。",
     recommendApp: "推荐一款软件",
     viewCriteria: "了解收录方式",
-    communityInstructions: "在 GitHub Issue 中提交项目链接、开源许可证和适用场景。收录前会核对公开信息。",
+    communityInstructions: "提交项目链接、开源许可证和真实使用场景，我们会核对公开信息。",
     contributionStepsLabel: "推荐软件需要的信息",
     contribution: { sourceTitle: "项目地址", sourceDetail: "作者仓库或官网", licenseTitle: "开源许可证", licenseDetail: "例如 MIT、GPL-3.0", reasonTitle: "推荐理由", reasonDetail: "它具体解决什么问题" },
     catalogEyebrow: "开源 Mac 软件",
     catalogHeading: "软件目录",
     catalogCopy: "按用途查找；每项标明许可证与 io 实测状态。",
+    catalogControlsLabel: "搜索和筛选软件",
+    recommendInline: "推荐一款好软件",
     searchPlaceholder: "搜索名称、用途或标签",
     searchLabel: "搜索软件目录",
     testedFilter: "仅显示 io 实测",
     appCategoriesLabel: "软件分类",
     foundCount: "找到 {count} 款软件",
-    dataError: "软件目录暂时无法载入。请前往 GitHub 查看。",
+    dataError: "软件目录暂时无法载入。",
+    dataErrorLink: "在 GitHub 查看",
     emptyState: "没有找到匹配的软件。",
     clearFilters: "清除筛选条件",
     metadataLabel: "项目属性",
+    detailsSummary: "系统要求与权限",
+    compatibilityLabel: "系统要求",
+    permissionsLabel: "权限与安全提示",
+    licenseFor: "查看 {license} 许可证说明（{name}）",
+    projectSiteFor: "打开 {name} 项目主页",
+    downloadFor: "下载 {name}",
     iconAlt: "{name} 图标",
     projectSite: "项目主页",
     download: "下载",
@@ -102,26 +129,41 @@ const copy = {
     languageOption: { zh: "Switch to Chinese", en: "Switch to English", ja: "Switch to Japanese" },
     languageChanged: "Language changed to English",
     category: { all: "All", office: "Work & Create", video: "Video & Audio", image: "Images & Graphics", launcher: "Windows & Launchers", menu: "Menu Bar & Hardware", maintenance: "Mac Care & Maintenance", files: "Files & Backup", privacy: "Privacy & Network", efficiency: "Developer & Productivity" },
-    communityEyebrow: "Community picks",
+    communityEyebrow: "MACOS · OPEN-SOURCE APP DIRECTORY",
     communityHeading: "Make your Mac better",
-    communityCopy: "Start with an open-source app you genuinely use.",
+    communityCopy: "Free, open-source apps organized by task—with official links, licenses, and real-world notes.",
+    heroStatsLabel: "Directory overview",
+    statApps: "open-source apps",
+    statCategories: "useful categories",
+    statLanguages: "languages",
+    submitKicker: "COMMUNITY PICKS",
+    submitHeading: "Know a good Mac app?",
     recommendApp: "Recommend an app",
     viewCriteria: "View submission criteria",
-    communityInstructions: "Open a GitHub Issue with the project link, open-source license, and a real use case. Public information is checked before listing.",
+    communityInstructions: "Share the project link, license, and the problem it solves. We check public details before listing.",
     contributionStepsLabel: "What to include with an app recommendation",
     contribution: { sourceTitle: "Project source", sourceDetail: "Author’s repository or official site", licenseTitle: "Open-source license", licenseDetail: "e.g. MIT or GPL-3.0", reasonTitle: "Why you recommend it", reasonDetail: "What problem it solves" },
     catalogEyebrow: "Open-source Mac apps",
     catalogHeading: "App directory",
     catalogCopy: "Browse by task. Each listing includes its license and io testing status.",
+    catalogControlsLabel: "Search and filter apps",
+    recommendInline: "Recommend an app",
     searchPlaceholder: "Search apps, features, or tags",
     searchLabel: "Search the app directory",
     testedFilter: "Show io-tested only",
     appCategoriesLabel: "App categories",
     foundCount: "{count} apps found",
-    dataError: "The app directory could not be loaded. View it on GitHub instead.",
+    dataError: "The app directory could not be loaded.",
+    dataErrorLink: "View it on GitHub",
     emptyState: "No matching apps found.",
     clearFilters: "Clear filters",
     metadataLabel: "App metadata",
+    detailsSummary: "System requirements & permissions",
+    compatibilityLabel: "System requirements",
+    permissionsLabel: "Permissions & safety",
+    licenseFor: "View the {license} license notes for {name}",
+    projectSiteFor: "Open the {name} project site",
+    downloadFor: "Download {name}",
     iconAlt: "{name} icon",
     projectSite: "Project site",
     download: "Download",
@@ -170,26 +212,41 @@ const copy = {
     languageOption: { zh: "中国語に切り替え", en: "英語に切り替え", ja: "日本語に切り替え" },
     languageChanged: "表示言語を日本語に切り替えました",
     category: { all: "すべて", office: "仕事・創作", video: "動画・オーディオ", image: "写真・画像", launcher: "ウインドウ・ランチャー", menu: "メニューバー・周辺機器", maintenance: "Macの最適化・メンテナンス", files: "ファイル・バックアップ", privacy: "プライバシー・ネットワーク", efficiency: "開発・効率化" },
-    communityEyebrow: "コミュニティのおすすめ",
+    communityEyebrow: "MACOS · オープンソースアプリガイド",
     communityHeading: "Macを、もっと使いやすく。",
-    communityCopy: "実際に使っているオープンソースのアプリを、一つ紹介するところから。",
+    communityCopy: "無料のオープンソースアプリを用途別に整理。公式リンク、ライセンス、実使用メモを確認できます。",
+    heroStatsLabel: "ディレクトリの概要",
+    statApps: "個のアプリ",
+    statCategories: "のカテゴリー",
+    statLanguages: "言語",
+    submitKicker: "コミュニティのおすすめ",
+    submitHeading: "便利なMacアプリ、教えてください。",
     recommendApp: "おすすめのアプリを紹介する",
     viewCriteria: "掲載条件を見る",
-    communityInstructions: "GitHub Issueから、プロジェクトのリンク、オープンソースライセンス、利用シーンをお寄せください。掲載前に公開情報を確認します。",
+    communityInstructions: "プロジェクトのリンク、ライセンス、解決できる課題をお寄せください。掲載前に公開情報を確認します。",
     contributionStepsLabel: "アプリ紹介に必要な情報",
     contribution: { sourceTitle: "プロジェクトの出所", sourceDetail: "作者のリポジトリまたは公式サイト", licenseTitle: "オープンソースライセンス", licenseDetail: "例：MIT / GPL-3.0", reasonTitle: "おすすめの理由", reasonDetail: "どんな課題を解決するか" },
     catalogEyebrow: "オープンソースのMacアプリ",
     catalogHeading: "アプリ一覧",
     catalogCopy: "用途で絞り込めます。各アプリにライセンスとioの実使用状況を記載しています。",
+    catalogControlsLabel: "アプリを検索・絞り込み",
+    recommendInline: "アプリを紹介する",
     searchPlaceholder: "名前・機能・タグで検索",
     searchLabel: "アプリ一覧を検索",
     testedFilter: "io 使用確認済みのみ",
     appCategoriesLabel: "アプリのカテゴリー",
     foundCount: "{count} 件のアプリ",
-    dataError: "アプリ情報を読み込めません。GitHubでご確認ください。",
+    dataError: "アプリ情報を読み込めません。",
+    dataErrorLink: "GitHubで確認",
     emptyState: "条件に合うアプリは見つかりませんでした。",
     clearFilters: "絞り込みをクリア",
     metadataLabel: "アプリの属性",
+    detailsSummary: "システム要件と権限",
+    compatibilityLabel: "システム要件",
+    permissionsLabel: "権限と安全に関する注意",
+    licenseFor: "{name} の {license} ライセンス説明を見る",
+    projectSiteFor: "{name} のプロジェクトページを開く",
+    downloadFor: "{name} をダウンロード",
     iconAlt: "{name}のアイコン",
     projectSite: "プロジェクトページ",
     download: "ダウンロード",
@@ -437,8 +494,8 @@ function escapeHTML(value) {
   return String(value).replace(/[&<>'"]/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" })[char]);
 }
 
-function link(url, text, className = "") {
-  return `<a class="${className}" href="${escapeHTML(url)}" target="_blank" rel="noreferrer">${escapeHTML(text)} <span aria-hidden="true">↗</span></a>`;
+function link(url, text, className = "", accessibleName = text) {
+  return `<a class="${className}" href="${escapeHTML(url)}" aria-label="${escapeHTML(accessibleName)}" target="_blank" rel="noreferrer">${escapeHTML(text)} <span aria-hidden="true">↗</span></a>`;
 }
 
 function statusClass(level) {
@@ -459,8 +516,10 @@ function buildSearchIndex(app) {
   return [
     app.name,
     app.license,
+    app.compatibility,
+    app.permissions,
     ...categoryLabels,
-    ...variants.flatMap(variant => [variant.summary, variant.recommendation, ...(variant.tags || [])])
+    ...variants.flatMap(variant => [variant.summary, variant.recommendation, variant.compatibility, variant.permissions, ...(variant.tags || [])])
   ].filter(Boolean).join(" ");
 }
 
@@ -495,28 +554,39 @@ function renderStandards() {
 function cardTemplate(app) {
   const status = app.status.level === "verified" ? null : (valueAt(copy[activeLanguage], `status.${app.status.level}`) ?? valueAt(copy.zh, `status.${app.status.level}`));
   const license = licenseDescription(app.license);
-  return `<article class="app-card">
+  const compatibility = localized(app, "compatibility") || app.compatibility;
+  const permissions = localized(app, "permissions") || app.permissions;
+  const compatibilityLanguage = appCopy[activeLanguage]?.[app.id]?.compatibility ? (activeLanguage === "ja" ? "ja" : "en") : "zh-CN";
+  const permissionsLanguage = appCopy[activeLanguage]?.[app.id]?.permissions ? (activeLanguage === "ja" ? "ja" : "en") : "zh-CN";
+  const details = compatibility || permissions ? `<details class="app-details"><summary>${escapeHTML(t("detailsSummary"))}</summary><dl>${compatibility ? `<div><dt>${escapeHTML(t("compatibilityLabel"))}</dt><dd lang="${compatibilityLanguage}">${escapeHTML(compatibility)}</dd></div>` : ""}${permissions ? `<div><dt>${escapeHTML(t("permissionsLabel"))}</dt><dd lang="${permissionsLanguage}">${escapeHTML(permissions)}</dd></div>` : ""}</dl></details>` : "";
+  return `<article class="app-card${app.featured ? " app-card-featured" : ""}">
     <img class="app-icon" src="${escapeHTML(app.icon)}" alt="${escapeHTML(t("iconAlt", { name: app.name }))}" width="46" height="46" loading="lazy" decoding="async" />
-    <div class="app-card-head"><div><h3 lang="en">${escapeHTML(app.name)}</h3><span class="app-type">${escapeHTML(categoryName(app.category))}</span></div><div class="app-card-meta" aria-label="${escapeHTML(t("metadataLabel"))}"><span class="license" lang="en" title="${escapeHTML(license)}" aria-label="${escapeHTML(license)}">${escapeHTML(app.license)}</span>${status ? `<span class="tag ${statusClass(app.status.level)}" title="${escapeHTML(status.note)}">${escapeHTML(status.label)}</span>` : ""}</div></div>
+    <div class="app-card-head"><div><h3 lang="en">${escapeHTML(app.name)}</h3><span class="app-type">${escapeHTML(categoryName(app.category))}</span></div><div class="app-card-meta" aria-label="${escapeHTML(t("metadataLabel"))}"><a class="license" href="#standards" lang="en" title="${escapeHTML(license)}" aria-label="${escapeHTML(t("licenseFor", { license: app.license, name: app.name }))}">${escapeHTML(app.license)}</a>${status ? `<span class="tag ${statusClass(app.status.level)}" aria-label="${escapeHTML(`${status.label}: ${status.note}`)}"><span class="status-check" aria-hidden="true">✓</span>${escapeHTML(status.label)}</span>` : ""}</div></div>
     <p class="card-summary">${escapeHTML(localized(app, "summary"))}</p>
     <p class="recommendation" title="${escapeHTML(localized(app, "recommendation"))}">${escapeHTML(localized(app, "recommendation"))}</p>
+    ${details}
     <div class="tags" aria-label="${escapeHTML(t("metadataLabel"))}">
       ${(localized(app, "tags") || []).map(tag => `<span class="tag">${escapeHTML(tag)}</span>`).join("")}
     </div>
     <div class="app-links">
-      ${link(app.homepage, t("projectSite"))}
-      ${link(app.download, t("download"))}
+      ${link(app.homepage, t("projectSite"), "project-link", t("projectSiteFor", { name: app.name }))}
+      ${link(app.download, t("download"), "download-link", t("downloadFor", { name: app.name }))}
     </div>
   </article>`;
 }
 
 function renderFilters() {
-  filters.innerHTML = categories.map(id => `<button class="filter" type="button" data-category="${id}" aria-pressed="${id === activeCategory}">${escapeHTML(categoryName(id))}</button>`).join("");
+  const focusedCategory = document.activeElement?.closest?.("#category-filters .filter")?.dataset.category;
+  filters.innerHTML = categories.map(id => {
+    const count = id === "all" ? apps.length : apps.filter(app => appCategoryIds(app).includes(id)).length;
+    return `<button class="filter" type="button" data-category="${id}" aria-pressed="${id === activeCategory}"><svg viewBox="0 0 24 24" aria-hidden="true">${categoryIconPaths[id]}</svg><span>${escapeHTML(categoryName(id))}</span><span class="filter-count">${count}</span></button>`;
+  }).join("");
   filters.querySelectorAll("button").forEach(button => button.addEventListener("click", () => {
     activeCategory = button.dataset.category;
     renderFilters();
     renderCatalog();
   }));
+  if (focusedCategory) filters.querySelector(`[data-category="${focusedCategory}"]`)?.focus();
 }
 
 function updateURL() {
@@ -525,6 +595,8 @@ function updateURL() {
   else url.searchParams.set("category", activeCategory);
   if (testedFilter.checked) url.searchParams.set("tested", "1");
   else url.searchParams.delete("tested");
+  if (searchInput.value.trim()) url.searchParams.set("q", searchInput.value.trim());
+  else url.searchParams.delete("q");
   if (activeLanguage === "zh") url.searchParams.delete("lang");
   else url.searchParams.set("lang", activeLanguage);
   history.replaceState({}, "", url);
@@ -544,6 +616,20 @@ function renderCatalog() {
   emptyState.hidden = list.length !== 0;
   resultCount.textContent = t("foundCount", { count: list.length });
   updateURL();
+}
+
+function restoreURLState() {
+  const params = new URLSearchParams(location.search);
+  activeCategory = categories.includes(params.get("category")) ? params.get("category") : "all";
+  searchInput.value = params.get("q") || "";
+  testedFilter.checked = params.get("tested") === "1";
+  const requestedLanguage = params.get("lang") || localStorage.getItem(languageStorageKey) || localStorage.getItem(legacyLanguageStorageKey) || "zh";
+  activeLanguage = copy[requestedLanguage] ? requestedLanguage : "zh";
+  localStorage.setItem(languageStorageKey, activeLanguage);
+  applyStaticCopy();
+  renderFilters();
+  renderCatalog();
+  renderStandards();
 }
 
 function resetFilters() {
@@ -626,18 +712,24 @@ async function init() {
   document.querySelectorAll("[data-language]").forEach(button => button.addEventListener("click", () => applyLanguage(button.dataset.language)));
   try {
     const dataURL = new URL("data/apps.json", import.meta.url);
-    dataURL.searchParams.set("v", "20261016.18");
+    dataURL.searchParams.set("v", "20261018.1");
     const response = await fetch(dataURL, { cache: "no-store" });
     if (!response.ok) throw new Error("Unable to load app data");
     apps = await response.json();
     apps.forEach(app => { app.searchIndex = buildSearchIndex(app); });
     apps.sort(compareApps);
-    testedFilter.checked = new URLSearchParams(location.search).get("tested") === "1";
+    const params = new URLSearchParams(location.search);
+    const requestedCategory = params.get("category");
+    activeCategory = categories.includes(requestedCategory) ? requestedCategory : "all";
+    searchInput.value = params.get("q") || "";
+    testedFilter.checked = params.get("tested") === "1";
+    document.querySelector("#app-total").textContent = String(apps.length);
+    document.querySelector("#category-total").textContent = String(categories.length - 1);
     renderFilters();
     renderCatalog();
     renderStandards();
   } catch (error) {
-    resultCount.textContent = t("dataError");
+    resultCount.innerHTML = `${escapeHTML(t("dataError"))} <a href="https://github.com/ixiehao/MacBetter/tree/main/website/data" target="_blank" rel="noreferrer">${escapeHTML(t("dataErrorLink"))} ↗</a>`;
     console.error(error);
   }
 }
@@ -646,11 +738,13 @@ searchInput.addEventListener("input", renderCatalog);
 testedFilter.addEventListener("change", renderCatalog);
 clearFilters.addEventListener("click", resetFilters);
 document.addEventListener("keydown", event => {
-  if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
+  const target = event.target;
+  const isEditable = target?.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(target?.tagName || "");
+  if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k" && (!isEditable || target === searchInput)) {
     event.preventDefault();
     searchInput.focus();
   }
-  if (event.key === "/" && document.activeElement?.tagName !== "INPUT") {
+  if (event.key === "/" && !isEditable) {
     event.preventDefault();
     searchInput.focus();
   }
@@ -659,5 +753,7 @@ document.addEventListener("keydown", event => {
     renderCatalog();
   }
 });
+
+window.addEventListener("popstate", restoreURLState);
 
 init();
