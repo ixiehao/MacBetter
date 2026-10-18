@@ -17,7 +17,7 @@
     "permissions": "本地文件访问：仅处理你选择的视频。",
     "icon": "assets/icons/shotmap.png",
     "featured": true,
-    "sortOrder": 1
+    "sortOrder": 2
   },
   {
     "id": "lumaview",
@@ -37,7 +37,7 @@
     "permissions": "本地文件访问：仅查看你打开的图片。",
     "icon": "assets/icons/lumaview.png",
     "featured": true,
-    "sortOrder": 2
+    "sortOrder": 1
   },
   {
     "id": "mp4flow",

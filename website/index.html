@@ -31,7 +31,7 @@
     <link rel="manifest" href="site.webmanifest" />
     <link rel="preconnect" href="https://github.com" />
     <link rel="preload" href="assets/fonts/InterVariable.woff2?v=20261016.8" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="styles.css?v=20261018.9" />
+    <link rel="stylesheet" href="styles.css?v=20261018.10" />
     <script id="site-schema" type="application/ld+json">
       {"@context":"https://schema.org","@type":"WebSite","@id":"https://ixiehao.github.io/MacBetter/#website","url":"https://ixiehao.github.io/MacBetter/","name":"让 Mac 更好用","alternateName":["MAC免费开源软件","Make Your Mac Better","Macアプリ集"],"description":"一个由 Mac 用户共同维护的开源 macOS 软件目录。","inLanguage":["zh-CN","en","ja"],"publisher":{"@type":"Person","name":"iXiehao","url":"https://github.com/ixiehao"}}
     </script>
@@ -49,7 +49,7 @@
           <a class="nav-contribute" href="#contribute" data-i18n="navContribute">推荐软件</a>
           <a href="#catalog" data-i18n="navCatalog">软件目录</a>
           <a href="#standards" data-i18n="navStandards">开源说明</a>
-          <a class="nav-github" href="https://github.com/ixiehao/MacBetter" target="_blank" rel="noreferrer" data-i18n="navGithub">在 GitHub 共建 ↗</a>
+          <a class="nav-github" href="https://github.com/ixiehao/MacBetter" target="_blank" rel="noreferrer"><span data-i18n="navGithub">在 GitHub 共建</span><svg class="ui-icon ui-icon-external" aria-hidden="true"><use href="assets/tabler-icons.svg#external-link"></use></svg></a>
         </nav>
         <div class="language-switcher" role="group" aria-label="选择语言" data-i18n-aria-label="languageLabel">
           <button type="button" data-language="zh" lang="zh-CN" aria-pressed="true">中</button>
@@ -75,15 +75,15 @@
           <aside class="submit-card" aria-labelledby="submit-heading">
             <div class="submit-card-heading">
               <span class="submit-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L8 18l-4 1 1-4Z" /></svg>
+                <svg class="ui-icon" aria-hidden="true"><use href="assets/tabler-icons.svg#pencil"></use></svg>
               </span>
               <div><p class="submit-kicker" data-i18n="submitKicker">社区共建</p><h2 id="submit-heading" data-i18n="submitHeading">好工具，等你推荐。</h2></div>
             </div>
             <p class="submit-copy" data-i18n="communityInstructions">提交项目链接、许可证和真实使用场景，我们会核对公开信息。</p>
             <div class="community-action">
-            <a class="button button-community" href="https://github.com/ixiehao/MacBetter/issues/new?template=recommend-an-app.yml" target="_blank" rel="noreferrer"><span data-i18n="recommendApp">推荐一款软件</span> <span aria-hidden="true">↗</span></a>
-            <a class="community-rules" href="https://github.com/ixiehao/MacBetter/blob/main/CONTRIBUTING.md" target="_blank" rel="noreferrer"><span data-i18n="viewCriteria">收录标准</span> <span aria-hidden="true">↗</span></a>
-          </div>
+              <a class="button button-community" href="https://github.com/ixiehao/MacBetter/issues/new?template=recommend-an-app.yml" target="_blank" rel="noreferrer"><span data-i18n="recommendApp">推荐一款软件</span><svg class="ui-icon ui-icon-external" aria-hidden="true"><use href="assets/tabler-icons.svg#external-link"></use></svg></a>
+              <a class="community-rules" href="https://github.com/ixiehao/MacBetter/blob/main/CONTRIBUTING.md" target="_blank" rel="noreferrer"><span data-i18n="viewCriteria">收录标准</span><svg class="ui-icon ui-icon-external" aria-hidden="true"><use href="assets/tabler-icons.svg#external-link"></use></svg></a>
+            </div>
             <ul class="contribution-steps" aria-label="推荐软件需要的信息" data-i18n-aria-label="contributionStepsLabel">
               <li><span>01</span><strong data-i18n="contribution.sourceTitle">项目地址</strong></li>
               <li><span>02</span><strong data-i18n="contribution.licenseTitle">开源许可证</strong></li>
@@ -105,7 +105,7 @@
 
           <div class="catalog-controls" role="search" aria-label="搜索和筛选软件" data-i18n-aria-label="catalogControlsLabel">
             <label class="search-box" for="search-input">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.4-4.4m2.4-5.6a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z" /></svg>
+              <svg class="ui-icon" aria-hidden="true"><use href="assets/tabler-icons.svg#search"></use></svg>
               <input id="search-input" type="search" autocomplete="off" placeholder="搜索名称、用途或标签" aria-label="搜索软件目录" aria-keyshortcuts="Meta+K Control+K" data-i18n-placeholder="searchPlaceholder" data-i18n-aria-label="searchLabel" />
               <kbd>⌘ K</kbd>
             </label>
@@ -116,8 +116,8 @@
           <div class="results-heading">
             <p class="result-count" id="result-count" aria-live="polite"></p>
             <div class="catalog-actions">
-              <button class="results-share" id="share-directory" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.7 10.7 6.6-4.4m-6.6 7 6.6 4.4"/></svg><span data-i18n="shareDirectory">分享目录</span></button>
-              <a class="results-recommend" href="https://github.com/ixiehao/MacBetter/issues/new?template=recommend-an-app.yml" target="_blank" rel="noreferrer"><span data-i18n="recommendInline">推荐一款好软件</span><span aria-hidden="true">↗</span></a>
+              <button class="results-share" id="share-directory" type="button"><svg class="ui-icon" aria-hidden="true"><use href="assets/tabler-icons.svg#share"></use></svg><span data-i18n="shareDirectory">分享目录</span></button>
+              <a class="results-recommend" href="https://github.com/ixiehao/MacBetter/issues/new?template=recommend-an-app.yml" target="_blank" rel="noreferrer"><span data-i18n="recommendInline">推荐一款好软件</span><svg class="ui-icon ui-icon-external" aria-hidden="true"><use href="assets/tabler-icons.svg#external-link"></use></svg></a>
             </div>
           </div>
           <p class="visually-hidden" id="share-status" role="status" aria-live="polite"></p>
@@ -145,9 +145,9 @@
     <footer class="site-footer">
       <div class="shell footer-inner">
         <p><img class="wordmark-mark footer-mark" src="assets/site-mark.svg" alt="" width="24" height="24" /> <span data-i18n="footerMaintained">由 iXiehao 维护，欢迎通过 GitHub 一起完善。</span></p>
-        <p><span data-i18n="footerRights">第三方商标、名称和图标归各自权利人所有。</span><a href="https://github.com/ixiehao/MacBetter" target="_blank" rel="noreferrer" data-i18n="footerSource">查看源代码 ↗</a></p>
+        <p><span data-i18n="footerRights">第三方商标、名称和图标归各自权利人所有。</span><a href="https://github.com/ixiehao/MacBetter" target="_blank" rel="noreferrer"><span data-i18n="footerSource">查看源代码</span><svg class="ui-icon ui-icon-external" aria-hidden="true"><use href="assets/tabler-icons.svg#external-link"></use></svg></a></p>
       </div>
     </footer>
-    <script type="module" src="app.js?v=20261018.7"></script>
+    <script type="module" src="app.js?v=20261018.10"></script>
   </body>
 </html>

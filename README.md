@@ -57,7 +57,7 @@ python3 -m http.server 8000 --bind 127.0.0.1 --directory website
 
 ## 第三方标识
 
-页面中的第三方软件名称、商标与图标归相应权利人所有。图标仅用于识别和链接到其官方项目，不表示项目作者对本清单的认可。
+页面中的第三方软件名称、商标与产品图标归相应权利人所有。网页界面图标统一采用 Tabler Icons Outline v3.49.0（MIT）；来源和完整许可文本见 [`website/assets/TABLER-ICONS-LICENSE.md`](website/assets/TABLER-ICONS-LICENSE.md)。产品图标仅用于识别和链接到其官方项目，不表示项目作者对本清单的认可。
 
 ## 字体
 

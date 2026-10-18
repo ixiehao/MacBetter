@@ -1,15 +1,15 @@
 const categories = ["all", "office", "video", "image", "launcher", "menu", "maintenance", "files", "privacy", "efficiency"];
-const categoryIconPaths = {
-  all: '<rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/>',
-  office: '<path d="M7 3h7l5 5v13H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"/><path d="M14 3v5h5M9 13h6M9 17h6"/>',
-  video: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m10 9 5 3-5 3z"/>',
-  image: '<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9" r="1.5"/><path d="m21 15-5-5L5 20"/>',
-  launcher: '<rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/>',
-  menu: '<path d="M4 6h16M4 12h16M4 18h10"/><circle cx="19" cy="18" r="2"/>',
-  maintenance: '<path d="m14.7 6.3 3 3M4 20l9.5-9.5M13 5a5 5 0 0 0 6 6l-4 4-6-6 4-4Z"/><path d="m5 19 2-2"/>',
-  files: '<path d="M3 7a2 2 0 0 1 2-2h5l2 2h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/>',
-  privacy: '<path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"/><path d="m9 12 2 2 4-4"/>',
-  efficiency: '<path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 4l-4 16"/>'
+const categoryIcons = {
+  all: "apps",
+  office: "briefcase",
+  video: "video",
+  image: "photo",
+  launcher: "layout-grid",
+  menu: "adjustments-horizontal",
+  maintenance: "tool",
+  files: "folder",
+  privacy: "shield-lock",
+  efficiency: "code"
 };
 const licenseOrder = ["MIT", "GPL-2.0", "GPL-3.0", "AGPL-3.0", "MPL-2.0", "Apache-2.0", "Unlicense", "LGPL-2.1", "BSD-2-Clause", "BSD-3-Clause"];
 const categoryOrder = ["video", "image", "launcher", "menu", "office", "files", "maintenance", "privacy", "efficiency"];
@@ -41,7 +41,7 @@ const copy = {
     navContribute: "推荐软件",
     navCatalog: "软件目录",
     navStandards: "开源说明",
-    navGithub: "在 GitHub 共建 ↗",
+    navGithub: "在 GitHub 共建",
     languageLabel: "选择语言",
     languageOption: { zh: "切换为中文", en: "切换为 English", ja: "切换为日本語" },
     languageChanged: "已切换为中文",
@@ -115,27 +115,27 @@ const copy = {
     },
     footerMaintained: "由 iXiehao 维护，欢迎通过 GitHub 一起完善。",
     footerRights: "第三方商标、名称和图标归各自权利人所有。",
-    footerSource: "查看源代码 ↗"
+    footerSource: "查看源代码"
   },
   en: {
     pageTitle: "Make Your Mac Better · Open-Source macOS Apps",
     pageDescription: "A maintained, practical directory of free and open-source macOS apps, with licenses, official links, and key permission notes.",
     htmlLang: "en",
     skipLink: "Skip to app directory",
-    wordmark: "Mac App Directory",
+    wordmark: "Free & Open-Source Mac Apps",
     wordmarkAria: "Mac app directory — back to top",
     navLabel: "Page navigation",
     navContribute: "Recommend an app",
     navCatalog: "All apps",
     navStandards: "Open-source guide",
-    navGithub: "Contribute on GitHub ↗",
+    navGithub: "Contribute on GitHub",
     languageLabel: "Choose language",
     languageOption: { zh: "Switch to Chinese", en: "Switch to English", ja: "Switch to Japanese" },
     languageChanged: "Language changed to English",
-    category: { all: "All", office: "Work & Create", video: "Video & Audio", image: "Images & Graphics", launcher: "Windows & Launchers", menu: "Menu Bar & Hardware", maintenance: "Mac Care & Maintenance", files: "Files & Backup", privacy: "Privacy & Network", efficiency: "Developer & Productivity" },
-    communityEyebrow: "MACOS · OPEN-SOURCE APP DIRECTORY",
+    category: { all: "All", office: "Office & Creativity", video: "Video & Audio", image: "Images & Graphics", launcher: "Window Management & Launchers", menu: "Menu Bar & Hardware", maintenance: "Mac Care & Maintenance", files: "Files & Backup", privacy: "Privacy & Network", efficiency: "Developer Tools & Productivity" },
+    communityEyebrow: "macOS · OPEN-SOURCE APP DIRECTORY",
     communityHeading: "Make your Mac better",
-    brandMeaning: "i stands for Independent developer; o for Open-source builder.",
+    brandMeaning: "i for independent developer; o for open-source builder.",
     communityCopy: "Free, open-source apps organized by task—with official links, licenses, and real-world notes.",
     heroStatsLabel: "Directory overview",
     statApps: "open-source apps",
@@ -149,7 +149,7 @@ const copy = {
     contribution: { sourceTitle: "Project source", sourceDetail: "Author’s repository or official site", licenseTitle: "Open-source license", licenseDetail: "e.g. MIT or GPL-3.0", reasonTitle: "Why you recommend it", reasonDetail: "What problem it solves" },
     catalogEyebrow: "Open-source Mac apps",
     catalogHeading: "App directory",
-    catalogCopy: "Browse by task. Each listing includes its license and io testing status.",
+    catalogCopy: "Browse by task. Each listing shows its license and whether io has tested it.",
     catalogControlsLabel: "Search and filter apps",
     recommendInline: "Recommend an app",
     shareDirectory: "Share directory",
@@ -157,7 +157,7 @@ const copy = {
     shareFailed: "Sharing is unavailable. Copy this page address from your browser.",
     searchPlaceholder: "Search apps, features, or tags",
     searchLabel: "Search the app directory",
-    testedFilter: "Show io-tested only",
+    testedFilter: "Show apps tested by io",
     appCategoriesLabel: "App categories",
     foundCount: "{count} apps found",
     dataError: "The app directory could not be loaded.",
@@ -167,7 +167,7 @@ const copy = {
     metadataLabel: "App metadata",
     detailsSummary: "System requirements & permissions",
     compatibilityLabel: "System requirements",
-    permissionsLabel: "Permissions & safety",
+    permissionsLabel: "Permissions & safety notes",
     licenseFor: "View the {license} license notes for {name}",
     licenseNote: "Plain-language summary, not legal advice. Projects may include third-party components; check the repository’s LICENSE and any NOTICE file for actual terms.",
     projectSiteFor: "Open the {name} project site",
@@ -176,7 +176,7 @@ const copy = {
     projectSite: "Project site",
     download: "Download",
     status: {
-      tested: { label: "Tested by io", note: "Used in iXiehao’s day-to-day environment. This is not a security audit and does not guarantee compatibility with every macOS version." }
+      tested: { label: "Tested by io", note: "Personally used on iXiehao’s everyday Mac. This is not a security audit or a guarantee of compatibility with every macOS version." }
     },
     requires: "Requires: {permission}",
     permission: { accessibility: "Accessibility", files: "File access", fullDiskOptional: "Full Disk Access (optional)", screenRecording: "Screen Recording", inputMonitoring: "Input Monitoring" },
@@ -202,7 +202,7 @@ const copy = {
     },
     footerMaintained: "Maintained by iXiehao. Help improve it on GitHub.",
     footerRights: "All third-party names, trademarks, and icons belong to their respective owners.",
-    footerSource: "View source code ↗"
+    footerSource: "View source code"
   },
   ja: {
     pageTitle: "Macを、もっと使いやすく。｜オープンソースアプリ集",
@@ -214,19 +214,19 @@ const copy = {
     navLabel: "ページ内ナビゲーション",
     navContribute: "アプリを紹介",
     navCatalog: "すべてのアプリ",
-    navStandards: "オープンソースの説明",
-    navGithub: "GitHubで参加する ↗",
+    navStandards: "ライセンスガイド",
+    navGithub: "GitHubで参加する",
     languageLabel: "言語を選択",
     languageOption: { zh: "中国語に切り替え", en: "英語に切り替え", ja: "日本語に切り替え" },
     languageChanged: "表示言語を日本語に切り替えました",
-    category: { all: "すべて", office: "仕事・創作", video: "動画・オーディオ", image: "写真・画像", launcher: "ウインドウ・ランチャー", menu: "メニューバー・周辺機器", maintenance: "Macの最適化・メンテナンス", files: "ファイル・バックアップ", privacy: "プライバシー・ネットワーク", efficiency: "開発・効率化" },
-    communityEyebrow: "MACOS · オープンソースアプリガイド",
+    category: { all: "すべて", office: "仕事・創作", video: "動画・オーディオ", image: "画像・グラフィック", launcher: "ウインドウ・ランチャー", menu: "メニューバー・周辺機器", maintenance: "Macの最適化・メンテナンス", files: "ファイル・バックアップ", privacy: "プライバシー・ネットワーク", efficiency: "開発・効率化" },
+    communityEyebrow: "macOS · オープンソースアプリガイド",
     communityHeading: "Macを、もっと使いやすく。",
     brandMeaning: "i は独立開発者、o はオープンソースを育てる人。",
     communityCopy: "無料のオープンソースアプリを用途別に整理。公式リンク、ライセンス、実使用メモを確認できます。",
     heroStatsLabel: "ディレクトリの概要",
     statApps: "個のアプリ",
-    statCategories: "のカテゴリー",
+    statCategories: "カテゴリ",
     submitKicker: "コミュニティのおすすめ",
     submitHeading: "便利なMacアプリ、教えてください。",
     recommendApp: "おすすめのアプリを紹介する",
@@ -236,7 +236,7 @@ const copy = {
     contribution: { sourceTitle: "プロジェクトの出所", sourceDetail: "作者のリポジトリまたは公式サイト", licenseTitle: "オープンソースライセンス", licenseDetail: "例：MIT / GPL-3.0", reasonTitle: "おすすめの理由", reasonDetail: "どんな課題を解決するか" },
     catalogEyebrow: "オープンソースのMacアプリ",
     catalogHeading: "アプリ一覧",
-    catalogCopy: "用途で絞り込めます。各アプリにライセンスとioの実使用状況を記載しています。",
+    catalogCopy: "用途別に探せます。ライセンスと、ioの実使用状況も掲載しています。",
     catalogControlsLabel: "アプリを検索・絞り込み",
     recommendInline: "アプリを紹介する",
     shareDirectory: "一覧を共有",
@@ -244,8 +244,8 @@ const copy = {
     shareFailed: "共有できません。ブラウザーのアドレスをコピーしてください。",
     searchPlaceholder: "名前・機能・タグで検索",
     searchLabel: "アプリ一覧を検索",
-    testedFilter: "io 使用確認済みのみ",
-    appCategoriesLabel: "アプリのカテゴリー",
+    testedFilter: "ioが実際に使ったアプリのみ",
+    appCategoriesLabel: "アプリのカテゴリ",
     foundCount: "{count} 件のアプリ",
     dataError: "アプリ情報を読み込めません。",
     dataErrorLink: "GitHubで確認",
@@ -254,16 +254,16 @@ const copy = {
     metadataLabel: "アプリの属性",
     detailsSummary: "システム要件と権限",
     compatibilityLabel: "システム要件",
-    permissionsLabel: "権限と安全に関する注意",
+    permissionsLabel: "権限・安全に関する注意",
     licenseFor: "{name} の {license} ライセンス説明を見る",
     licenseNote: "平易な要約であり、法的助言ではありません。第三者のコードを含む場合があります。実際の条件はリポジトリの LICENSE と、NOTICE がある場合はその内容を確認してください。",
     projectSiteFor: "{name} のプロジェクトページを開く",
     downloadFor: "{name} をダウンロード",
     iconAlt: "{name}のアイコン",
-    projectSite: "公式サイト",
+    projectSite: "プロジェクトページ",
     download: "ダウンロード",
     status: {
-      tested: { label: "io 使用確認済み", note: "iXiehaoの日常用Macで使用を確認済みです。セキュリティ監査ではなく、すべてのmacOSバージョンでの互換性を保証するものではありません。" }
+      tested: { label: "ioで使用確認済み", note: "iXiehaoの日常用Macで実際に使用しています。セキュリティ監査ではなく、すべてのmacOSバージョンでの動作を保証するものでもありません。" }
     },
     requires: "要：{permission}",
     permission: { accessibility: "アクセシビリティ", files: "ファイルアクセス", fullDiskOptional: "フルディスクアクセス（任意）", screenRecording: "画面収録", inputMonitoring: "入力監視" },
@@ -289,7 +289,7 @@ const copy = {
     },
     footerMaintained: "iXiehaoが継続して管理しています。GitHubで一緒に改善できます。",
     footerRights: "第三者の商標、名称、アイコンは各権利者に帰属します。",
-    footerSource: "ソースコードを見る ↗"
+    footerSource: "ソースコードを見る"
   }
 };
 
@@ -306,7 +306,7 @@ const appCopy = {
     monitorcontrol: { summary: "Control an external display’s brightness and volume via DDC/CI, including with your keyboard media keys.", recommendation: "Adjust an external display without its buttons.", tags: ["External display", "Brightness", "DDC/CI"], permissions: "Using the native brightness keys with external displays requires Accessibility permission." },
     puremac: { summary: "See storage use and cleanable items more transparently, so you understand before you act.", recommendation: "See what will change before cleaning.", tags: ["Storage analysis", "Cleanup", "Preview before cleaning"], permissions: "Cleanup tools may request broader file access. Review every path they will touch before proceeding." },
     purge: { summary: "Scan caches, development leftovers, and large files, then keep cleanup actions in a reviewable interface.", recommendation: "My first choice for cache cleanup.", tags: ["Cache cleanup", "Large files", "Development files"], permissions: "Full Disk Access is optional; grant it only when you need to scan additional locations." },
-    libreoffice: { summary: "A free, open-source suite for documents, spreadsheets, and presentations—useful for viewing, light editing, and converting Office files.", recommendation: "A dependable offline fallback for Office files.", tags: ["Documents", "Spreadsheets", "Presentations"] },
+    libreoffice: { summary: "A free, open-source suite for documents, spreadsheets, and presentations—useful for viewing, light editing, and converting Office files.", recommendation: "Work with Office files offline, without a subscription.", tags: ["Documents", "Spreadsheets", "Presentations"] },
     zettlr: { summary: "A Markdown writing workspace for notes, citations, and long-form projects.", recommendation: "Keep long-form writing and citations in your files.", tags: ["Markdown", "Writing", "Citations"] },
     joplin: { summary: "A Markdown notes app with notebooks, end-to-end encrypted sync options, and an optional Web Clipper.", recommendation: "Sync notes without locking them to one service.", tags: ["Notes", "Markdown", "Sync"] },
     iina: { summary: "A modern macOS media player built on mpv, with strong format support, playlists, and subtitle controls.", recommendation: "Open local video and get on with it.", tags: ["Media player", "Subtitles", "Local playback"] },
@@ -325,8 +325,8 @@ const appCopy = {
     "obs-studio": { summary: "An open-source studio for recording and streaming, with scenes, sources, audio mixing, and local capture.", recommendation: "Record and stream from one capable workspace.", tags: ["Recording", "Live streaming", "Scenes"], permissions: "Screen Recording access is required to capture your display. Grant only the camera and microphone access you need." },
     "lossless-cut": { summary: "Trim, join, and extract video or audio quickly around keyframes, avoiding re-encoding when possible.", recommendation: "Cut a clip without re-encoding the whole video.", tags: ["Lossless trim", "Video", "FFmpeg"] },
     audacity: { summary: "A mature multitrack audio editor for recording, editing, noise reduction, and format conversion.", recommendation: "Use a proper timeline when audio needs detail.", tags: ["Audio editing", "Recording", "Noise reduction"] },
-    mangodisk: { summary: "Inspect disk use, duplicates, and uninstallable apps before choosing what to remove.", recommendation: "Understand each item before you clean it.", tags: ["Disk analysis", "Uninstaller", "Duplicates"] },
-    netnewswire: { summary: "A fast, local-first RSS reader that brings sites, blogs, and subscriptions into one quiet inbox.", recommendation: "Bring subscriptions back to your desktop, quietly.", tags: ["RSS", "Reading", "Local-first"] },
+    mangodisk: { summary: "Inspect disk use, duplicates, and uninstallable apps before choosing what to remove.", recommendation: "See what is taking up space before you delete it.", tags: ["Disk analysis", "Uninstaller", "Duplicates"] },
+    netnewswire: { summary: "A fast, local-first RSS reader that brings sites, blogs, and subscriptions into one quiet inbox.", recommendation: "Read your favorite sites together in one place.", tags: ["RSS", "Reading", "Local-first"] },
     appflowy: { summary: "A local-first workspace for documents, databases, and projects, with optional collaboration and sync.", recommendation: "Keep notes, tasks, and knowledge in your hands.", tags: ["Documents", "Databases", "Local-first"] },
     onlyoffice: { summary: "An offline document, spreadsheet, and presentation suite with DOCX, XLSX, and PPTX compatibility.", recommendation: "Start here when Office compatibility matters.", tags: ["Office compatible", "Documents", "Spreadsheets"] },
     qownnotes: { summary: "A Markdown notes app built around ordinary files, with folder and Nextcloud workflows.", recommendation: "Notes are files—take them anywhere.", tags: ["Markdown", "Notes", "Nextcloud"] },
@@ -334,13 +334,13 @@ const appCopy = {
     darktable: { summary: "An open-source darkroom workflow for RAW photo management and non-destructive editing.", recommendation: "Edit RAW seriously, without a subscription.", tags: ["RAW", "Color grading", "Photo management"] },
     rawtherapee: { summary: "A high-quality RAW processor with deep control over exposure, sharpening, and color.", recommendation: "Bring the detail back from your camera files.", tags: ["RAW", "Developing", "Color"] },
     amethyst: { summary: "An approachable automatic tiling window manager for macOS, with layouts and shortcuts.", recommendation: "Let windows arrange themselves so you can focus.", tags: ["Auto tiling", "Window management", "Shortcuts"], permissions: "Requires Accessibility permission to read and arrange other apps’ windows." },
-    thaw: { summary: "Organize, hide, and search menu bar icons so the top of your screen stays usable.", recommendation: "Your menu bar should be clear, not crowded.", tags: ["Menu bar", "Icon organizer", "Search"] },
+    thaw: { summary: "Organize, hide, and search menu bar icons so the top of your screen stays usable.", recommendation: "Keep your menu bar tidy and easy to use.", tags: ["Menu bar", "Icon organizer", "Search"] },
     linearmouse: { summary: "Give each external mouse and trackpad its own scrolling, pointer, and acceleration feel.", recommendation: "An external mouse should feel like yours.", tags: ["Mouse", "Trackpad", "Scrolling"], permissions: "Requires Accessibility permission to apply input-device settings." },
     "background-music": { summary: "Control each app’s volume separately and optionally record system audio.", recommendation: "One loud app should not surprise you.", tags: ["Per-app volume", "System audio", "Recording"], permissions: "Installs an audio driver. Recording may also request Microphone permission." },
     "keeping-you-awake": { summary: "Prevent your Mac from sleeping for a set time—handy for downloads, demos, and transfers.", recommendation: "When you need it awake, keep it awake.", tags: ["Stay awake", "Menu bar", "Timer"] },
     latest: { summary: "See which installed Mac apps have updates available, while keeping approval in your hands.", recommendation: "Check app updates without opening every app.", tags: ["App updates", "Checks", "Lightweight"] },
     localsend: { summary: "Send files, text, and clipboard content directly over the local network, without a cloud relay.", recommendation: "Send a file without uploading it first.", tags: ["Local transfer", "Cross-platform", "No cloud"] },
-    openmtp: { summary: "Browse, drag, and transfer files directly between a Mac and Android or other MTP devices.", recommendation: "Android file transfer on Mac should just work.", tags: ["Android", "MTP", "File transfer"] },
+    openmtp: { summary: "Browse, drag, and transfer files directly between a Mac and Android or other MTP devices.", recommendation: "Move files between your Mac and Android with ease.", tags: ["Android", "MTP", "File transfer"] },
     kopia: { summary: "A backup tool with snapshots, deduplication, and encryption for local or remote destinations.", recommendation: "A backup only counts when it restores.", tags: ["Backup", "Snapshots", "Encryption"] },
     syncthing: { summary: "Sync chosen folders directly between devices without handing files to a third-party cloud.", recommendation: "Sync files without giving them away.", tags: ["File sync", "End-to-end", "Decentralized"] },
     cryptomator: { summary: "Encrypt files locally before they reach a cloud drive; you keep control of the keys.", recommendation: "Lock files before they go to the cloud.", tags: ["Encryption", "Cloud drives", "Privacy"] },
@@ -365,10 +365,10 @@ const appCopy = {
     applite: { summary: "A graphical way to browse, install, and update Homebrew formulae and Casks.", recommendation: "Homebrew is useful; memorizing commands is optional.", tags: ["Homebrew", "App updates", "GUI"] },
     "github-desktop": { summary: "Use a clear visual workflow for commits, branches, comparisons, and pull requests in everyday Git work.", recommendation: "Git should be powerful without feeling punishing.", tags: ["Git", "Version control", "Development"] },
     vscodium: { summary: "A community-built, open-source code editor distribution with familiar extensions and debugging workflows.", recommendation: "Keep your editor capable, with less telemetry.", tags: ["Code editor", "Extensions", "Development"] },
-    dbeaver: { summary: "A universal database client for queries, schema browsing, and data import or export across many engines.", recommendation: "One database tool should cover the common connections.", tags: ["Databases", "SQL", "Data management"] },
-    zed: { summary: "A fast native code editor focused on collaboration, language tooling, and a fluid daily coding experience.", recommendation: "A fast editor should not interrupt your thought.", tags: ["Code editor", "Collaboration", "Native performance"] },
+    dbeaver: { summary: "A universal database client for queries, schema browsing, and data import or export across many engines.", recommendation: "One client for the databases you use.", tags: ["Databases", "SQL", "Data management"] },
+    zed: { summary: "A fast native code editor focused on collaboration, language tooling, and a fluid daily coding experience.", recommendation: "Fast editing that keeps you in the flow.", tags: ["Code editor", "Collaboration", "Native performance"] },
     codeedit: { summary: "An open-source native Mac code editor with a clean interface for lightweight project browsing and editing.", recommendation: "A few lines of code should not require a giant tool.", tags: ["Code editor", "Swift-native", "Lightweight"] },
-    xcodes: { summary: "Download, switch, and manage multiple Xcode versions in one place for different projects and systems.", recommendation: "Do not manage multi-version Xcode by hunting installers.", tags: ["Xcode", "Dev environment", "Version management"] },
+    xcodes: { summary: "Download, switch, and manage multiple Xcode versions in one place for different projects and systems.", recommendation: "Manage multiple Xcode versions without hunting down installers.", tags: ["Xcode", "Dev environment", "Version management"] },
     vlc: { summary: "The classic play-anything media player for local files, discs, streams, and less common codecs.", recommendation: "If a video will not open, try VLC first.", tags: ["Media player", "Wide format support", "Streaming"] },
     "subtitle-edit": { summary: "A complete subtitle editor for writing, proofreading, translating, and syncing subtitles with waveforms and spectrograms.", recommendation: "When subtitles drift, do not drag them by eye.", tags: ["Subtitles", "Timeline", "Speech recognition"] },
     subler: { summary: "A native MP4/M4V packaging and metadata tool for organizing subtitles, audio tracks, artwork, and media details.", recommendation: "Put the subtitles and artwork into the delivered file.", tags: ["MP4", "Subtitle muxing", "Metadata"] },
@@ -384,7 +384,7 @@ const appCopy = {
   },
   ja: {
     shotmap: { summary: "ローカル動画からキーフレームを抽出し、調整可能なストーリーボードとコンタクトシートを生成。PNG / JPGで書き出せます。", recommendation: "長い動画を、一枚で見返せる。", tags: ["Swiftネイティブ", "オフライン処理", "動画", "画像"] },
-    lumaview: { summary: "高速でミニマルなローカル画像ビューア。開く、めくる、細部を見ることに絞りました。", recommendation: "画像を見るだけなら、軽くていい。", tags: ["Swiftネイティブ", "ローカル画像", "軽量"] },
+    lumaview: { summary: "画像をすばやく開いて閲覧し、細部まで確認できるシンプルなローカルビューアです。", recommendation: "画像を見るだけなら、軽くていい。", tags: ["Swiftネイティブ", "ローカル画像", "軽量"] },
     mp4flow: { summary: "MP4の変換、トリミング、回転、結合などを、ローカルで手軽に行えます。", recommendation: "MP4だけなら、重い編集ソフトは要らない。", tags: ["Swiftネイティブ", "ローカル処理", "MP4"] },
     "launchpad-back": { summary: "従来のLaunchpadのグリッド、ページ、フォルダ、ドラッグ＆ドロップ、検索の操作感を再現します。", recommendation: "アプリ探しを、手になじむ操作へ。", tags: ["アプリ起動", "グリッド", "フォルダ"] },
     loop: { summary: "ドラッグ、ショートカット、フローティングメニューでウインドウを素早く整列。画面分割やマルチタスクに向いています。", recommendation: "ウインドウ整理は、ドラッグ一つで。", tags: ["ウインドウ管理", "ショートカット", "画面分割"], permissions: "ほかのアプリのウインドウを移動・リサイズするため、「アクセシビリティ」へのアクセスが必要です。" },
@@ -394,13 +394,13 @@ const appCopy = {
     monitorcontrol: { summary: "DDC/CI対応ディスプレイの明るさと音量を調整。キーボードのメディアキーとも連携します。", recommendation: "外部ディスプレイの調整に、ボタン探しは不要。", tags: ["外部ディスプレイ", "明るさ", "DDC/CI"], permissions: "外部ディスプレイをキーボードの標準輝度キーで操作するには、「アクセシビリティ」へのアクセスが必要です。" },
     puremac: { summary: "ストレージの使用状況と削除候補を分かりやすく可視化。理解してから操作できます。", recommendation: "消す前に、何が変わるかを知る。", tags: ["ストレージ分析", "クリーニング", "プレビュー"], permissions: "クリーニング機能は追加のファイルアクセスを求めることがあります。実行前に対象パスを一つずつ確認してください。" },
     purge: { summary: "キャッシュ、開発環境の残り、大きなファイルをスキャンし、削除操作を確認可能な画面にまとめます。", recommendation: "キャッシュを掃除するなら、まずこれ。", tags: ["キャッシュ削除", "大容量ファイル", "開発環境"], permissions: "フルディスクアクセスは任意です。より多くのフォルダをスキャンする必要があるときだけ検討してください。" },
-    libreoffice: { summary: "無料のオープンソース文書・表計算・プレゼンテーションスイート。Officeファイルの閲覧、軽い編集、変換の予備手段になります。", recommendation: "Officeファイルのための、頼れるオフライン予備。", tags: ["文書", "表計算", "プレゼンテーション"] },
+    libreoffice: { summary: "無料のオープンソース文書・表計算・プレゼンテーションスイート。Officeファイルの閲覧、軽い編集、変換に使えます。", recommendation: "Officeファイルをオフラインで扱うときの、頼れる選択肢。", tags: ["文書", "表計算", "プレゼンテーション"] },
     zettlr: { summary: "Markdown、引用管理、長文執筆を一つの作業環境にまとめる、研究・執筆向けのエディタです。", recommendation: "原稿と引用を、自分のファイルに残せる。", tags: ["Markdown", "引用管理", "長文執筆"] },
     joplin: { summary: "Markdown対応のノートアプリ。端末間同期やエンドツーエンド暗号化を、自分で選んだ保存先で利用できます。", recommendation: "同期先を自分で選べるノート。", tags: ["ノート", "Markdown", "同期"] },
     iina: { summary: "macOS向けに設計された動画プレーヤー。字幕、プレイリスト、各種動画・音声形式を軽快に扱えます。", recommendation: "ローカル動画は、ただ気持ちよく再生したい。", tags: ["動画再生", "字幕", "mpv"] },
     handbrake: { summary: "動画を多様な形式へ変換できる、定番のオープンソース・トランスコーダーです。プリセットと詳細設定の両方を備えます。", recommendation: "動画変換を、迷わず確実に。", tags: ["動画変換", "エンコード", "プリセット"] },
     "yt-dlp": { summary: "多数の対応サイトから動画・音声を取得できる、機能豊富なコマンドラインツールです。", recommendation: "許可された保存を、きちんと自動化。", tags: ["コマンドライン", "動画・音声", "ダウンロード"] },
-    macshot: { summary: "注釈、スクロールキャプチャ、OCR、画面収録、簡易編集を一つにまとめたネイティブのキャプチャツールです。", recommendation: "撮る、隠す、注釈を入れる。一度で。", tags: ["スクリーンショット", "画面収録", "スクロールキャプチャ"], permissions: "撮影・録画には「画面収録」許可が必要です。音声録音では「マイク」、グローバル操作では必要に応じて「アクセシビリティ」または「入力監視」を求めます。" },
+    macshot: { summary: "注釈、スクロールキャプチャ、OCR、画面収録、簡易編集を一つにまとめたネイティブのキャプチャツールです。", recommendation: "撮影から注釈まで、これ一つで。", tags: ["スクリーンショット", "画面収録", "スクロールキャプチャ"], permissions: "撮影・録画には「画面収録」許可が必要です。音声録音では「マイク」、グローバル操作では必要に応じて「アクセシビリティ」または「入力監視」を求めます。" },
     imageoptim: { summary: "画像をドラッグ＆ドロップで最適化し、見た目を保ちながらファイルサイズを小さくします。", recommendation: "公開前の画像を、軽く整える。", tags: ["画像圧縮", "最適化", "ドラッグ＆ドロップ"] },
     krita: { summary: "イラスト、コンセプトアート、コミック制作に対応する、機能豊富なデジタルペイントソフトです。", recommendation: "描くための道具が、ここにある。", tags: ["デジタルペイント", "イラスト", "PSD"] },
     rectangle: { summary: "ショートカットやスナップ領域でウインドウを移動・リサイズし、画面を素早く整えます。", recommendation: "ウインドウの置き場所を、迷わず決める。", tags: ["ウインドウ整列", "ショートカット", "スナップ"], permissions: "ほかのアプリのウインドウを操作するため、「アクセシビリティ」へのアクセスが必要です。" },
@@ -413,8 +413,8 @@ const appCopy = {
     "obs-studio": { summary: "シーン、映像・音声ソース、ミキサーをまとめて扱える、録画・配信向けのオープンソーススタジオです。", recommendation: "録画も配信も、一つの作業場所で。", tags: ["画面収録", "ライブ配信", "シーン"], permissions: "画面を取り込むには「画面収録」が必要です。カメラとマイクは使う機能に応じて許可してください。" },
     "lossless-cut": { summary: "キーフレームを基準に動画・音声をすばやく切り出し、可能な限り再エンコードを避けます。", recommendation: "一部を切るだけなら、全編を再エンコードしない。", tags: ["ロスレスカット", "動画", "FFmpeg"] },
     audacity: { summary: "録音、編集、ノイズ除去、形式変換まで対応する、定番のマルチトラック音声エディタです。", recommendation: "音声を詰めるなら、きちんとしたタイムラインで。", tags: ["音声編集", "録音", "ノイズ除去"] },
-    mangodisk: { summary: "ディスク使用量、重複ファイル、削除可能なアプリを確認してから、整理の対象を選べます。", recommendation: "掃除の前に、一つずつ正体を見る。", tags: ["ディスク分析", "アンインストール", "重複ファイル"] },
-    netnewswire: { summary: "軽快でローカル優先のRSSリーダー。サイトやブログの更新を、静かな受信箱にまとめます。", recommendation: "情報の購読を、静かにデスクトップへ戻す。", tags: ["RSS", "読む", "ローカル優先"] },
+    mangodisk: { summary: "ディスク使用量、重複ファイル、削除可能なアプリを確認してから、整理の対象を選べます。", recommendation: "削除前に、容量を使っている項目を確認。", tags: ["ディスク分析", "アンインストール", "重複ファイル"] },
+    netnewswire: { summary: "軽快でローカル優先のRSSリーダー。サイトやブログの更新を、静かな受信箱にまとめます。", recommendation: "お気に入りのサイトを、デスクトップでまとめて読める。", tags: ["RSS", "読む", "ローカル優先"] },
     appflowy: { summary: "文書、データベース、プロジェクトをまとめるローカル優先のワークスペース。必要に応じて同期や共同作業も選べます。", recommendation: "ノートもタスクも、手元に残せる。", tags: ["文書", "データベース", "ローカル優先"] },
     onlyoffice: { summary: "DOCX、XLSX、PPTXに対応する、オフラインの文書・表計算・プレゼンテーションスイートです。", recommendation: "Office互換が必要なら、まずこれ。", tags: ["Office互換", "文書", "表計算"] },
     qownnotes: { summary: "普通のMarkdownファイルを軸にしたノートアプリ。フォルダやNextcloudと組み合わせて使えます。", recommendation: "ノートはファイル。どこへでも持っていける。", tags: ["Markdown", "ノート", "Nextcloud"] },
@@ -422,13 +422,13 @@ const appCopy = {
     darktable: { summary: "RAW写真の管理と非破壊編集に向く、オープンソースの暗室ワークフローです。", recommendation: "RAWを本気で仕上げるなら、サブスクなしで。", tags: ["RAW", "カラー調整", "写真管理"] },
     rawtherapee: { summary: "露出、シャープネス、色を細かく追い込める、高品質なRAW現像ソフトです。", recommendation: "カメラの原データから、細部を取り戻す。", tags: ["RAW", "現像", "色"] },
     amethyst: { summary: "複数のレイアウトとショートカットを備えた、使い始めやすい自動タイル型ウインドウマネージャです。", recommendation: "ウインドウは任せて、作業に集中。", tags: ["自動タイル", "ウインドウ管理", "ショートカット"], permissions: "ほかのアプリのウインドウを読み取り・整列するため、「アクセシビリティ」へのアクセスが必要です。" },
-    thaw: { summary: "メニューバーのアイコンを整理、非表示、検索。上部がアイコンだらけでも使いやすくします。", recommendation: "メニューバーは、すっきりしているべき。", tags: ["メニューバー", "アイコン整理", "検索"] },
+    thaw: { summary: "メニューバーのアイコンを整理、非表示、検索。上部がアイコンだらけでも使いやすくします。", recommendation: "メニューバーをすっきり整理。", tags: ["メニューバー", "アイコン整理", "検索"] },
     linearmouse: { summary: "外付けマウスやトラックパッドごとに、スクロール、ポインタ、加速感を設定できます。", recommendation: "外付けマウスも、自分の手になじむ。", tags: ["マウス", "トラックパッド", "スクロール"], permissions: "入力デバイスの設定を適用するため、「アクセシビリティ」へのアクセスが必要です。" },
     "background-music": { summary: "アプリごとの音量を個別に調整し、必要ならシステム音声も録音できます。", recommendation: "一つのアプリに、突然大きな音を出させない。", tags: ["アプリ別音量", "システム音声", "録音"], permissions: "オーディオドライバを導入します。録音では「マイク」許可を求めることがあります。" },
     "keeping-you-awake": { summary: "決めた時間だけMacの自動スリープを防止。ダウンロード、デモ、転送時に便利です。", recommendation: "眠らせたくないときは、起こしておく。", tags: ["スリープ防止", "メニューバー", "タイマー"] },
     latest: { summary: "インストール済みアプリの更新を一か所で確認。更新の実行は自分で判断できます。", recommendation: "アプリを一つずつ開かずに、更新を確認。", tags: ["アプリ更新", "確認", "軽量"] },
     localsend: { summary: "クラウドを経由せず、同じネットワーク内でファイル、テキスト、クリップボードを直接送れます。", recommendation: "送る前に、アップロードしなくていい。", tags: ["ローカル転送", "クロスプラットフォーム", "クラウド不要"] },
-    openmtp: { summary: "MacとAndroidなどのMTP機器の間で、ファイルを直接ブラウズ、ドラッグ、転送できます。", recommendation: "Androidのファイル転送も、Macで普通に。", tags: ["Android", "MTP", "ファイル転送"] },
+    openmtp: { summary: "MacとAndroidなどのMTP機器の間で、ファイルを直接ブラウズ、ドラッグ、転送できます。", recommendation: "Androidとのファイル転送も、Macから手軽に。", tags: ["Android", "MTP", "ファイル転送"] },
     kopia: { summary: "スナップショット、重複排除、暗号化を備え、ローカルや各種リモート保存先にバックアップできます。", recommendation: "バックアップは、復元できて初めて役に立つ。", tags: ["バックアップ", "スナップショット", "暗号化"] },
     syncthing: { summary: "指定したフォルダを端末同士で直接同期。第三者のクラウドにファイルを預ける必要はありません。", recommendation: "同期しても、ファイルを手放さない。", tags: ["ファイル同期", "エンドツーエンド", "分散型"] },
     cryptomator: { summary: "クラウドドライブへ送る前にファイルをローカルで暗号化。鍵は自分で管理します。", recommendation: "クラウドへ行く前に、ファイルをロック。", tags: ["暗号化", "クラウドドライブ", "プライバシー"] },
@@ -453,17 +453,17 @@ const appCopy = {
     applite: { summary: "HomebrewのFormulaとCaskを、グラフィカルに探し、インストール、更新できるツールです。", recommendation: "Homebrewは便利。コマンドを暗記しなくてもいい。", tags: ["Homebrew", "アプリ更新", "GUI"] },
     "github-desktop": { summary: "コミット、ブランチ、比較、プルリクエストを視覚的な流れで扱える、日常のGit作業向けアプリです。", recommendation: "Gitは強力であっても、怖くなくていい。", tags: ["Git", "バージョン管理", "開発"] },
     vscodium: { summary: "馴染みある拡張機能とデバッグの流れを備えた、コミュニティビルドのオープンソースコードエディタです。", recommendation: "便利なエディタを、より少ないテレメトリーで。", tags: ["コードエディタ", "拡張機能", "開発"] },
-    dbeaver: { summary: "多様なDBに対応する汎用クライアント。クエリ、スキーマ閲覧、データ入出力をまとめて扱えます。", recommendation: "よく使う接続を、一つのDBツールで。", tags: ["データベース", "SQL", "データ管理"] },
-    zed: { summary: "共同作業、言語ツール、日々の滑らかなコーディング体験に焦点を当てた高速ネイティブコードエディタです。", recommendation: "速いエディタは、思考を止めない。", tags: ["コードエディタ", "共同作業", "ネイティブ性能"] },
+    dbeaver: { summary: "多様なDBに対応する汎用クライアント。クエリ、スキーマ閲覧、データ入出力をまとめて扱えます。", recommendation: "よく使うデータベースを、一つのツールで。", tags: ["データベース", "SQL", "データ管理"] },
+    zed: { summary: "共同作業、言語ツール、日々の滑らかなコーディング体験に焦点を当てた高速ネイティブコードエディタです。", recommendation: "エディタの待ち時間を減らして、流れを止めない。", tags: ["コードエディタ", "共同作業", "ネイティブ性能"] },
     codeedit: { summary: "軽いプロジェクトの閲覧と編集に適した、すっきりした画面のオープンソースMacネイティブコードエディタです。", recommendation: "数行直すだけなら、巨大なツールは要らない。", tags: ["コードエディタ", "Swiftネイティブ", "軽量"] },
-    xcodes: { summary: "異なるプロジェクトやOS向けに、複数のXcodeを一か所でダウンロード、切り替え、管理できます。", recommendation: "複数のXcodeを、インストーラー探しで管理しない。", tags: ["Xcode", "開発環境", "バージョン管理"] },
+    xcodes: { summary: "異なるプロジェクトやOS向けに、複数のXcodeを一か所でダウンロード、切り替え、管理できます。", recommendation: "複数のXcodeを、探し回らずに管理。", tags: ["Xcode", "開発環境", "バージョン管理"] },
     vlc: { summary: "ローカルファイル、ディスク、ストリーム、珍しいコーデックまで扱える、定番の万能メディアプレーヤーです。", recommendation: "開けない動画があれば、まずVLC。", tags: ["メディアプレーヤー", "幅広い形式", "ストリーミング"] },
     "subtitle-edit": { summary: "波形やスペクトログラムを見ながら、字幕の作成、校正、翻訳、同期まで行える総合エディタです。", recommendation: "字幕のずれを、目だけで直さない。", tags: ["字幕", "タイムライン", "音声認識"] },
     subler: { summary: "字幕、音声トラック、アートワーク、メタデータを整理できる、MP4/M4V向けネイティブ編集ツールです。", recommendation: "納品前に、字幕と表紙を一つのファイルへ。", tags: ["MP4", "字幕mux", "メタデータ"] },
     mediainfo: { summary: "映像・音声コンテナ内のコーデック、ビットレート、トラック、色、字幕などの技術情報を確認できます。", recommendation: "納品前に、ファイルの中身を正確に知る。", tags: ["コーデック情報", "メディア検査", "メタデータ"] },
     mixxx: { summary: "2デッキミックス、コントローラー割り当て、ビート同期、音楽ライブラリ管理を備えた自由なDJソフトです。", recommendation: "本格的なミックスに、サブスクは要らない。", tags: ["DJ", "ミキシング", "音楽ライブラリ"] },
-    musescore: { summary: "MIDI、読み書き、出力を備えた本格的なワークフローで、楽譜の作成、編集、レイアウトができます。", recommendation: "楽譜を書くのに、制譜ソフトを借りなくていい。", tags: ["楽譜", "MIDI", "音楽制作"] },
-    firefox: { summary: "同期、拡張機能、プライバシー設定、開発者ツールを備えた、成熟したオープンソースブラウザーです。", recommendation: "信頼できるブラウザーなら、Firefoxがまず候補。", tags: ["ブラウザー", "拡張機能", "プライバシー"] },
+    musescore: { summary: "MIDI、読み書き、出力を備えた本格的なワークフローで、楽譜の作成、編集、レイアウトができます。", recommendation: "楽譜を、無料のソフトで作成・編集。", tags: ["楽譜", "MIDI", "音楽制作"] },
+    firefox: { summary: "同期、拡張機能、プライバシー設定、開発者ツールを備えた、成熟したオープンソースブラウザーです。", recommendation: "迷ったら、まずFirefoxを。", tags: ["ブラウザー", "拡張機能", "プライバシー"] },
     "zen-browser": { summary: "Firefoxを基盤に、ワークスペース、分割表示、タブ整理に力を入れたオープンソースブラウザーです。", recommendation: "タブが多くても、集中できる場所を。", tags: ["ブラウザー", "ワークスペース", "タブ管理"] },
     thunderbird: { summary: "複数のメール、カレンダー、連絡先、RSS、ローカル検索をまとめて扱えるオープンソースのメールクライアントです。", recommendation: "複数の受信箱を、一つの静かなデスクトップへ。", tags: ["メール", "カレンダー", "RSS"] },
     signal: { summary: "メッセージと通話に対応するオープンソースのプライベートメッセンジャー。連携したスマートフォンから履歴も移せます。", recommendation: "私的な会話には、検証できるエンドツーエンド暗号化を。", tags: ["プライベートメッセージ", "エンドツーエンド暗号化", "クロスプラットフォーム"] },
@@ -509,7 +509,7 @@ function escapeHTML(value) {
 }
 
 function link(url, text, className = "", accessibleName = text) {
-  return `<a class="${className}" href="${escapeHTML(url)}" aria-label="${escapeHTML(accessibleName)}" target="_blank" rel="noreferrer">${escapeHTML(text)} <span aria-hidden="true">↗</span></a>`;
+  return `<a class="${className}" href="${escapeHTML(url)}" aria-label="${escapeHTML(accessibleName)}" target="_blank" rel="noreferrer">${escapeHTML(text)}<svg class="ui-icon ui-icon-external" aria-hidden="true"><use href="assets/tabler-icons.svg#external-link"></use></svg></a>`;
 }
 
 function statusClass(level) {
@@ -574,10 +574,10 @@ function cardTemplate(app) {
   const compatibilityLanguage = appCopy[activeLanguage]?.[app.id]?.compatibility ? (activeLanguage === "ja" ? "ja" : "en") : "zh-CN";
   const permissionsLanguage = appCopy[activeLanguage]?.[app.id]?.permissions ? (activeLanguage === "ja" ? "ja" : "en") : "zh-CN";
   const licensePopover = `<details class="license-details card-popover"><summary class="license" aria-label="${escapeHTML(t("licenseFor", { license: app.license, name: app.name }))}" title="${escapeHTML(t("licenseFor", { license: app.license, name: app.name }))}" lang="en">${escapeHTML(app.license)}</summary><div class="license-popover"><strong lang="en">${escapeHTML(app.license)}</strong><p>${escapeHTML(licenseExplanation)}</p><p class="license-note">${escapeHTML(t("licenseNote"))}</p></div></details>`;
-  const details = compatibility || permissions ? `<details class="app-details card-popover"><summary aria-label="${escapeHTML(t("detailsSummary"))}" title="${escapeHTML(t("detailsSummary"))}"><span aria-hidden="true">i</span></summary><dl>${compatibility ? `<div><dt>${escapeHTML(t("compatibilityLabel"))}</dt><dd lang="${compatibilityLanguage}">${escapeHTML(compatibility)}</dd></div>` : ""}${permissions ? `<div><dt>${escapeHTML(t("permissionsLabel"))}</dt><dd lang="${permissionsLanguage}">${escapeHTML(permissions)}</dd></div>` : ""}</dl></details>` : "";
-  return `<article class="app-card${app.featured ? " app-card-featured" : ""}">
+  const details = compatibility || permissions ? `<details class="app-details card-popover"><summary aria-label="${escapeHTML(t("detailsSummary"))}" title="${escapeHTML(t("detailsSummary"))}"><svg class="ui-icon" aria-hidden="true"><use href="assets/tabler-icons.svg#info-circle"></use></svg></summary><dl>${compatibility ? `<div><dt>${escapeHTML(t("compatibilityLabel"))}</dt><dd lang="${compatibilityLanguage}">${escapeHTML(compatibility)}</dd></div>` : ""}${permissions ? `<div><dt>${escapeHTML(t("permissionsLabel"))}</dt><dd lang="${permissionsLanguage}">${escapeHTML(permissions)}</dd></div>` : ""}</dl></details>` : "";
+  return `<article class="app-card">
     <img class="app-icon" src="${escapeHTML(app.icon)}" alt="${escapeHTML(t("iconAlt", { name: app.name }))}" width="46" height="46" loading="lazy" decoding="async" />
-    <div class="app-card-head"><div><h3 lang="en">${escapeHTML(app.name)}</h3><span class="app-type">${escapeHTML(categoryName(app.category))}</span></div><div class="app-card-meta" aria-label="${escapeHTML(t("metadataLabel"))}">${status ? `<span class="tag ${statusClass(app.status.level)}" aria-label="${escapeHTML(`${status.label}: ${status.note}`)}"><span class="status-check" aria-hidden="true">✓</span>${escapeHTML(status.label)}</span>` : ""}${details}</div></div>
+    <div class="app-card-head"><div><h3 lang="en">${escapeHTML(app.name)}</h3><span class="app-type">${escapeHTML(categoryName(app.category))}</span></div><div class="app-card-meta" aria-label="${escapeHTML(t("metadataLabel"))}">${status ? `<span class="tag ${statusClass(app.status.level)}" aria-label="${escapeHTML(`${status.label}: ${status.note}`)}"><svg class="ui-icon status-check" aria-hidden="true"><use href="assets/tabler-icons.svg#check"></use></svg>${escapeHTML(status.label)}</span>` : ""}${details}</div></div>
     <p class="card-summary">${escapeHTML(localized(app, "summary"))}</p>
     <p class="recommendation" title="${escapeHTML(localized(app, "recommendation"))}">${escapeHTML(localized(app, "recommendation"))}</p>
     <div class="tags" aria-label="${escapeHTML(t("metadataLabel"))}">
@@ -595,7 +595,7 @@ function renderFilters() {
   const focusedCategory = document.activeElement?.closest?.("#category-filters .filter")?.dataset.category;
   filters.innerHTML = categories.map(id => {
     const count = id === "all" ? apps.length : apps.filter(app => appCategoryIds(app).includes(id)).length;
-    return `<button class="filter" type="button" data-category="${id}" aria-pressed="${id === activeCategory}"><svg viewBox="0 0 24 24" aria-hidden="true">${categoryIconPaths[id]}</svg><span>${escapeHTML(categoryName(id))}</span><span class="filter-count">${count}</span></button>`;
+    return `<button class="filter" type="button" data-category="${id}" aria-pressed="${id === activeCategory}"><svg class="ui-icon" aria-hidden="true"><use href="assets/tabler-icons.svg#${categoryIcons[id]}"></use></svg><span>${escapeHTML(categoryName(id))}</span><span class="filter-count">${count}</span></button>`;
   }).join("");
   filters.querySelectorAll("button").forEach(button => button.addEventListener("click", () => {
     activeCategory = button.dataset.category;
@@ -728,7 +728,7 @@ async function init() {
   document.querySelectorAll("[data-language]").forEach(button => button.addEventListener("click", () => applyLanguage(button.dataset.language)));
   try {
     const dataURL = new URL("data/apps.json", import.meta.url);
-    dataURL.searchParams.set("v", "20261018.1");
+    dataURL.searchParams.set("v", "20261018.2");
     const response = await fetch(dataURL, { cache: "no-store" });
     if (!response.ok) throw new Error("Unable to load app data");
     apps = await response.json();
@@ -745,7 +745,7 @@ async function init() {
     renderCatalog();
     renderStandards();
   } catch (error) {
-    resultCount.innerHTML = `${escapeHTML(t("dataError"))} <a href="https://github.com/ixiehao/MacBetter/tree/main/website/data" target="_blank" rel="noreferrer">${escapeHTML(t("dataErrorLink"))} ↗</a>`;
+    resultCount.innerHTML = `${escapeHTML(t("dataError"))} ${link("https://github.com/ixiehao/MacBetter/tree/main/website/data", t("dataErrorLink"), "data-error-link")}`;
     console.error(error);
   }
 }

@@ -9,6 +9,13 @@
 - 部署流程：[`deploy-pages.yml`](../.github/workflows/deploy-pages.yml)。
 - 软件库：[`website/data/apps.json`](../website/data/apps.json)。
 
+## 网页图标
+
+- 网页界面图标统一使用 [`assets/tabler-icons.svg`](../website/assets/tabler-icons.svg) 中的 Tabler Icons Outline v3.49.0；新增界面图标时从同一版本选取，使用 `<svg class="ui-icon" aria-hidden="true"><use href="assets/tabler-icons.svg#icon-name"></use></svg>`。
+- 图标用途：分类、搜索、分享、项目外链、信息提示、完成状态与推荐入口。不要添加手绘小图标、Emoji、Unicode 图案或其他图标库。
+- 软件卡片的第三方产品 Logo 和 MacBetter 自身品牌图形不是界面图标，分别保留其真实产品/品牌资源；软件 Logo 仅用于识别及链接到官方项目。
+- Tabler Icons 来源、版权与完整 MIT 许可见 [`website/assets/TABLER-ICONS-LICENSE.md`](../website/assets/TABLER-ICONS-LICENSE.md)。
+
 源码目录不进入公开 URL；迁移后不要把外链改成 `/MacBetter/website/`。软件库和图标以网站根目录为相对基准，保持其相对结构。
 
 ## 预览与验证
