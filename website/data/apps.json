@@ -1608,5 +1608,24 @@
     "icon": "https://raw.githubusercontent.com/tumingke0/LayoutKeeper/main/docs/images/icon.png",
     "featured": false,
     "sortOrder": 87
+  },
+  {
+    "id": "kilobat-cli",
+    "name": "Kilobat CLI",
+    "summary": "在终端排查网络连接、延迟与 DNS，输出 JSON，并可作为本地 MCP 服务。",
+    "recommendation": "连不上网，先查清原因。",
+    "category": "efficiency",
+    "categories": ["efficiency", "privacy"],
+    "tags": ["命令行", "网络诊断", "MCP"],
+    "homepage": "https://github.com/seifip/kilobat-cli",
+    "github": "https://github.com/seifip/kilobat-cli",
+    "download": "https://github.com/seifip/kilobat-cli#install-with-homebrew",
+    "license": "GPL-3.0",
+    "status": { "level": "verified" },
+    "compatibility": "macOS 14 及以上；通过 Homebrew 从源码安装需 Xcode 16 及以上。这里收录免费开源 CLI；另行分发的桌面应用不是开源软件，部分功能付费。",
+    "permissions": "诊断会访问网络；部分 Wi-Fi 名称、过滤状态和预算信息依赖另装桌面应用及定位授权。更改系统设置的命令可能需确认或管理员授权。",
+    "icon": "https://kilobat.app/icon.png",
+    "featured": false,
+    "sortOrder": 88
   }
 ]

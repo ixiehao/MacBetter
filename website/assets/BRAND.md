@@ -3,7 +3,7 @@
 The `io` mark is an original geometric design made for MacBetter, maintained by iXiehao. The `i` stands for independent developer; the `o` stands for open-source builder. The warm dot and blue letterforms are intended to stay legible on light surfaces.
 
 - `site-mark.svg`: transparent primary mark for the website header. Recommended display size: 36–44 px. Do not add a dark enclosing tile.
-- `favicon.svg`: optically simplified mark on a pale blue tile for small browser icons.
+- `favicon.svg`: optically simplified mark on a pale blue tile for small browser icons. PNG exports (32, 180, 192, 512 px) and the 16/32/48 px ICO use this same source; regenerate them together.
 - `social-card.svg`: editable 1200 × 630 share artwork. Keep any PNG export in sync with this source before publishing.
 
 ## Color roles

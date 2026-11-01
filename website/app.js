@@ -21,8 +21,8 @@ const workflowOrder = {
   office: ["libreoffice", "onlyoffice", "thunderbird", "zettlr", "qownnotes", "joplin", "logseq", "anki", "koodo-reader", "netnewswire", "appflowy", "super-productivity", "drawio-desktop"],
   files: ["localsend", "openmtp", "cyberduck", "syncthing", "kopia"],
   maintenance: ["puremac", "purge", "mangodisk", "dupeguru", "latest", "applite", "sloth"],
-  privacy: ["signal", "keepassxc", "cryptomator", "lulu"],
-  efficiency: ["firefox", "zen-browser", "github-desktop", "vscodium", "zed", "codeedit", "xcodes", "alacritty", "dbeaver", "tablepro", "bruno", "utm", "espanso", "hammerspoon", "swiftbar"]
+  privacy: ["signal", "keepassxc", "cryptomator", "lulu", "kilobat-cli"],
+  efficiency: ["firefox", "zen-browser", "github-desktop", "vscodium", "zed", "codeedit", "xcodes", "alacritty", "dbeaver", "tablepro", "bruno", "kilobat-cli", "utm", "espanso", "hammerspoon", "swiftbar"]
 };
 const siteURL = "https://ixiehao.github.io/MacBetter/";
 const languageStorageKey = "MacBetter-language";
@@ -381,7 +381,8 @@ const appCopy = {
     thunderbird: { summary: "An open-source desktop email client that brings multiple accounts, calendars, contacts, RSS, and local search together.", recommendation: "Bring multiple inboxes into one quiet desktop.", tags: ["Email", "Calendar", "RSS"] },
     signal: { summary: "An open-source private messenger for messages and calls, with optional history transfer from a linked phone.", recommendation: "Private conversations deserve verifiable end-to-end encryption.", tags: ["Private messaging", "End-to-end encryption", "Cross-platform"] },
     blender: { summary: "A complete 3D creation suite for modeling, materials, animation, rendering, and even video editing.", recommendation: "Model, animate, and render in one capable tool.", tags: ["3D creation", "Modeling", "Rendering"], compatibility: "Blender 5.x for Mac supports Apple Silicon only. Intel Mac users should choose 4.5 LTS and check its hardware requirements." },
-    bruno: { summary: "An open-source, offline-first API client that stores collections as local files and works well with Git.", recommendation: "Test APIs without handing your work to a cloud first.", tags: ["API testing", "Offline-first", "Git"] }
+    bruno: { summary: "An open-source, offline-first API client that stores collections as local files and works well with Git.", recommendation: "Test APIs without handing your work to a cloud first.", tags: ["API testing", "Offline-first", "Git"] },
+    "kilobat-cli": { summary: "Diagnose network connections, latency, and DNS from Terminal. Get JSON output or use it as a local MCP server.", recommendation: "Find out why a connection fails.", tags: ["Command line", "Network diagnostics", "MCP"], compatibility: "macOS 14+; building through Homebrew requires Xcode 16+. This listing covers the free, open-source CLI. The separate desktop app is proprietary and has optional paid features.", permissions: "Diagnostics access the network. Some Wi-Fi names, filter status, and budget data require the separate desktop app and location permission. System-changing commands may need confirmation or administrator approval." }
   },
   ja: {
     shotmap: { summary: "動画から自動で選んだコマを手動で調整。複数の動画を分割画像にまとめ、PNG / JPGで書き出せます。", recommendation: "長い動画を、一枚で見返せる。", tags: ["Swiftネイティブ", "オフライン処理", "動画", "画像"], compatibility: "macOS 13以降 · Intel / Apple Silicon" },
@@ -470,7 +471,8 @@ const appCopy = {
     thunderbird: { summary: "複数のメール、カレンダー、連絡先、RSS、ローカル検索をまとめて扱えるオープンソースのメールクライアントです。", recommendation: "複数の受信箱を、一つの静かなデスクトップへ。", tags: ["メール", "カレンダー", "RSS"] },
     signal: { summary: "メッセージと通話に対応するオープンソースのプライベートメッセンジャー。連携したスマートフォンから履歴も移せます。", recommendation: "私的な会話には、検証できるエンドツーエンド暗号化を。", tags: ["プライベートメッセージ", "エンドツーエンド暗号化", "クロスプラットフォーム"] },
     blender: { summary: "モデリング、マテリアル、アニメーション、レンダリング、動画編集まで扱える、統合型の3D制作スイートです。", recommendation: "モデリングからレンダリングまで、一つで。", tags: ["3D制作", "モデリング", "レンダリング"], compatibility: "Mac版Blender 5.xはApple Silicon専用です。Intel Macでは4.5 LTSを選び、動作要件を確認してください。" },
-    bruno: { summary: "APIコレクションをローカルファイルとして保存し、Gitとも相性がよいオープンソースのオフライン優先APIクライアントです。", recommendation: "APIを試す前に、仕事をクラウドへ渡さない。", tags: ["APIテスト", "オフライン優先", "Git"] }
+    bruno: { summary: "APIコレクションをローカルファイルとして保存し、Gitとも相性がよいオープンソースのオフライン優先APIクライアントです。", recommendation: "APIを試す前に、仕事をクラウドへ渡さない。", tags: ["APIテスト", "オフライン優先", "Git"] },
+    "kilobat-cli": { summary: "ターミナルで接続・遅延・DNSを診断し、結果をJSONで出力。ローカルのMCPサーバーとしても使えます。", recommendation: "つながらない原因を調べる。", tags: ["コマンドライン", "ネットワーク診断", "MCP"], compatibility: "macOS 14以降。Homebrew経由のソースビルドにはXcode 16以降が必要です。掲載対象は無料・オープンソースのCLIです。別配布のデスクトップ版はオープンソースではなく、一部機能は有料です。", permissions: "診断時にネットワークへ接続します。一部のWi-Fi名、フィルター状態、通信量の予算情報には別途デスクトップアプリと位置情報の許可が必要です。システム設定の変更には確認や管理者認証を求められる場合があります。" }
   }
 };
 
@@ -730,7 +732,7 @@ async function init() {
   document.querySelectorAll("[data-language]").forEach(button => button.addEventListener("click", () => applyLanguage(button.dataset.language)));
   try {
     const dataURL = new URL("data/apps.json", import.meta.url);
-    dataURL.searchParams.set("v", "6107672a3265");
+    dataURL.searchParams.set("v", "e83a92a1cec0");
     const response = await fetch(dataURL, { cache: "no-store" });
     if (!response.ok) throw new Error("Unable to load app data");
     apps = await response.json();
