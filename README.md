@@ -1,68 +1,38 @@
-# 让 Mac 更好用 · Make Your Mac Better
+# MacBetter — Make Your Mac Better
 
-[中文](https://ixiehao.github.io/MacBetter/) · [English](https://ixiehao.github.io/MacBetter/?lang=en) · [日本語](https://ixiehao.github.io/MacBetter/?lang=ja) · [在线目录](https://ixiehao.github.io/MacBetter/)
+**English** · [中文](README.zh-CN.md) · [日本語](README.ja.md)
 
-一份由 Mac 用户共同维护的开源 macOS 软件目录。它不追逐“软件越多越好”，而是帮助人们快速找到免费、开源、安装路径清楚的实用工具，并看清许可证与关键权限。
+A community-curated directory of free, open-source macOS tools. Find an app for the task, check its requirements, and go straight to the official project.
 
-> A practical, community-maintained directory of free and open-source macOS apps — with clear licenses, official links, and permission notes.
+**[Browse the directory](https://ixiehao.github.io/MacBetter/?lang=en)** · **[Recommend an app](https://github.com/ixiehao/MacBetter/issues/new?template=recommend-an-app.yml)**
 
-## 为什么值得收藏
+## What you’ll find
 
-- 80+ 款按用途整理的 macOS 工具，支持中文、English、日本語；
-- 每个条目链接到项目主页与官方下载页，而非第三方下载站；
-- 标明开源许可证；涉及辅助功能、屏幕录制、文件访问等权限时会给出说明；
-- `io 实测` 只代表维护者在日常 Mac 上实际使用过，不是安全审计或兼容性保证；
-- 欢迎通过 [Issue 模板](https://github.com/ixiehao/MacBetter/issues/new?template=recommend-an-app.yml) 推荐真正解决问题的新工具。
+- Apps grouped by purpose, with search and filters.
+- Short descriptions, practical recommendations, licenses, and official installation links.
+- English, Chinese, and Japanese pages.
+- **Tested by io** marks apps personally used by iXiehao. Other listings are checked against public project information. Neither is a security audit or a compatibility guarantee.
 
-## Share it
+## Recommend a tool
 
-If this directory saves someone a search, share the link or recommend one app through an issue. The collection becomes more useful through specific, first-hand recommendations — not promotional claims.
+Share its source repository, license, official installation link, macOS requirements, and one concrete problem it solves. Include any important permissions or limitations.
 
-## 这份清单如何表达推荐
+We look for accessible source code, a clear open-source license, a usable free version, and a practical Mac use case. Paid extras and separate proprietary products should be clearly identified. Stars alone do not establish quality or safety.
 
-- **io 实测**：仅表示 iXiehao 已在日常设备实际使用过；不延伸为所有系统版本、所有场景的保证。
-- **收录前核验**：已核对项目的官方 GitHub、开源许可证和官方下载/发布入口；这不是独立安全审计或无风险承诺。
+Found an outdated link or description? [Open an issue](https://github.com/ixiehao/MacBetter/issues/new) or send a pull request. See the [contribution guide](CONTRIBUTING.md) (Chinese).
 
-开源能让代码、问题和许可证可被检查，但不能自动替代你对下载来源、权限、更新和数据备份的判断。请优先从项目官方 Releases、项目主页或可信包管理器安装，尤其慎重对待辅助功能、完整磁盘访问、屏幕录制、网络代理和剪贴板权限。
+## Run locally
 
-## 收录标准
-
-1. 可访问的源代码，以及清楚的开源许可证；
-2. 免费可用，且有官方安装/发布入口；
-3. 能说明它在 Mac 上实际解决什么问题；
-4. 对重要权限、兼容性或数据删除风险有明确提示；
-5. 不以 GitHub Star 数量作为安全、质量或适配性的证明。
-
-## 推荐新项目
-
-请通过 [Issue 模板](https://github.com/ixiehao/MacBetter/issues/new?template=recommend-an-app.yml) 提交，并提供：
-
-- 项目主页和源码仓库；
-- 许可证；
-- 官方安装/下载入口；
-- macOS 版本、必要权限、是否涉及数据删除/联网；
-- 你实际喜欢它的一个具体理由。
-
-## 本地预览
-
-这是不依赖构建工具的静态站点，官网源码统一在 `website/`；软件条目维护在 [`website/data/apps.json`](website/data/apps.json)。
-
-从仓库根目录运行：
+The site is static; no build step is required. From the repository root:
 
 ```sh
 python3 -m http.server 8000 --bind 127.0.0.1 --directory website
 ```
 
-打开 <http://127.0.0.1:8000/>。开发、验证与发布步骤见[文档索引](docs/README.md)。
+Open <http://127.0.0.1:8000/>. Catalog entries live in [`website/data/apps.json`](website/data/apps.json); translations live in [`website/app.js`](website/app.js). Keep all three languages in sync. See the [development and deployment docs](docs/README.md) (Chinese).
 
-## 第三方标识
+## License and credits
 
-页面中的第三方软件名称、商标与产品图标归相应权利人所有。网页界面图标统一采用 Tabler Icons Outline v3.49.0（MIT）；来源和完整许可文本见 [`website/assets/TABLER-ICONS-LICENSE.md`](website/assets/TABLER-ICONS-LICENSE.md)。产品图标仅用于识别和链接到其官方项目，不表示项目作者对本清单的认可。
+Site code: [MIT](LICENSE). Listed projects retain their own licenses; their names and icons belong to their respective owners. Inclusion does not imply endorsement.
 
-## 字体
-
-站点随源码自托管 [Inter](https://github.com/rsms/inter)、[Noto Sans SC](https://github.com/google/fonts/tree/main/ofl/notosanssc) 与 [Noto Sans JP](https://github.com/google/fonts/tree/main/ofl/notosansjp) 的页面字符子集，均采用 SIL Open Font License 1.1，可免费用于商业项目。完整许可证与来源说明见 [`website/assets/fonts/README.md`](website/assets/fonts/README.md)。
-
-## 许可
-
-本站源码采用 [MIT License](LICENSE)。软件条目本身保留各项目原有许可证与权利归属。
+The site self-hosts [Inter and Noto Sans](website/assets/fonts/README.md) under SIL OFL 1.1 and uses [Tabler Icons](website/assets/TABLER-ICONS-LICENSE.md) under MIT. See the [brand asset notes](website/assets/BRAND.md) for the site’s io mark.
