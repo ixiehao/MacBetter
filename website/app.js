@@ -25,6 +25,7 @@ const workflowOrder = {
   efficiency: ["firefox", "zen-browser", "github-desktop", "vscodium", "zed", "codeedit", "xcodes", "alacritty", "dbeaver", "tablepro", "bruno", "kilobat-cli", "utm", "espanso", "hammerspoon", "swiftbar"]
 };
 const siteURL = "https://ixiehao.github.io/MacBetter/";
+const defaultLanguage = "en";
 const languageStorageKey = "MacBetter-language";
 const legacyLanguageStorageKey = "mac-better-language";
 const ogLocales = { zh: "zh_CN", en: "en_US", ja: "ja_JP" };
@@ -476,8 +477,9 @@ const appCopy = {
   }
 };
 
-let activeLanguage = new URLSearchParams(location.search).get("lang") || localStorage.getItem(languageStorageKey) || localStorage.getItem(legacyLanguageStorageKey) || "zh";
-if (!copy[activeLanguage]) activeLanguage = "zh";
+let activeLanguage = new URLSearchParams(location.search).get("lang") || localStorage.getItem(languageStorageKey) || localStorage.getItem(legacyLanguageStorageKey) || defaultLanguage;
+if (!copy[activeLanguage]) activeLanguage = defaultLanguage;
+localStorage.setItem(languageStorageKey, activeLanguage);
 let activeCategory = new URLSearchParams(location.search).get("category") || "all";
 if (!categories.includes(activeCategory)) activeCategory = "all";
 let apps = [];
@@ -499,7 +501,7 @@ function valueAt(object, path) {
 }
 
 function t(path, parameters = {}) {
-  const fallback = valueAt(copy.zh, path);
+  const fallback = valueAt(copy[defaultLanguage], path);
   const value = valueAt(copy[activeLanguage], path) ?? fallback ?? path;
   return String(value).replace(/\{(\w+)\}/g, (_, key) => parameters[key] ?? `{${key}}`);
 }
@@ -617,7 +619,7 @@ function updateURL() {
   else url.searchParams.delete("tested");
   if (searchInput.value.trim()) url.searchParams.set("q", searchInput.value.trim());
   else url.searchParams.delete("q");
-  if (activeLanguage === "zh") url.searchParams.delete("lang");
+  if (activeLanguage === defaultLanguage) url.searchParams.delete("lang");
   else url.searchParams.set("lang", activeLanguage);
   history.replaceState({}, "", url);
 }
@@ -643,8 +645,8 @@ function restoreURLState() {
   activeCategory = categories.includes(params.get("category")) ? params.get("category") : "all";
   searchInput.value = params.get("q") || "";
   testedFilter.checked = params.get("tested") === "1";
-  const requestedLanguage = params.get("lang") || localStorage.getItem(languageStorageKey) || localStorage.getItem(legacyLanguageStorageKey) || "zh";
-  activeLanguage = copy[requestedLanguage] ? requestedLanguage : "zh";
+  const requestedLanguage = params.get("lang") || localStorage.getItem(languageStorageKey) || localStorage.getItem(legacyLanguageStorageKey) || defaultLanguage;
+  activeLanguage = copy[requestedLanguage] ? requestedLanguage : defaultLanguage;
   localStorage.setItem(languageStorageKey, activeLanguage);
   applyStaticCopy();
   renderFilters();
@@ -667,7 +669,7 @@ function setMetaContent(selector, value) {
 
 function updateMetadata() {
   const canonicalURL = new URL(siteURL);
-  if (activeLanguage !== "zh") canonicalURL.searchParams.set("lang", activeLanguage);
+  if (activeLanguage !== defaultLanguage) canonicalURL.searchParams.set("lang", activeLanguage);
   const canonical = canonicalURL.toString();
   const title = t("pageTitle");
   const description = t("pageDescription");

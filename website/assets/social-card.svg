@@ -6,8 +6,8 @@
       @font-face { font-family: "Noto Sans JP Site"; src: url("fonts/NotoSansJP-subset.woff2") format("woff2"); font-weight: 100 900; }
     </style>
   </defs>
-  <title id="title">让 Mac 更好用</title>
-  <desc id="description">免费 · 开源 · 实用</desc>
+  <title id="title">Make your Mac better</title>
+  <desc id="description">Free · Open-source · Useful</desc>
   <rect width="1200" height="630" fill="#FFFFFF"/>
   <rect x="24" y="24" width="1152" height="582" rx="32" fill="#F4F8FF"/>
   <circle cx="1043" cy="110" r="174" fill="#E7F1FF"/>
@@ -18,9 +18,9 @@
     <circle cx="60" cy="56" r="21" stroke="#1769E0" stroke-width="14"/>
   </g>
   <text x="160" y="107" fill="#1769E0" font-family="Inter Site, Inter, sans-serif" font-size="22" font-weight="700" letter-spacing="1.5">MACBETTER</text>
-  <path d="M76 337h557" stroke="#F59B45" stroke-width="16" stroke-linecap="round"/>
-  <text x="66" y="309" fill="#172B46" font-family="Noto Sans SC Site, Noto Sans SC, sans-serif" font-size="96" font-weight="800" letter-spacing="-3">让 Mac 更好用</text>
-  <text x="72" y="406" fill="#60718A" font-family="Noto Sans SC Site, Noto Sans SC, sans-serif" font-size="27" font-weight="500">免费 · 开源 · 实用</text>
+  <path d="M76 337h785" stroke="#F59B45" stroke-width="16" stroke-linecap="round"/>
+  <text x="66" y="309" fill="#172B46" font-family="Inter Site, Inter, sans-serif" font-size="78" font-weight="800" letter-spacing="-3">Make your Mac better</text>
+  <text x="72" y="406" fill="#60718A" font-family="Inter Site, Inter, sans-serif" font-size="27" font-weight="500">Free · Open-source · Useful</text>
   <text x="74" y="530" fill="#1769E0" font-family="Inter Site, Inter, sans-serif" font-size="24" font-weight="650">ixiehao.github.io/MacBetter</text>
-  <text x="74" y="568" fill="#60718A" font-family="Inter Site, Inter, Noto Sans JP Site, Noto Sans JP, Noto Sans SC Site, Noto Sans SC, sans-serif" font-size="18">中文 · English · 日本語</text>
+  <text x="74" y="568" fill="#60718A" font-family="Inter Site, Inter, Noto Sans JP Site, Noto Sans JP, Noto Sans SC Site, Noto Sans SC, sans-serif" font-size="18">English · 中文 · 日本語</text>
 </svg>

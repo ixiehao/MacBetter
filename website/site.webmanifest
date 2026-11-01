@@ -1,7 +1,7 @@
 {
-  "name": "让 Mac 更好用",
-  "short_name": "Mac Better",
-  "description": "免费、开源、实用的 macOS 软件目录。",
+  "name": "Make Your Mac Better",
+  "short_name": "MacBetter",
+  "description": "A directory of free, open-source macOS apps.",
   "start_url": "/MacBetter/",
   "display": "browser",
   "background_color": "#ffffff",
@@ -25,5 +25,6 @@
       "type": "image/png",
       "purpose": "any"
     }
-  ]
+  ],
+  "lang": "en"
 }

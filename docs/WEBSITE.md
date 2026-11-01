@@ -9,6 +9,13 @@
 - 部署流程：[`deploy-pages.yml`](../.github/workflows/deploy-pages.yml)。
 - 软件库：[`website/data/apps.json`](../website/data/apps.json)。
 
+## 语言
+
+- 官网默认英语；初始 HTML、元数据、manifest 与无语言参数的标准 URL 均以英语为准。
+- 语言优先级：URL 中的 `lang` → 已保存的语言选择 → 英语。不按浏览器语言自动切换；不支持的语言回退到英语。
+- 中文直达链接为 `?lang=zh`，日语为 `?lang=ja`；旧版 `?lang=en` 链接继续可用。语言按钮顺序为 EN、中、日。
+- 社区回复与对外交流优先使用英语；需要时补充中文或日语说明。
+
 ## 网页图标
 
 - 网页界面图标统一使用 [`assets/tabler-icons.svg`](../website/assets/tabler-icons.svg) 中的 Tabler Icons Outline v3.49.0；新增界面图标时从同一版本选取，使用 `<svg class="ui-icon" aria-hidden="true"><use href="assets/tabler-icons.svg#icon-name"></use></svg>`。
