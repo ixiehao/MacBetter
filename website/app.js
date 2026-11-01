@@ -16,8 +16,8 @@ const categoryOrder = ["video", "image", "launcher", "menu", "office", "files", 
 const workflowOrder = {
   video: ["mp4flow", "handbrake", "lossless-cut", "subler", "mediainfo", "subtitle-edit", "iina", "vlc", "jellyfin-media-player", "kap", "obs-studio", "audacity", "mixxx", "musescore", "yt-dlp"],
   image: ["lumaview", "macshot", "imageoptim", "darktable", "rawtherapee", "krita", "blender", "godot", "freecad"],
-  launcher: ["launchpad-back", "loop", "rectangle", "alt-tab", "aerospace", "amethyst"],
-  menu: ["ice", "thaw", "stats", "monitorcontrol", "linearmouse", "karabiner-elements", "maccy", "finetune", "background-music", "onlyswitch", "keeping-you-awake"],
+  launcher: ["launchpad-back", "loop", "rectangle", "layoutkeeper", "alt-tab", "aerospace", "amethyst"],
+  menu: ["ice", "thaw", "stats", "monitorcontrol", "layoutkeeper", "linearmouse", "karabiner-elements", "maccy", "finetune", "background-music", "onlyswitch", "keeping-you-awake"],
   office: ["libreoffice", "onlyoffice", "thunderbird", "zettlr", "qownnotes", "joplin", "logseq", "anki", "koodo-reader", "netnewswire", "appflowy", "super-productivity", "drawio-desktop"],
   files: ["localsend", "openmtp", "cyberduck", "syncthing", "kopia"],
   maintenance: ["puremac", "purge", "mangodisk", "dupeguru", "latest", "applite", "sloth"],
@@ -339,8 +339,9 @@ const appCopy = {
     "background-music": { summary: "Control each app’s volume separately and optionally record system audio.", recommendation: "One loud app should not surprise you.", tags: ["Per-app volume", "System audio", "Recording"], permissions: "Installs an audio driver. Recording may also request Microphone permission.", compatibility: "macOS 10.13+" },
     "keeping-you-awake": { summary: "Prevent your Mac from sleeping for a set time—handy for downloads, demos, and transfers.", recommendation: "When you need it awake, keep it awake.", tags: ["Stay awake", "Menu bar", "Timer"], compatibility: "macOS 10.13+" },
     latest: { summary: "Check for and install updates for supported apps from the Mac App Store or apps using Sparkle.", recommendation: "Check app updates without opening every app.", tags: ["App updates", "Checks", "Lightweight"], compatibility: "macOS 10.15+" },
+    layoutkeeper: { summary: "Restore saved window layouts when you reconnect a monitor, with optional brightness sync and keep-awake modes.", recommendation: "Reconnect. Restore your windows.", tags: ["External display", "Window layout", "Stay awake"], compatibility: "macOS 14+ · Intel and Apple Silicon. Restoring windows across Spaces requires macOS 26+. Hardware brightness control needs Apple Silicon and a compatible DDC display.", permissions: "Requires Accessibility. No Screen Recording or Input Monitoring is needed. Release builds are self-signed, not notarized by Apple." },
     localsend: { summary: "Send files, text, and clipboard content directly over the local network, without a cloud relay.", recommendation: "Send a file without uploading it first.", tags: ["Local transfer", "Cross-platform", "No cloud"] },
-    openmtp: { summary: "Browse, drag, and transfer files directly between a Mac and Android or other MTP devices.", recommendation: "Move files between your Mac and Android with ease.", tags: ["Android", "MTP", "File transfer"], compatibility: "macOS 10.14+" },
+    openmtp: { summary: "Browse, drag, and transfer files directly between a Mac and Android or other MTP devices.", recommendation: "Move files between your Mac and Android with ease.", tags: ["Android", "MTP", "File transfer"], compatibility: "macOS 11+" },
     kopia: { summary: "A backup tool with snapshots, deduplication, and encryption for local or remote destinations.", recommendation: "A backup only counts when it restores.", tags: ["Backup", "Snapshots", "Encryption"] },
     syncthing: { summary: "Sync chosen folders directly between devices without handing files to a third-party cloud.", recommendation: "Sync files without giving them away.", tags: ["File sync", "End-to-end", "Decentralized"], compatibility: "Official macOS archives contain a command-line program configured through a browser interface. Choose the build for your chip." },
     cryptomator: { summary: "Encrypt files locally before they reach a cloud drive; you keep control of the keys.", recommendation: "Lock files before they go to the cloud.", tags: ["Encryption", "Cloud drives", "Privacy"] },
@@ -427,8 +428,9 @@ const appCopy = {
     "background-music": { summary: "アプリごとの音量を個別に調整し、必要ならシステム音声も録音できます。", recommendation: "一つのアプリに、突然大きな音を出させない。", tags: ["アプリ別音量", "システム音声", "録音"], permissions: "オーディオドライバを導入します。録音では「マイク」許可を求めることがあります。", compatibility: "macOS 10.13以降" },
     "keeping-you-awake": { summary: "決めた時間だけMacの自動スリープを防止。ダウンロード、デモ、転送時に便利です。", recommendation: "眠らせたくないときは、起こしておく。", tags: ["スリープ防止", "メニューバー", "タイマー"], compatibility: "macOS 10.13以降" },
     latest: { summary: "Mac App StoreのアプリやSparkle対応アプリの更新をまとめて確認・実行できます。", recommendation: "アプリを一つずつ開かずに、更新を確認。", tags: ["アプリ更新", "確認", "軽量"], compatibility: "macOS 10.15以降" },
+    layoutkeeper: { summary: "外付けディスプレイの再接続時にウィンドウ配置を復元。明るさ連動やスリープ防止にも対応します。", recommendation: "つなぎ直して、元の配置へ。", tags: ["外付けディスプレイ", "ウィンドウ配置", "スリープ防止"], compatibility: "macOS 14以降 · Intel / Apple Silicon。Spaces間の復元はmacOS 26以降が必要です。ハードウェア輝度調整はApple SiliconとDDC対応ディスプレイが必要です。", permissions: "「アクセシビリティ」が必要です。画面収録・入力監視は不要です。配布版は自己署名で、Appleの公証を受けていません。" },
     localsend: { summary: "クラウドを経由せず、同じネットワーク内でファイル、テキスト、クリップボードを直接送れます。", recommendation: "送る前に、アップロードしなくていい。", tags: ["ローカル転送", "クロスプラットフォーム", "クラウド不要"] },
-    openmtp: { summary: "MacとAndroidなどのMTP機器の間で、ファイルを直接ブラウズ、ドラッグ、転送できます。", recommendation: "Androidとのファイル転送も、Macから手軽に。", tags: ["Android", "MTP", "ファイル転送"], compatibility: "macOS 10.14以降" },
+    openmtp: { summary: "MacとAndroidなどのMTP機器の間で、ファイルを直接ブラウズ、ドラッグ、転送できます。", recommendation: "Androidとのファイル転送も、Macから手軽に。", tags: ["Android", "MTP", "ファイル転送"], compatibility: "macOS 11以降" },
     kopia: { summary: "スナップショット、重複排除、暗号化を備え、ローカルや各種リモート保存先にバックアップできます。", recommendation: "バックアップは、復元できて初めて役に立つ。", tags: ["バックアップ", "スナップショット", "暗号化"] },
     syncthing: { summary: "指定したフォルダを端末同士で直接同期。第三者のクラウドにファイルを預ける必要はありません。", recommendation: "同期しても、ファイルを手放さない。", tags: ["ファイル同期", "エンドツーエンド", "分散型"], compatibility: "公式macOS版はコマンドラインプログラムの圧縮ファイルで、設定はブラウザから行います。CPUに合う版を選んでください。" },
     cryptomator: { summary: "クラウドドライブへ送る前にファイルをローカルで暗号化。鍵は自分で管理します。", recommendation: "クラウドへ行く前に、ファイルをロック。", tags: ["暗号化", "クラウドドライブ", "プライバシー"] },
@@ -728,7 +730,7 @@ async function init() {
   document.querySelectorAll("[data-language]").forEach(button => button.addEventListener("click", () => applyLanguage(button.dataset.language)));
   try {
     const dataURL = new URL("data/apps.json", import.meta.url);
-    dataURL.searchParams.set("v", "ee9a527937ef");
+    dataURL.searchParams.set("v", "6107672a3265");
     const response = await fetch(dataURL, { cache: "no-store" });
     if (!response.ok) throw new Error("Unable to load app data");
     apps = await response.json();

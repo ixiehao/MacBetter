@@ -1,6 +1,6 @@
 @font-face { font-family: "Inter Site"; src: url("assets/fonts/InterVariable.woff2?v=693b77d4f32e") format("woff2"); font-style: normal; font-weight: 100 900; font-display: swap; }
-@font-face { font-family: "Noto Sans SC Site"; src: url("assets/fonts/NotoSansSC-subset.woff2?v=b51ad6681efb") format("woff2"); font-style: normal; font-weight: 100 900; font-display: swap; }
-@font-face { font-family: "Noto Sans JP Site"; src: url("assets/fonts/NotoSansJP-subset.woff2?v=cc4b4c6b5ba4") format("woff2"); font-style: normal; font-weight: 100 900; font-display: swap; }
+@font-face { font-family: "Noto Sans SC Site"; src: url("assets/fonts/NotoSansSC-subset.woff2?v=98a3c8f59449") format("woff2"); font-style: normal; font-weight: 100 900; font-display: swap; }
+@font-face { font-family: "Noto Sans JP Site"; src: url("assets/fonts/NotoSansJP-subset.woff2?v=f651fc8ce336") format("woff2"); font-style: normal; font-weight: 100 900; font-display: swap; }
 
 :root {
   color-scheme: light;

@@ -1588,5 +1588,25 @@
     "icon": "https://github.com/usebruno.png?size=128",
     "featured": false,
     "sortOrder": 86
+  },
+  {
+    "id": "layoutkeeper",
+    "name": "LayoutKeeper",
+    "summary": "记住外接屏上的窗口位置，重新连接后一键或自动恢复；还可联动亮度和防休眠。",
+    "recommendation": "接回外接屏，窗口归原位。",
+    "category": "menu",
+    "categories": ["menu", "launcher"],
+    "tags": ["外接显示器", "窗口布局", "防休眠"],
+    "homepage": "https://github.com/tumingke0/LayoutKeeper",
+    "github": "https://github.com/tumingke0/LayoutKeeper",
+    "download": "https://github.com/tumingke0/LayoutKeeper/releases",
+    "license": "GPL-3.0",
+    "status": { "level": "verified" },
+    "compatibility": "macOS 14 及以上 · Intel 与 Apple Silicon。跨桌面恢复需 macOS 26 及以上；硬件亮度调节需 Apple Silicon 与支持 DDC 的显示器。",
+    "permissions": "需要“辅助功能”权限，无需屏幕录制或输入监控。发行包自签名，未经 Apple 公证。",
+    "permissionKey": "accessibility",
+    "icon": "https://raw.githubusercontent.com/tumingke0/LayoutKeeper/main/docs/images/icon.png",
+    "featured": false,
+    "sortOrder": 87
   }
 ]
