@@ -4,11 +4,11 @@
   "description": "免费、开源、实用的 macOS 软件目录。",
   "start_url": "/MacBetter/",
   "display": "browser",
-  "background_color": "#f6f8fb",
-  "theme_color": "#17324d",
+  "background_color": "#ffffff",
+  "theme_color": "#1769e0",
   "icons": [
     {
-      "src": "assets/site-mark.svg",
+      "src": "assets/favicon.svg?v=a3cf2091a95f",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"
