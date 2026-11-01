@@ -1,28 +1,42 @@
-const categories = ["all", "office", "video", "image", "launcher", "menu", "maintenance", "files", "privacy", "efficiency"];
+const categories = ["all", "office", "notes", "video", "player", "audio", "image", "capture", "browser", "download", "files", "launcher", "menu", "maintenance", "privacy", "productivity", "efficiency"];
 const categoryIcons = {
   all: "apps",
   office: "briefcase",
+  notes: "notebook",
   video: "video",
+  player: "player-play",
+  audio: "headphones",
   image: "photo",
+  capture: "screenshot",
+  browser: "world-www",
+  download: "download",
   launcher: "layout-grid",
   menu: "adjustments-horizontal",
   maintenance: "tool",
   files: "folder",
   privacy: "shield-lock",
+  productivity: "bolt",
   efficiency: "code"
 };
 const licenseOrder = ["MIT", "GPL-2.0", "GPL-3.0", "AGPL-3.0", "MPL-2.0", "Apache-2.0", "Unlicense", "LGPL-2.1", "BSD-2-Clause", "BSD-3-Clause"];
-const categoryOrder = ["video", "image", "launcher", "menu", "office", "files", "maintenance", "privacy", "efficiency"];
+const categoryOrder = ["video", "player", "audio", "image", "capture", "browser", "download", "launcher", "menu", "office", "notes", "productivity", "files", "maintenance", "privacy", "efficiency"];
 const workflowOrder = {
-  video: ["mp4flow", "handbrake", "lossless-cut", "subler", "mediainfo", "subtitle-edit", "iina", "vlc", "jellyfin-media-player", "kap", "obs-studio", "audacity", "mixxx", "musescore", "yt-dlp"],
-  image: ["lumaview", "macshot", "imageoptim", "darktable", "rawtherapee", "krita", "blender", "godot", "freecad"],
-  launcher: ["launchpad-back", "loop", "rectangle", "layoutkeeper", "alt-tab", "aerospace", "amethyst"],
+  video: ["shotmap", "mp4flow", "handbrake", "lossless-cut", "subler", "mediainfo", "subtitle-edit", "blender"],
+  player: ["iina", "vlc", "jellyfin-media-player"],
+  audio: ["audacity", "mixxx", "musescore", "finetune", "background-music"],
+  image: ["lumaview", "shotmap", "macshot", "imageoptim", "darktable", "rawtherapee", "krita", "drawio-desktop", "blender", "freecad", "godot"],
+  capture: ["macshot", "kap", "obs-studio"],
+  browser: ["firefox", "zen-browser", "netnewswire"],
+  download: ["yt-dlp", "cyberduck"],
+  launcher: ["launchpad-back", "loop", "rectangle", "layoutkeeper", "alt-tab", "aerospace", "amethyst", "hammerspoon"],
   menu: ["ice", "thaw", "stats", "monitorcontrol", "layoutkeeper", "linearmouse", "karabiner-elements", "maccy", "finetune", "background-music", "onlyswitch", "keeping-you-awake"],
-  office: ["libreoffice", "onlyoffice", "thunderbird", "zettlr", "qownnotes", "joplin", "logseq", "anki", "koodo-reader", "netnewswire", "appflowy", "super-productivity", "drawio-desktop"],
+  office: ["lumaview", "libreoffice", "onlyoffice", "thunderbird", "koodo-reader", "anki", "drawio-desktop"],
+  notes: ["zettlr", "qownnotes", "joplin", "logseq", "appflowy"],
+  productivity: ["super-productivity", "maccy", "espanso", "hammerspoon", "swiftbar"],
   files: ["localsend", "openmtp", "cyberduck", "syncthing", "kopia"],
   maintenance: ["puremac", "purge", "mangodisk", "dupeguru", "latest", "applite", "sloth"],
-  privacy: ["signal", "keepassxc", "cryptomator", "lulu", "kilobat-cli"],
-  efficiency: ["firefox", "zen-browser", "github-desktop", "vscodium", "zed", "codeedit", "xcodes", "alacritty", "dbeaver", "tablepro", "bruno", "kilobat-cli", "utm", "espanso", "hammerspoon", "swiftbar"]
+  privacy: ["signal", "keepassxc", "cryptomator", "lulu"],
+  efficiency: ["github-desktop", "vscodium", "zed", "codeedit", "xcodes", "alacritty", "dbeaver", "tablepro", "bruno", "kilobat-cli", "utm", "hammerspoon", "swiftbar"]
 };
 const siteURL = "https://ixiehao.github.io/MacBetter/";
 const defaultLanguage = "en";
@@ -46,7 +60,7 @@ const copy = {
     languageLabel: "选择语言",
     languageOption: { zh: "切换为中文", en: "切换为 English", ja: "切换为日本語" },
     languageChanged: "已切换为中文",
-    category: { all: "全部", office: "办公与创作", video: "视频与音频", image: "图片与图像", launcher: "窗口与启动", menu: "菜单栏与硬件", maintenance: "Mac 优化与维护", files: "文件与备份", privacy: "隐私与网络", efficiency: "开发与效率" },
+    category: { all: "全部", office: "办公与学习", notes: "笔记与知识", video: "视频处理", player: "影音播放", audio: "音频与音乐", image: "图片与设计", capture: "截图与录屏", browser: "网络浏览", download: "下载工具", launcher: "窗口与启动", menu: "菜单栏与硬件", maintenance: "Mac 优化与维护", files: "文件与备份", privacy: "隐私与安全", productivity: "效率与自动化", efficiency: "开发工具" },
     communityEyebrow: "MACOS · 开源软件导航",
     communityHeading: "让 Mac 更好用",
     brandMeaning: "i 代表独立开发者，o 代表开源建设者。",
@@ -63,7 +77,7 @@ const copy = {
     contribution: { sourceTitle: "项目地址", sourceDetail: "作者仓库或官网", licenseTitle: "开源许可证", licenseDetail: "例如 MIT、GPL-3.0", reasonTitle: "推荐理由", reasonDetail: "它具体解决什么问题" },
     catalogEyebrow: "开源 Mac 软件",
     catalogHeading: "软件目录",
-    catalogCopy: "按用途查找；每项标明许可证与 io 实测状态。",
+    catalogCopy: "按用途查找；多用途软件可出现在多个分类。",
     catalogControlsLabel: "搜索和筛选软件",
     recommendInline: "推荐一款好软件",
     shareDirectory: "分享目录",
@@ -133,7 +147,7 @@ const copy = {
     languageLabel: "Choose language",
     languageOption: { zh: "Switch to Chinese", en: "Switch to English", ja: "Switch to Japanese" },
     languageChanged: "Language changed to English",
-    category: { all: "All", office: "Office & Creativity", video: "Video & Audio", image: "Images & Graphics", launcher: "Window Management & Launchers", menu: "Menu Bar & Hardware", maintenance: "Mac Care & Maintenance", files: "Files & Backup", privacy: "Privacy & Network", efficiency: "Developer Tools & Productivity" },
+    category: { all: "All", office: "Office & Learning", notes: "Notes & Knowledge", video: "Video Tools", player: "Media Players", audio: "Audio & Music", image: "Images & Design", capture: "Screen Capture", browser: "Web Browsing", download: "Download Tools", launcher: "Windows & Launchers", menu: "Menu Bar & Hardware", maintenance: "Mac Maintenance", files: "Files & Backup", privacy: "Privacy & Security", productivity: "Productivity & Automation", efficiency: "Developer Tools" },
     communityEyebrow: "macOS · OPEN-SOURCE APP DIRECTORY",
     communityHeading: "Make your Mac better",
     brandMeaning: "i for independent developer; o for open-source builder.",
@@ -150,7 +164,7 @@ const copy = {
     contribution: { sourceTitle: "Project source", sourceDetail: "Author’s repository or official site", licenseTitle: "Open-source license", licenseDetail: "e.g. MIT or GPL-3.0", reasonTitle: "Why you recommend it", reasonDetail: "What problem it solves" },
     catalogEyebrow: "Open-source Mac apps",
     catalogHeading: "App directory",
-    catalogCopy: "Browse by task. Each listing shows its license and whether io has tested it.",
+    catalogCopy: "Browse by task. Apps may appear in more than one category.",
     catalogControlsLabel: "Search and filter apps",
     recommendInline: "Recommend an app",
     shareDirectory: "Share directory",
@@ -220,7 +234,7 @@ const copy = {
     languageLabel: "言語を選択",
     languageOption: { zh: "中国語に切り替え", en: "英語に切り替え", ja: "日本語に切り替え" },
     languageChanged: "表示言語を日本語に切り替えました",
-    category: { all: "すべて", office: "仕事・創作", video: "動画・オーディオ", image: "画像・グラフィック", launcher: "ウインドウ・ランチャー", menu: "メニューバー・周辺機器", maintenance: "Macの最適化・メンテナンス", files: "ファイル・バックアップ", privacy: "プライバシー・ネットワーク", efficiency: "開発・効率化" },
+    category: { all: "すべて", office: "オフィス・学習", notes: "ノート・情報整理", video: "動画編集・変換", player: "メディア再生", audio: "音声・音楽", image: "画像・デザイン", capture: "スクリーンショット・録画", browser: "Webブラウジング", download: "ダウンロード", launcher: "ウインドウ・ランチャー", menu: "メニューバー・周辺機器", maintenance: "Macのメンテナンス", files: "ファイル・バックアップ", privacy: "プライバシー・セキュリティ", productivity: "作業効率化・自動化", efficiency: "開発ツール" },
     communityEyebrow: "macOS · オープンソースアプリガイド",
     communityHeading: "Macを、もっと使いやすく。",
     brandMeaning: "i は独立開発者、o はオープンソースを育てる人。",
@@ -237,7 +251,7 @@ const copy = {
     contribution: { sourceTitle: "プロジェクトの出所", sourceDetail: "作者のリポジトリまたは公式サイト", licenseTitle: "オープンソースライセンス", licenseDetail: "例：MIT / GPL-3.0", reasonTitle: "おすすめの理由", reasonDetail: "どんな課題を解決するか" },
     catalogEyebrow: "オープンソースのMacアプリ",
     catalogHeading: "アプリ一覧",
-    catalogCopy: "用途別に探せます。ライセンスと、ioの実使用状況も掲載しています。",
+    catalogCopy: "用途から探せます。複数の分類に掲載されるアプリもあります。",
     catalogControlsLabel: "アプリを検索・絞り込み",
     recommendInline: "アプリを紹介する",
     shareDirectory: "一覧を共有",
@@ -515,7 +529,7 @@ function escapeHTML(value) {
 }
 
 function link(url, text, className, accessibleName, iconName) {
-  return `<a class="${className}" href="${escapeHTML(url)}" aria-label="${escapeHTML(accessibleName)}" target="_blank" rel="noreferrer">${escapeHTML(text)}<svg class="ui-icon" aria-hidden="true"><use href="assets/tabler-icons.svg#${iconName}"></use></svg></a>`;
+  return `<a class="${className}" href="${escapeHTML(url)}" aria-label="${escapeHTML(accessibleName)}" target="_blank" rel="noreferrer">${escapeHTML(text)}<svg class="ui-icon" aria-hidden="true"><use href="assets/tabler-icons.svg?v=5c6857ca047b#${iconName}"></use></svg></a>`;
 }
 
 function statusClass(level) {
@@ -543,15 +557,15 @@ function buildSearchIndex(app) {
   ].filter(Boolean).join(" ");
 }
 
-function compareApps(a, b) {
+function compareApps(a, b, category = "all") {
   const featuredDifference = Number(Boolean(b.featured)) - Number(Boolean(a.featured));
   if (featuredDifference) return featuredDifference;
   if (a.featured && b.featured) return a.sortOrder - b.sortOrder;
 
-  const categoryDifference = categoryOrder.indexOf(a.category) - categoryOrder.indexOf(b.category);
+  const categoryDifference = category === "all" ? categoryOrder.indexOf(a.category) - categoryOrder.indexOf(b.category) : 0;
   if (categoryDifference) return categoryDifference;
 
-  const withinCategory = workflowOrder[a.category] || [];
+  const withinCategory = workflowOrder[category === "all" ? a.category : category] || [];
   const aRank = withinCategory.indexOf(a.id);
   const bRank = withinCategory.indexOf(b.id);
   const workflowDifference = (aRank === -1 ? Number.MAX_SAFE_INTEGER : aRank) - (bRank === -1 ? Number.MAX_SAFE_INTEGER : bRank);
@@ -580,10 +594,10 @@ function cardTemplate(app) {
   const compatibilityLanguage = appCopy[activeLanguage]?.[app.id]?.compatibility ? (activeLanguage === "ja" ? "ja" : "en") : "zh-CN";
   const permissionsLanguage = appCopy[activeLanguage]?.[app.id]?.permissions ? (activeLanguage === "ja" ? "ja" : "en") : "zh-CN";
   const licensePopover = `<details class="license-details card-popover"><summary class="license" aria-label="${escapeHTML(t("licenseFor", { license: app.license, name: app.name }))}" title="${escapeHTML(t("licenseFor", { license: app.license, name: app.name }))}" lang="en">${escapeHTML(app.license)}</summary><div class="license-popover"><strong lang="en">${escapeHTML(app.license)}</strong><p>${escapeHTML(licenseExplanation)}</p><p class="license-note">${escapeHTML(t("licenseNote"))}</p></div></details>`;
-  const details = compatibility || permissions ? `<details class="app-details card-popover"><summary aria-label="${escapeHTML(t("detailsSummary"))}" title="${escapeHTML(t("detailsSummary"))}"><svg class="ui-icon" aria-hidden="true"><use href="assets/tabler-icons.svg#info-circle"></use></svg></summary><dl>${compatibility ? `<div><dt>${escapeHTML(t("compatibilityLabel"))}</dt><dd lang="${compatibilityLanguage}">${escapeHTML(compatibility)}</dd></div>` : ""}${permissions ? `<div><dt>${escapeHTML(t("permissionsLabel"))}</dt><dd lang="${permissionsLanguage}">${escapeHTML(permissions)}</dd></div>` : ""}</dl></details>` : "";
+  const details = compatibility || permissions ? `<details class="app-details card-popover"><summary aria-label="${escapeHTML(t("detailsSummary"))}" title="${escapeHTML(t("detailsSummary"))}"><svg class="ui-icon" aria-hidden="true"><use href="assets/tabler-icons.svg?v=5c6857ca047b#info-circle"></use></svg></summary><dl>${compatibility ? `<div><dt>${escapeHTML(t("compatibilityLabel"))}</dt><dd lang="${compatibilityLanguage}">${escapeHTML(compatibility)}</dd></div>` : ""}${permissions ? `<div><dt>${escapeHTML(t("permissionsLabel"))}</dt><dd lang="${permissionsLanguage}">${escapeHTML(permissions)}</dd></div>` : ""}</dl></details>` : "";
   return `<article class="app-card">
     <img class="app-icon" src="${escapeHTML(app.icon)}" alt="${escapeHTML(t("iconAlt", { name: app.name }))}" width="46" height="46" loading="lazy" decoding="async" />
-    <div class="app-card-head"><div><h3 lang="en">${escapeHTML(app.name)}</h3><span class="app-type">${escapeHTML(categoryName(app.category))}</span></div><div class="app-card-meta" aria-label="${escapeHTML(t("metadataLabel"))}">${status ? `<span class="tag ${statusClass(app.status.level)}" aria-label="${escapeHTML(`${status.label}: ${status.note}`)}"><svg class="ui-icon status-check" aria-hidden="true"><use href="assets/tabler-icons.svg#check"></use></svg>${escapeHTML(status.label)}</span>` : ""}${details}</div></div>
+    <div class="app-card-head"><div><h3 lang="en">${escapeHTML(app.name)}</h3><span class="app-type">${escapeHTML(categoryName(app.category))}</span></div><div class="app-card-meta" aria-label="${escapeHTML(t("metadataLabel"))}">${status ? `<span class="tag ${statusClass(app.status.level)}" aria-label="${escapeHTML(`${status.label}: ${status.note}`)}"><svg class="ui-icon status-check" aria-hidden="true"><use href="assets/tabler-icons.svg?v=5c6857ca047b#check"></use></svg>${escapeHTML(status.label)}</span>` : ""}${details}</div></div>
     <p class="card-summary">${escapeHTML(localized(app, "summary"))}</p>
     <p class="recommendation" title="${escapeHTML(localized(app, "recommendation"))}">${escapeHTML(localized(app, "recommendation"))}</p>
     <div class="tags" aria-label="${escapeHTML(t("metadataLabel"))}">
@@ -601,7 +615,7 @@ function renderFilters() {
   const focusedCategory = document.activeElement?.closest?.("#category-filters .filter")?.dataset.category;
   filters.innerHTML = categories.map(id => {
     const count = id === "all" ? apps.length : apps.filter(app => appCategoryIds(app).includes(id)).length;
-    return `<button class="filter" type="button" data-category="${id}" aria-pressed="${id === activeCategory}"><svg class="ui-icon" aria-hidden="true"><use href="assets/tabler-icons.svg#${categoryIcons[id]}"></use></svg><span>${escapeHTML(categoryName(id))}</span><span class="filter-count">${count}</span></button>`;
+    return `<button class="filter" type="button" data-category="${id}" aria-pressed="${id === activeCategory}"><svg class="ui-icon" aria-hidden="true"><use href="assets/tabler-icons.svg?v=5c6857ca047b#${categoryIcons[id]}"></use></svg><span>${escapeHTML(categoryName(id))}</span><span class="filter-count">${count}</span></button>`;
   }).join("");
   filters.querySelectorAll("button").forEach(button => button.addEventListener("click", () => {
     activeCategory = button.dataset.category;
@@ -633,7 +647,7 @@ function renderCatalog() {
     const categoryMatch = activeCategory === "all" || appCategories.includes(activeCategory);
     const testedMatch = !testedFilter.checked || app.status.level === "tested";
     return categoryMatch && testedMatch && searchText.includes(query);
-  });
+  }).sort((a, b) => compareApps(a, b, activeCategory));
   appGrid.innerHTML = list.map(cardTemplate).join("");
   emptyState.hidden = list.length !== 0;
   resultCount.textContent = t("foundCount", { count: list.length });
@@ -734,7 +748,7 @@ async function init() {
   document.querySelectorAll("[data-language]").forEach(button => button.addEventListener("click", () => applyLanguage(button.dataset.language)));
   try {
     const dataURL = new URL("data/apps.json", import.meta.url);
-    dataURL.searchParams.set("v", "e83a92a1cec0");
+    dataURL.searchParams.set("v", "6f8dc09ae9b5");
     const response = await fetch(dataURL, { cache: "no-store" });
     if (!response.ok) throw new Error("Unable to load app data");
     apps = await response.json();

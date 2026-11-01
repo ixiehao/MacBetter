@@ -113,4 +113,31 @@
     <path d="M12 9h.01" />
     <path d="M11 12h1v4h1" />
   </symbol>
+  <symbol id="notebook" viewBox="0 0 24 24">
+    <path d="M6 4h11a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-11a1 1 0 0 1 -1 -1v-14a1 1 0 0 1 1 -1m3 0v18" />
+    <path d="M13 8l2 0" />
+    <path d="M13 12l2 0" />
+  </symbol>
+  <symbol id="player-play" viewBox="0 0 24 24">
+    <path d="M7 4v16l13 -8l-13 -8" />
+  </symbol>
+  <symbol id="headphones" viewBox="0 0 24 24">
+    <path d="M4 15a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-1a2 2 0 0 1 -2 -2l0 -3" />
+    <path d="M15 15a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-1a2 2 0 0 1 -2 -2l0 -3" />
+    <path d="M4 15v-3a8 8 0 0 1 16 0v3" />
+  </symbol>
+  <symbol id="screenshot" viewBox="0 0 24 24">
+    <path d="M7 19a2 2 0 0 1 -2 -2" />
+    <path d="M5 13v-2" />
+    <path d="M5 7a2 2 0 0 1 2 -2" />
+    <path d="M11 5h2" />
+    <path d="M17 5a2 2 0 0 1 2 2" />
+    <path d="M19 11v2" />
+    <path d="M19 17v4" />
+    <path d="M21 19h-4" />
+    <path d="M13 19h-2" />
+  </symbol>
+  <symbol id="bolt" viewBox="0 0 24 24">
+    <path d="M13 3l0 7l6 0l-8 11l0 -7l-6 0l8 -11" />
+  </symbol>
 </svg>
