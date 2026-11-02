@@ -18,16 +18,16 @@ const categoryIcons = {
   productivity: "bolt",
   efficiency: "code"
 };
-const licenseOrder = ["MIT", "GPL-2.0", "GPL-3.0", "AGPL-3.0", "MPL-2.0", "Apache-2.0", "Unlicense", "LGPL-2.1", "BSD-2-Clause", "BSD-3-Clause"];
+const licenseOrder = ["MIT", "GPL-2.0", "GPL-3.0", "GPL-2.0 / GPL-3.0", "AGPL-3.0", "MPL-2.0", "Apache-2.0", "Unlicense", "LGPL-2.1", "BSD-2-Clause", "BSD-3-Clause"];
 const categoryOrder = ["video", "player", "audio", "image", "capture", "browser", "download", "launcher", "menu", "office", "notes", "productivity", "files", "maintenance", "privacy", "efficiency"];
 const workflowOrder = {
-  video: ["shotmap", "mp4flow", "handbrake", "lossless-cut", "subler", "mediainfo", "subtitle-edit", "blender"],
-  player: ["iina", "vlc", "jellyfin-media-player"],
-  audio: ["audacity", "mixxx", "musescore", "finetune", "background-music"],
-  image: ["lumaview", "shotmap", "macshot", "imageoptim", "darktable", "rawtherapee", "krita", "drawio-desktop", "blender", "freecad", "godot"],
-  capture: ["macshot", "kap", "obs-studio"],
-  browser: ["firefox", "zen-browser", "netnewswire"],
-  download: ["yt-dlp", "cyberduck"],
+  video: ["shotmap", "mp4flow", "handbrake", "lossless-cut", "subler", "mediainfo", "subtitle-edit", "openscreen", "blender"],
+  player: ["iina", "vlc", "mpv", "kodi", "jellyfin-media-player", "cog", "feishin", "yesplaymusic"],
+  audio: ["cog", "feishin", "audacity", "mixxx", "musescore", "finetune", "background-music", "yesplaymusic"],
+  image: ["lumaview", "shotmap", "macshot", "flameshot", "imageoptim", "darktable", "rawtherapee", "krita", "drawio-desktop", "blender", "freecad", "godot"],
+  capture: ["macshot", "flameshot", "bettercapture", "kap", "openscreen", "obs-studio", "screenity"],
+  browser: ["firefox", "waterfox", "floorp", "zen-browser", "brave", "helium", "netnewswire"],
+  download: ["ab-download-manager", "gopeed", "aria2", "yt-dlp", "transmission", "qbittorrent", "cyberduck"],
   launcher: ["launchpad-back", "loop", "rectangle", "layoutkeeper", "alt-tab", "aerospace", "amethyst", "hammerspoon"],
   menu: ["ice", "thaw", "stats", "monitorcontrol", "layoutkeeper", "linearmouse", "karabiner-elements", "maccy", "finetune", "background-music", "onlyswitch", "keeping-you-awake"],
   office: ["lumaview", "libreoffice", "onlyoffice", "thunderbird", "koodo-reader", "anki", "drawio-desktop"],
@@ -101,6 +101,8 @@ const copy = {
     projectSiteFor: "打开 {name} 项目主页",
     downloadFor: "下载 {name}",
     iconAlt: "{name} 图标",
+    previewFor: "预览 {name} 的软件截图",
+    previewLabel: "预览",
     projectSite: "项目主页",
     download: "下载",
     status: {
@@ -112,6 +114,7 @@ const copy = {
       MIT: "MIT：个人或商业使用、修改和再发布都可以；分发时保留许可证与版权声明即可，通常不要求公开自己的修改版源码。",
       "GPL-2.0": "GPL-2.0：可自由使用和修改；若向他人分发程序或修改版，须按 GPL-2.0 提供对应源码，并保留许可与版权声明。",
       "GPL-3.0": "GPL-3.0：可自由使用和修改；分发程序或修改版时，须按 GPL-3.0 提供对应源码。它还包含明确的专利条款。",
+      "GPL-2.0 / GPL-3.0": "GPL-2.0 / GPL-3.0：项目允许选择 GPLv2 或 GPLv3；发布时遵守所选版本，并提供对应源码，保留适用的例外与组件声明。",
       "AGPL-3.0": "AGPL-3.0：若修改后的软件通过网络服务供他人使用，也须向这些用户提供对应源码；这比 GPL 多了网络服务场景的要求。",
       "MPL-2.0": "MPL-2.0：对外发布时，修改过的 MPL 覆盖文件须提供源码并继续按 MPL 授权；独立的新文件可使用其他许可证。",
       "Apache-2.0": "Apache-2.0：宽松许可，可用于闭源组合和再发布；需保留许可证、版权与专利声明，并按要求附带 NOTICE 文件内容。",
@@ -188,6 +191,8 @@ const copy = {
     projectSiteFor: "Open the {name} project site",
     downloadFor: "Download {name}",
     iconAlt: "{name} icon",
+    previewFor: "Preview a screenshot of {name}",
+    previewLabel: "Preview",
     projectSite: "Project site",
     download: "Download",
     status: {
@@ -199,6 +204,7 @@ const copy = {
       MIT: "MIT: Free to use, modify, and redistribute, including commercially. Keep the license and copyright notice; it generally does not require publishing your own modified source.",
       "GPL-2.0": "GPL-2.0: You may use and modify it. If you distribute the program or a modified version, provide the corresponding source under GPL-2.0 and preserve its notices.",
       "GPL-3.0": "GPL-3.0: You may use and modify it. Distribution of the program or a modified version requires corresponding source under GPL-3.0; it also includes express patent terms.",
+      "GPL-2.0 / GPL-3.0": "GPL-2.0 / GPL-3.0: Choose GPLv2 or GPLv3 as the project permits. Follow that version when distributing the software and its source, including applicable exceptions and component notices.",
       "AGPL-3.0": "AGPL-3.0: If you modify the software and let others use it over a network, you must offer those users the corresponding source—a requirement beyond the usual GPL distribution trigger.",
       "MPL-2.0": "MPL-2.0: When distributing it, publish changes to MPL-covered files under the MPL. Independent new files may use other licenses.",
       "Apache-2.0": "Apache-2.0: A permissive license that allows closed-source combinations. Preserve license, copyright, and patent notices, and include any required NOTICE content.",
@@ -275,6 +281,8 @@ const copy = {
     projectSiteFor: "{name} のプロジェクトページを開く",
     downloadFor: "{name} をダウンロード",
     iconAlt: "{name}のアイコン",
+    previewFor: "{name}のスクリーンショットをプレビュー",
+    previewLabel: "プレビュー",
     projectSite: "プロジェクトページ",
     download: "ダウンロード",
     status: {
@@ -286,6 +294,7 @@ const copy = {
       MIT: "MIT：商用を含め、自由に利用・改変・再配布できます。ライセンスと著作権表示を残します。通常、独自の改変ソースを公開する義務はありません。",
       "GPL-2.0": "GPL-2.0：利用・改変は自由です。プログラムや改変版を配布する場合、GPL-2.0で対応するソースコードを提供し、表示を保持する必要があります。",
       "GPL-3.0": "GPL-3.0：利用・改変は自由です。プログラムや改変版の配布時はGPL-3.0で対応するソースコードを提供します。特許に関する条項も含まれます。",
+      "GPL-2.0 / GPL-3.0": "GPL-2.0 / GPL-3.0：プロジェクトの条件に従ってGPLv2またはGPLv3を選べます。配布時は選んだ版でソースを提供し、適用される例外や各部品の表示も保ちます。",
       "AGPL-3.0": "AGPL-3.0：改変したソフトをネットワーク経由で他者に使わせる場合も、利用者に対応するソースコードを提供する必要があります。通常のGPLよりネットワーク利用の条件が加わります。",
       "MPL-2.0": "MPL-2.0：配布する場合、MPL対象ファイルへの変更はMPLで公開します。独立した新規ファイルには別のライセンスを適用できます。",
       "Apache-2.0": "Apache-2.0：寛容なライセンスで、クローズドソースの製品にも組み込めます。ライセンス・著作権・特許表示を残し、必要な場合はNOTICEも含めます。",
@@ -397,7 +406,25 @@ const appCopy = {
     signal: { summary: "An open-source private messenger for messages and calls, with optional history transfer from a linked phone.", recommendation: "Private conversations deserve verifiable end-to-end encryption.", tags: ["Private messaging", "End-to-end encryption", "Cross-platform"] },
     blender: { summary: "A complete 3D creation suite for modeling, materials, animation, rendering, and even video editing.", recommendation: "Model, animate, and render in one capable tool.", tags: ["3D creation", "Modeling", "Rendering"], compatibility: "Blender 5.x for Mac supports Apple Silicon only. Intel Mac users should choose 4.5 LTS and check its hardware requirements." },
     bruno: { summary: "An open-source, offline-first API client that stores collections as local files and works well with Git.", recommendation: "Test APIs without handing your work to a cloud first.", tags: ["API testing", "Offline-first", "Git"] },
-    "kilobat-cli": { summary: "Diagnose network connections, latency, and DNS from Terminal. Get JSON output or use it as a local MCP server.", recommendation: "Find out why a connection fails.", tags: ["Command line", "Network diagnostics", "MCP"], compatibility: "macOS 14+; building through Homebrew requires Xcode 16+. This listing covers the free, open-source CLI. The separate desktop app is proprietary and has optional paid features.", permissions: "Diagnostics access the network. Some Wi-Fi names, filter status, and budget data require the separate desktop app and location permission. System-changing commands may need confirmation or administrator approval." }
+    "kilobat-cli": { summary: "Diagnose network connections, latency, and DNS from Terminal. Get JSON output or use it as a local MCP server.", recommendation: "Find out why a connection fails.", tags: ["Command line", "Network diagnostics", "MCP"], compatibility: "macOS 14+; building through Homebrew requires Xcode 16+. This listing covers the free, open-source CLI. The separate desktop app is proprietary and has optional paid features.", permissions: "Diagnostics access the network. Some Wi-Fi names, filter status, and budget data require the separate desktop app and location permission. System-changing commands may need confirmation or administrator approval." },
+    "mpv": {"summary": "A minimal media player with subtitles, scripts, detailed playback controls, and a command-line interface.", "recommendation": "Just the video, without the clutter.", "tags": ["Media player", "Scripting", "Command line"], "compatibility": "Follow the official macOS install guide for Homebrew, MacPorts, or prebuilt packages. Homebrew does not include an .app bundle; requirements vary by build. GPLv2+ by default, or LGPLv2.1+ when GPL components are disabled.", "permissions": "Reads selected media, subtitles, and configuration. Network playback and third-party scripts may access the internet."},
+    "kodi": {"summary": "A media center for organizing local and network movies, shows, and music, with a remote-friendly interface.", "recommendation": "Turn scattered files into a media library.", "tags": ["Media center", "Library", "Big screen"], "compatibility": "Official stable installers support Intel and Apple Silicon on macOS 10.14 or later.", "permissions": "Reads media folders you add. Artwork lookup, network media, and add-ons use the internet; third-party add-ons have separate terms."},
+    "cog": {"summary": "A native Mac audio player for lossless files, cue sheets, game music, and playlists, without importing a library first.", "recommendation": "Play your files without importing them.", "tags": ["Music player", "Lossless audio", "CUE"], "compatibility": "The current direct download requires macOS 12 or later and updates through Sparkle. An App Store edition is also available.", "permissions": "Reads authorized music folders. Online lyrics and Last.fm or ListenBrainz scrobbling connect when enabled."},
+    "feishin": {"summary": "A desktop client for self-hosted music servers such as Navidrome and Jellyfin, with albums, playlists, and synced lyrics.", "recommendation": "A better front end for your music server.", "tags": ["Music player", "Self-hosted", "Lyrics"], "compatibility": "macOS releases include Intel and Apple Silicon installers. A compatible music server is required; this is not a standalone local-file player.", "permissions": "Connects to your configured music server. Online lyrics use external services; media-key control may request Accessibility access."},
+    "gopeed": {"summary": "A download manager for HTTP, HTTPS, torrents, and magnets, with queues, browser integration, and extensions.", "recommendation": "One queue for links and torrents.", "tags": ["Download manager", "Magnet links", "Extensions"], "compatibility": "Stable macOS releases offer Intel, Apple Silicon, and Universal installers. Version 2.0 also has beta builds; the download link selects the latest stable release.", "permissions": "Downloads to selected folders. Torrent tasks exchange data with peers; installed extensions add their own network functions."},
+    "ab-download-manager": {"summary": "Multi-connection downloads with resuming, categories, scheduled queues, and optional browser integration.", "recommendation": "Pause a large download and finish it later.", "tags": ["Resume downloads", "Queues", "Browser integration"], "compatibility": "Official releases include Intel and Apple Silicon DMGs. Browser integration uses an optional extension; resuming requires server support.", "permissions": "Reads download URLs and writes to selected folders. The optional browser extension receives download requests within its granted access."},
+    "qbittorrent": {"summary": "An ad-free torrent and magnet client with queues, file selection, speed limits, and optional remote Web management.", "recommendation": "Torrent downloads without the ads.", "tags": ["BitTorrent", "Magnet links", "Queues"], "compatibility": "The official Mac download is currently 5.2.3 for macOS 13+. Other platforms may be newer; the project notes limited macOS maintenance. Source is GPLv2+; distributed binaries are GPLv3+.", "permissions": "Torrent downloads exchange data with peers. Remote Web management is optional and should be authenticated when enabled."},
+    "transmission": {"summary": "A native Mac torrent client with a simple interface for magnets, speed limits, and seeding ratios.", "recommendation": "A clean Mac app for torrents.", "tags": ["BitTorrent", "Native Mac", "Magnet links"], "compatibility": "The current official Mac app requires macOS 12 or later and ships as a DMG. It uses a native interface rather than the Qt interface on other platforms.", "permissions": "Torrent tasks upload and download data with peers. Optional remote access exposes a management interface."},
+    "aria2": {"summary": "A command-line downloader for HTTP, FTP, SFTP, BitTorrent, and Metalink, with batch tasks and RPC control.", "recommendation": "Put batch downloads in a script.", "tags": ["Command line", "Multiple protocols", "Batch downloads"], "compatibility": "Follow the project instructions for Homebrew or MacPorts on macOS. There is no GUI; stable releases are infrequent and the tool suits scripted workflows.", "permissions": "Connects to supplied URLs and writes downloads. Torrents exchange data with peers; configure RPC authentication for its intended scope."},
+    "brave": {"summary": "A Chromium browser with Chrome extension support, built-in ad and tracker blocking, sync, and privacy controls.", "recommendation": "Keep your Chrome extensions, lose more ads.", "tags": ["Chromium", "Ad blocking", "Chrome extensions"], "compatibility": "The current stable release requires macOS 13+ and offers Intel, Apple Silicon, and Universal builds. Select Brave-Browser; Brave Origin is a separate paid edition. The core browser is free, with paid VPN and some AI services.", "permissions": "Sites request camera, microphone, and other access as needed. Sync, Rewards, AI, and other online features follow their own settings and service terms."},
+    "floorp": {"summary": "A Firefox-based browser with workspaces, a sidebar, and extensive interface customization for multitasking.", "recommendation": "Give busy browsing a workspace.", "tags": ["Firefox-based", "Workspaces", "Customization"], "compatibility": "Official documentation lists macOS 10.15 or later. Releases provide a Universal DMG for Intel and Apple Silicon.", "permissions": "Sites and extensions request access as needed. Settings control sync, recommended extensions, and other network features."},
+    "waterfox": {"summary": "An independent Firefox-based browser with a familiar extension ecosystem and its own privacy and interface settings.", "recommendation": "A different take on familiar Firefox browsing.", "tags": ["Firefox-based", "Browser", "Extensions"], "compatibility": "The official site offers a Universal DMG for macOS 10.15+ on Intel and Apple Silicon. GitHub releases mainly provide version notes.", "permissions": "Websites and extensions use the access you grant. Sync and other online services depend on your settings."},
+    "helium": {"summary": "A Chromium browser in beta, with a minimal interface, content blocking, vertical tabs, and Chrome extension support.", "recommendation": "Try a simpler take on Chromium.", "tags": ["Chromium", "Content blocking", "Beta"], "compatibility": "macOS 13+; Intel and Apple Silicon DMGs are available. The project is explicitly in beta, so unexpected issues may occur. Auto-updates require Helium services to be enabled.", "permissions": "Helium services for extension proxying, filter lists, and updates connect according to your choices. Third-party assets retain their own licenses."},
+    "bettercapture": {"summary": "A native menu bar recorder for screen, system audio, and microphone, with H.264, HEVC, and ProRes encoding.", "recommendation": "Screen and system audio, with less setup.", "tags": ["Native Mac", "System audio", "ProRes"], "compatibility": "The official requirement is macOS 15.2+. The current release provides an Apple Silicon DMG only, with no Intel installer.", "permissions": "Screen and system-audio recording require macOS permission. Microphone and camera access are granted when used; recordings are stored locally by default."},
+    "openscreen": {"summary": "Turn a screen recording into a demo with auto-zoom, cursor effects, webcam overlays, editing, and MP4/GIF export.", "recommendation": "Record a demo, then polish it in place.", "tags": ["Demo recording", "Auto-zoom", "Video editing"], "compatibility": "Official DMGs support Intel and Apple Silicon. Recording and editing are free; development is active and formats may change. Optional cloud AI requires your own API key and may incur provider charges.", "permissions": "Requests Screen Recording, Accessibility, microphone, and camera access as needed. Optional bring-your-own-key AI sends requests to the selected provider."},
+    "flameshot": {"summary": "Capture a region, then add arrows, text, highlights, and redactions before copying, saving, or optionally uploading it.", "recommendation": "Capture it and mark what matters.", "tags": ["Screenshots", "Annotations", "Cross-platform"], "compatibility": "Current 14.x Mac packages require macOS 15+ and provide separate Intel and Apple Silicon DMGs. Signing checks may appear on first launch.", "permissions": "Screenshots require Screen Recording permission. Saving and copying can stay local; upload actions send images to the configured service."},
+    "screenity": {"summary": "A Chrome extension for recording tabs or the desktop, annotating while recording, and trimming, cropping, and exporting videos.", "recommendation": "Explain a browser task as you record it.", "tags": ["Browser extension", "Screen recording", "Live annotations"], "compatibility": "A Chrome/Chromium extension, not a standalone Mac app. Free recording and local export are available; Screenity Pro is a separate paid cloud service.", "permissions": "Captures the selected tab, desktop, microphone, or camera. Cloud saving and Pro sharing connect and upload the relevant content."},
+    "yesplaymusic": {"summary": "A third-party NetEase Cloud Music client centered on playlists, albums, lyrics, and light or dark themes.", "recommendation": "A different interface for NetEase music.", "tags": ["NetEase music", "Third-party client", "Lyrics"], "compatibility": "Stable v0.4.11 (2026-10-10) offers Intel, Apple Silicon, and Universal Mac builds. Recent users report blocked logins, not established as Mac-specific. Availability depends on service APIs, account status, and track rights. The hosted demo was unavailable during this review; use the official releases for installation.", "permissions": "Login and playlists contact NetEase or third-party music APIs. Optional additional music sources connect to other services."}
   },
   ja: {
     shotmap: { summary: "動画から自動で選んだコマを手動で調整。複数の動画を分割画像にまとめ、PNG / JPGで書き出せます。", recommendation: "長い動画を、一枚で見返せる。", tags: ["Swiftネイティブ", "オフライン処理", "動画", "画像"], compatibility: "macOS 13以降 · Intel / Apple Silicon" },
@@ -487,7 +514,25 @@ const appCopy = {
     signal: { summary: "メッセージと通話に対応するオープンソースのプライベートメッセンジャー。連携したスマートフォンから履歴も移せます。", recommendation: "私的な会話には、検証できるエンドツーエンド暗号化を。", tags: ["プライベートメッセージ", "エンドツーエンド暗号化", "クロスプラットフォーム"] },
     blender: { summary: "モデリング、マテリアル、アニメーション、レンダリング、動画編集まで扱える、統合型の3D制作スイートです。", recommendation: "モデリングからレンダリングまで、一つで。", tags: ["3D制作", "モデリング", "レンダリング"], compatibility: "Mac版Blender 5.xはApple Silicon専用です。Intel Macでは4.5 LTSを選び、動作要件を確認してください。" },
     bruno: { summary: "APIコレクションをローカルファイルとして保存し、Gitとも相性がよいオープンソースのオフライン優先APIクライアントです。", recommendation: "APIを試す前に、仕事をクラウドへ渡さない。", tags: ["APIテスト", "オフライン優先", "Git"] },
-    "kilobat-cli": { summary: "ターミナルで接続・遅延・DNSを診断し、結果をJSONで出力。ローカルのMCPサーバーとしても使えます。", recommendation: "つながらない原因を調べる。", tags: ["コマンドライン", "ネットワーク診断", "MCP"], compatibility: "macOS 14以降。Homebrew経由のソースビルドにはXcode 16以降が必要です。掲載対象は無料・オープンソースのCLIです。別配布のデスクトップ版はオープンソースではなく、一部機能は有料です。", permissions: "診断時にネットワークへ接続します。一部のWi-Fi名、フィルター状態、通信量の予算情報には別途デスクトップアプリと位置情報の許可が必要です。システム設定の変更には確認や管理者認証を求められる場合があります。" }
+    "kilobat-cli": { summary: "ターミナルで接続・遅延・DNSを診断し、結果をJSONで出力。ローカルのMCPサーバーとしても使えます。", recommendation: "つながらない原因を調べる。", tags: ["コマンドライン", "ネットワーク診断", "MCP"], compatibility: "macOS 14以降。Homebrew経由のソースビルドにはXcode 16以降が必要です。掲載対象は無料・オープンソースのCLIです。別配布のデスクトップ版はオープンソースではなく、一部機能は有料です。", permissions: "診断時にネットワークへ接続します。一部のWi-Fi名、フィルター状態、通信量の予算情報には別途デスクトップアプリと位置情報の許可が必要です。システム設定の変更には確認や管理者認証を求められる場合があります。" },
+    "mpv": {"summary": "字幕やスクリプト、細かな再生設定に対応するミニマルなプレーヤー。コマンドラインからも使えます。", "recommendation": "余計な画面なしで、動画を再生。", "tags": ["メディア再生", "スクリプト", "コマンドライン"], "compatibility": "公式のMac向け導入案内からHomebrew、MacPorts、ビルド済みパッケージを選べます。Homebrew版には.appがなく、必要なOSはビルドごとに異なります。標準はGPLv2+、GPL部品を無効にした構成はLGPLv2.1+です。", "permissions": "選択したメディア、字幕、設定を読み込みます。ネットワーク再生や外部スクリプトでは通信が発生します。"},
+    "kodi": {"summary": "ローカルやネットワーク上の映画・番組・音楽をライブラリに整理。大画面やリモコンでの操作にも向いています。", "recommendation": "散らばった動画を、自分のライブラリに。", "tags": ["メディアセンター", "ライブラリ", "大画面"], "compatibility": "公式安定版はmacOS 10.14以降に対応し、Intel用とApple Silicon用を配布しています。", "permissions": "追加したメディアフォルダーを読み込みます。作品情報の取得、ネットワーク再生、アドオンでは通信が発生し、外部アドオンには個別の利用条件があります。"},
+    "cog": {"summary": "ロスレス音源、CUE、ゲーム音楽、プレイリストに対応するMac用プレーヤー。曲を事前に取り込む必要がありません。", "recommendation": "取り込まず、そのまま音楽を再生。", "tags": ["音楽再生", "ロスレス音源", "CUE"], "compatibility": "現在の公式直接配布版はmacOS 12以降が必要で、Sparkleによる更新に対応します。App Store版もあります。", "permissions": "許可した音楽フォルダーを読み込みます。オンライン歌詞やLast.fm・ListenBrainzへの再生記録は、設定に応じて通信します。"},
+    "feishin": {"summary": "NavidromeやJellyfinなどの音楽サーバーに接続し、アルバム、プレイリスト、同期歌詞を使えるデスクトップクライアントです。", "recommendation": "自分の音楽サーバーを、聴きやすく。", "tags": ["音楽再生", "セルフホスト", "歌詞"], "compatibility": "Intel用とApple Silicon用のMac版を配布しています。対応する音楽サーバーが必要で、単体のローカルファイル再生用ではありません。", "permissions": "設定した音楽サーバーへ接続します。オンライン歌詞は外部サービスを利用し、メディアキー操作にはアクセシビリティ権限を求める場合があります。"},
+    "gopeed": {"summary": "HTTP・HTTPS・BT・マグネットリンクをまとめて管理。キュー、ブラウザー連携、拡張機能に対応しています。", "recommendation": "リンクもTorrentも、一つのキューに。", "tags": ["ダウンロード管理", "マグネットリンク", "拡張機能"], "compatibility": "Mac安定版にはIntel、Apple Silicon、Universalのパッケージがあります。2.0にはベータ版もありますが、ダウンロード先は最新の安定版です。", "permissions": "選択したフォルダーへダウンロードします。BTでは他のピアとデータを交換し、拡張機能を入れると個別の通信機能が追加されます。"},
+    "ab-download-manager": {"summary": "複数接続、再開、分類、予約キューに対応するダウンロード管理ツール。拡張機能でブラウザーとも連携できます。", "recommendation": "大きなファイルも、一時停止して続きから。", "tags": ["ダウンロード再開", "キュー", "ブラウザー連携"], "compatibility": "Intel用とApple Silicon用の公式DMGがあります。ブラウザー連携は任意の拡張機能で、再開には配信サーバーの対応が必要です。", "permissions": "ダウンロードURLを読み、選んだフォルダーへ保存します。任意のブラウザー拡張は、許可の範囲でダウンロード要求を受け取ります。"},
+    "qbittorrent": {"summary": "広告のないBT・マグネット対応クライアント。キュー、ファイル選択、速度制限、任意のWeb管理に対応します。", "recommendation": "広告に邪魔されず、Torrentを管理。", "tags": ["BitTorrent", "マグネットリンク", "キュー"], "compatibility": "現在の公式Mac版は5.2.3で、macOS 13以降が必要です。他OSとは版が異なる場合があり、Mac版の保守人員は限られています。ソースはGPLv2+、配布バイナリはGPLv3+です。", "permissions": "BTでは他のピアとデータを交換します。Webによる遠隔管理は任意で、有効にする場合は認証を設定します。"},
+    "transmission": {"summary": "MacネイティブのシンプルなBTクライアント。マグネットリンク、速度制限、共有比率を管理できます。", "recommendation": "Torrentに、すっきりしたMacアプリを。", "tags": ["BitTorrent", "Macネイティブ", "マグネットリンク"], "compatibility": "現在の公式Mac版はmacOS 12以降に対応し、DMGで配布されます。他OSのQt版とは異なるネイティブUIです。", "permissions": "BTのタスクは他のピアと送受信します。任意のリモート接続を有効にすると管理用インターフェースが開きます。"},
+    "aria2": {"summary": "HTTP・FTP・SFTP・BT・Metalinkに対応するコマンドラインツール。一括処理やRPC制御にも使えます。", "recommendation": "まとめて落とす作業を、スクリプトに。", "tags": ["コマンドライン", "複数プロトコル", "一括ダウンロード"], "compatibility": "Macでは公式案内に従ってHomebrewやMacPortsから導入できます。GUIはなく、安定版の更新間隔は長めです。スクリプト用途に向いています。", "permissions": "指定URLへ接続してファイルを保存します。BTは他のピアとデータを交換し、RPCには用途に応じた認証設定が必要です。"},
+    "brave": {"summary": "Chrome拡張に対応するChromium系ブラウザー。広告・トラッカーのブロック、同期、プライバシー設定を備えています。", "recommendation": "Chrome拡張はそのまま、広告を減らす。", "tags": ["Chromium", "広告ブロック", "Chrome拡張"], "compatibility": "現在の安定版はmacOS 13以降が必要で、Intel、Apple Silicon、Universal版があります。Brave-Browserを選んでください。Brave Originは別の有料版です。基本ブラウザーは無料で、VPNや一部AIは有料です。", "permissions": "サイトが必要に応じてカメラやマイクなどを要求します。同期、Rewards、AIなどは個別の設定とサービス規約に従って通信します。"},
+    "floorp": {"summary": "Firefoxベースで、ワークスペースやサイドバー、細かなUI変更に対応。複数の作業を並行する人向けです。", "recommendation": "増えたページを、ワークスペースで整理。", "tags": ["Firefoxベース", "ワークスペース", "カスタマイズ"], "compatibility": "公式案内ではmacOS 10.15以降に対応し、IntelとApple Silicon向けのUniversal DMGを配布しています。", "permissions": "サイトや拡張機能が必要な権限を要求します。同期、おすすめ拡張などのネットワーク機能は設定に従います。"},
+    "waterfox": {"summary": "Firefoxをベースにした独立系ブラウザー。なじみのある拡張機能を使え、独自のプライバシー・UI設定も備えています。", "recommendation": "慣れたFirefoxに、もう一つの選択肢。", "tags": ["Firefoxベース", "ブラウザー", "拡張機能"], "compatibility": "公式サイトはmacOS 10.15以降のIntel・Apple Silicon向けにUniversal DMGを配布しています。GitHubのReleaseは主に更新情報用です。", "permissions": "サイトと拡張機能は許可した範囲にアクセスします。同期などのオンラインサービスは設定に応じて動作します。"},
+    "helium": {"summary": "ベータ開発中のChromium系ブラウザー。簡潔なUI、コンテンツブロック、縦型タブ、Chrome拡張に対応しています。", "recommendation": "シンプルなChromiumを試す選択肢。", "tags": ["Chromium", "コンテンツブロック", "ベータ版"], "compatibility": "macOS 13以降向けにIntel用とApple Silicon用のDMGがあります。明確にベータ段階のため不具合の可能性があり、自動更新にはHeliumサービスの有効化が必要です。", "permissions": "拡張のプロキシ、フィルター更新などのHeliumサービスは選択に応じて通信します。第三者の素材には各自のライセンスが適用されます。"},
+    "bettercapture": {"summary": "画面、システム音声、マイクを収録できるネイティブのメニューバーアプリ。H.264・HEVC・ProResに対応します。", "recommendation": "画面もシステム音声も、手間を減らして。", "tags": ["Macネイティブ", "システム音声", "ProRes"], "compatibility": "公式要件はmacOS 15.2以降です。現在の配布物はApple Silicon用DMGのみで、Intel用はありません。", "permissions": "画面とシステム音声の収録にはmacOSの許可が必要です。マイク・カメラは使用時に許可し、録画は標準でローカルへ保存します。"},
+    "openscreen": {"summary": "録画をそのままデモ動画に。自動ズーム、カーソル効果、カメラ合成、編集、MP4・GIF書き出しを備えています。", "recommendation": "録ったデモを、その場で仕上げる。", "tags": ["デモ録画", "自動ズーム", "動画編集"], "compatibility": "Intel用とApple Silicon用の公式DMGがあります。録画・編集は無料で、開発中のため形式が変わる場合があります。任意のクラウドAIには自分のAPIキーが必要で、提供元の料金が発生し得ます。", "permissions": "画面収録、アクセシビリティ、マイク、カメラを必要に応じて許可します。自分のキーでAIを使う場合は、選んだ提供元へリクエストを送信します。"},
+    "flameshot": {"summary": "範囲を撮って、その場で矢印、文字、強調、マスクを追加。コピー・保存のほか、任意のアップロードにも対応します。", "recommendation": "撮ったその場で、伝えたい所をマーク。", "tags": ["スクリーンショット", "注釈", "クロスプラットフォーム"], "compatibility": "現在の14.x Mac版はmacOS 15以降が必要で、Intel用とApple Silicon用のDMGがあります。初回に署名の確認が出る場合があります。", "permissions": "撮影には画面収録の許可が必要です。保存やコピーはローカルで行えますが、アップロードを選ぶと設定したサービスへ画像を送信します。"},
+    "screenity": {"summary": "タブやデスクトップを録画するChrome拡張。録画中の注釈、トリミング、クロップ、動画の書き出しに対応します。", "recommendation": "ブラウザーの操作を、録りながら説明。", "tags": ["ブラウザー拡張", "画面録画", "録画中の注釈"], "compatibility": "Chrome・Chromium用の拡張機能で、独立したMacアプリではありません。録画とローカル書き出しは無料で、Screenity Proは別の有料クラウドサービスです。", "permissions": "選んだタブ、デスクトップ、マイク、カメラを収録します。クラウド保存やProの共有機能では、該当コンテンツをアップロードします。"},
+    "yesplaymusic": {"summary": "网易云音乐（NetEase Cloud Music）の非公式クライアント。プレイリスト、アルバム、歌詞を中心に、ライト・ダーク表示を使えます。", "recommendation": "网易云音乐に、別の使い心地を。", "tags": ["NetEase音楽", "非公式クライアント", "歌詞"], "compatibility": "安定版v0.4.11（2026-10-10）はIntel・Apple Silicon・UniversalのMac版を配布しています。最近もログイン制限の報告がありますが、Mac固有とは確認されていません。API、アカウント、楽曲の利用条件に左右されます。 確認時はWebデモが利用できなかったため、導入には公式Releaseを使ってください。", "permissions": "ログインやプレイリスト機能はNetEaseまたは外部の音楽APIへ接続します。任意の追加音源は別のサービスを利用します。"}
   }
 };
 
@@ -595,9 +640,12 @@ function cardTemplate(app) {
   const permissionsLanguage = appCopy[activeLanguage]?.[app.id]?.permissions ? (activeLanguage === "ja" ? "ja" : "en") : "zh-CN";
   const licensePopover = `<details class="license-details card-popover"><summary class="license" aria-label="${escapeHTML(t("licenseFor", { license: app.license, name: app.name }))}" title="${escapeHTML(t("licenseFor", { license: app.license, name: app.name }))}" lang="en">${escapeHTML(app.license)}</summary><div class="license-popover"><strong lang="en">${escapeHTML(app.license)}</strong><p>${escapeHTML(licenseExplanation)}</p><p class="license-note">${escapeHTML(t("licenseNote"))}</p></div></details>`;
   const details = compatibility || permissions ? `<details class="app-details card-popover"><summary aria-label="${escapeHTML(t("detailsSummary"))}" title="${escapeHTML(t("detailsSummary"))}"><svg class="ui-icon" aria-hidden="true"><use href="assets/tabler-icons.svg?v=5c6857ca047b#info-circle"></use></svg></summary><dl>${compatibility ? `<div><dt>${escapeHTML(t("compatibilityLabel"))}</dt><dd lang="${compatibilityLanguage}">${escapeHTML(compatibility)}</dd></div>` : ""}${permissions ? `<div><dt>${escapeHTML(t("permissionsLabel"))}</dt><dd lang="${permissionsLanguage}">${escapeHTML(permissions)}</dd></div>` : ""}</dl></details>` : "";
-  return `<article class="app-card">
+  const previewImage = app.preview?.images?.[activeLanguage] || app.preview?.image;
+  const preview = app.preview ? ` data-app-name="${escapeHTML(app.name)}" data-preview-image="${escapeHTML(previewImage)}" data-preview-source="${escapeHTML(app.preview.source)}"` : "";
+  const previewButton = app.preview ? `<button class="preview-trigger" type="button" aria-haspopup="dialog" aria-controls="app-preview-dialog" aria-label="${escapeHTML(t("previewFor", { name: app.name }))}" title="${escapeHTML(t("previewFor", { name: app.name }))}"><svg class="ui-icon" aria-hidden="true"><use href="assets/tabler-icons.svg?v=5c6857ca047b#photo"></use></svg><span class="preview-label">${escapeHTML(t("previewLabel"))}</span></button>` : "";
+  return `<article class="app-card"${preview}>
     <img class="app-icon" src="${escapeHTML(app.icon)}" alt="${escapeHTML(t("iconAlt", { name: app.name }))}" width="46" height="46" loading="lazy" decoding="async" />
-    <div class="app-card-head"><div><h3 lang="en">${escapeHTML(app.name)}</h3><span class="app-type">${escapeHTML(categoryName(app.category))}</span></div><div class="app-card-meta" aria-label="${escapeHTML(t("metadataLabel"))}">${status ? `<span class="tag ${statusClass(app.status.level)}" aria-label="${escapeHTML(`${status.label}: ${status.note}`)}"><svg class="ui-icon status-check" aria-hidden="true"><use href="assets/tabler-icons.svg?v=5c6857ca047b#check"></use></svg>${escapeHTML(status.label)}</span>` : ""}${details}</div></div>
+    <div class="app-card-head"><div><h3 lang="en">${escapeHTML(app.name)}</h3><span class="app-type">${escapeHTML(categoryName(app.category))}</span></div><div class="app-card-meta" aria-label="${escapeHTML(t("metadataLabel"))}">${status ? `<span class="tag ${statusClass(app.status.level)}" aria-label="${escapeHTML(`${status.label}: ${status.note}`)}"><svg class="ui-icon status-check" aria-hidden="true"><use href="assets/tabler-icons.svg?v=5c6857ca047b#check"></use></svg>${escapeHTML(status.label)}</span>` : ""}<div class="card-tools">${details}</div></div></div>
     <p class="card-summary">${escapeHTML(localized(app, "summary"))}</p>
     <p class="recommendation" title="${escapeHTML(localized(app, "recommendation"))}">${escapeHTML(localized(app, "recommendation"))}</p>
     <div class="tags" aria-label="${escapeHTML(t("metadataLabel"))}">
@@ -605,6 +653,7 @@ function cardTemplate(app) {
     </div>
     <div class="app-links">
       ${link(app.homepage, t("projectSite"), "project-link", t("projectSiteFor", { name: app.name }), "world-www")}
+      ${previewButton}
       ${link(app.download, t("download"), "download-link", t("downloadFor", { name: app.name }), "download")}
       ${licensePopover}
     </div>
@@ -748,7 +797,7 @@ async function init() {
   document.querySelectorAll("[data-language]").forEach(button => button.addEventListener("click", () => applyLanguage(button.dataset.language)));
   try {
     const dataURL = new URL("data/apps.json", import.meta.url);
-    dataURL.searchParams.set("v", "6f8dc09ae9b5");
+    dataURL.searchParams.set("v", "60eabd6e0c9c");
     const response = await fetch(dataURL, { cache: "no-store" });
     if (!response.ok) throw new Error("Unable to load app data");
     apps = await response.json();

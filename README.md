@@ -9,6 +9,7 @@ A community-curated directory of free, open-source macOS tools. Find an app for 
 ## What you’ll find
 
 - Apps grouped by purpose, with search and filters.
+- Project screenshots on hover, with larger previews for touch and keyboard users.
 - Short descriptions, practical recommendations, licenses, and official installation links.
 - English, Chinese, and Japanese pages.
 - **Tested by io** marks apps personally used by iXiehao. Other listings are checked against public project information. Neither is a security audit or a compatibility guarantee.

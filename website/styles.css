@@ -1,6 +1,6 @@
 @font-face { font-family: "Inter Site"; src: url("assets/fonts/InterVariable.woff2?v=693b77d4f32e") format("woff2"); font-style: normal; font-weight: 100 900; font-display: swap; }
-@font-face { font-family: "Noto Sans SC Site"; src: url("assets/fonts/NotoSansSC-subset.woff2?v=eb1bb9eefddf") format("woff2"); font-style: normal; font-weight: 100 900; font-display: swap; }
-@font-face { font-family: "Noto Sans JP Site"; src: url("assets/fonts/NotoSansJP-subset.woff2?v=b29dc7730c18") format("woff2"); font-style: normal; font-weight: 100 900; font-display: swap; }
+@font-face { font-family: "Noto Sans SC Site"; src: url("assets/fonts/NotoSansSC-subset.woff2?v=d155ff6a7a23") format("woff2"); font-style: normal; font-weight: 100 900; font-display: swap; }
+@font-face { font-family: "Noto Sans JP Site"; src: url("assets/fonts/NotoSansJP-subset.woff2?v=f22b97a1dfaf") format("woff2"); font-style: normal; font-weight: 100 900; font-display: swap; }
 
 :root {
   color-scheme: light;
@@ -135,6 +135,11 @@ kbd { min-width: 42px; padding: 4px 6px; color: #718195; background: #fff; borde
 .app-card h3 { margin: 2px 0 5px; overflow-wrap: anywhere; font-size: 18px; font-weight: 730; letter-spacing: -.035em; line-height: 1.18; }
 .app-card-meta { display: flex; flex: 0 0 auto; flex-direction: column; align-items: flex-end; justify-content: flex-start; gap: 5px; }
 .app-card-meta .tag { max-width: 110px; padding: 4px 5px; font-size: 9px; line-height: 1.15; text-align: right; white-space: nowrap; }
+.card-tools { display: flex; align-items: center; gap: 2px; }
+.preview-trigger { width: 25px; height: 25px; display: grid; place-items: center; padding: 0; color: #5d7799; background: #f3f7fd; border: 1px solid #e4ecf6; border-radius: 7px; cursor: pointer; }
+.preview-trigger .ui-icon { width: 14px; height: 14px; }
+.preview-label { display: none; }
+.preview-trigger:hover { color: var(--brand); background: var(--brand-soft); border-color: #b8d1f3; }
 .license { color: #5c6f88; font-size: 10px; font-weight: 760; letter-spacing: .04em; text-transform: uppercase; white-space: nowrap; }
 .license-details { position: relative; min-width: 0; }
 .license-details summary { display: inline-flex; align-items: center; padding: 0 2px; color: #7e8ba0; background: transparent; border: 0; border-radius: 0; cursor: pointer; list-style: none; text-decoration: underline dotted #b6c1d0; text-underline-offset: 3px; transition: color .16s ease; }
@@ -173,6 +178,39 @@ html[lang="en"] .app-type { text-transform: none; }
 .app-links .download-link { color: var(--brand-deep); background: #edf4ff; border-color: transparent; }
 .app-links .download-link:hover { color: #fff; background: var(--brand); text-decoration: none; }
 .app-links .license-details { flex: 0 0 auto; margin-left: auto; }
+.app-links .preview-trigger { flex-shrink: 0; width: 30px; height: 30px; }
+.app-preview { position: fixed; z-index: 70; overflow: hidden; color: var(--ink); background: #fff; border: 1px solid #d3e0f0; border-radius: 14px; box-shadow: 0 16px 55px rgb(23 43 70 / 22%), 0 2px 8px rgb(23 43 70 / 8%); }
+.app-preview[hidden], .app-preview img[hidden], .app-preview-dialog img[hidden], .preview-message[hidden] { display: none; }
+.preview-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 11px 14px; }
+.preview-heading strong { overflow: hidden; font-size: 13px; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; }
+.preview-heading span { flex-shrink: 0; color: var(--muted); font-size: 10px; }
+.preview-frame { width: 100%; height: var(--preview-image-height, 260px); display: grid; place-items: center; overflow: hidden; margin: 0; padding: 0; color: var(--muted); background: #f1f5fb; border: 0; cursor: zoom-in; }
+.preview-frame img { width: 100%; height: 100%; object-fit: contain; }
+.preview-message { margin: 0; padding: 20px; color: var(--muted); font-size: 12px; line-height: 1.6; text-align: center; }
+.preview-caption { margin: 0; padding: 9px 14px; color: var(--muted); font-size: 10px; text-align: right; }
+.app-preview-dialog { width: min(1100px, calc(100vw - 40px)); max-width: none; max-height: calc(100dvh - 40px); overflow: auto; margin: auto; padding: 0; color: var(--ink); background: #fff; border: 1px solid #d3e0f0; border-radius: 18px; box-shadow: 0 24px 80px rgb(10 28 54 / 24%); }
+.app-preview-dialog::backdrop { background: rgb(17 32 54 / 58%); backdrop-filter: blur(3px); }
+.preview-dialog-heading { position: sticky; z-index: 1; top: 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 18px; background: #fff; border-bottom: 1px solid #e5edf7; }
+.preview-dialog-heading h2 { margin: 0; font-size: 18px; line-height: 1.3; overflow-wrap: anywhere; }
+.preview-dialog-heading p { margin: 4px 0 0; color: var(--muted); font-size: 11px; }
+.preview-close { flex-shrink: 0; min-width: 56px; min-height: 44px; padding: 0 14px; color: var(--brand-deep); background: #edf4ff; border: 1px solid #d9e7fa; border-radius: 9px; font-size: 12px; font-weight: 650; cursor: pointer; }
+.preview-dialog-image { min-height: 160px; display: grid; place-items: center; padding: 12px; background: #f1f5fb; }
+.preview-dialog-image img { width: auto; max-width: 100%; height: auto; max-height: calc(100dvh - 190px); object-fit: contain; }
+.app-preview-dialog footer { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 18px; padding: 12px 18px; border-top: 1px solid #e5edf7; }
+.app-preview-dialog footer a { min-height: 28px; display: inline-flex; align-items: center; color: var(--link); font-size: 12px; font-weight: 600; }
+body.preview-dialog-open { overflow: hidden; }
+@media (max-width: 700px) {
+  .preview-trigger { width: auto; min-width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; gap: 4px; padding: 0 6px; }
+  .preview-trigger .ui-icon { width: 18px; height: 18px; }
+  .preview-label { display: inline; font-size: 10px; font-weight: 600; white-space: nowrap; }
+  .app-links .preview-trigger { width: auto; min-width: 44px; height: 44px; }
+  .app-preview-dialog { width: 100%; max-height: calc(100dvh - 16px); margin: auto 0 0; border-radius: 18px 18px 0 0; }
+  .preview-dialog-heading { padding: 14px; }
+  .preview-dialog-image { padding: 8px; }
+  .preview-dialog-image img { max-height: calc(100dvh - 190px); }
+  .app-preview-dialog footer { justify-content: space-between; padding: 10px 16px max(10px, env(safe-area-inset-bottom)); }
+  .app-preview-dialog footer a { min-height: 40px; }
+}
 .empty-state { padding: 56px 20px; text-align: center; background: var(--surface); border: 1px dashed #ccd7e2; border-radius: 13px; }
 .empty-state p { margin-bottom: 13px; color: var(--ink-soft); font-size: 14px; }
 .text-button { padding: 0; color: var(--link); background: none; border: 0; font-size: 13px; font-weight: 700; }

@@ -28,12 +28,20 @@
 - 多用途归类应有明确功能依据，例如 MacShot 属于截图与录屏，也支持图片标注；Cyberduck 属于下载工具，也提供文件传输。不要因为具备隐私设置就把所有浏览器放进安全分类。
 - 全部目录按主用途排列；进入分类后按该分类的 `workflowOrder` 排列，包括从其他主分类进入的多用途软件。软件总数按唯一 ID 统计，分类数量允许重叠。
 
+### 软件截图预览
+
+- 有合适截图时，可添加 `preview: { image, source }`：`image` 是项目官网或官方仓库提供的 HTTPS 图片原址，`source` 是展示该截图的官方页面。不要填 logo、用户头像、手机端界面或无法代表软件的宣传素材。
+- 若项目提供三语截图，可补充 `preview.images`，使用 `en`、`zh`、`ja` 键；缺少某语种时回退到 `image`。不把截图文件复制进本仓库，来源及图片权利保留给原项目。
+- 卡片由 `app.js` 输出预览入口，交互在 `previews.js`，样式在 `styles.css`。鼠标停留后才加载侧边截图；触屏与键盘通过按钮打开原比例大图。
+- 更新后检查左右定位、窄屏弹层、Escape、焦点恢复、异步加载切换及图片失效；未核实的截图不启用入口。图片和来源 URL 必须为 HTTPS，不需要绕过防盗链或登录限制。
+
 ## 验证
 
 从仓库根目录运行：
 
 ```sh
 node --check website/app.js
+node --check website/previews.js
 node -e 'const fs=require("node:fs"); const a=JSON.parse(fs.readFileSync("website/data/apps.json","utf8")); if(!Array.isArray(a)||new Set(a.map(x=>x.id)).size!==a.length) throw Error("Invalid catalog or duplicate id"); console.log(a.length+" apps");'
 git diff --check
 ```
