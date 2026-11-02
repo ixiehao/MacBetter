@@ -30,6 +30,7 @@ const hoverFrame = hover.querySelector(".preview-frame");
 const dialogImage = dialog.querySelector("img");
 let activeCard = null;
 let pendingCard = null;
+let dismissedCard = null;
 let showTimer;
 let hideTimer;
 let hoverRequest = 0;
@@ -168,7 +169,7 @@ function openDialog(card) {
 grid.addEventListener("pointerover", event => {
   if (event.pointerType !== "mouse" || !matchMedia("(hover: hover) and (pointer: fine)").matches || dialog.open) return;
   const card = event.target.closest(".app-card[data-preview-image]");
-  if (!card) return;
+  if (!card || card === dismissedCard) return;
   clearTimeout(hideTimer);
   if (card === activeCard || card === pendingCard) return;
   hideHover();
@@ -178,7 +179,9 @@ grid.addEventListener("pointerover", event => {
 
 grid.addEventListener("pointerout", event => {
   const card = event.target.closest(".app-card[data-preview-image]");
-  if (!card || card.contains(event.relatedTarget) || hover.contains(event.relatedTarget)) return;
+  if (!card || card.contains(event.relatedTarget)) return;
+  if (card === dismissedCard) dismissedCard = null;
+  if (hover.contains(event.relatedTarget)) return;
   clearTimeout(showTimer);
   pendingCard = null;
   hideTimer = setTimeout(hideHover, 140);
@@ -202,8 +205,16 @@ dialog.addEventListener("close", () => {
   document.body.classList.remove("preview-dialog-open");
   if (opener?.isConnected) opener.focus({ preventScroll: true });
 });
-document.addEventListener("keydown", event => { if (event.key === "Escape") hideHover(); });
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape" && !event.isComposing) {
+    dismissedCard = activeCard || pendingCard || dismissedCard;
+    hideHover();
+  }
+});
 window.addEventListener("scroll", hideHover, { passive: true, capture: true });
 window.addEventListener("resize", hideHover, { passive: true });
 window.addEventListener("blur", hideHover);
-new MutationObserver(() => { if (activeCard && !activeCard.isConnected) hideHover(); }).observe(grid, { childList: true });
+new MutationObserver(() => {
+  if (activeCard && !activeCard.isConnected) hideHover();
+  if (dismissedCard && !dismissedCard.isConnected) dismissedCard = null;
+}).observe(grid, { childList: true });

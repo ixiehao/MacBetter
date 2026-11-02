@@ -548,6 +548,7 @@ const filters = document.querySelector("#category-filters");
 const standardsList = document.querySelector("#standards-list");
 const searchInput = document.querySelector("#search-input");
 const searchClear = document.querySelector("#clear-search");
+let isSearchComposing = false;
 const testedFilter = document.querySelector("#tested-filter");
 const resultCount = document.querySelector("#result-count");
 const emptyState = document.querySelector("#empty-state");
@@ -701,6 +702,7 @@ function renderCatalog() {
   }).sort((a, b) => compareApps(a, b, activeCategory));
   appGrid.innerHTML = list.map(cardTemplate).join("");
   emptyState.hidden = list.length !== 0;
+  clearFilters.hidden = activeCategory === "all" && !testedFilter.checked && list.length !== 0;
   resultCount.textContent = t("foundCount", { count: list.length });
   updateURL();
 }
@@ -725,6 +727,7 @@ function resetFilters() {
   testedFilter.checked = false;
   renderFilters();
   renderCatalog();
+  searchInput.focus({ preventScroll: true });
 }
 
 function clearSearchQuery() {
@@ -846,7 +849,15 @@ async function shareDirectory() {
   }
 }
 
-searchInput.addEventListener("input", renderCatalog);
+searchInput.addEventListener("compositionstart", () => { isSearchComposing = true; });
+searchInput.addEventListener("compositionend", () => {
+  isSearchComposing = false;
+  renderCatalog();
+});
+searchInput.addEventListener("input", event => {
+  searchClear.hidden = searchInput.value.length === 0;
+  if (!event.isComposing && !isSearchComposing) renderCatalog();
+});
 searchClear.addEventListener("click", clearSearchQuery);
 testedFilter.addEventListener("change", renderCatalog);
 clearFilters.addEventListener("click", resetFilters);
@@ -863,6 +874,7 @@ document.addEventListener("click", event => {
   }
 });
 document.addEventListener("keydown", event => {
+  if (event.isComposing || event.keyCode === 229 || isSearchComposing) return;
   if (event.key === "Escape") appGrid.querySelectorAll(".card-popover[open]").forEach(popover => { popover.open = false; });
   const target = event.target;
   const isEditable = target?.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(target?.tagName || "");
