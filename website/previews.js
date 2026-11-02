@@ -6,6 +6,12 @@ const copy = {
 };
 const text = key => (copy[document.documentElement.lang.startsWith("zh") ? "zh" : document.documentElement.lang.startsWith("ja") ? "ja" : "en"])[key];
 
+const scrim = document.createElement("div");
+scrim.className = "preview-scrim";
+scrim.hidden = true;
+scrim.setAttribute("aria-hidden", "true");
+document.body.append(scrim);
+
 const hover = document.createElement("aside");
 hover.className = "app-preview";
 hover.hidden = true;
@@ -20,6 +26,7 @@ dialog.innerHTML = '<header class="preview-dialog-heading"><div><h2 id="preview-
 document.body.append(dialog);
 
 const hoverImage = hover.querySelector("img");
+const hoverFrame = hover.querySelector(".preview-frame");
 const dialogImage = dialog.querySelector("img");
 let activeCard = null;
 let pendingCard = null;
@@ -45,36 +52,49 @@ function hideHover() {
   clearTimeout(showTimer);
   clearTimeout(hideTimer);
   pendingCard = null;
+  activeCard?.classList.remove("is-previewing");
   activeCard = null;
   hover.hidden = true;
+  scrim.hidden = true;
   hoverRequest++;
 }
 
 function positionHover(card) {
   if (!card?.isConnected || innerWidth < 760 || innerHeight < 280) return false;
   const rect = card.getBoundingClientRect();
+  const viewportWidth = document.documentElement.clientWidth;
+  const viewportHeight = document.documentElement.clientHeight;
   const margin = 16;
   const gap = 12;
   const left = rect.left - gap - margin;
-  const right = innerWidth - rect.right - gap - margin;
+  const right = viewportWidth - rect.right - gap - margin;
   if (Math.max(left, right) < 270) return false;
   const side = right >= left ? "right" : "left";
-  const width = Math.min(520, side === "right" ? right : left);
-  const ratio = hoverImage.naturalWidth ? hoverImage.naturalHeight / hoverImage.naturalWidth : 0.64;
-  const height = Math.min(Math.max(150, width * ratio), 420, innerHeight - 132);
+  const maxWidth = Math.min(560, side === "right" ? right : left);
+  hover.style.width = `${Math.floor(maxWidth)}px`;
+  // Measure the translated heading and caption rather than assuming a fixed height.
+  const chromeHeight = hover.offsetHeight - hoverFrame.offsetHeight;
+  const borderWidth = hover.offsetWidth - hover.clientWidth;
+  const maxImageHeight = Math.min(560, viewportHeight - margin * 2 - chromeHeight);
+  if (maxImageHeight < 120) return false;
+  // A hidden image may still contain the previous app's intrinsic dimensions.
+  const aspect = !hoverImage.hidden && hoverImage.naturalWidth ? hoverImage.naturalWidth / hoverImage.naturalHeight : 1.6;
+  const width = Math.min(maxWidth, Math.max(260, maxImageHeight * aspect + borderWidth));
+  const height = Math.min(maxImageHeight, Math.max(120, (width - borderWidth) / aspect));
   hover.style.width = `${Math.floor(width)}px`;
   hover.style.setProperty("--preview-image-height", `${Math.floor(height)}px`);
   hover.dataset.side = side;
-  hover.style.left = `${Math.round(side === "right" ? rect.right + gap : rect.left - gap - width)}px`;
-  const panelHeight = height + 82;
-  const top = Math.max(margin, Math.min(rect.top + (rect.height - panelHeight) / 2, innerHeight - panelHeight - margin));
+  const panelWidth = hover.offsetWidth;
+  hover.style.left = `${Math.round(side === "right" ? rect.right + gap : rect.left - gap - panelWidth)}px`;
+  const panelHeight = hover.offsetHeight;
+  const top = Math.max(margin, Math.min(rect.top + (rect.height - panelHeight) / 2, viewportHeight - panelHeight - margin));
   hover.style.top = `${Math.round(top)}px`;
   return true;
 }
 
 function showHover(card) {
   const data = dataFor(card);
-  if (!data || dialog.open || card.querySelector(".card-popover[open]") || !positionHover(card)) return;
+  if (!data || dialog.open || card.querySelector(".card-popover[open]")) return;
   activeCard = card;
   pendingCard = null;
   const request = ++hoverRequest;
@@ -88,17 +108,23 @@ function showHover(card) {
   message.hidden = false;
   hoverImage.hidden = true;
   hoverImage.alt = `${data.name} · ${text("preview")}`;
+  hover.hidden = false;
+  if (!positionHover(card)) {
+    hideHover();
+    return;
+  }
+  activeCard.classList.add("is-previewing");
+  scrim.hidden = false;
   hoverImage.onload = () => {
     if (request !== hoverRequest || activeCard !== card) return;
     hoverImage.hidden = false;
     message.hidden = true;
-    positionHover(card);
+    if (!positionHover(card)) hideHover();
   };
   hoverImage.onerror = () => {
     if (request !== hoverRequest) return;
     message.textContent = text("failed");
   };
-  hover.hidden = false;
   hoverImage.src = data.image;
 }
 
@@ -179,4 +205,5 @@ dialog.addEventListener("close", () => {
 document.addEventListener("keydown", event => { if (event.key === "Escape") hideHover(); });
 window.addEventListener("scroll", hideHover, { passive: true, capture: true });
 window.addEventListener("resize", hideHover, { passive: true });
+window.addEventListener("blur", hideHover);
 new MutationObserver(() => { if (activeCard && !activeCard.isConnected) hideHover(); }).observe(grid, { childList: true });

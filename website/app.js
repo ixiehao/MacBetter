@@ -77,7 +77,6 @@ const copy = {
     contribution: { sourceTitle: "项目地址", sourceDetail: "作者仓库或官网", licenseTitle: "开源许可证", licenseDetail: "例如 MIT、GPL-3.0", reasonTitle: "推荐理由", reasonDetail: "它具体解决什么问题" },
     catalogEyebrow: "开源 Mac 软件",
     catalogHeading: "软件目录",
-    catalogCopy: "按用途查找；多用途软件可出现在多个分类。",
     catalogControlsLabel: "搜索和筛选软件",
     recommendInline: "推荐一款好软件",
     shareDirectory: "分享目录",
@@ -85,6 +84,7 @@ const copy = {
     shareFailed: "暂时无法分享，请从地址栏复制当前页面地址。",
     searchPlaceholder: "搜索名称、用途或标签",
     searchLabel: "搜索软件目录",
+    clearSearch: "清空搜索",
     testedFilter: "仅显示 io 实测",
     appCategoriesLabel: "软件分类",
     foundCount: "找到 {count} 款软件",
@@ -167,7 +167,6 @@ const copy = {
     contribution: { sourceTitle: "Project source", sourceDetail: "Author’s repository or official site", licenseTitle: "Open-source license", licenseDetail: "e.g. MIT or GPL-3.0", reasonTitle: "Why you recommend it", reasonDetail: "What problem it solves" },
     catalogEyebrow: "Open-source Mac apps",
     catalogHeading: "App directory",
-    catalogCopy: "Browse by task. Apps may appear in more than one category.",
     catalogControlsLabel: "Search and filter apps",
     recommendInline: "Recommend an app",
     shareDirectory: "Share directory",
@@ -175,6 +174,7 @@ const copy = {
     shareFailed: "Sharing is unavailable. Copy this page address from your browser.",
     searchPlaceholder: "Search apps, features, or tags",
     searchLabel: "Search the app directory",
+    clearSearch: "Clear search",
     testedFilter: "Show apps tested by io",
     appCategoriesLabel: "App categories",
     foundCount: "{count} apps found",
@@ -257,7 +257,6 @@ const copy = {
     contribution: { sourceTitle: "プロジェクトの出所", sourceDetail: "作者のリポジトリまたは公式サイト", licenseTitle: "オープンソースライセンス", licenseDetail: "例：MIT / GPL-3.0", reasonTitle: "おすすめの理由", reasonDetail: "どんな課題を解決するか" },
     catalogEyebrow: "オープンソースのMacアプリ",
     catalogHeading: "アプリ一覧",
-    catalogCopy: "用途から探せます。複数の分類に掲載されるアプリもあります。",
     catalogControlsLabel: "アプリを検索・絞り込み",
     recommendInline: "アプリを紹介する",
     shareDirectory: "一覧を共有",
@@ -265,6 +264,7 @@ const copy = {
     shareFailed: "共有できません。ブラウザーのアドレスをコピーしてください。",
     searchPlaceholder: "名前・機能・タグで検索",
     searchLabel: "アプリ一覧を検索",
+    clearSearch: "検索をクリア",
     testedFilter: "ioが実際に使ったアプリのみ",
     appCategoriesLabel: "アプリのカテゴリ",
     foundCount: "{count} 件のアプリ",
@@ -547,6 +547,7 @@ const appGrid = document.querySelector("#app-grid");
 const filters = document.querySelector("#category-filters");
 const standardsList = document.querySelector("#standards-list");
 const searchInput = document.querySelector("#search-input");
+const searchClear = document.querySelector("#clear-search");
 const testedFilter = document.querySelector("#tested-filter");
 const resultCount = document.querySelector("#result-count");
 const emptyState = document.querySelector("#empty-state");
@@ -574,7 +575,7 @@ function escapeHTML(value) {
 }
 
 function link(url, text, className, accessibleName, iconName) {
-  return `<a class="${className}" href="${escapeHTML(url)}" aria-label="${escapeHTML(accessibleName)}" target="_blank" rel="noreferrer">${escapeHTML(text)}<svg class="ui-icon" aria-hidden="true"><use href="assets/tabler-icons.svg?v=5c6857ca047b#${iconName}"></use></svg></a>`;
+  return `<a class="${className}" href="${escapeHTML(url)}" aria-label="${escapeHTML(accessibleName)}" target="_blank" rel="noreferrer">${escapeHTML(text)}<svg class="ui-icon" aria-hidden="true"><use href="assets/tabler-icons.svg?v=f4517e656209#${iconName}"></use></svg></a>`;
 }
 
 function statusClass(level) {
@@ -639,13 +640,13 @@ function cardTemplate(app) {
   const compatibilityLanguage = appCopy[activeLanguage]?.[app.id]?.compatibility ? (activeLanguage === "ja" ? "ja" : "en") : "zh-CN";
   const permissionsLanguage = appCopy[activeLanguage]?.[app.id]?.permissions ? (activeLanguage === "ja" ? "ja" : "en") : "zh-CN";
   const licensePopover = `<details class="license-details card-popover"><summary class="license" aria-label="${escapeHTML(t("licenseFor", { license: app.license, name: app.name }))}" title="${escapeHTML(t("licenseFor", { license: app.license, name: app.name }))}" lang="en">${escapeHTML(app.license)}</summary><div class="license-popover"><strong lang="en">${escapeHTML(app.license)}</strong><p>${escapeHTML(licenseExplanation)}</p><p class="license-note">${escapeHTML(t("licenseNote"))}</p></div></details>`;
-  const details = compatibility || permissions ? `<details class="app-details card-popover"><summary aria-label="${escapeHTML(t("detailsSummary"))}" title="${escapeHTML(t("detailsSummary"))}"><svg class="ui-icon" aria-hidden="true"><use href="assets/tabler-icons.svg?v=5c6857ca047b#info-circle"></use></svg></summary><dl>${compatibility ? `<div><dt>${escapeHTML(t("compatibilityLabel"))}</dt><dd lang="${compatibilityLanguage}">${escapeHTML(compatibility)}</dd></div>` : ""}${permissions ? `<div><dt>${escapeHTML(t("permissionsLabel"))}</dt><dd lang="${permissionsLanguage}">${escapeHTML(permissions)}</dd></div>` : ""}</dl></details>` : "";
+  const details = compatibility || permissions ? `<details class="app-details card-popover"><summary aria-label="${escapeHTML(t("detailsSummary"))}" title="${escapeHTML(t("detailsSummary"))}"><svg class="ui-icon" aria-hidden="true"><use href="assets/tabler-icons.svg?v=f4517e656209#info-circle"></use></svg></summary><dl>${compatibility ? `<div><dt>${escapeHTML(t("compatibilityLabel"))}</dt><dd lang="${compatibilityLanguage}">${escapeHTML(compatibility)}</dd></div>` : ""}${permissions ? `<div><dt>${escapeHTML(t("permissionsLabel"))}</dt><dd lang="${permissionsLanguage}">${escapeHTML(permissions)}</dd></div>` : ""}</dl></details>` : "";
   const previewImage = app.preview?.images?.[activeLanguage] || app.preview?.image;
   const preview = app.preview ? ` data-app-name="${escapeHTML(app.name)}" data-preview-image="${escapeHTML(previewImage)}" data-preview-source="${escapeHTML(app.preview.source)}"` : "";
-  const previewButton = app.preview ? `<button class="preview-trigger" type="button" aria-haspopup="dialog" aria-controls="app-preview-dialog" aria-label="${escapeHTML(t("previewFor", { name: app.name }))}" title="${escapeHTML(t("previewFor", { name: app.name }))}"><svg class="ui-icon" aria-hidden="true"><use href="assets/tabler-icons.svg?v=5c6857ca047b#photo"></use></svg><span class="preview-label">${escapeHTML(t("previewLabel"))}</span></button>` : "";
+  const previewButton = app.preview ? `<button class="preview-trigger" type="button" aria-haspopup="dialog" aria-controls="app-preview-dialog" aria-label="${escapeHTML(t("previewFor", { name: app.name }))}" title="${escapeHTML(t("previewFor", { name: app.name }))}"><svg class="ui-icon" aria-hidden="true"><use href="assets/tabler-icons.svg?v=f4517e656209#photo"></use></svg><span class="preview-label">${escapeHTML(t("previewLabel"))}</span></button>` : "";
   return `<article class="app-card"${preview}>
     <img class="app-icon" src="${escapeHTML(app.icon)}" alt="${escapeHTML(t("iconAlt", { name: app.name }))}" width="46" height="46" loading="lazy" decoding="async" />
-    <div class="app-card-head"><div><h3 lang="en">${escapeHTML(app.name)}</h3><span class="app-type">${escapeHTML(categoryName(app.category))}</span></div><div class="app-card-meta" aria-label="${escapeHTML(t("metadataLabel"))}">${status ? `<span class="tag ${statusClass(app.status.level)}" aria-label="${escapeHTML(`${status.label}: ${status.note}`)}"><svg class="ui-icon status-check" aria-hidden="true"><use href="assets/tabler-icons.svg?v=5c6857ca047b#check"></use></svg>${escapeHTML(status.label)}</span>` : ""}<div class="card-tools">${details}</div></div></div>
+    <div class="app-card-head"><div><h3 lang="en">${escapeHTML(app.name)}</h3><span class="app-type">${escapeHTML(categoryName(app.category))}</span></div><div class="app-card-meta" aria-label="${escapeHTML(t("metadataLabel"))}">${status ? `<span class="tag ${statusClass(app.status.level)}" aria-label="${escapeHTML(`${status.label}: ${status.note}`)}"><svg class="ui-icon status-check" aria-hidden="true"><use href="assets/tabler-icons.svg?v=f4517e656209#check"></use></svg>${escapeHTML(status.label)}</span>` : ""}<div class="card-tools">${details}</div></div></div>
     <p class="card-summary">${escapeHTML(localized(app, "summary"))}</p>
     <p class="recommendation" title="${escapeHTML(localized(app, "recommendation"))}">${escapeHTML(localized(app, "recommendation"))}</p>
     <div class="tags" aria-label="${escapeHTML(t("metadataLabel"))}">
@@ -664,7 +665,7 @@ function renderFilters() {
   const focusedCategory = document.activeElement?.closest?.("#category-filters .filter")?.dataset.category;
   filters.innerHTML = categories.map(id => {
     const count = id === "all" ? apps.length : apps.filter(app => appCategoryIds(app).includes(id)).length;
-    return `<button class="filter" type="button" data-category="${id}" aria-pressed="${id === activeCategory}"><svg class="ui-icon" aria-hidden="true"><use href="assets/tabler-icons.svg?v=5c6857ca047b#${categoryIcons[id]}"></use></svg><span>${escapeHTML(categoryName(id))}</span><span class="filter-count">${count}</span></button>`;
+    return `<button class="filter" type="button" data-category="${id}" aria-pressed="${id === activeCategory}"><svg class="ui-icon" aria-hidden="true"><use href="assets/tabler-icons.svg?v=f4517e656209#${categoryIcons[id]}"></use></svg><span>${escapeHTML(categoryName(id))}</span><span class="filter-count">${count}</span></button>`;
   }).join("");
   filters.querySelectorAll("button").forEach(button => button.addEventListener("click", () => {
     activeCategory = button.dataset.category;
@@ -688,6 +689,7 @@ function updateURL() {
 }
 
 function renderCatalog() {
+  searchClear.hidden = searchInput.value.length === 0;
   const locale = activeLanguage === "ja" ? "ja-JP" : activeLanguage === "en" ? "en-US" : "zh-CN";
   const query = searchInput.value.trim().toLocaleLowerCase(locale);
   const list = apps.filter(app => {
@@ -723,6 +725,12 @@ function resetFilters() {
   testedFilter.checked = false;
   renderFilters();
   renderCatalog();
+}
+
+function clearSearchQuery() {
+  searchInput.value = "";
+  renderCatalog();
+  searchInput.focus({ preventScroll: true });
 }
 
 function setMetaContent(selector, value) {
@@ -773,6 +781,7 @@ function applyStaticCopy() {
   document.querySelectorAll("[data-i18n]").forEach(element => { element.textContent = t(element.dataset.i18n); });
   document.querySelectorAll("[data-i18n-placeholder]").forEach(element => { element.placeholder = t(element.dataset.i18nPlaceholder); });
   document.querySelectorAll("[data-i18n-aria-label]").forEach(element => { element.setAttribute("aria-label", t(element.dataset.i18nAriaLabel)); });
+  searchClear.title = t("clearSearch");
   document.querySelectorAll("[data-language]").forEach(button => {
     button.setAttribute("aria-pressed", String(button.dataset.language === activeLanguage));
     button.setAttribute("aria-label", t(`languageOption.${button.dataset.language}`));
@@ -838,6 +847,7 @@ async function shareDirectory() {
 }
 
 searchInput.addEventListener("input", renderCatalog);
+searchClear.addEventListener("click", clearSearchQuery);
 testedFilter.addEventListener("change", renderCatalog);
 clearFilters.addEventListener("click", resetFilters);
 shareButton.addEventListener("click", shareDirectory);
@@ -865,8 +875,7 @@ document.addEventListener("keydown", event => {
     searchInput.focus();
   }
   if (event.key === "Escape" && document.activeElement === searchInput && searchInput.value) {
-    searchInput.value = "";
-    renderCatalog();
+    clearSearchQuery();
   }
 });
 
