@@ -2,6 +2,8 @@
 
 MacBetter's interface pictograms use Tabler Icons Outline v3.49.0 from the [official Tabler Icons repository](https://github.com/tabler/tabler-icons/tree/v3.49.0). The selected SVG paths are included in [`tabler-icons.svg`](tabler-icons.svg) and used unchanged.
 
+The generic [`app icon fallback`](icons/app-fallback.svg) also uses the unchanged `apps` paths from that release. It is not a third-party product logo.
+
 Copyright (c) 2020-2026 Paweł Kuna
 
 MIT License

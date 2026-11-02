@@ -809,7 +809,7 @@ async function init() {
   document.querySelectorAll("[data-language]").forEach(button => button.addEventListener("click", () => applyLanguage(button.dataset.language)));
   try {
     const dataURL = new URL("data/apps.json", import.meta.url);
-    dataURL.searchParams.set("v", "8955fd4edcbb");
+    dataURL.searchParams.set("v", "4e89eacf08e8");
     const response = await fetch(dataURL, { cache: "no-store" });
     if (!response.ok) throw new Error("Unable to load app data");
     apps = await response.json();
@@ -862,6 +862,13 @@ searchClear.addEventListener("click", clearSearchQuery);
 testedFilter.addEventListener("change", renderCatalog);
 clearFilters.addEventListener("click", resetFilters);
 shareButton.addEventListener("click", shareDirectory);
+appGrid.addEventListener("error", event => {
+  const image = event.target;
+  if (!image.matches?.(".app-icon") || image.dataset.iconFallback) return;
+  image.dataset.iconFallback = "true";
+  image.alt = "";
+  image.src = new URL("assets/icons/app-fallback.svg", import.meta.url).href;
+}, true);
 appGrid.addEventListener("click", event => {
   const activePopover = event.target.closest(".card-popover");
   appGrid.querySelectorAll(".card-popover[open]").forEach(popover => {

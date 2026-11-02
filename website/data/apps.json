@@ -55,7 +55,7 @@
     "status": { "level": "tested" },
     "compatibility": "macOS 13 及以上 · Intel 与 Apple Silicon · 需本机 FFmpeg / ffprobe",
     "permissions": "本地文件访问：仅处理你选择的视频。",
-    "icon": "assets/icons/mp4flow.png",
+    "icon": "assets/icons/mp4flow-256.png",
     "featured": true,
     "sortOrder": 3
   },
@@ -318,7 +318,7 @@
     "status": { "level": "verified" },
     "compatibility": "项目提供 macOS Release；请以当前版本的系统要求为准",
     "permissions": "仅处理你选定的本地媒体文件；转码前留意输出位置与文件覆盖设置。",
-    "icon": "assets/icons/handbrake.png",
+    "icon": "assets/icons/handbrake-256.png",
     "featured": false,
     "sortOrder": 16
   },
@@ -518,7 +518,7 @@
     "status": { "level": "verified" },
     "compatibility": "2.x 数据库版为 Beta；旧 Markdown / Org 文件库已移至 Logseq OG。迁移前备份。",
     "permissions": "常规笔记软件；使用同步、插件或外部服务前，请先阅读其数据与权限说明。",
-    "icon": "https://raw.githubusercontent.com/logseq/logseq/master/assets/icon.png",
+    "icon": "assets/icons/logseq.png",
     "featured": false,
     "sortOrder": 26
   },
@@ -538,7 +538,7 @@
     "status": { "level": "verified" },
     "compatibility": "项目 Release 提供 macOS Universal 安装包",
     "permissions": "常规图表工具；打开外部模板或配置文件前请确认来源。",
-    "icon": "https://raw.githubusercontent.com/jgraph/drawio-desktop/dev/build/icon.png",
+    "icon": "assets/icons/drawio-desktop.png",
     "featured": false,
     "sortOrder": 27
   },
@@ -559,7 +559,7 @@
     "compatibility": "Release 同时提供 Apple Silicon 与 Intel 的 macOS 安装包",
     "permissions": "录制屏幕时需要系统的“屏幕录制”权限；仅按需授予摄像头与麦克风权限。",
     "permissionKey": "screenRecording",
-    "icon": "https://raw.githubusercontent.com/obsproject/obs-studio/master/frontend/cmake/macos/Assets.xcassets/AppIcon.appiconset/icon_256x256.png",
+    "icon": "assets/icons/obs-studio.png",
     "featured": false,
     "sortOrder": 28
   },
@@ -579,7 +579,7 @@
     "status": { "level": "verified" },
     "compatibility": "当前版本不再支持 macOS 11；Release 提供 Apple Silicon 与 Intel 安装包",
     "permissions": "本地媒体处理；只会读取你选择打开或导入的媒体文件。",
-    "icon": "https://raw.githubusercontent.com/mifi/lossless-cut/master/src/renderer/src/icon-mac.svg",
+    "icon": "assets/icons/lossless-cut.svg",
     "featured": false,
     "sortOrder": 29
   },
@@ -599,7 +599,7 @@
     "status": { "level": "verified" },
     "compatibility": "项目 Release 提供 macOS 安装包；请以当前版本系统要求为准",
     "permissions": "录音时需要按系统提示授权麦克风；处理文件时请确认导入来源。",
-    "icon": "https://github.com/audacity.png?size=128",
+    "icon": "assets/icons/audacity.png",
     "featured": false,
     "sortOrder": 30
   },
@@ -619,7 +619,7 @@
     "status": { "level": "verified" },
     "compatibility": "请以项目当前 Release 与 macOS 系统要求为准",
     "permissions": "磁盘分析与清理可能需要额外文件访问；删除前应逐项确认结果。",
-    "icon": "https://raw.githubusercontent.com/harry0703/MangoDisk/main/src-tauri/icons/128x128@2x.png",
+    "icon": "assets/icons/mangodisk.png",
     "featured": false,
     "sortOrder": 31
   },
@@ -639,7 +639,7 @@
     "status": { "level": "verified" },
     "compatibility": "项目 Release 提供 macOS 安装包",
     "permissions": "常规阅读器；订阅源会按你的选择联网更新。",
-    "icon": "https://raw.githubusercontent.com/Ranchero-Software/NetNewsWire/main/Mac/Resources/Assets.xcassets/AppIcon.appiconset/Icon-MacOS-128x128@2x.png",
+    "icon": "assets/icons/netnewswire.png",
     "featured": false,
     "sortOrder": 32
   },
@@ -659,7 +659,7 @@
     "status": { "level": "verified" },
     "compatibility": "当前 macOS Release 提供 Apple Silicon、Intel 与 Universal 安装包",
     "permissions": "常规文档工具；连接云端工作区前请确认同步与共享范围。",
-    "icon": "https://raw.githubusercontent.com/AppFlowy-IO/AppFlowy/main/frontend/appflowy_flutter/ios/Runner/Assets.xcassets/AppIcon.appiconset/1024.png",
+    "icon": "assets/icons/appflowy.png",
     "featured": false,
     "sortOrder": 33
   },
@@ -679,7 +679,7 @@
     "status": { "level": "verified" },
     "compatibility": "macOS 10.13 及以上 · 提供 Intel 与 Apple Silicon 安装包",
     "permissions": "常规文档软件；陌生文件中的宏、外链与嵌入内容应谨慎打开。",
-    "icon": "https://github.com/ONLYOFFICE.png?size=128",
+    "icon": "assets/icons/onlyoffice.png",
     "featured": false,
     "sortOrder": 34
   },
@@ -699,7 +699,7 @@
     "status": { "level": "verified" },
     "compatibility": "项目 Release 提供 macOS 安装包",
     "permissions": "仅访问你指定的笔记文件夹；同步服务由你自行配置。",
-    "icon": "https://raw.githubusercontent.com/pbek/QOwnNotes/main/icons/icon-800.png",
+    "icon": "assets/icons/qownnotes.png",
     "featured": false,
     "sortOrder": 35
   },
@@ -719,7 +719,7 @@
     "status": { "level": "verified" },
     "compatibility": "Release 提供 Apple Silicon 与 Intel 的 macOS 安装包",
     "permissions": "本地阅读器；导入和同步的书籍与笔记由你选择。",
-    "icon": "https://raw.githubusercontent.com/koodo-reader/koodo-reader/master/assets/icons/512x512.png",
+    "icon": "assets/icons/koodo-reader.png",
     "featured": false,
     "sortOrder": 36
   },
@@ -739,7 +739,7 @@
     "status": { "level": "verified" },
     "compatibility": "当前 5.6.2 官方 Mac 安装包仅提供 Apple Silicon 版；系统要求请核对下载页，Intel 用户需查找旧版。",
     "permissions": "只会处理导入的照片目录；建议先保留原始文件备份。",
-    "icon": "https://github.com/darktable-org.png?size=128",
+    "icon": "assets/icons/darktable.png",
     "featured": false,
     "sortOrder": 37
   },
@@ -759,7 +759,7 @@
     "status": { "level": "verified" },
     "compatibility": "当前 macOS 发行包为 Universal ZIP；安装前请核对下载页的系统版本要求。",
     "permissions": "只读取你导入的照片；建议保留原片和输出文件的独立目录。",
-    "icon": "https://raw.githubusercontent.com/RawTherapee/RawTherapee/dev/rtdata/icons/hicolor/256x256/apps/rawtherapee.png",
+    "icon": "assets/icons/rawtherapee.png",
     "featured": false,
     "sortOrder": 38
   },
@@ -779,7 +779,7 @@
     "compatibility": "macOS 10.15 及以上",
     "permissions": "需要“辅助功能”权限以读取和排列其他应用的窗口。",
     "permissionKey": "accessibility",
-    "icon": "https://raw.githubusercontent.com/ianyh/Amethyst/development/Amethyst/Images.xcassets/AppIcon.appiconset/icon_128x128@2x.png",
+    "icon": "assets/icons/amethyst.png",
     "featured": false,
     "sortOrder": 39
   },
@@ -799,7 +799,7 @@
     "status": { "level": "verified" },
     "compatibility": "稳定版 2.1 仅支持 macOS 26；3.x 测试版需 macOS 27。旧系统请在 Releases 中查找适配版本。",
     "permissions": "菜单栏管理功能可能按系统版本请求辅助功能等权限。",
-    "icon": "https://github.com/thaw-app.png?size=128",
+    "icon": "assets/icons/thaw.png",
     "featured": false,
     "sortOrder": 40
   },
@@ -820,7 +820,7 @@
     "compatibility": "项目 Release 提供 macOS 安装包",
     "permissions": "需要“辅助功能”权限，以应用输入设备相关设置。",
     "permissionKey": "accessibility",
-    "icon": "https://raw.githubusercontent.com/linearmouse/linearmouse/master/LinearMouse/Assets.xcassets/AppIcon.appiconset/Icon-1024.png",
+    "icon": "assets/icons/linearmouse.png",
     "featured": false,
     "sortOrder": 41
   },
@@ -840,7 +840,7 @@
     "status": { "level": "verified" },
     "compatibility": "macOS 10.13 及以上",
     "permissions": "会安装音频驱动；录音时还可能需要按系统提示授权麦克风。",
-    "icon": "https://raw.githubusercontent.com/kyleneideck/BackgroundMusic/master/BGMApp/BGMApp/Images.xcassets/AppIcon.appiconset/appicon_1024.png",
+    "icon": "assets/icons/background-music.png",
     "featured": false,
     "sortOrder": 42
   },
@@ -860,7 +860,7 @@
     "status": { "level": "verified" },
     "compatibility": "macOS 10.13 及以上",
     "permissions": "不需要读取个人文件；按需使用系统的防休眠能力。",
-    "icon": "https://raw.githubusercontent.com/newmarcel/KeepingYouAwake/main/KeepingYouAwake/AppIcon.icon/Assets/AppIcon.svg",
+    "icon": "assets/icons/keeping-you-awake.svg",
     "featured": false,
     "sortOrder": 43
   },
@@ -880,7 +880,7 @@
     "status": { "level": "verified" },
     "compatibility": "macOS 10.15 及以上",
     "permissions": "读取本机应用信息以检查更新；更新仍由你确认。",
-    "icon": "https://raw.githubusercontent.com/mangerlahn/Latest/main/Latest/Resources/Assets.xcassets/AppIcon.appiconset/1024.png",
+    "icon": "assets/icons/latest.png",
     "featured": false,
     "sortOrder": 44
   },
@@ -900,7 +900,7 @@
     "status": { "level": "verified" },
     "compatibility": "项目 Release 提供 macOS 安装包",
     "permissions": "使用局域网发现与传输；只接收你确认的设备和文件。",
-    "icon": "https://raw.githubusercontent.com/localsend/localsend/main/app/assets/img/logo-256.png",
+    "icon": "assets/icons/localsend.png",
     "featured": false,
     "sortOrder": 45
   },
@@ -920,7 +920,7 @@
     "status": { "level": "verified" },
     "compatibility": "macOS 11 及以上",
     "permissions": "只访问你通过 USB 连接并授权的设备与选择的本地文件。",
-    "icon": "https://raw.githubusercontent.com/ganeshrvel/openmtp/master/build/icons/1024x1024.png",
+    "icon": "assets/icons/openmtp.png",
     "featured": false,
     "sortOrder": 46
   },
@@ -939,7 +939,7 @@
     "status": { "level": "verified" },
     "compatibility": "Release 提供 Apple Silicon 与 Intel 的 macOS 安装包",
     "permissions": "需要读取你选定的备份源和写入备份目的地；首次使用应先做一次恢复演练。",
-    "icon": "https://raw.githubusercontent.com/kopia/kopia/master/app/public/logo512.png",
+    "icon": "assets/icons/kopia.png",
     "featured": false,
     "sortOrder": 47
   },
@@ -959,7 +959,7 @@
     "status": { "level": "verified" },
     "compatibility": "官方 macOS 发行包为命令行程序压缩包，通过浏览器界面配置；请按芯片选择版本。",
     "permissions": "同步范围由你选择；请为每个共享文件夹核对设备与版本保留设置。",
-    "icon": "https://raw.githubusercontent.com/syncthing/syncthing/main/assets/logo-512.png",
+    "icon": "assets/icons/syncthing.png",
     "featured": false,
     "sortOrder": 48
   },
@@ -979,7 +979,7 @@
     "status": { "level": "verified" },
     "compatibility": "Release 提供 Apple Silicon 与 Intel 的 macOS 安装包",
     "permissions": "需访问你选定的保险库与同步目录；请妥善保存恢复密钥和密码。",
-    "icon": "https://raw.githubusercontent.com/cryptomator/cryptomator/main/src/main/resources/img/logo128.png",
+    "icon": "assets/icons/cryptomator.png",
     "featured": false,
     "sortOrder": 49
   },
@@ -999,7 +999,7 @@
     "status": { "level": "verified" },
     "compatibility": "项目 Release 提供 macOS 安装包；请以当前版本系统要求为准",
     "permissions": "会安装网络过滤系统扩展并请求管理员授权；安装前阅读项目说明。",
-    "icon": "https://raw.githubusercontent.com/objective-see/LuLu/master/LuLu/App/Assets.xcassets/AppIcon.appiconset/icon_128x128@2x.png",
+    "icon": "assets/icons/lulu.png",
     "featured": false,
     "sortOrder": 50
   },
@@ -1019,7 +1019,7 @@
     "status": { "level": "verified" },
     "compatibility": "项目 Release 提供 UTM.dmg；虚拟系统支持范围取决于 Mac 架构与镜像",
     "permissions": "虚拟机可访问你主动挂载的目录与网络；避免向陌生镜像暴露个人文件。",
-    "icon": "https://github.com/utmapp.png?size=128",
+    "icon": "assets/icons/utm.png",
     "featured": false,
     "sortOrder": 51
   },
@@ -1039,7 +1039,7 @@
     "status": { "level": "verified" },
     "compatibility": "项目 Release 提供 macOS .dmg 安装包",
     "permissions": "终端执行的命令拥有与你账户相同的权限；只运行理解的命令。",
-    "icon": "https://github.com/alacritty.png?size=128",
+    "icon": "assets/icons/alacritty.png",
     "featured": false,
     "sortOrder": 52
   },
@@ -1059,7 +1059,7 @@
     "compatibility": "项目 Release 提供 macOS Universal 安装包",
     "permissions": "为监听键盘输入需要按项目说明授予相应权限；不要把敏感内容写进不可信模板。",
     "permissionKey": "accessibility",
-    "icon": "https://github.com/espanso.png?size=128",
+    "icon": "assets/icons/espanso.png",
     "featured": false,
     "sortOrder": 53
   },
@@ -1079,7 +1079,7 @@
     "compatibility": "项目 Release 提供 macOS 安装包；请以当前版本系统要求为准",
     "permissions": "自动化脚本可能请求辅助功能、文件或网络权限；只运行自己审查过的配置。",
     "permissionKey": "accessibility",
-    "icon": "https://github.com/Hammerspoon.png?size=128",
+    "icon": "assets/icons/hammerspoon.png",
     "featured": false,
     "sortOrder": 54
   },
@@ -1099,7 +1099,7 @@
     "status": { "level": "verified" },
     "compatibility": "macOS 12 及以上",
     "permissions": "会运行你启用的脚本；只添加来源可信、内容可审查的插件。",
-    "icon": "https://github.com/swiftbar.png?size=128",
+    "icon": "assets/icons/swiftbar.png",
     "featured": false,
     "sortOrder": 55
   },
@@ -1118,7 +1118,7 @@
     "status": { "level": "verified" },
     "compatibility": "项目 Release 提供 Apple Silicon 与 Intel 的 macOS .dmg 安装包",
     "permissions": "可选同步服务会上传你主动同步的牌组与媒体；敏感资料请先了解同步设置。",
-    "icon": "https://github.com/ankitects.png?size=128",
+    "icon": "assets/icons/anki.png",
     "featured": false,
     "sortOrder": 56
   },
@@ -1138,7 +1138,7 @@
     "status": { "level": "verified" },
     "compatibility": "项目 Release 提供 Universal、Apple Silicon 与 Intel 的 macOS .dmg 安装包",
     "permissions": "本地使用无需账户；如连接第三方任务服务，请按需授权。",
-    "icon": "https://raw.githubusercontent.com/super-productivity/super-productivity/master/build/icon.iconset/icon_512x512.png",
+    "icon": "assets/icons/super-productivity.png",
     "featured": false,
     "sortOrder": 57
   },
@@ -1158,7 +1158,7 @@
     "status": { "level": "verified" },
     "compatibility": "macOS 13 及以上",
     "permissions": "连接数据库前请确认主机、账号与网络范围，只使用受信任的连接配置。",
-    "icon": "https://github.com/TableProApp.png?size=128",
+    "icon": "assets/icons/tablepro.png",
     "featured": false,
     "sortOrder": 58
   },
@@ -1178,7 +1178,7 @@
     "status": { "level": "verified" },
     "compatibility": "项目 Release 提供 Apple Silicon 与 Intel 的 macOS 安装包",
     "permissions": "录制屏幕需要 macOS 的屏幕录制权限；录音时按需授予麦克风权限。",
-    "icon": "https://github.com/wulkano.png?size=128",
+    "icon": "assets/icons/kap.png",
     "featured": false,
     "sortOrder": 59
   },
@@ -1198,7 +1198,7 @@
     "status": { "level": "verified" },
     "compatibility": "稳定版 v1.12 需 macOS 13 及以上；安装包仍以 Jellyfin Media Player 命名。需连接 Jellyfin 服务端。",
     "permissions": "连接服务器时会访问你填写的地址和媒体账户；仅连接自己信任的服务器。",
-    "icon": "https://github.com/jellyfin.png?size=128",
+    "icon": "assets/icons/jellyfin-media-player.png",
     "featured": false,
     "sortOrder": 60
   },
@@ -1218,7 +1218,7 @@
     "status": { "level": "verified" },
     "compatibility": "项目 Release 提供 macOS Universal 安装包",
     "permissions": "打开第三方项目会执行其构建脚本或导入资源；只运行可信项目。",
-    "icon": "https://raw.githubusercontent.com/godotengine/godot/master/editor/icons/Logo.svg",
+    "icon": "assets/icons/godot.svg",
     "featured": false,
     "sortOrder": 61
   },
@@ -1237,7 +1237,7 @@
     "status": { "level": "verified" },
     "compatibility": "项目 Release 提供 Apple Silicon 与 Intel 的 macOS .dmg 安装包",
     "permissions": "只处理你打开或导出的设计文件；外部工作台与宏脚本请审查来源。",
-    "icon": "https://github.com/FreeCAD.png?size=128",
+    "icon": "assets/icons/freecad.png",
     "featured": false,
     "sortOrder": 62
   },
@@ -1257,7 +1257,7 @@
     "status": { "level": "verified" },
     "compatibility": "项目 Release 提供 Apple Silicon 与 Intel 的 macOS .dmg 安装包",
     "permissions": "浏览器自动填充需要安装官方扩展并授权连接；请妥善保管主密码与密钥文件。",
-    "icon": "https://github.com/keepassxreboot.png?size=128",
+    "icon": "assets/icons/keepassxc.png",
     "featured": false,
     "sortOrder": 63
   },
@@ -1277,7 +1277,7 @@
     "status": { "level": "verified" },
     "compatibility": "官网提供 macOS 安装包；连接协议与服务端兼容性以官方说明为准",
     "permissions": "会保存你选择的服务器书签与凭据；使用密钥或系统钥匙串并保护好访问令牌。",
-    "icon": "https://github.com/iterate-ch.png?size=128",
+    "icon": "assets/icons/cyberduck.png",
     "featured": false,
     "sortOrder": 64
   },
@@ -1297,7 +1297,7 @@
     "status": { "level": "verified" },
     "compatibility": "macOS 15 及以上",
     "permissions": "需要“屏幕与系统音频录制”权限，以捕获和调节各应用的声音。",
-    "icon": "https://raw.githubusercontent.com/ronitsingh10/FineTune/main/FineTune/Assets.xcassets/fineTuneIcon.appiconset/icon_128x128@2x.png",
+    "icon": "assets/icons/finetune.png",
     "featured": false,
     "sortOrder": 65
   },
@@ -1317,7 +1317,7 @@
     "status": { "level": "verified" },
     "compatibility": "项目 Release 提供 macOS .dmg 安装包；开关可用性取决于系统版本",
     "permissions": "少数功能会调用系统服务或要求授权；只启用自己理解的项目。",
-    "icon": "https://raw.githubusercontent.com/jacklandrin/OnlySwitch/main/OnlySwitch/Assets.xcassets/AppIcon.appiconset/icon_128x128@2x.png",
+    "icon": "assets/icons/onlyswitch.png",
     "featured": false,
     "sortOrder": 66
   },
@@ -1337,7 +1337,7 @@
     "status": { "level": "verified" },
     "compatibility": "项目 Release 提供 macOS 压缩包；请以发布页系统要求为准",
     "permissions": "读取进程与连接信息；在受管理设备上请先遵循组织的安全规则。",
-    "icon": "https://raw.githubusercontent.com/sveinbjornt/Sloth/master/assets/SlothIcon.iconset/icon_128x128@2x.png",
+    "icon": "assets/icons/sloth.png",
     "featured": false,
     "sortOrder": 67
   },
@@ -1357,7 +1357,7 @@
     "status": { "level": "verified" },
     "compatibility": "macOS 14 及以上 · Intel 与 Apple Silicon · 无需预装 Homebrew",
     "permissions": "下载安装软件时需要网络；安装部分应用时可能请求管理员授权。可复用已有 Homebrew。",
-    "icon": "https://github.com/milanvarady.png?size=128",
+    "icon": "assets/icons/applite.svg",
     "featured": false,
     "sortOrder": 68
   },
@@ -1377,7 +1377,7 @@
     "status": { "level": "verified" },
     "compatibility": "项目 Release 提供 Apple Silicon 与 Intel 的 macOS 安装包",
     "permissions": "可访问你添加的本地仓库和已登录 GitHub 账号；提交前仍应检查变更内容。",
-    "icon": "https://github.com/desktop.png?size=128",
+    "icon": "assets/icons/github-desktop.png",
     "featured": false,
     "sortOrder": 69
   },
@@ -1397,7 +1397,7 @@
     "status": { "level": "verified" },
     "compatibility": "macOS 12 及以上",
     "permissions": "扩展可访问项目文件与网络；只安装可信扩展并查看其权限说明。",
-    "icon": "https://github.com/VSCodium.png?size=128",
+    "icon": "assets/icons/vscodium.png",
     "featured": false,
     "sortOrder": 70
   },
@@ -1417,7 +1417,7 @@
     "status": { "level": "verified" },
     "compatibility": "项目 Release 提供 Apple Silicon 与 Intel 的 macOS .dmg 安装包",
     "permissions": "会保存你建立的数据库连接；避免在不安全网络中保存高权限凭据。",
-    "icon": "https://github.com/dbeaver.png?size=128",
+    "icon": "assets/icons/dbeaver.png",
     "featured": false,
     "sortOrder": 71
   },
@@ -1436,7 +1436,7 @@
     "status": { "level": "verified" },
     "compatibility": "项目 Release 提供 Apple Silicon 与 Intel 的 macOS .dmg 安装包",
     "permissions": "打开项目、启用扩展或协作时可能访问文件与网络；请检查工作区和扩展来源。",
-    "icon": "https://github.com/zed-industries.png?size=128",
+    "icon": "assets/icons/zed.jpg",
     "featured": false,
     "sortOrder": 72
   },
@@ -1456,7 +1456,7 @@
     "status": { "level": "verified" },
     "compatibility": "当前仍在开发中；官方暂不建议用于生产工作，请按发布页确认系统要求。",
     "permissions": "只访问你打开的项目文件；语言服务与插件的额外访问范围需单独确认。",
-    "icon": "https://raw.githubusercontent.com/CodeEditApp/CodeEdit/main/.github/CodeEdit-Icon-128@2x.png",
+    "icon": "assets/icons/codeedit.png",
     "featured": false,
     "sortOrder": 73
   },
@@ -1476,7 +1476,7 @@
     "status": { "level": "verified" },
     "compatibility": "macOS 13 及以上；下载 Xcode 需要 Apple 账户。",
     "permissions": "会管理 Xcode 文件与 Apple 开发者登录状态；只从官方源下载并妥善保护账号。",
-    "icon": "https://github.com/XcodesOrg.png?size=128",
+    "icon": "assets/icons/xcodes.jpg",
     "featured": false,
     "sortOrder": 74
   },
@@ -1496,7 +1496,7 @@
     "status": { "level": "verified" },
     "compatibility": "官方提供 macOS Universal 安装包；兼容性以当前 VideoLAN 发布页为准",
     "permissions": "播放本地文件和网络流；只打开可信的网络地址与播放列表。",
-    "icon": "https://images.videolan.org/images/logoOrange.png",
+    "icon": "assets/icons/vlc.svg",
     "featured": false,
     "sortOrder": 75
   },
@@ -1515,7 +1515,7 @@
     "status": { "level": "verified" },
     "compatibility": "项目 Release 提供 Apple Silicon 与 Intel 的 macOS .dmg 安装包",
     "permissions": "处理你选择的媒体与字幕文件；语音识别、翻译等在线功能按实际使用授权。",
-    "icon": "https://raw.githubusercontent.com/SubtitleEdit/subtitleedit/main/src/libse/Icon.png",
+    "icon": "assets/icons/subtitle-edit.png",
     "featured": false,
     "sortOrder": 76
   },
@@ -1534,7 +1534,7 @@
     "status": { "level": "verified" },
     "compatibility": "项目 Release 提供 macOS 压缩包；请以发布页系统要求为准",
     "permissions": "仅修改你选定的媒体文件；操作前保留原始文件副本。",
-    "icon": "https://raw.githubusercontent.com/SublerApp/Subler/main/Assets.xcassets/AppIcon.appiconset/icon_512x512.png",
+    "icon": "assets/icons/subler.png",
     "featured": false,
     "sortOrder": 77
   },
@@ -1554,7 +1554,7 @@
     "status": { "level": "verified" },
     "compatibility": "官网提供 macOS 安装包；请按设备架构选择对应版本",
     "permissions": "只读取你打开的媒体文件及其技术元数据。",
-    "icon": "https://raw.githubusercontent.com/MediaArea/MediaInfo/master/Project/Snap/mediainfo/snap/gui/icon.svg",
+    "icon": "assets/icons/mediainfo.svg",
     "featured": false,
     "sortOrder": 78
   },
@@ -1573,7 +1573,7 @@
     "status": { "level": "verified" },
     "compatibility": "从官网下载 macOS 安装包；GitHub 当前稳定版发布页未附安装包。控制器支持请查官方列表。",
     "permissions": "可访问你选定的音乐库；接入控制器或麦克风时按需授权。",
-    "icon": "https://github.com/mixxxdj.png?size=128",
+    "icon": "assets/icons/mixxx.png",
     "featured": false,
     "sortOrder": 79
   },
@@ -1593,7 +1593,7 @@
     "status": { "level": "verified" },
     "compatibility": "项目 Release 提供 macOS .dmg 安装包；请以发布页系统要求为准",
     "permissions": "访问你打开或导出的乐谱与音频设备；安装扩展前请确认来源。",
-    "icon": "https://github.com/musescore.png?size=128",
+    "icon": "assets/icons/musescore.png",
     "featured": false,
     "sortOrder": 80
   },
@@ -1613,7 +1613,7 @@
     "status": { "level": "tested" },
     "compatibility": "官方提供 macOS .dmg 安装包；请在下载页确认当前系统要求",
     "permissions": "摄像头、麦克风、定位和通知等由访问的网站按需请求；只向可信站点授予。",
-    "icon": "https://github.com/mozilla-firefox.png?size=128",
+    "icon": "assets/icons/firefox.png",
     "featured": false,
     "sortOrder": 81
   },
@@ -1633,7 +1633,7 @@
     "status": { "level": "verified" },
     "compatibility": "项目 Release 提供适用于 Apple Silicon 与 Intel 的 Universal macOS .dmg",
     "permissions": "摄像头、麦克风、定位和通知等由访问的网站按需请求；只向可信站点授予。",
-    "icon": "https://github.com/zen-browser.png?size=128",
+    "icon": "assets/icons/zen-browser.png",
     "featured": false,
     "sortOrder": 82
   },
@@ -1652,7 +1652,7 @@
     "status": { "level": "verified" },
     "compatibility": "官方提供 macOS 安装包；请在下载页确认当前系统要求",
     "permissions": "需要登录你的邮件与日历账户；按需配置服务器、OAuth 授权和本地邮件存储。",
-    "icon": "https://github.com/thunderbird.png?size=128",
+    "icon": "assets/icons/thunderbird.png",
     "featured": false,
     "sortOrder": 83
   },
@@ -1672,7 +1672,7 @@
     "status": { "level": "verified" },
     "compatibility": "官方提供 macOS 客户端；首次使用须先在手机上安装 Signal 并完成关联",
     "permissions": "通话或发送媒体时会按功能请求麦克风、摄像头与本地文件访问；只按需授予。",
-    "icon": "https://github.com/signalapp.png?size=128",
+    "icon": "assets/icons/signal.png",
     "featured": false,
     "sortOrder": 84
   },
@@ -1692,7 +1692,7 @@
     "status": { "level": "verified" },
     "compatibility": "Blender 5.x 的 Mac 版仅支持 Apple Silicon；Intel Mac 请选 4.5 LTS 并核对硬件要求。",
     "permissions": "仅访问你打开、导入或导出的项目文件；启用插件与在线资源前请确认来源。",
-    "icon": "https://github.com/blender.png?size=128",
+    "icon": "assets/icons/blender.png",
     "featured": false,
     "sortOrder": 85
   },
@@ -1712,7 +1712,7 @@
     "status": { "level": "verified" },
     "compatibility": "项目 Release 提供 Apple Silicon 与 Intel 的 macOS .dmg 和 .pkg 安装包",
     "permissions": "会向你配置的 API 地址发起网络请求并读取本地集合；不要把密钥写进共享仓库。",
-    "icon": "https://github.com/usebruno.png?size=128",
+    "icon": "assets/icons/bruno.png",
     "featured": false,
     "sortOrder": 86
   },
@@ -1732,7 +1732,7 @@
     "compatibility": "macOS 14 及以上 · Intel 与 Apple Silicon。跨桌面恢复需 macOS 26 及以上；硬件亮度调节需 Apple Silicon 与支持 DDC 的显示器。",
     "permissions": "需要“辅助功能”权限，无需屏幕录制或输入监控。发行包自签名，未经 Apple 公证。",
     "permissionKey": "accessibility",
-    "icon": "https://raw.githubusercontent.com/tumingke0/LayoutKeeper/main/docs/images/icon.png",
+    "icon": "assets/icons/layoutkeeper.png",
     "featured": false,
     "sortOrder": 87
   },
@@ -1751,7 +1751,7 @@
     "status": { "level": "verified" },
     "compatibility": "macOS 14 及以上；通过 Homebrew 从源码安装需 Xcode 16 及以上。这里收录免费开源 CLI；另行分发的桌面应用不是开源软件，部分功能付费。",
     "permissions": "诊断会访问网络；部分 Wi-Fi 名称、过滤状态和预算信息依赖另装桌面应用及定位授权。更改系统设置的命令可能需确认或管理员授权。",
-    "icon": "https://kilobat.app/icon.png",
+    "icon": "assets/icons/kilobat-cli.png",
     "featured": false,
     "sortOrder": 88
   },
@@ -1779,7 +1779,7 @@
     "status": {
       "level": "verified"
     },
-    "icon": "https://raw.githubusercontent.com/mpv-player/mpv/master/etc/mpv-icon-8bit-128x128.png",
+    "icon": "assets/icons/mpv.png",
     "featured": false,
     "sortOrder": 89
   },
@@ -1806,7 +1806,7 @@
     "status": {
       "level": "verified"
     },
-    "icon": "https://github.com/xbmc.png?size=128",
+    "icon": "assets/icons/kodi.png",
     "featured": false,
     "sortOrder": 90
   },
@@ -1834,7 +1834,7 @@
     "status": {
       "level": "verified"
     },
-    "icon": "https://raw.githubusercontent.com/losnoco/Cog/main/CogAssets.xcassets/AppIcon.appiconset/icon_128x128.png",
+    "icon": "assets/icons/cog.png",
     "featured": false,
     "sortOrder": 91
   },
@@ -1863,7 +1863,7 @@
     "status": {
       "level": "verified"
     },
-    "icon": "https://raw.githubusercontent.com/jeffvli/feishin/development/assets/icons/128x128.png",
+    "icon": "assets/icons/feishin.png",
     "featured": false,
     "sortOrder": 92
   },
@@ -1891,7 +1891,7 @@
     "status": {
       "level": "verified"
     },
-    "icon": "https://raw.githubusercontent.com/GopeedLab/gopeed/main/ui/flutter/assets/icon/icon.svg",
+    "icon": "assets/icons/gopeed.svg",
     "featured": false,
     "sortOrder": 93
   },
@@ -1919,7 +1919,7 @@
     "status": {
       "level": "verified"
     },
-    "icon": "https://raw.githubusercontent.com/amir1376/ab-download-manager/master/assets/logo/app_logo_with_background.svg",
+    "icon": "assets/icons/ab-download-manager.svg",
     "featured": false,
     "sortOrder": 94
   },
@@ -1946,7 +1946,7 @@
     "status": {
       "level": "verified"
     },
-    "icon": "https://raw.githubusercontent.com/qbittorrent/qBittorrent/master/dist/unix/menuicons/128x128/apps/qbittorrent.png",
+    "icon": "assets/icons/qbittorrent.png",
     "featured": false,
     "sortOrder": 95
   },
@@ -1974,7 +1974,7 @@
     "status": {
       "level": "verified"
     },
-    "icon": "https://raw.githubusercontent.com/transmission/transmission/main/macosx/Images/Images.xcassets/AppIcon.appiconset/icon_128x128.png",
+    "icon": "assets/icons/transmission.png",
     "featured": false,
     "sortOrder": 96
   },
@@ -2001,7 +2001,7 @@
     "status": {
       "level": "verified"
     },
-    "icon": "https://github.com/aria2.png?size=128",
+    "icon": "assets/icons/aria2.png",
     "featured": false,
     "sortOrder": 97
   },
@@ -2029,7 +2029,7 @@
     "status": {
       "level": "verified"
     },
-    "icon": "https://brave.com/static-assets/images/cropped-brave_appicon_release-192x192.png",
+    "icon": "assets/icons/brave.png",
     "featured": false,
     "sortOrder": 98
   },
@@ -2057,7 +2057,7 @@
     "status": {
       "level": "verified"
     },
-    "icon": "https://raw.githubusercontent.com/Floorp-Projects/Floorp/main/static/installers/stub-win64-installer/src-tauri/icons/128x128.png",
+    "icon": "assets/icons/floorp.png",
     "featured": false,
     "sortOrder": 99
   },
@@ -2112,7 +2112,7 @@
     "status": {
       "level": "verified"
     },
-    "icon": "https://raw.githubusercontent.com/imputnet/helium/main/resources/branding/app_icon/raw.png",
+    "icon": "assets/icons/helium.png",
     "featured": false,
     "sortOrder": 101
   },
@@ -2140,7 +2140,7 @@
     "status": {
       "level": "verified"
     },
-    "icon": "https://raw.githubusercontent.com/jsattler/BetterCapture/main/website/public/favicon.svg",
+    "icon": "assets/icons/bettercapture.svg",
     "featured": false,
     "sortOrder": 102
   },
@@ -2169,7 +2169,7 @@
     "status": {
       "level": "verified"
     },
-    "icon": "https://raw.githubusercontent.com/getopenscreen/openscreen/main/build/appx/Square44x44Logo.targetsize-256.png",
+    "icon": "assets/icons/openscreen.png",
     "featured": false,
     "sortOrder": 103
   },
@@ -2198,7 +2198,7 @@
     "status": {
       "level": "verified"
     },
-    "icon": "https://raw.githubusercontent.com/flameshot-org/flameshot/master/data/img/app/flameshot.svg",
+    "icon": "assets/icons/flameshot.svg",
     "featured": false,
     "sortOrder": 104
   },
@@ -2225,7 +2225,7 @@
     "status": {
       "level": "verified"
     },
-    "icon": "https://raw.githubusercontent.com/alyssaxuu/screenity/master/src/assets/icon-128.png",
+    "icon": "assets/icons/screenity.png",
     "featured": false,
     "sortOrder": 105
   },
@@ -2254,7 +2254,7 @@
     "status": {
       "level": "verified"
     },
-    "icon": "https://raw.githubusercontent.com/qier222/YesPlayMusic/master/build/icons/128x128.png",
+    "icon": "assets/icons/yesplaymusic.png",
     "featured": false,
     "sortOrder": 106
   }

@@ -44,13 +44,16 @@
 ```sh
 node --check website/app.js
 node --check website/previews.js
+node scripts/check-icons.mjs
 node -e 'const fs=require("node:fs"); const a=JSON.parse(fs.readFileSync("website/data/apps.json","utf8")); if(!Array.isArray(a)||new Set(a.map(x=>x.id)).size!==a.length) throw Error("Invalid catalog or duplicate id"); console.log(a.length+" apps");'
 git diff --check
 ```
 
 然后检查中文、英文、日语下的搜索、分类、排序、许可证说明、推荐按钮、官方下载链接和窄屏换行。检查每个本地图标实际存在；来源页面可访问不代表安装包已实测。
 
-新增或替换图标时，检查浏览器实际解码成功（`naturalWidth > 0`）；外链 HTTP 200 不代表允许跨站显示，应留意 `Cross-Origin-Resource-Policy`。本地保存的官方图标保持原样，并在 `website/assets/icons/SOURCES.md` 记录其来源与权利说明。
+软件图标统一保存在 `website/assets/icons/`，目录数据使用本站相对路径。优先采用官方原始 SVG 或 128–256 像素 PNG，不重绘第三方标志；避免用开发者照片代替软件图标。保留原图字节，在 `SOURCES.md` 与 `sources.json` 同步记录来源、权利说明和 SHA-256；保留的旧素材若缺少原图地址，要如实标记。
+
+新增或替换图标时运行 `node scripts/check-icons.mjs`，再检查浏览器实际解码成功（`naturalWidth > 0`、没有 `data-icon-fallback`）。HTTP 200 不代表图片有效或允许跨站显示，应留意 `Cross-Origin-Resource-Policy`。加载失败时使用本站通用图标兜底；兜底不替代修复真实素材。
 
 ## 发布边界
 
