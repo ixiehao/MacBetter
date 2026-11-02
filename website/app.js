@@ -809,7 +809,7 @@ async function init() {
   document.querySelectorAll("[data-language]").forEach(button => button.addEventListener("click", () => applyLanguage(button.dataset.language)));
   try {
     const dataURL = new URL("data/apps.json", import.meta.url);
-    dataURL.searchParams.set("v", "60eabd6e0c9c");
+    dataURL.searchParams.set("v", "8955fd4edcbb");
     const response = await fetch(dataURL, { cache: "no-store" });
     if (!response.ok) throw new Error("Unable to load app data");
     apps = await response.json();

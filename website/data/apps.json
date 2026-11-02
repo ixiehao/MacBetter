@@ -2084,7 +2084,7 @@
     "status": {
       "level": "verified"
     },
-    "icon": "https://www.waterfox.com/favicons/apple-touch-icon.png",
+    "icon": "assets/icons/waterfox.png",
     "featured": false,
     "sortOrder": 100
   },
