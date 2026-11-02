@@ -55,6 +55,8 @@ git diff --check
 
 新增或替换图标时运行 `node scripts/check-icons.mjs`，再检查浏览器实际解码成功（`naturalWidth > 0`、没有 `data-icon-fallback`）。HTTP 200 不代表图片有效或允许跨站显示，应留意 `Cross-Origin-Resource-Policy`。加载失败时使用本站通用图标兜底；兜底不替代修复真实素材。
 
+Pages 工作流在上传站点前自动执行图标与脚本检查，阻止外链图标、缺失文件或来源校验值不一致的版本发布。
+
 ## 发布边界
 
 仅修改网站与目录数据，不生成桌面应用 Release。通过 [官网部署](WEBSITE.md) 发布；更新完成后回读线上数据和版本缓存，不能只凭本地页面判断上线。
