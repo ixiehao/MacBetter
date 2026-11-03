@@ -218,7 +218,7 @@
     "compatibility": "macOS 13 及以上",
     "permissions": "完整磁盘访问是可选项；仅在需要扫描更多目录时考虑授予。",
     "permissionKey": "fullDiskOptional",
-    "icon": "assets/icons/purge.png",
+    "icon": "assets/icons/purge-256.png",
     "featured": false,
     "sortOrder": 11
   },

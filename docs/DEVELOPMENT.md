@@ -14,6 +14,19 @@
 
 ## 更新软件库
 
+### 日常管理：刷新与收录
+
+这是由 GitHub Pages 发布的静态网站，没有独立管理后台，也不会自动抓取、上架软件。刷新网页只会获取本站已发布的内容，不会重新检查上游项目。
+
+- **获取软件新版**：卡片的“下载”链接通往官方 Releases、下载页或安装说明；使用者从官方入口选择当前版本。本站不托管安装包。
+- **更新已有条目**：检查官方 README、许可证、近期 Release、系统与芯片要求，再更新 `website/data/apps.json` 的中文条目，以及 `website/app.js` 中的英语、日语文案。图标变更还须同步 `assets/icons/sources.json` 与 `SOURCES.md`。不要仅凭 Star 或 Release 日期覆盖介绍。
+- **收录新软件**：访客可点“推荐一款软件”提交 Issue，也可提交 PR。维护者按下列清单复核后添加，`status.level` 默认用 `verified`；只有维护者确认实际使用过，才改为 `tested`。
+- **发布**：运行 `node scripts/update-cache-keys.mjs` 更新资源的内容哈希，再完成本页检查，提交并推送至 `main`。等待 Pages 工作流成功，再回读线上页面和资源；强制刷新浏览器不能替代发布。
+
+公用 README 和本地维护记录不属于发布内容，不要上传。项目公开维护说明保存在本仓库 `docs/`。
+
+### 条目检查清单
+
 1. 按 [CONTRIBUTING.md](../CONTRIBUTING.md) 核对官方仓库、许可证、macOS 支持和官方发行入口。
 2. 使用唯一且稳定的 `id`，填写名称、简介、简短推荐语、分类、功能标签、链接和图标；字段结构以现有 JSON 与消费代码为准。
 3. `io 实测` 只用于维护者确实使用过的软件；不要以来源检查代替实测。
@@ -34,9 +47,16 @@
 - 有合适截图时，可添加 `preview: { image, source }`：`image` 是项目官网或官方仓库提供的 HTTPS 图片原址，`source` 是展示该截图的官方页面。不要填 logo、用户头像、手机端界面或无法代表软件的宣传素材。
 - 若项目提供三语截图，可补充 `preview.images`，使用 `en`、`zh`、`ja` 键；缺少某语种时回退到 `image`。不把截图文件复制进本仓库，来源及图片权利保留给原项目。
 - 卡片由 `app.js` 输出预览入口，交互在 `previews.js`，样式在 `styles.css`。鼠标停留后才加载侧边截图；触屏与键盘通过按钮打开原比例大图。
-- 悬停时，黑色半透明遮罩位于页面与当前卡片之间，不拦截鼠标；当前卡片和截图保持清晰。移开、Escape、滚动、切换筛选或窗口失焦时同步清除高亮与遮罩。
+- 悬停时，黑色半透明遮罩位于页面与当前卡片之间，不拦截鼠标；当前卡片和截图保持清晰。鼠标离开卡片时立即撤掉遮罩与高亮；截图保留 140ms 点击缓冲，进入截图后可继续查看，但不保持整页变暗。Escape、滚动、切换结果或窗口失焦时关闭预览。
 - 浮层按截图比例和可见区域计算宽高，标题与底栏使用实际高度；图片网格必须允许收缩，防止竖图的固有尺寸撑开网格后被裁切。
 - 更新后检查左右定位、窄屏弹层、Escape、焦点恢复、异步加载切换及图片失效；未核实的截图不启用入口。图片和来源 URL 必须为 HTTPS，不需要绕过防盗链或登录限制。
+
+### 新 Mac 必备工具
+
+- `app.js` 的 `essentialAppIds` 定义精选顺序；名称、图标和实测状态复用软件库，不另复制一份软件数据。用途短文案维护在三语 `essentialsTask`，所有项目均实测时才显示栏目实测标记。
+- 点击图标会清除目录查询与筛选，定位并聚焦 `#app-软件ID` 卡片；普通链接、新标签页和键盘导航均可使用。新机栏目不改变软件总数与原有分类。
+- 搜索索引在加载时统一规范化；输入合并 100ms，输入法组词不触发筛选。结果 ID 和语言未变化时复用现有卡片，避免重复解码图标和重建整个列表。
+- 目录 JSON 使用内容哈希 URL 和浏览器默认缓存；截图按需加载，关闭预览后清除活动图片引用。动效限于短暂的 CSS `opacity` / `transform`，支持减少动态效果，不添加持续动画或动画库。
 
 ## 验证
 
@@ -45,6 +65,7 @@
 ```sh
 node --check website/app.js
 node --check website/previews.js
+node --check scripts/update-cache-keys.mjs
 node scripts/check-icons.mjs
 node -e 'const fs=require("node:fs"); const a=JSON.parse(fs.readFileSync("website/data/apps.json","utf8")); if(!Array.isArray(a)||new Set(a.map(x=>x.id)).size!==a.length) throw Error("Invalid catalog or duplicate id"); console.log(a.length+" apps");'
 git diff --check

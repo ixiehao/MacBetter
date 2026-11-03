@@ -1,6 +1,6 @@
 # App icon sources
 
-All catalog icons are served from this site. Source files are copied unchanged; HandBrake uses an unchanged PNG representation extracted from its official ICNS. Smaller original exports are used where available. SVGs must be self-contained.
+All catalog icons are served from this site. Source files are copied unchanged; HandBrake and Purge use unchanged PNG representations extracted from their official ICNS containers. Smaller original exports are used where available. SVGs must be self-contained.
 
 Names, logos, and trademarks remain with their respective owners. They identify and link to the listed projects; inclusion does not imply endorsement. The site’s MIT license does not relicense third-party branding. Project license labels in the catalog describe the software, not a blanket license for its logo.
 
@@ -18,7 +18,7 @@ Names, logos, and trademarks remain with their respective owners. They identify 
 | Stats | [stats.png](stats.png) | [Project (retained asset)](https://github.com/exelban/stats) |
 | MonitorControl | [monitorcontrol.png](monitorcontrol.png) | [Project (retained asset)](https://github.com/MonitorControl/MonitorControl) |
 | PureMac | [puremac.png](puremac.png) | [Project (retained asset)](https://github.com/momenbasel/PureMac) |
-| Purge | [purge.png](purge.png) | [Project (retained asset)](https://github.com/jithin-sabu/purge-app) |
+| Purge | [purge-256.png](purge-256.png) | [Official ICNS (unchanged 256px PNG)](https://raw.githubusercontent.com/jithin-sabu/purge-app/main/Assets/dmg/VolumeIcon.icns) |
 | LibreOffice | [libreoffice.png](libreoffice.png) | [Project (retained asset)](https://github.com/LibreOffice/core) |
 | Zettlr | [zettlr.png](zettlr.png) | [Project (retained asset)](https://github.com/Zettlr/Zettlr) |
 | Joplin | [joplin.png](joplin.png) | [Project (retained asset)](https://github.com/laurent22/joplin) |

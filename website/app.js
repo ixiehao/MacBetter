@@ -41,6 +41,7 @@ const workflowOrder = {
   efficiency: ["github-desktop", "vscodium", "zed", "codeedit", "xcodes", "alacritty", "dbeaver", "tablepro", "bruno", "kilobat-cli", "utm", "hammerspoon", "swiftbar"]
 };
 const siteURL = "https://ixiehao.github.io/MacBetter/";
+const essentialAppIds = ["lumaview", "iina", "macshot", "imageoptim", "macrar", "firefox", "launchpad-back", "purge"];
 const defaultLanguage = "en";
 const languageStorageKey = "MacBetter-language";
 const legacyLanguageStorageKey = "mac-better-language";
@@ -48,6 +49,10 @@ const ogLocales = { zh: "zh_CN", en: "en_US", ja: "ja_JP" };
 
 const copy = {
   zh: {
+    essentialsHeading: "新 Mac 必备工具",
+    essentialsCopy: "日常刚需，一次配齐。",
+    essentialsFor: "查看 {name}：{task}",
+    essentialsTask: { lumaview: "看图", iina: "看视频", macshot: "截屏", imageoptim: "压缩图片", macrar: "解压缩", firefox: "浏览网页", "launchpad-back": "启动应用", purge: "缓存清理" },
     pageTitle: "让 Mac 更好用 · MAC免费开源软件",
     pageDescription: "一个由 Mac 用户共同维护的开源 macOS 软件目录：免费、开源、实用，并标明许可证、项目入口与关键权限。",
     htmlLang: "zh-CN",
@@ -139,6 +144,10 @@ const copy = {
     footerSource: "查看源代码"
   },
   en: {
+    essentialsHeading: "New Mac essentials",
+    essentialsCopy: "Everyday tasks, covered.",
+    essentialsFor: "View {name}: {task}",
+    essentialsTask: { lumaview: "View images", iina: "Play video", macshot: "Take screenshots", imageoptim: "Compress images", macrar: "Open archives", firefox: "Browse the web", "launchpad-back": "Launch apps", purge: "Clear caches" },
     pageTitle: "Make Your Mac Better · Open-Source macOS Apps",
     pageDescription: "A maintained, practical directory of free and open-source macOS apps, with licenses, official links, and key permission notes.",
     htmlLang: "en",
@@ -230,6 +239,10 @@ const copy = {
     footerSource: "View source code"
   },
   ja: {
+    essentialsHeading: "新しいMacに、まずこのアプリ",
+    essentialsCopy: "毎日の作業に、このセット。",
+    essentialsFor: "{name}を見る：{task}",
+    essentialsTask: { lumaview: "画像を見る", iina: "動画を見る", macshot: "画面を撮る", imageoptim: "画像を圧縮", macrar: "圧縮・解凍", firefox: "Webを使う", "launchpad-back": "アプリを開く", purge: "Macを整理" },
     pageTitle: "Macを、もっと使いやすく。｜オープンソースアプリ集",
     pageDescription: "Macユーザーと育てる、無料・オープンソースのmacOSアプリ集。ライセンス、公式リンク、主な権限を確認できます。",
     htmlLang: "ja",
@@ -555,6 +568,10 @@ if (!categories.includes(activeCategory)) activeCategory = "all";
 let apps = [];
 
 const appGrid = document.querySelector("#app-grid");
+const essentialsBand = document.querySelector("#essentials");
+const essentialsGrid = document.querySelector("#essentials-grid");
+let searchTimer;
+let catalogKey = "";
 const filters = document.querySelector("#category-filters");
 const standardsList = document.querySelector("#standards-list");
 const searchInput = document.querySelector("#search-input");
@@ -643,6 +660,29 @@ function renderStandards() {
   standardsList.innerHTML = licenses.map((license, index) => `<li><span>${String(index + 1).padStart(2, "0")}</span><div><h3 lang="en">${escapeHTML(license)}</h3><p>${escapeHTML(licenseDescription(license))}</p></div></li>`).join("");
 }
 
+function renderEssentials() {
+  const selected = essentialAppIds.map(id => apps.find(app => app.id === id)).filter(Boolean);
+  essentialsGrid.innerHTML = selected.map(app => {
+    const url = new URL(location.href);
+    for (const key of ["q", "category", "tested"]) url.searchParams.delete(key);
+    if (activeLanguage === defaultLanguage) url.searchParams.delete("lang");
+    else url.searchParams.set("lang", activeLanguage);
+    url.hash = `app-${app.id}`;
+    const task = t(`essentialsTask.${app.id}`);
+    return `<li><a class="essentials-item" href="${escapeHTML(url.pathname + url.search + url.hash)}" data-essential-app="${app.id}" aria-label="${escapeHTML(t("essentialsFor", { name: app.name, task }))}"><img class="essentials-icon" src="${escapeHTML(app.icon)}" alt="" width="44" height="44" loading="lazy" decoding="async" /><span class="essentials-task">${escapeHTML(task)}</span><span class="essentials-name" lang="en">${escapeHTML(app.name)}</span></a></li>`;
+  }).join("");
+  document.querySelector("#essentials-tested").hidden = !selected.length || !selected.every(app => app.status.level === "tested");
+  essentialsBand.hidden = selected.length !== essentialAppIds.length;
+}
+
+function focusLinkedApp() {
+  if (!location.hash.startsWith("#app-")) return;
+  const target = document.getElementById(location.hash.slice(1));
+  if (!target || !appGrid.contains(target)) return;
+  target.focus({ preventScroll: true });
+  target.scrollIntoView({ block: "center", behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth" });
+}
+
 function cardTemplate(app) {
   const status = app.status.level === "verified" ? null : (valueAt(copy[activeLanguage], `status.${app.status.level}`) ?? valueAt(copy.zh, `status.${app.status.level}`));
   const license = licenseDescription(app.license);
@@ -656,7 +696,7 @@ function cardTemplate(app) {
   const previewImage = app.preview?.images?.[activeLanguage] || app.preview?.image;
   const preview = app.preview ? ` data-app-name="${escapeHTML(app.name)}" data-preview-image="${escapeHTML(previewImage)}" data-preview-source="${escapeHTML(app.preview.source)}"` : "";
   const previewButton = app.preview ? `<button class="preview-trigger" type="button" aria-haspopup="dialog" aria-controls="app-preview-dialog" aria-label="${escapeHTML(t("previewFor", { name: app.name }))}" title="${escapeHTML(t("previewFor", { name: app.name }))}"><svg class="ui-icon" aria-hidden="true"><use href="assets/tabler-icons.svg?v=f3f9ffa728c5#photo"></use></svg><span class="preview-label">${escapeHTML(t("previewLabel"))}</span></button>` : "";
-  return `<article class="app-card"${preview}>
+  return `<article class="app-card" id="app-${escapeHTML(app.id)}" tabindex="-1"${preview}>
     <img class="app-icon" src="${escapeHTML(app.icon)}" alt="${escapeHTML(t("iconAlt", { name: app.name }))}" width="46" height="46" loading="lazy" decoding="async" />
     <div class="app-card-head"><div><h3 lang="en">${escapeHTML(app.name)}</h3><span class="app-type">${escapeHTML(categoryName(app.category))}</span></div><div class="app-card-meta" aria-label="${escapeHTML(t("metadataLabel"))}">${status ? `<span class="tag ${statusClass(app.status.level)}" aria-label="${escapeHTML(`${status.label}: ${status.note}`)}"><svg class="ui-icon status-check" aria-hidden="true"><use href="assets/tabler-icons.svg?v=f3f9ffa728c5#check"></use></svg>${escapeHTML(status.label)}</span>` : ""}<div class="card-tools">${details}</div></div></div>
     <p class="card-summary">${escapeHTML(localized(app, "summary"))}</p>
@@ -701,17 +741,20 @@ function updateURL() {
 }
 
 function renderCatalog() {
+  clearTimeout(searchTimer);
   searchClear.hidden = searchInput.value.length === 0;
-  const locale = activeLanguage === "ja" ? "ja-JP" : activeLanguage === "en" ? "en-US" : "zh-CN";
-  const query = searchInput.value.trim().toLocaleLowerCase(locale);
+  const query = searchInput.value.trim().toLowerCase();
   const list = apps.filter(app => {
-    const searchText = app.searchIndex.toLocaleLowerCase(locale);
     const appCategories = appCategoryIds(app);
     const categoryMatch = activeCategory === "all" || appCategories.includes(activeCategory);
     const testedMatch = !testedFilter.checked || app.status.level === "tested";
-    return categoryMatch && testedMatch && searchText.includes(query);
+    return categoryMatch && testedMatch && app.searchIndex.includes(query);
   }).sort((a, b) => compareApps(a, b, activeCategory));
-  appGrid.innerHTML = list.map(cardTemplate).join("");
+  const nextKey = `${activeLanguage}:${list.map(app => app.id).join(",")}`;
+  if (nextKey !== catalogKey) {
+    appGrid.innerHTML = list.map(cardTemplate).join("");
+    catalogKey = nextKey;
+  }
   emptyState.hidden = list.length !== 0;
   clearFilters.hidden = activeCategory === "all" && !testedFilter.checked && list.length !== 0;
   resultCount.textContent = t("foundCount", { count: list.length });
@@ -727,9 +770,11 @@ function restoreURLState() {
   activeLanguage = copy[requestedLanguage] ? requestedLanguage : defaultLanguage;
   localStorage.setItem(languageStorageKey, activeLanguage);
   applyStaticCopy();
+  renderEssentials();
   renderFilters();
   renderCatalog();
   renderStandards();
+  focusLinkedApp();
 }
 
 function resetFilters() {
@@ -809,6 +854,7 @@ function applyLanguage(language) {
   applyStaticCopy();
   languageStatus.textContent = t("languageChanged");
   if (apps.length) {
+    renderEssentials();
     renderFilters();
     renderCatalog();
     renderStandards();
@@ -820,11 +866,11 @@ async function init() {
   document.querySelectorAll("[data-language]").forEach(button => button.addEventListener("click", () => applyLanguage(button.dataset.language)));
   try {
     const dataURL = new URL("data/apps.json", import.meta.url);
-    dataURL.searchParams.set("v", "fe6f973cd548");
-    const response = await fetch(dataURL, { cache: "no-store" });
+    dataURL.searchParams.set("v", "f517b45d88a3");
+    const response = await fetch(dataURL);
     if (!response.ok) throw new Error("Unable to load app data");
     apps = await response.json();
-    apps.forEach(app => { app.searchIndex = buildSearchIndex(app); });
+    apps.forEach(app => { app.searchIndex = buildSearchIndex(app).toLowerCase(); });
     apps.sort(compareApps);
     const params = new URLSearchParams(location.search);
     const requestedCategory = params.get("category");
@@ -833,9 +879,11 @@ async function init() {
     testedFilter.checked = params.get("tested") === "1";
     document.querySelector("#app-total").textContent = String(apps.length);
     document.querySelector("#category-total").textContent = String(categories.length - 1);
+    renderEssentials();
     renderFilters();
     renderCatalog();
     renderStandards();
+    focusLinkedApp();
   } catch (error) {
     resultCount.innerHTML = `${escapeHTML(t("dataError"))} ${link("https://github.com/ixiehao/MacBetter/tree/main/website/data", t("dataErrorLink"), "data-error-link")}`;
     console.error(error);
@@ -860,26 +908,41 @@ async function shareDirectory() {
   }
 }
 
-searchInput.addEventListener("compositionstart", () => { isSearchComposing = true; });
+searchInput.addEventListener("compositionstart", () => { isSearchComposing = true; clearTimeout(searchTimer); });
 searchInput.addEventListener("compositionend", () => {
   isSearchComposing = false;
   renderCatalog();
 });
 searchInput.addEventListener("input", event => {
   searchClear.hidden = searchInput.value.length === 0;
-  if (!event.isComposing && !isSearchComposing) renderCatalog();
+  clearTimeout(searchTimer);
+  if (!event.isComposing && !isSearchComposing) searchTimer = setTimeout(renderCatalog, 100);
 });
 searchClear.addEventListener("click", clearSearchQuery);
 testedFilter.addEventListener("change", renderCatalog);
 clearFilters.addEventListener("click", resetFilters);
 shareButton.addEventListener("click", shareDirectory);
-appGrid.addEventListener("error", event => {
+function handleIconError(event) {
   const image = event.target;
-  if (!image.matches?.(".app-icon") || image.dataset.iconFallback) return;
+  if (!image.matches?.(".app-icon, .essentials-icon") || image.dataset.iconFallback) return;
   image.dataset.iconFallback = "true";
   image.alt = "";
   image.src = new URL("assets/icons/app-fallback.svg", import.meta.url).href;
-}, true);
+}
+appGrid.addEventListener("error", handleIconError, true);
+essentialsGrid.addEventListener("error", handleIconError, true);
+essentialsGrid.addEventListener("click", event => {
+  const item = event.target.closest("a[data-essential-app]");
+  if (!item || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+  event.preventDefault();
+  if (item.href !== location.href) history.pushState({}, "", item.getAttribute("href"));
+  activeCategory = "all";
+  searchInput.value = "";
+  testedFilter.checked = false;
+  renderFilters();
+  renderCatalog();
+  focusLinkedApp();
+});
 appGrid.addEventListener("click", event => {
   const activePopover = event.target.closest(".card-popover");
   appGrid.querySelectorAll(".card-popover[open]").forEach(popover => {

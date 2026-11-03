@@ -36,6 +36,12 @@ let hideTimer;
 let hoverRequest = 0;
 let dialogRequest = 0;
 let opener = null;
+const hoverCapability = matchMedia("(hover: hover) and (pointer: fine)");
+
+function clearSpotlight() {
+  activeCard?.classList.remove("is-previewing");
+  scrim.hidden = true;
+}
 
 function dataFor(card) {
   if (!card?.dataset.previewImage) return null;
@@ -50,14 +56,17 @@ function dataFor(card) {
 }
 
 function hideHover() {
+  if (!activeCard && !pendingCard && hover.hidden && scrim.hidden) return;
   clearTimeout(showTimer);
   clearTimeout(hideTimer);
   pendingCard = null;
-  activeCard?.classList.remove("is-previewing");
+  clearSpotlight();
   activeCard = null;
   hover.hidden = true;
-  scrim.hidden = true;
   hoverRequest++;
+  hoverImage.onload = null;
+  hoverImage.onerror = null;
+  hoverImage.removeAttribute("src");
 }
 
 function positionHover(card) {
@@ -167,11 +176,16 @@ function openDialog(card) {
 }
 
 grid.addEventListener("pointerover", event => {
-  if (event.pointerType !== "mouse" || !matchMedia("(hover: hover) and (pointer: fine)").matches || dialog.open) return;
+  if (event.pointerType !== "mouse" || !hoverCapability.matches || dialog.open) return;
   const card = event.target.closest(".app-card[data-preview-image]");
   if (!card || card === dismissedCard) return;
   clearTimeout(hideTimer);
-  if (card === activeCard || card === pendingCard) return;
+  if (card === activeCard) {
+    card.classList.add("is-previewing");
+    scrim.hidden = false;
+    return;
+  }
+  if (card === pendingCard) return;
   hideHover();
   pendingCard = card;
   showTimer = setTimeout(() => showHover(card), 320);
@@ -181,9 +195,10 @@ grid.addEventListener("pointerout", event => {
   const card = event.target.closest(".app-card[data-preview-image]");
   if (!card || card.contains(event.relatedTarget)) return;
   if (card === dismissedCard) dismissedCard = null;
-  if (hover.contains(event.relatedTarget)) return;
+  clearSpotlight();
   clearTimeout(showTimer);
   pendingCard = null;
+  if (hover.contains(event.relatedTarget)) return;
   hideTimer = setTimeout(hideHover, 140);
 });
 
@@ -202,6 +217,9 @@ dialog.addEventListener("click", event => {
 });
 dialog.addEventListener("close", () => {
   dialogRequest++;
+  dialogImage.onload = null;
+  dialogImage.onerror = null;
+  dialogImage.removeAttribute("src");
   document.body.classList.remove("preview-dialog-open");
   if (opener?.isConnected) opener.focus({ preventScroll: true });
 });

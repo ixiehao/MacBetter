@@ -116,13 +116,15 @@
     {
       "id": "purge",
       "name": "Purge",
-      "file": "assets/icons/purge.png",
-      "kind": "retained-local-asset",
+      "file": "assets/icons/purge-256.png",
+      "kind": "official-icns-representation",
+      "source": "https://raw.githubusercontent.com/jithin-sabu/purge-app/main/Assets/dmg/VolumeIcon.icns",
       "sourcePage": "https://github.com/jithin-sabu/purge-app",
-      "note": "Previously checked-in asset retained unchanged. Original asset URL was not recorded.",
-      "sha256": "adc2f4b3467be9cb60910792ef0db4bcd44323525cfe343e94511170bb804758",
-      "bytes": 1273876,
-      "checkedAt": "2026-11-02"
+      "upstreamBlob": "5fa007dc0a0854442c180e6a7ce5adb5f9336382",
+      "note": "Unchanged 256px PNG representation extracted from the official ICNS container; no pixel editing or resampling.",
+      "sha256": "142dc4b8c3f3d857a062541ee4cd282275a96b4cb6dc6218e70ab3cc0232c295",
+      "bytes": 35536,
+      "checkedAt": "2026-11-03"
     },
     {
       "id": "libreoffice",
