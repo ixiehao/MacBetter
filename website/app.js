@@ -1,4 +1,4 @@
-const categories = ["all", "office", "notes", "video", "player", "audio", "image", "capture", "browser", "download", "files", "launcher", "menu", "maintenance", "privacy", "productivity", "efficiency"];
+const categories = ["all", "office", "notes", "video", "player", "audio", "image", "capture", "browser", "download", "archives", "files", "launcher", "menu", "maintenance", "privacy", "productivity", "efficiency"];
 const categoryIcons = {
   all: "apps",
   office: "briefcase",
@@ -14,12 +14,13 @@ const categoryIcons = {
   menu: "adjustments-horizontal",
   maintenance: "tool",
   files: "folder",
+  archives: "file-zip",
   privacy: "shield-lock",
   productivity: "bolt",
   efficiency: "code"
 };
-const licenseOrder = ["MIT", "GPL-2.0", "GPL-3.0", "GPL-2.0 / GPL-3.0", "AGPL-3.0", "MPL-2.0", "Apache-2.0", "Unlicense", "LGPL-2.1", "BSD-2-Clause", "BSD-3-Clause"];
-const categoryOrder = ["video", "player", "audio", "image", "capture", "browser", "download", "launcher", "menu", "office", "notes", "productivity", "files", "maintenance", "privacy", "efficiency"];
+const licenseOrder = ["MIT", "GPL-2.0", "GPL-3.0", "GPL-2.0 / GPL-3.0", "AGPL-3.0", "MPL-2.0", "Apache-2.0", "Unlicense", "LGPL-2.1", "LGPL-3.0", "BSD-2-Clause", "BSD-3-Clause"];
+const categoryOrder = ["video", "player", "audio", "image", "capture", "browser", "download", "launcher", "menu", "office", "notes", "productivity", "archives", "files", "maintenance", "privacy", "efficiency"];
 const workflowOrder = {
   video: ["shotmap", "mp4flow", "handbrake", "lossless-cut", "subler", "mediainfo", "subtitle-edit", "openscreen", "blender"],
   player: ["iina", "vlc", "mpv", "kodi", "jellyfin-media-player", "cog", "feishin", "yesplaymusic"],
@@ -33,7 +34,8 @@ const workflowOrder = {
   office: ["lumaview", "libreoffice", "onlyoffice", "thunderbird", "koodo-reader", "anki", "drawio-desktop"],
   notes: ["zettlr", "qownnotes", "joplin", "logseq", "appflowy"],
   productivity: ["super-productivity", "maccy", "espanso", "hammerspoon", "swiftbar"],
-  files: ["localsend", "openmtp", "cyberduck", "syncthing", "kopia"],
+  archives: ["macpacker", "peazip", "macrar"],
+  files: ["macpacker", "peazip", "macrar", "localsend", "openmtp", "cyberduck", "syncthing", "kopia"],
   maintenance: ["puremac", "purge", "mangodisk", "dupeguru", "latest", "applite", "sloth"],
   privacy: ["signal", "keepassxc", "cryptomator", "lulu"],
   efficiency: ["github-desktop", "vscodium", "zed", "codeedit", "xcodes", "alacritty", "dbeaver", "tablepro", "bruno", "kilobat-cli", "utm", "hammerspoon", "swiftbar"]
@@ -60,7 +62,7 @@ const copy = {
     languageLabel: "选择语言",
     languageOption: { zh: "切换为中文", en: "切换为 English", ja: "切换为日本語" },
     languageChanged: "已切换为中文",
-    category: { all: "全部", office: "办公与学习", notes: "笔记与知识", video: "视频处理", player: "影音播放", audio: "音频与音乐", image: "图片与设计", capture: "截图与录屏", browser: "网络浏览", download: "下载工具", launcher: "窗口与启动", menu: "菜单栏与硬件", maintenance: "Mac 优化与维护", files: "文件与备份", privacy: "隐私与安全", productivity: "效率与自动化", efficiency: "开发工具" },
+    category: { all: "全部", office: "办公与学习", notes: "笔记与知识", video: "视频处理", player: "影音播放", audio: "音频与音乐", image: "图片与设计", capture: "截图与录屏", browser: "网络浏览", download: "下载工具", launcher: "窗口与启动", menu: "菜单栏与硬件", maintenance: "Mac 优化与维护", archives: "压缩与解压", files: "文件与备份", privacy: "隐私与安全", productivity: "效率与自动化", efficiency: "开发工具" },
     communityEyebrow: "MACOS · 开源软件导航",
     communityHeading: "让 Mac 更好用",
     brandMeaning: "i 代表独立开发者，o 代表开源建设者。",
@@ -119,6 +121,7 @@ const copy = {
       "MPL-2.0": "MPL-2.0：对外发布时，修改过的 MPL 覆盖文件须提供源码并继续按 MPL 授权；独立的新文件可使用其他许可证。",
       "Apache-2.0": "Apache-2.0：宽松许可，可用于闭源组合和再发布；需保留许可证、版权与专利声明，并按要求附带 NOTICE 文件内容。",
       "LGPL-2.1": "LGPL-2.1：主要用于库；修改该库并分发时须提供库源码。应用可采用其他许可证，但需让用户能按许可条件替换或重新链接该库。",
+      "LGPL-3.0": "LGPL-3.0：主要用于库；分发修改版须提供对应库源码。应用可使用其他许可证，但须按条件允许用户替换或重新链接库，并保留相关声明。",
       "BSD-2-Clause": "BSD-2-Clause：宽松许可，可用于闭源项目；再发布时保留版权、许可条件和免责声明即可。",
       "BSD-3-Clause": "BSD-3-Clause：与 BSD-2-Clause 类似；除保留版权与免责声明外，不得未经许可用作者或贡献者姓名为衍生产品背书。",
       Unlicense: "Unlicense：作者尽可能将作品贡献到公有领域，并放弃保证；适用范围仍受当地法律及第三方组件许可影响。"
@@ -150,7 +153,7 @@ const copy = {
     languageLabel: "Choose language",
     languageOption: { zh: "Switch to Chinese", en: "Switch to English", ja: "Switch to Japanese" },
     languageChanged: "Language changed to English",
-    category: { all: "All", office: "Office & Learning", notes: "Notes & Knowledge", video: "Video Tools", player: "Media Players", audio: "Audio & Music", image: "Images & Design", capture: "Screen Capture", browser: "Web Browsing", download: "Download Tools", launcher: "Windows & Launchers", menu: "Menu Bar & Hardware", maintenance: "Mac Maintenance", files: "Files & Backup", privacy: "Privacy & Security", productivity: "Productivity & Automation", efficiency: "Developer Tools" },
+    category: { all: "All", office: "Office & Learning", notes: "Notes & Knowledge", video: "Video Tools", player: "Media Players", audio: "Audio & Music", image: "Images & Design", capture: "Screen Capture", browser: "Web Browsing", download: "Download Tools", launcher: "Windows & Launchers", menu: "Menu Bar & Hardware", maintenance: "Mac Maintenance", archives: "Archives", files: "Files & Backup", privacy: "Privacy & Security", productivity: "Productivity & Automation", efficiency: "Developer Tools" },
     communityEyebrow: "macOS · OPEN-SOURCE APP DIRECTORY",
     communityHeading: "Make your Mac better",
     brandMeaning: "i for independent developer; o for open-source builder.",
@@ -209,6 +212,7 @@ const copy = {
       "MPL-2.0": "MPL-2.0: When distributing it, publish changes to MPL-covered files under the MPL. Independent new files may use other licenses.",
       "Apache-2.0": "Apache-2.0: A permissive license that allows closed-source combinations. Preserve license, copyright, and patent notices, and include any required NOTICE content.",
       "LGPL-2.1": "LGPL-2.1: Mainly intended for libraries. If you distribute a modified library, provide its source; an application may use another license if users can replace or relink the library under the license terms.",
+      "LGPL-3.0": "LGPL-3.0: Mainly used for libraries. Distributing a modified version requires the corresponding library source. Applications may use other licenses if users can replace or relink the library as required and notices are preserved.",
       "BSD-2-Clause": "BSD-2-Clause: A permissive license that can be used in closed-source projects. Keep the copyright, license conditions, and disclaimer when redistributing.",
       "BSD-3-Clause": "BSD-3-Clause: Similar to BSD-2-Clause, with an added rule against using authors’ or contributors’ names to endorse derived products without permission.",
       Unlicense: "Unlicense: The author dedicates the work to the public domain as far as possible and disclaims warranties; local law and third-party component licenses still matter."
@@ -240,7 +244,7 @@ const copy = {
     languageLabel: "言語を選択",
     languageOption: { zh: "中国語に切り替え", en: "英語に切り替え", ja: "日本語に切り替え" },
     languageChanged: "表示言語を日本語に切り替えました",
-    category: { all: "すべて", office: "オフィス・学習", notes: "ノート・情報整理", video: "動画編集・変換", player: "メディア再生", audio: "音声・音楽", image: "画像・デザイン", capture: "スクリーンショット・録画", browser: "Webブラウジング", download: "ダウンロード", launcher: "ウインドウ・ランチャー", menu: "メニューバー・周辺機器", maintenance: "Macのメンテナンス", files: "ファイル・バックアップ", privacy: "プライバシー・セキュリティ", productivity: "作業効率化・自動化", efficiency: "開発ツール" },
+    category: { all: "すべて", office: "オフィス・学習", notes: "ノート・情報整理", video: "動画編集・変換", player: "メディア再生", audio: "音声・音楽", image: "画像・デザイン", capture: "スクリーンショット・録画", browser: "Webブラウジング", download: "ダウンロード", launcher: "ウインドウ・ランチャー", menu: "メニューバー・周辺機器", maintenance: "Macのメンテナンス", archives: "圧縮・解凍", files: "ファイル・バックアップ", privacy: "プライバシー・セキュリティ", productivity: "作業効率化・自動化", efficiency: "開発ツール" },
     communityEyebrow: "macOS · オープンソースアプリガイド",
     communityHeading: "Macを、もっと使いやすく。",
     brandMeaning: "i は独立開発者、o はオープンソースを育てる人。",
@@ -299,6 +303,7 @@ const copy = {
       "MPL-2.0": "MPL-2.0：配布する場合、MPL対象ファイルへの変更はMPLで公開します。独立した新規ファイルには別のライセンスを適用できます。",
       "Apache-2.0": "Apache-2.0：寛容なライセンスで、クローズドソースの製品にも組み込めます。ライセンス・著作権・特許表示を残し、必要な場合はNOTICEも含めます。",
       "LGPL-2.1": "LGPL-2.1：主にライブラリ向けです。改変したライブラリを配布する場合はソースを提供します。アプリ側は、利用者が条件に従ってライブラリを交換・再リンクできれば別のライセンスにできます。",
+      "LGPL-3.0": "LGPL-3.0：主にライブラリ向け。変更版を配布する場合は対応するライブラリのソースを提供します。所定の条件で差し替え・再リンクを可能にし、告知を残せば、アプリに別のライセンスを使えます。",
       "BSD-2-Clause": "BSD-2-Clause：クローズドソースの製品にも使える寛容なライセンスです。再配布時は著作権表示、条件、免責表示を残します。",
       "BSD-3-Clause": "BSD-3-Clause：BSD-2-Clauseと同様ですが、許可なく作者や貢献者の名前を派生製品の推奨・宣伝に使えない条件が加わります。",
       Unlicense: "Unlicense：可能な範囲で著作権を放棄し、公有領域に置くことを意図しています。保証はなく、各地域の法律や第三者コードのライセンスも関係します。"
@@ -319,6 +324,9 @@ const copy = {
 
 const appCopy = {
   en: {
+    "macpacker": {"summary": "Browse and preview archives in a native Mac interface. Create ZIP and 7z files, open RAR, and extract only what you need.", "recommendation": "Take one file out, not the whole archive.", "tags": ["Archives", "ZIP / 7z", "Preview contents"], "compatibility": "The current release requires macOS 14.6+ and supports Intel and Apple Silicon. Official DMG / ZIP builds are signed and notarized; macOS 13 support ended at v0.14.1.", "permissions": "Accesses selected archives and output folders. Enable Finder and Quick Look extensions when needed."},
+    "peazip": {"summary": "A cross-platform archive manager for ZIP, 7z, TAR, and RAR extraction, with encryption, split volumes, and integrity checks.", "recommendation": "Handle mixed archive formats in one place.", "tags": ["Archives", "Multiple formats", "Encryption & splitting"], "compatibility": "Separate official macOS packages are available for Intel and Apple Silicon. Mac builds lack Developer ID signing and may be blocked on first launch; see the official installation notes.", "permissions": "Reads selected files and writes to the chosen destination. Finder services are optional. Compression and RAR extraction are free; RAR creation is not supported."},
+    "macrar": {"summary": "A native archive manager with ZIP, 7z, and TAR creation, RAR extraction, encryption, split volumes, and Finder actions.", "recommendation": "A familiar WinRAR-style workflow on Mac.", "tags": ["Archives", "RAR extraction", "Finder actions"], "compatibility": "macOS 13+; Universal builds support Intel and Apple Silicon. Official GitHub DMG / ZIP builds are signed and notarized. ZIP, 7z, and TAR creation and RAR extraction are free.", "permissions": "Reads selected files and writes to the chosen destination; enable Finder Quick Actions as needed. Creating or modifying RAR requires your own paid RARLAB rar tool (a trial is available). MIT covers MacRAR source only; 7-Zip and other components retain their own terms."},
     shotmap: { summary: "Turn local videos into storyboard sheets with smart frame selection, manual adjustments, and batch PNG / JPG export.", recommendation: "Review a long video at a glance.", tags: ["Swift-native", "Offline processing", "Video", "Images"], compatibility: "macOS 13+ · Intel and Apple Silicon" },
     lumaview: { summary: "Browse local images and PDFs in a lightweight viewer, with folder navigation, EXIF details, zoom, rotation, and printing.", recommendation: "Viewing images should stay lightweight.", tags: ["Swift-native", "Images & PDFs", "Lightweight"], compatibility: "macOS 12+ · Intel and Apple Silicon", permissions: "Local file access to images, PDFs, and folders you choose." },
     "mp4flow": { summary: "Batch-convert videos to MP4, trim and merge clips, adjust the picture, and choose audio tracks, subtitles, and a target file size.", recommendation: "Make an MP4 without opening an editor.", tags: ["Swift-native", "Local processing", "MP4"], compatibility: "macOS 13+ · Intel and Apple Silicon · Requires local FFmpeg / ffprobe" },
@@ -427,6 +435,9 @@ const appCopy = {
     "yesplaymusic": {"summary": "A third-party NetEase Cloud Music client centered on playlists, albums, lyrics, and light or dark themes.", "recommendation": "A different interface for NetEase music.", "tags": ["NetEase music", "Third-party client", "Lyrics"], "compatibility": "Stable v0.4.11 (2026-10-10) offers Intel, Apple Silicon, and Universal Mac builds. Recent users report blocked logins, not established as Mac-specific. Availability depends on service APIs, account status, and track rights. The hosted demo was unavailable during this review; use the official releases for installation.", "permissions": "Login and playlists contact NetEase or third-party music APIs. Optional additional music sources connect to other services."}
   },
   ja: {
+    "macpacker": {"summary": "Mac向けの圧縮ファイル管理アプリ。ZIP・7zの作成、RARなどの閲覧・プレビュー、必要なファイルだけの取り出しに対応。", "recommendation": "全部解凍せず、必要なファイルだけ。", "tags": ["圧縮・解凍", "ZIP / 7z", "中身をプレビュー"], "compatibility": "現行版はmacOS 14.6以降が必要で、IntelとApple Siliconに対応。公式DMG・ZIPは署名・公証済みです。macOS 13対応は旧版v0.14.1までです。", "permissions": "選択した圧縮ファイルと保存先にアクセスします。Finder・Quick Look拡張は必要に応じて有効にします。"},
+    "peazip": {"summary": "ZIP・7z・TARの作成やRARの解凍に対応する、クロスプラットフォームの圧縮ソフト。暗号化、分割、整合性チェックも備えています。", "recommendation": "形式が混在していても、一つで扱える。", "tags": ["圧縮・解凍", "多形式対応", "暗号化・分割"], "compatibility": "Intel用とApple Silicon用の公式Mac版があります。Developer IDによる署名がないため、初回起動がブロックされる場合があります。導入手順は公式案内を確認してください。", "permissions": "選択したファイルを読み書きし、指定先に保存します。Finderサービスの導入は任意です。圧縮とRARの解凍は無料で、RARの作成には対応していません。"},
+    "macrar": {"summary": "ZIP・7z・TARの作成とRARの解凍に対応するMac向けアプリ。暗号化、分割、Finderのクイックアクションを使えます。", "recommendation": "Macでも、WinRARに近い操作感で。", "tags": ["圧縮・解凍", "RAR解凍", "Finder連携"], "compatibility": "macOS 13以降。Intel・Apple Silicon対応のUniversal版です。公式GitHubのDMG・ZIPは署名・公証済み。ZIP・7z・TARの作成とRARの解凍は無料です。", "permissions": "選択したファイルと保存先にアクセスし、Finderのクイックアクションは必要に応じて有効にします。RARの作成・変更には、別途有料のRARLAB製rarが必要です（試用あり）。MITはMacRARのソースコードに適用され、7-Zipなどの部品には各自のライセンスが適用されます。"},
     shotmap: { summary: "動画から自動で選んだコマを手動で調整。複数の動画を分割画像にまとめ、PNG / JPGで書き出せます。", recommendation: "長い動画を、一枚で見返せる。", tags: ["Swiftネイティブ", "オフライン処理", "動画", "画像"], compatibility: "macOS 13以降 · Intel / Apple Silicon" },
     lumaview: { summary: "画像やPDFを軽快に閲覧。フォルダ内の画像送り、EXIF表示、拡大・回転、印刷に対応します。", recommendation: "画像を見るだけなら、軽くていい。", tags: ["Swiftネイティブ", "画像・PDF", "軽量"], compatibility: "macOS 12以降 · Intel / Apple Silicon", permissions: "選択した画像・PDF・フォルダへのアクセスが必要です。" },
     "mp4flow": { summary: "動画をまとめてMP4に変換。カット・結合・画面調整に加え、音声トラックや字幕、目標ファイルサイズを選べます。", recommendation: "MP4だけなら、重い編集ソフトは要らない。", tags: ["Swiftネイティブ", "ローカル処理", "MP4"], compatibility: "macOS 13以降 · Intel / Apple Silicon · FFmpeg / ffprobeが別途必要" },
@@ -576,7 +587,7 @@ function escapeHTML(value) {
 }
 
 function link(url, text, className, accessibleName, iconName) {
-  return `<a class="${className}" href="${escapeHTML(url)}" aria-label="${escapeHTML(accessibleName)}" target="_blank" rel="noreferrer">${escapeHTML(text)}<svg class="ui-icon" aria-hidden="true"><use href="assets/tabler-icons.svg?v=f4517e656209#${iconName}"></use></svg></a>`;
+  return `<a class="${className}" href="${escapeHTML(url)}" aria-label="${escapeHTML(accessibleName)}" target="_blank" rel="noreferrer">${escapeHTML(text)}<svg class="ui-icon" aria-hidden="true"><use href="assets/tabler-icons.svg?v=f3f9ffa728c5#${iconName}"></use></svg></a>`;
 }
 
 function statusClass(level) {
@@ -641,13 +652,13 @@ function cardTemplate(app) {
   const compatibilityLanguage = appCopy[activeLanguage]?.[app.id]?.compatibility ? (activeLanguage === "ja" ? "ja" : "en") : "zh-CN";
   const permissionsLanguage = appCopy[activeLanguage]?.[app.id]?.permissions ? (activeLanguage === "ja" ? "ja" : "en") : "zh-CN";
   const licensePopover = `<details class="license-details card-popover"><summary class="license" aria-label="${escapeHTML(t("licenseFor", { license: app.license, name: app.name }))}" title="${escapeHTML(t("licenseFor", { license: app.license, name: app.name }))}" lang="en">${escapeHTML(app.license)}</summary><div class="license-popover"><strong lang="en">${escapeHTML(app.license)}</strong><p>${escapeHTML(licenseExplanation)}</p><p class="license-note">${escapeHTML(t("licenseNote"))}</p></div></details>`;
-  const details = compatibility || permissions ? `<details class="app-details card-popover"><summary aria-label="${escapeHTML(t("detailsSummary"))}" title="${escapeHTML(t("detailsSummary"))}"><svg class="ui-icon" aria-hidden="true"><use href="assets/tabler-icons.svg?v=f4517e656209#info-circle"></use></svg></summary><dl>${compatibility ? `<div><dt>${escapeHTML(t("compatibilityLabel"))}</dt><dd lang="${compatibilityLanguage}">${escapeHTML(compatibility)}</dd></div>` : ""}${permissions ? `<div><dt>${escapeHTML(t("permissionsLabel"))}</dt><dd lang="${permissionsLanguage}">${escapeHTML(permissions)}</dd></div>` : ""}</dl></details>` : "";
+  const details = compatibility || permissions ? `<details class="app-details card-popover"><summary aria-label="${escapeHTML(t("detailsSummary"))}" title="${escapeHTML(t("detailsSummary"))}"><svg class="ui-icon" aria-hidden="true"><use href="assets/tabler-icons.svg?v=f3f9ffa728c5#info-circle"></use></svg></summary><dl>${compatibility ? `<div><dt>${escapeHTML(t("compatibilityLabel"))}</dt><dd lang="${compatibilityLanguage}">${escapeHTML(compatibility)}</dd></div>` : ""}${permissions ? `<div><dt>${escapeHTML(t("permissionsLabel"))}</dt><dd lang="${permissionsLanguage}">${escapeHTML(permissions)}</dd></div>` : ""}</dl></details>` : "";
   const previewImage = app.preview?.images?.[activeLanguage] || app.preview?.image;
   const preview = app.preview ? ` data-app-name="${escapeHTML(app.name)}" data-preview-image="${escapeHTML(previewImage)}" data-preview-source="${escapeHTML(app.preview.source)}"` : "";
-  const previewButton = app.preview ? `<button class="preview-trigger" type="button" aria-haspopup="dialog" aria-controls="app-preview-dialog" aria-label="${escapeHTML(t("previewFor", { name: app.name }))}" title="${escapeHTML(t("previewFor", { name: app.name }))}"><svg class="ui-icon" aria-hidden="true"><use href="assets/tabler-icons.svg?v=f4517e656209#photo"></use></svg><span class="preview-label">${escapeHTML(t("previewLabel"))}</span></button>` : "";
+  const previewButton = app.preview ? `<button class="preview-trigger" type="button" aria-haspopup="dialog" aria-controls="app-preview-dialog" aria-label="${escapeHTML(t("previewFor", { name: app.name }))}" title="${escapeHTML(t("previewFor", { name: app.name }))}"><svg class="ui-icon" aria-hidden="true"><use href="assets/tabler-icons.svg?v=f3f9ffa728c5#photo"></use></svg><span class="preview-label">${escapeHTML(t("previewLabel"))}</span></button>` : "";
   return `<article class="app-card"${preview}>
     <img class="app-icon" src="${escapeHTML(app.icon)}" alt="${escapeHTML(t("iconAlt", { name: app.name }))}" width="46" height="46" loading="lazy" decoding="async" />
-    <div class="app-card-head"><div><h3 lang="en">${escapeHTML(app.name)}</h3><span class="app-type">${escapeHTML(categoryName(app.category))}</span></div><div class="app-card-meta" aria-label="${escapeHTML(t("metadataLabel"))}">${status ? `<span class="tag ${statusClass(app.status.level)}" aria-label="${escapeHTML(`${status.label}: ${status.note}`)}"><svg class="ui-icon status-check" aria-hidden="true"><use href="assets/tabler-icons.svg?v=f4517e656209#check"></use></svg>${escapeHTML(status.label)}</span>` : ""}<div class="card-tools">${details}</div></div></div>
+    <div class="app-card-head"><div><h3 lang="en">${escapeHTML(app.name)}</h3><span class="app-type">${escapeHTML(categoryName(app.category))}</span></div><div class="app-card-meta" aria-label="${escapeHTML(t("metadataLabel"))}">${status ? `<span class="tag ${statusClass(app.status.level)}" aria-label="${escapeHTML(`${status.label}: ${status.note}`)}"><svg class="ui-icon status-check" aria-hidden="true"><use href="assets/tabler-icons.svg?v=f3f9ffa728c5#check"></use></svg>${escapeHTML(status.label)}</span>` : ""}<div class="card-tools">${details}</div></div></div>
     <p class="card-summary">${escapeHTML(localized(app, "summary"))}</p>
     <p class="recommendation" title="${escapeHTML(localized(app, "recommendation"))}">${escapeHTML(localized(app, "recommendation"))}</p>
     <div class="tags" aria-label="${escapeHTML(t("metadataLabel"))}">
@@ -666,7 +677,7 @@ function renderFilters() {
   const focusedCategory = document.activeElement?.closest?.("#category-filters .filter")?.dataset.category;
   filters.innerHTML = categories.map(id => {
     const count = id === "all" ? apps.length : apps.filter(app => appCategoryIds(app).includes(id)).length;
-    return `<button class="filter" type="button" data-category="${id}" aria-pressed="${id === activeCategory}"><svg class="ui-icon" aria-hidden="true"><use href="assets/tabler-icons.svg?v=f4517e656209#${categoryIcons[id]}"></use></svg><span>${escapeHTML(categoryName(id))}</span><span class="filter-count">${count}</span></button>`;
+    return `<button class="filter" type="button" data-category="${id}" aria-pressed="${id === activeCategory}"><svg class="ui-icon" aria-hidden="true"><use href="assets/tabler-icons.svg?v=f3f9ffa728c5#${categoryIcons[id]}"></use></svg><span>${escapeHTML(categoryName(id))}</span><span class="filter-count">${count}</span></button>`;
   }).join("");
   filters.querySelectorAll("button").forEach(button => button.addEventListener("click", () => {
     activeCategory = button.dataset.category;
@@ -809,7 +820,7 @@ async function init() {
   document.querySelectorAll("[data-language]").forEach(button => button.addEventListener("click", () => applyLanguage(button.dataset.language)));
   try {
     const dataURL = new URL("data/apps.json", import.meta.url);
-    dataURL.searchParams.set("v", "4e89eacf08e8");
+    dataURL.searchParams.set("v", "d46bba17cfc6");
     const response = await fetch(dataURL, { cache: "no-store" });
     if (!response.ok) throw new Error("Unable to load app data");
     apps = await response.json();

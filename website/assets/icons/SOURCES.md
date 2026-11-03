@@ -114,3 +114,6 @@ Names, logos, and trademarks remain with their respective owners. They identify 
 | Flameshot | [flameshot.svg](flameshot.svg) | [Original asset](https://raw.githubusercontent.com/flameshot-org/flameshot/master/data/img/app/flameshot.svg) |
 | Screenity | [screenity.png](screenity.png) | [Original asset](https://raw.githubusercontent.com/alyssaxuu/screenity/master/src/assets/icon-128.png) |
 | YesPlayMusic | [yesplaymusic.png](yesplaymusic.png) | [Original asset](https://raw.githubusercontent.com/qier222/YesPlayMusic/master/build/icons/128x128.png) |
+| MacPacker | [macpacker.png](macpacker.png) | [Original asset](https://raw.githubusercontent.com/sarensw/MacPacker/v1.2.0/assets/AppIcon-iOS-Default-1024x1024%401x.png) |
+| PeaZip | [peazip.png](peazip.png) | [Original asset](https://raw.githubusercontent.com/peazip/PeaZip/sources/peazip-sources/res/share/icons/peazip.png) |
+| MacRAR | [macrar.png](macrar.png) | [Original asset](https://raw.githubusercontent.com/mstcvk/MacRAR/v1.4.4/docs/icon.png) |

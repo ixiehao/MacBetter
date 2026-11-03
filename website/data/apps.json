@@ -2257,5 +2257,101 @@
     "icon": "assets/icons/yesplaymusic.png",
     "featured": false,
     "sortOrder": 106
+  },
+  {
+    "id": "macpacker",
+    "name": "MacPacker",
+    "summary": "原生压缩包管理器，支持 ZIP、7z 压缩，以及 RAR 等格式的浏览、预览和按需提取。",
+    "recommendation": "先看包内文件，只解压需要的。",
+    "tags": [
+      "压缩与解压",
+      "ZIP / 7z",
+      "包内预览"
+    ],
+    "compatibility": "当前版本要求 macOS 14.6 及以上，支持 Intel 与 Apple Silicon。官方提供签名、公证的 DMG / ZIP；macOS 13 仅支持旧版至 v0.14.1。",
+    "permissions": "访问你选择的压缩包与输出目录；Finder 与 Quick Look 扩展按需启用。",
+    "homepage": "https://macpacker.app/",
+    "github": "https://github.com/sarensw/MacPacker",
+    "license": "GPL-3.0",
+    "preview": {
+      "image": "https://macpacker.app/hero.png",
+      "source": "https://macpacker.app/"
+    },
+    "category": "archives",
+    "categories": [
+      "archives",
+      "files"
+    ],
+    "download": "https://github.com/sarensw/MacPacker/releases",
+    "status": {
+      "level": "verified"
+    },
+    "icon": "assets/icons/macpacker.png",
+    "featured": false,
+    "sortOrder": 107
+  },
+  {
+    "id": "peazip",
+    "name": "PeaZip",
+    "summary": "跨平台压缩包管理器，可创建 ZIP、7z、TAR，解压 RAR，并提供加密、分卷和校验工具。",
+    "recommendation": "格式再杂，一个工具处理。",
+    "tags": [
+      "压缩与解压",
+      "多格式",
+      "加密与分卷"
+    ],
+    "compatibility": "官方分别提供 Intel 与 Apple Silicon 的 macOS 安装包。Mac 版未使用 Developer ID 签名，首次启动可能受到系统拦截；安装步骤见官方说明。",
+    "permissions": "读写所选文件和目标目录；Finder 右键服务可选安装。压缩、解压与 RAR 解压免费，不提供 RAR 创建。",
+    "homepage": "https://peazip.github.io/peazip-macos.html",
+    "github": "https://github.com/peazip/PeaZip",
+    "license": "LGPL-3.0",
+    "preview": {
+      "image": "https://peazip.github.io/peazip-darwin-macos.png",
+      "source": "https://peazip.github.io/peazip-macos.html"
+    },
+    "category": "archives",
+    "categories": [
+      "archives",
+      "files"
+    ],
+    "download": "https://github.com/peazip/PeaZip/releases",
+    "status": {
+      "level": "verified"
+    },
+    "icon": "assets/icons/peazip.png",
+    "featured": false,
+    "sortOrder": 108
+  },
+  {
+    "id": "macrar",
+    "name": "MacRAR",
+    "summary": "原生压缩包管理器，可创建 ZIP、7z、TAR，解压 RAR，支持加密、分卷与 Finder 右键操作。",
+    "recommendation": "在 Mac 上也能像 WinRAR 那样用。",
+    "tags": [
+      "压缩与解压",
+      "RAR 解压",
+      "Finder 集成"
+    ],
+    "compatibility": "macOS 13 及以上，Universal 安装包支持 Intel 与 Apple Silicon。GitHub 版官方提供签名、公证的 DMG / ZIP；ZIP、7z、TAR 压缩和 RAR 解压免费。",
+    "permissions": "读写所选文件和输出目录；Finder 快速操作按需启用。创建或修改 RAR 需自行安装 RARLAB 的付费 rar 工具（提供试用），不包含在免费功能内。MIT 仅覆盖 MacRAR 源码，7-Zip 等组件保留各自许可。",
+    "homepage": "https://github.com/mstcvk/MacRAR",
+    "github": "https://github.com/mstcvk/MacRAR",
+    "license": "MIT",
+    "preview": {
+      "image": "https://raw.githubusercontent.com/mstcvk/MacRAR/v1.4.4/docs/main-window-rar.png",
+      "source": "https://github.com/mstcvk/MacRAR"
+    },
+    "category": "archives",
+    "categories": [
+      "archives",
+      "files"
+    ],
+    "download": "https://github.com/mstcvk/MacRAR/releases",
+    "status": {
+      "level": "verified"
+    },
+    "icon": "assets/icons/macrar.png",
+    "featured": false,
+    "sortOrder": 109
   }
 ]

@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-02",
+  "checkedAt": "2026-11-03",
   "icons": [
     {
       "id": "shotmap",
@@ -1178,6 +1178,39 @@
       "sha256": "956e9f7458f4a7737a1564f643698fd412f5ffe67f7a881fe1720eb3194b3c1a",
       "bytes": 6564,
       "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "macpacker",
+      "name": "MacPacker",
+      "file": "assets/icons/macpacker.png",
+      "kind": "official-project-asset",
+      "source": "https://raw.githubusercontent.com/sarensw/MacPacker/v1.2.0/assets/AppIcon-iOS-Default-1024x1024%401x.png",
+      "sourcePage": "https://github.com/sarensw/MacPacker",
+      "sha256": "3fe45528d5dd7f29601aa5d35731aac5d5fc5dd93d875fc29e641c4926ab9222",
+      "bytes": 1300853,
+      "checkedAt": "2026-11-03"
+    },
+    {
+      "id": "peazip",
+      "name": "PeaZip",
+      "file": "assets/icons/peazip.png",
+      "kind": "official-project-asset",
+      "source": "https://raw.githubusercontent.com/peazip/PeaZip/sources/peazip-sources/res/share/icons/peazip.png",
+      "sourcePage": "https://github.com/peazip/PeaZip",
+      "sha256": "c6f90a87b96b1d4171041a93e62e2aef9b65fda22a7f84869a1376479d0f67b3",
+      "bytes": 5737,
+      "checkedAt": "2026-11-03"
+    },
+    {
+      "id": "macrar",
+      "name": "MacRAR",
+      "file": "assets/icons/macrar.png",
+      "kind": "official-project-asset",
+      "source": "https://raw.githubusercontent.com/mstcvk/MacRAR/v1.4.4/docs/icon.png",
+      "sourcePage": "https://github.com/mstcvk/MacRAR",
+      "sha256": "c34767164911c549d0e67b78d04e888ae4b4dbee11a734b99dfe65e6ba16102a",
+      "bytes": 42453,
+      "checkedAt": "2026-11-03"
     }
   ]
 }
