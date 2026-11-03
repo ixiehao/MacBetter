@@ -1,8 +1,8 @@
 const grid = document.querySelector("#app-grid");
 const copy = {
-  en: { preview: "App preview", loading: "Loading screenshot…", failed: "This screenshot could not be loaded.", enlarge: "View larger", close: "Close", original: "Original image", source: "Image source", credit: "Screenshot provided by the project" },
-  zh: { preview: "软件预览", loading: "正在加载截图…", failed: "暂时无法加载这张截图。", enlarge: "点击查看大图", close: "关闭", original: "查看原图", source: "截图来源", credit: "截图由项目提供" },
-  ja: { preview: "アプリのプレビュー", loading: "スクリーンショットを読み込み中…", failed: "画像を読み込めませんでした。", enlarge: "クリックして拡大", close: "閉じる", original: "元の画像", source: "画像の出典", credit: "プロジェクト提供のスクリーンショット" }
+  en: { preview: "App preview", loading: "Loading screenshot…", failed: "This screenshot could not be loaded.", hint: "Use the card’s preview button to enlarge.", close: "Close", original: "Original image", source: "Image source", credit: "Screenshot provided by the project" },
+  zh: { preview: "软件预览", loading: "正在加载截图…", failed: "暂时无法加载这张截图。", hint: "点击卡片上的预览按钮查看大图", close: "关闭", original: "查看原图", source: "截图来源", credit: "截图由项目提供" },
+  ja: { preview: "アプリのプレビュー", loading: "スクリーンショットを読み込み中…", failed: "画像を読み込めませんでした。", hint: "カードのプレビューボタンで拡大", close: "閉じる", original: "元の画像", source: "画像の出典", credit: "プロジェクト提供のスクリーンショット" }
 };
 const text = key => (copy[document.documentElement.lang.startsWith("zh") ? "zh" : document.documentElement.lang.startsWith("ja") ? "ja" : "en"])[key];
 
@@ -15,7 +15,8 @@ document.body.append(scrim);
 const hover = document.createElement("aside");
 hover.className = "app-preview";
 hover.hidden = true;
-hover.innerHTML = '<div class="preview-heading"><strong></strong><span></span></div><button class="preview-frame" type="button"><img referrerpolicy="no-referrer" decoding="async" hidden /><span class="preview-message" role="status"></span></button><p class="preview-caption"></p>';
+hover.setAttribute("aria-hidden", "true");
+hover.innerHTML = '<div class="preview-heading"><strong></strong><span></span></div><div class="preview-frame"><img referrerpolicy="no-referrer" decoding="async" hidden /><span class="preview-message"></span></div><p class="preview-caption"></p>';
 document.body.append(hover);
 
 const dialog = document.createElement("dialog");
@@ -32,7 +33,6 @@ let activeCard = null;
 let pendingCard = null;
 let dismissedCard = null;
 let showTimer;
-let hideTimer;
 let hoverRequest = 0;
 let dialogRequest = 0;
 let opener = null;
@@ -64,7 +64,6 @@ function dataFor(card) {
 function hideHover() {
   if (!activeCard && !pendingCard && hover.hidden && scrim.hidden) return;
   clearTimeout(showTimer);
-  clearTimeout(hideTimer);
   pendingCard = null;
   clearSpotlight();
   activeCard = null;
@@ -122,8 +121,7 @@ function showHover(card) {
   hover.setAttribute("aria-label", `${data.name} · ${text("preview")}`);
   hover.querySelector("strong").textContent = data.name;
   hover.querySelector(".preview-heading span").textContent = text("preview");
-  hover.querySelector(".preview-frame").setAttribute("aria-label", `${text("enlarge")} · ${data.name}`);
-  hover.querySelector(".preview-caption").textContent = text("enlarge");
+  hover.querySelector(".preview-caption").textContent = text("hint");
   const message = hover.querySelector(".preview-message");
   message.textContent = text("loading");
   message.hidden = false;
@@ -189,7 +187,6 @@ grid.addEventListener("pointerover", event => {
   if (event.pointerType !== "mouse" || !hoverCapability.matches || dialog.open) return;
   const card = event.target.closest(".app-card[data-preview-image]");
   if (!card || card === dismissedCard) return;
-  clearTimeout(hideTimer);
   if (card === activeCard) {
     syncSpotlight();
     return;
@@ -204,11 +201,7 @@ grid.addEventListener("pointerout", event => {
   const card = event.target.closest(".app-card[data-preview-image]");
   if (!card || card.contains(event.relatedTarget)) return;
   if (card === dismissedCard) dismissedCard = null;
-  clearSpotlight();
-  clearTimeout(showTimer);
-  pendingCard = null;
-  if (hover.contains(event.relatedTarget)) return;
-  hideTimer = setTimeout(hideHover, 140);
+  hideHover();
 });
 
 grid.addEventListener("click", event => {
@@ -216,24 +209,15 @@ grid.addEventListener("click", event => {
   if (button) openDialog(button.closest(".app-card"));
 });
 grid.addEventListener("toggle", hideHover, true);
-// Only the card owns the scrim. The preview and every other page region cannot keep it open.
+// Only the card owns the hover preview and scrim; neither can keep itself open.
 document.addEventListener("pointerover", event => {
   if (event.pointerType !== "mouse") return;
-  if (pendingCard && !pendingCard.contains(event.target)) {
-    clearTimeout(showTimer);
-    pendingCard = null;
-  }
-  if (activeCard && !activeCard.contains(event.target)) clearSpotlight();
+  const owner = activeCard || pendingCard;
+  if (owner && !owner.contains(event.target)) hideHover();
 }, { capture: true, passive: true });
 document.addEventListener("pointerout", event => {
   if (!event.relatedTarget) hideHover();
 }, { capture: true, passive: true });
-hover.addEventListener("pointerenter", () => {
-  clearSpotlight();
-  clearTimeout(hideTimer);
-});
-hover.addEventListener("pointerleave", () => { hideTimer = setTimeout(hideHover, 140); });
-hover.querySelector(".preview-frame").addEventListener("click", () => { if (activeCard) openDialog(activeCard); });
 dialog.querySelector(".preview-close").addEventListener("click", () => dialog.close());
 dialog.addEventListener("click", event => {
   const rect = dialog.getBoundingClientRect();
