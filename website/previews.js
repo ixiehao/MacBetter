@@ -37,6 +37,7 @@ let hoverRequest = 0;
 let dialogRequest = 0;
 let opener = null;
 const hoverCapability = matchMedia("(hover: hover) and (pointer: fine)");
+const hoverDelay = 600;
 
 function clearSpotlight() {
   activeCard?.classList.remove("is-previewing");
@@ -194,7 +195,7 @@ grid.addEventListener("pointerover", event => {
   if (card === pendingCard) return;
   hideHover();
   pendingCard = card;
-  showTimer = setTimeout(() => showHover(card), 320);
+  showTimer = setTimeout(() => showHover(card), hoverDelay);
 });
 
 grid.addEventListener("pointerout", event => {
