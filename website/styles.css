@@ -206,13 +206,13 @@ html[lang="en"] .app-type { text-transform: none; }
 .app-links .download-link:hover { color: #fff; background: var(--brand); text-decoration: none; }
 .app-links .license-details { flex: 0 0 auto; margin-left: auto; }
 .app-links .preview-trigger { flex-shrink: 0; width: 30px; height: 30px; }
-.preview-scrim { position: fixed; z-index: 60; inset: 0; background: rgb(0 0 0 / 42%); pointer-events: none; animation: scrim-in .14s ease-out; }
+.preview-scrim { display: none; position: fixed; z-index: 60; inset: 0; background: rgb(0 0 0 / 42%); pointer-events: none; }
+body:has(#app-grid > .app-card.is-previewing:hover) > .preview-scrim:not([hidden]) { display: block; }
 .preview-scrim[hidden] { display: none; }
-.app-card.is-previewing { z-index: 65; transform: translateY(-3px); border-color: #b9d2f3; box-shadow: 0 12px 32px rgb(0 0 0 / 18%); }
+.app-card.is-previewing:hover { z-index: 65; transform: translateY(-3px); border-color: #b9d2f3; box-shadow: 0 12px 32px rgb(0 0 0 / 18%); }
 .app-preview { position: fixed; z-index: 70; overflow: hidden; color: var(--ink); background: #fff; border: 1px solid #d3e0f0; border-radius: 14px; box-shadow: 0 16px 55px rgb(23 43 70 / 22%), 0 2px 8px rgb(23 43 70 / 8%); animation: preview-in .16s ease-out; }
 .app-preview[data-side="left"] { --preview-shift: 6px; }
 .app-preview[data-side="right"] { --preview-shift: -6px; }
-@keyframes scrim-in { from { opacity: 0; } to { opacity: 1; } }
 @keyframes preview-in { from { opacity: 0; transform: translateX(var(--preview-shift, 0)); } to { opacity: 1; transform: translateX(0); } }
 .app-preview[hidden], .app-preview img[hidden], .app-preview-dialog img[hidden], .preview-message[hidden] { display: none; }
 .preview-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 11px 14px; }
@@ -371,7 +371,7 @@ h1::after { display: block; width: 42px; height: 5px; margin-top: 11px; backgrou
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .app-preview, .preview-scrim { animation: none; }
+  .app-preview { animation: none; }
   .essentials-icon { transition: none; }
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }

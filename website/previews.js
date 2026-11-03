@@ -43,6 +43,12 @@ function clearSpotlight() {
   scrim.hidden = true;
 }
 
+function syncSpotlight() {
+  const onCard = Boolean(activeCard?.isConnected && activeCard.matches(":hover") && !hover.hidden && !dialog.open);
+  activeCard?.classList.toggle("is-previewing", onCard);
+  scrim.hidden = !onCard;
+}
+
 function dataFor(card) {
   if (!card?.dataset.previewImage) return null;
   try {
@@ -103,6 +109,11 @@ function positionHover(card) {
 }
 
 function showHover(card) {
+  // A delayed callback must never revive a preview after the pointer has left.
+  if (pendingCard !== card || !card.isConnected || !card.matches(":hover")) {
+    if (pendingCard === card) pendingCard = null;
+    return;
+  }
   const data = dataFor(card);
   if (!data || dialog.open || card.querySelector(".card-popover[open]")) return;
   activeCard = card;
@@ -123,8 +134,7 @@ function showHover(card) {
     hideHover();
     return;
   }
-  activeCard.classList.add("is-previewing");
-  scrim.hidden = false;
+  syncSpotlight();
   hoverImage.onload = () => {
     if (request !== hoverRequest || activeCard !== card) return;
     hoverImage.hidden = false;
@@ -181,8 +191,7 @@ grid.addEventListener("pointerover", event => {
   if (!card || card === dismissedCard) return;
   clearTimeout(hideTimer);
   if (card === activeCard) {
-    card.classList.add("is-previewing");
-    scrim.hidden = false;
+    syncSpotlight();
     return;
   }
   if (card === pendingCard) return;
@@ -207,7 +216,22 @@ grid.addEventListener("click", event => {
   if (button) openDialog(button.closest(".app-card"));
 });
 grid.addEventListener("toggle", hideHover, true);
-hover.addEventListener("pointerenter", () => clearTimeout(hideTimer));
+// Only the card owns the scrim. The preview and every other page region cannot keep it open.
+document.addEventListener("pointerover", event => {
+  if (event.pointerType !== "mouse") return;
+  if (pendingCard && !pendingCard.contains(event.target)) {
+    clearTimeout(showTimer);
+    pendingCard = null;
+  }
+  if (activeCard && !activeCard.contains(event.target)) clearSpotlight();
+}, { capture: true, passive: true });
+document.addEventListener("pointerout", event => {
+  if (!event.relatedTarget) hideHover();
+}, { capture: true, passive: true });
+hover.addEventListener("pointerenter", () => {
+  clearSpotlight();
+  clearTimeout(hideTimer);
+});
 hover.addEventListener("pointerleave", () => { hideTimer = setTimeout(hideHover, 140); });
 hover.querySelector(".preview-frame").addEventListener("click", () => { if (activeCard) openDialog(activeCard); });
 dialog.querySelector(".preview-close").addEventListener("click", () => dialog.close());
@@ -232,6 +256,7 @@ document.addEventListener("keydown", event => {
 window.addEventListener("scroll", hideHover, { passive: true, capture: true });
 window.addEventListener("resize", hideHover, { passive: true });
 window.addEventListener("blur", hideHover);
+document.addEventListener("visibilitychange", () => { if (document.hidden) hideHover(); });
 new MutationObserver(() => {
   if (activeCard && !activeCard.isConnected) hideHover();
   if (dismissedCard && !dismissedCard.isConnected) dismissedCard = null;
