@@ -336,8 +336,7 @@
     "license": "GPL-3.0",
     "status": { "level": "tested" },
     "compatibility": "官方提供 Apple Silicon 与 Intel 安装包；macOS 27 实测。按项目说明准备 yt-dlp 等组件，当前 Mac 版未签名。",
-    "permissions": "读取 Chrome Cookies 需访问其应用数据；macOS 27 可在“文件与文件夹”中为 YTDownloader 开启 Google Chrome 权限。详见设置指南。",
-    "setupGuide": "guides/ytdownloader.zh.html",
+    "permissions": "读取 Chrome Cookies 需访问其应用数据；macOS 27 可在“文件与文件夹”中为 YTDownloader 开启 Google Chrome 权限。",
     "icon": "assets/icons/ytdownloader.png",
     "preview": {
       "image": "https://github.com/user-attachments/assets/89d484b0-9413-416c-9c3b-e322f6d93ca8",

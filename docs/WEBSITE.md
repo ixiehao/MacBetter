@@ -8,7 +8,6 @@
 - 线上地址：https://ixiehao.github.io/MacBetter/
 - 部署流程：[`deploy-pages.yml`](../.github/workflows/deploy-pages.yml)。
 - 软件库：[`website/data/apps.json`](../website/data/apps.json)。
-- 软件设置指南源码：[`website/guides/`](../website/guides/)。ytDownloader 提供[英语](https://ixiehao.github.io/MacBetter/guides/ytdownloader.html)、[中文](https://ixiehao.github.io/MacBetter/guides/ytdownloader.zh.html)、[日语](https://ixiehao.github.io/MacBetter/guides/ytdownloader.ja.html)独立页面。
 
 ## 语言
 

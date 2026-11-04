@@ -103,8 +103,6 @@ const copy = {
     detailsSummary: "系统要求与权限",
     compatibilityLabel: "系统要求",
     permissionsLabel: "权限与安全提示",
-    setupGuide: "指南",
-    setupGuideFor: "查看 {name} 的设置指南",
     licenseFor: "查看 {license} 许可证说明（{name}）",
     licenseNote: "通俗摘要，不构成法律意见。项目可能包含第三方组件；实际使用或分发时，请核对仓库中的 LICENSE，以及如有的 NOTICE 文件。",
     projectSiteFor: "打开 {name} 项目主页",
@@ -113,7 +111,6 @@ const copy = {
     previewFor: "预览 {name} 的软件截图",
     previewLabel: "预览",
     projectSite: "项目主页",
-    projectSiteShort: "官网",
     download: "下载",
     status: {
       tested: { label: "io 实测", note: "已在 iXiehao 的实际使用环境中运行；不等同于安全审计，也不保证适配所有 macOS 版本。" }
@@ -201,8 +198,6 @@ const copy = {
     detailsSummary: "System requirements & permissions",
     compatibilityLabel: "System requirements",
     permissionsLabel: "Permissions & safety notes",
-    setupGuide: "Guide",
-    setupGuideFor: "View the setup guide for {name}",
     licenseFor: "View the {license} license notes for {name}",
     licenseNote: "Plain-language summary, not legal advice. Projects may include third-party components; check the repository’s LICENSE and any NOTICE file for actual terms.",
     projectSiteFor: "Open the {name} project site",
@@ -211,7 +206,6 @@ const copy = {
     previewFor: "Preview a screenshot of {name}",
     previewLabel: "Preview",
     projectSite: "Project site",
-    projectSiteShort: "Site",
     download: "Download",
     status: {
       tested: { label: "Tested by io", note: "Personally used on iXiehao’s everyday Mac. This is not a security audit or a guarantee of compatibility with every macOS version." }
@@ -299,8 +293,6 @@ const copy = {
     detailsSummary: "システム要件と権限",
     compatibilityLabel: "システム要件",
     permissionsLabel: "権限・安全に関する注意",
-    setupGuide: "ガイド",
-    setupGuideFor: "{name} の設定ガイドを見る",
     licenseFor: "{name} の {license} ライセンス説明を見る",
     licenseNote: "平易な要約であり、法的助言ではありません。第三者のコードを含む場合があります。実際の条件はリポジトリの LICENSE と、NOTICE がある場合はその内容を確認してください。",
     projectSiteFor: "{name} のプロジェクトページを開く",
@@ -309,7 +301,6 @@ const copy = {
     previewFor: "{name}のスクリーンショットをプレビュー",
     previewLabel: "プレビュー",
     projectSite: "プロジェクトページ",
-    projectSiteShort: "公式",
     download: "ダウンロード",
     status: {
       tested: { label: "ioで使用確認済み", note: "iXiehaoの日常用Macで実際に使用しています。セキュリティ監査ではなく、すべてのmacOSバージョンでの動作を保証するものでもありません。" }
@@ -346,7 +337,7 @@ const copy = {
 
 const appCopy = {
   en: {
-    ytdownloader: {"summary": "Download videos, audio, and playlists from YouTube and other sites, with quality selection and batch downloads.", "recommendation": "Paste a link. Save the video.", "tags": ["Video downloads", "Playlists", "Audio extraction"], "compatibility": "Official Apple Silicon and Intel builds; tested on macOS 27. Follow the project instructions for yt-dlp and other components. The Mac release is unsigned.", "permissions": "Reading Chrome Cookies requires access to Chrome app data. On macOS 27, enable Google Chrome under YTDownloader in Files & Folders. See the setup guide.", "setupGuide": "guides/ytdownloader.html"},
+    "ytdownloader": {"summary": "Download videos, audio, and playlists from YouTube and other sites, with quality selection and batch downloads.", "recommendation": "Paste a link. Save the video.", "tags": ["Video downloads", "Playlists", "Audio extraction"], "compatibility": "Official Apple Silicon and Intel builds; tested on macOS 27. Follow the project instructions for yt-dlp and other components. The Mac release is unsigned.", "permissions": "Reading Chrome Cookies requires access to Chrome app data. On macOS 27, enable Google Chrome under YTDownloader in Files & Folders."},
     "macpacker": {"summary": "Browse and preview archives in a native Mac interface. Create ZIP and 7z files, open RAR, and extract only what you need.", "recommendation": "Take one file out, not the whole archive.", "tags": ["Archives", "ZIP / 7z", "Preview contents"], "compatibility": "The current release requires macOS 14.6+ and supports Intel and Apple Silicon. Official DMG / ZIP builds are signed and notarized; macOS 13 support ended at v0.14.1.", "permissions": "Accesses selected archives and output folders. Enable Finder and Quick Look extensions when needed."},
     "peazip": {"summary": "A cross-platform archive manager for ZIP, 7z, TAR, and RAR extraction, with encryption, split volumes, and integrity checks.", "recommendation": "Handle mixed archive formats in one place.", "tags": ["Archives", "Multiple formats", "Encryption & splitting"], "compatibility": "Separate official macOS packages are available for Intel and Apple Silicon. Mac builds lack Developer ID signing and may be blocked on first launch; see the official installation notes.", "permissions": "Reads selected files and writes to the chosen destination. Finder services are optional. Compression and RAR extraction are free; RAR creation is not supported."},
     "macrar": {"summary": "A native archive manager with ZIP, 7z, and TAR creation, RAR extraction, encryption, split volumes, and Finder actions.", "recommendation": "A familiar WinRAR-style workflow on Mac.", "tags": ["Archives", "RAR extraction", "Finder actions"], "compatibility": "macOS 13+; Universal builds support Intel and Apple Silicon. Official GitHub DMG / ZIP builds are signed and notarized. ZIP, 7z, and TAR creation and RAR extraction are free.", "permissions": "Reads selected files and writes to the chosen destination; enable Finder Quick Actions as needed. Creating or modifying RAR requires your own paid RARLAB rar tool (a trial is available). MIT covers MacRAR source only; 7-Zip and other components retain their own terms."},
@@ -458,7 +449,7 @@ const appCopy = {
     "yesplaymusic": {"summary": "A third-party NetEase Cloud Music client centered on playlists, albums, lyrics, and light or dark themes.", "recommendation": "A different interface for NetEase music.", "tags": ["NetEase music", "Third-party client", "Lyrics"], "compatibility": "Stable v0.4.11 (2026-10-10) offers Intel, Apple Silicon, and Universal Mac builds. Recent users report blocked logins, not established as Mac-specific. Availability depends on service APIs, account status, and track rights. The hosted demo was unavailable during this review; use the official releases for installation.", "permissions": "Login and playlists contact NetEase or third-party music APIs. Optional additional music sources connect to other services."}
   },
   ja: {
-    ytdownloader: {"summary": "YouTubeなどの動画・音声・再生リストを保存。画質の選択や複数URLの一括ダウンロードに対応。", "recommendation": "リンクを貼って、動画を手元に。", "tags": ["動画ダウンロード", "再生リスト", "音声抽出"], "compatibility": "Apple Silicon用とIntel用の公式ビルドがあります。macOS 27で実使用を確認。yt-dlpなどは公式手順に沿って用意してください。Mac版は未署名です。", "permissions": "ChromeのCookieを読むには、Chromeのアプリデータへのアクセスが必要です。macOS 27では「ファイルとフォルダ」のYTDownloaderでGoogle Chromeを有効にします。詳しくは設定ガイドへ。", "setupGuide": "guides/ytdownloader.ja.html"},
+    "ytdownloader": {"summary": "YouTubeなどの動画・音声・再生リストを保存。画質の選択や複数URLの一括ダウンロードに対応。", "recommendation": "リンクを貼って、動画を手元に。", "tags": ["動画ダウンロード", "再生リスト", "音声抽出"], "compatibility": "Apple Silicon用とIntel用の公式ビルドがあります。macOS 27で実使用を確認。yt-dlpなどは公式手順に沿って用意してください。Mac版は未署名です。", "permissions": "ChromeのCookieを読むには、Chromeのアプリデータへのアクセスが必要です。macOS 27では「ファイルとフォルダ」のYTDownloaderでGoogle Chromeを有効にします。"},
     "macpacker": {"summary": "Mac向けの圧縮ファイル管理アプリ。ZIP・7zの作成、RARなどの閲覧・プレビュー、必要なファイルだけの取り出しに対応。", "recommendation": "全部解凍せず、必要なファイルだけ。", "tags": ["圧縮・解凍", "ZIP / 7z", "中身をプレビュー"], "compatibility": "現行版はmacOS 14.6以降が必要で、IntelとApple Siliconに対応。公式DMG・ZIPは署名・公証済みです。macOS 13対応は旧版v0.14.1までです。", "permissions": "選択した圧縮ファイルと保存先にアクセスします。Finder・Quick Look拡張は必要に応じて有効にします。"},
     "peazip": {"summary": "ZIP・7z・TARの作成やRARの解凍に対応する、クロスプラットフォームの圧縮ソフト。暗号化、分割、整合性チェックも備えています。", "recommendation": "形式が混在していても、一つで扱える。", "tags": ["圧縮・解凍", "多形式対応", "暗号化・分割"], "compatibility": "Intel用とApple Silicon用の公式Mac版があります。Developer IDによる署名がないため、初回起動がブロックされる場合があります。導入手順は公式案内を確認してください。", "permissions": "選択したファイルを読み書きし、指定先に保存します。Finderサービスの導入は任意です。圧縮とRARの解凍は無料で、RARの作成には対応していません。"},
     "macrar": {"summary": "ZIP・7z・TARの作成とRARの解凍に対応するMac向けアプリ。暗号化、分割、Finderのクイックアクションを使えます。", "recommendation": "Macでも、WinRARに近い操作感で。", "tags": ["圧縮・解凍", "RAR解凍", "Finder連携"], "compatibility": "macOS 13以降。Intel・Apple Silicon対応のUniversal版です。公式GitHubのDMG・ZIPは署名・公証済み。ZIP・7z・TARの作成とRARの解凍は無料です。", "permissions": "選択したファイルと保存先にアクセスし、Finderのクイックアクションは必要に応じて有効にします。RARの作成・変更には、別途有料のRARLAB製rarが必要です（試用あり）。MITはMacRARのソースコードに適用され、7-Zipなどの部品には各自のライセンスが適用されます。"},
@@ -615,8 +606,7 @@ function escapeHTML(value) {
 }
 
 function link(url, text, className, accessibleName, iconName) {
-  const icon = iconName ? `<svg class="ui-icon" aria-hidden="true"><use href="assets/tabler-icons.svg?v=f3f9ffa728c5#${iconName}"></use></svg>` : "";
-  return `<a class="${className}" href="${escapeHTML(url)}" aria-label="${escapeHTML(accessibleName)}" target="_blank" rel="noreferrer">${escapeHTML(text)}${icon}</a>`;
+  return `<a class="${className}" href="${escapeHTML(url)}" aria-label="${escapeHTML(accessibleName)}" target="_blank" rel="noreferrer">${escapeHTML(text)}<svg class="ui-icon" aria-hidden="true"><use href="assets/tabler-icons.svg?v=f3f9ffa728c5#${iconName}"></use></svg></a>`;
 }
 
 function statusClass(level) {
@@ -701,9 +691,6 @@ function cardTemplate(app) {
   const licenseExplanation = license.slice(app.license.length).replace(/^[：:]\s*/, "");
   const compatibility = localized(app, "compatibility") || app.compatibility;
   const permissions = localized(app, "permissions") || app.permissions;
-  const setupGuide = localized(app, "setupGuide");
-  const setupLink = setupGuide ? link(setupGuide, t("setupGuide"), "setup-link", t("setupGuideFor", { name: app.name })) : "";
-  const downloadLink = link(app.download, t("download"), "download-link", t("downloadFor", { name: app.name }), setupGuide ? null : "download");
   const compatibilityLanguage = appCopy[activeLanguage]?.[app.id]?.compatibility ? (activeLanguage === "ja" ? "ja" : "en") : "zh-CN";
   const permissionsLanguage = appCopy[activeLanguage]?.[app.id]?.permissions ? (activeLanguage === "ja" ? "ja" : "en") : "zh-CN";
   const licensePopover = `<details class="license-details card-popover"><summary class="license" aria-label="${escapeHTML(t("licenseFor", { license: app.license, name: app.name }))}" title="${escapeHTML(t("licenseFor", { license: app.license, name: app.name }))}" lang="en">${escapeHTML(app.license)}</summary><div class="license-popover"><strong lang="en">${escapeHTML(app.license)}</strong><p>${escapeHTML(licenseExplanation)}</p><p class="license-note">${escapeHTML(t("licenseNote"))}</p></div></details>`;
@@ -719,10 +706,10 @@ function cardTemplate(app) {
     <div class="tags" aria-label="${escapeHTML(t("metadataLabel"))}">
       ${(localized(app, "tags") || []).map(tag => `<span class="tag">${escapeHTML(tag)}</span>`).join("")}
     </div>
-    <div class="app-links${setupGuide ? " has-setup-guide" : ""}">
-      ${link(app.homepage, t(setupGuide ? "projectSiteShort" : "projectSite"), "project-link", t("projectSiteFor", { name: app.name }), setupGuide ? null : "world-www")}
+    <div class="app-links">
+      ${link(app.homepage, t("projectSite"), "project-link", t("projectSiteFor", { name: app.name }), "world-www")}
       ${previewButton}
-      ${setupLink ? `<div class="download-actions">${downloadLink}${setupLink}</div>` : downloadLink}
+      ${link(app.download, t("download"), "download-link", t("downloadFor", { name: app.name }), "download")}
       ${licensePopover}
     </div>
   </article>`;
@@ -881,7 +868,7 @@ async function init() {
   document.querySelectorAll("[data-language]").forEach(button => button.addEventListener("click", () => applyLanguage(button.dataset.language)));
   try {
     const dataURL = new URL("data/apps.json", import.meta.url);
-    dataURL.searchParams.set("v", "8b73ce57ad48");
+    dataURL.searchParams.set("v", "5eb44ffa6587");
     const response = await fetch(dataURL);
     if (!response.ok) throw new Error("Unable to load app data");
     apps = await response.json();

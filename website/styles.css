@@ -204,15 +204,6 @@ html[lang="en"] .app-type { text-transform: none; }
 .app-links .project-link:hover { color: var(--link-hover); background: transparent; text-decoration: underline; }
 .app-links .download-link { color: var(--brand-deep); background: #edf4ff; border-color: transparent; }
 .app-links .download-link:hover { color: #fff; background: var(--brand); text-decoration: none; }
-.download-actions { display: inline-flex; align-items: center; gap: 6px; flex-shrink: 0; }
-.app-links.has-setup-guide { flex-wrap: nowrap; gap: 4px; }
-.has-setup-guide .download-actions { gap: 4px; }
-.app-links.has-setup-guide a { padding-inline: 0; }
-.app-links.has-setup-guide .project-link, .app-links .setup-link { border: 0; border-radius: 0; text-decoration: underline; text-decoration-color: #bdcde2; text-underline-offset: 3px; }
-.app-links.has-setup-guide .download-link { min-width: 38px; justify-content: center; padding-inline: 2px; border-radius: 6px; }
-.app-links.has-setup-guide .preview-trigger { width: 24px; min-width: 24px; padding: 0; background: transparent; border: 0; }
-.has-setup-guide .preview-label { display: none; }
-.has-setup-guide .license-details summary { padding-inline: 0; font-size: 9px; letter-spacing: 0; }
 .app-links .license-details { flex: 0 0 auto; margin-left: auto; }
 .app-links .preview-trigger { flex-shrink: 0; width: 30px; height: 30px; }
 .preview-scrim { display: none; position: fixed; z-index: 60; inset: 0; background: rgb(0 0 0 / 42%); pointer-events: none; }
@@ -364,7 +355,6 @@ h1::after { display: block; width: 42px; height: 5px; margin-top: 11px; backgrou
 }
 @media (max-width: 700px) {
   .app-links a, .button-community, .community-rules, .results-reset { min-height: 44px; }
-  .app-links.has-setup-guide .preview-trigger { width: 32px; min-width: 32px; height: 44px; }
   .filter { min-height: 40px; }
   .language-switcher button { min-width: 34px; height: 34px; }
 }
