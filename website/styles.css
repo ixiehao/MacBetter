@@ -1,6 +1,6 @@
 @font-face { font-family: "Inter Site"; src: url("assets/fonts/InterVariable.woff2?v=693b77d4f32e") format("woff2"); font-style: normal; font-weight: 100 900; font-display: swap; }
-@font-face { font-family: "Noto Sans SC Site"; src: url("assets/fonts/NotoSansSC-subset.woff2?v=dc837d58fbb4") format("woff2"); font-style: normal; font-weight: 100 900; font-display: swap; }
-@font-face { font-family: "Noto Sans JP Site"; src: url("assets/fonts/NotoSansJP-subset.woff2?v=46d827a63199") format("woff2"); font-style: normal; font-weight: 100 900; font-display: swap; }
+@font-face { font-family: "Noto Sans SC Site"; src: url("assets/fonts/NotoSansSC-subset.woff2?v=3e76ddd2a275") format("woff2"); font-style: normal; font-weight: 100 900; font-display: swap; }
+@font-face { font-family: "Noto Sans JP Site"; src: url("assets/fonts/NotoSansJP-subset.woff2?v=e8e6887b88e1") format("woff2"); font-style: normal; font-weight: 100 900; font-display: swap; }
 
 :root {
   color-scheme: light;
@@ -173,7 +173,6 @@ kbd { min-width: 42px; padding: 4px 6px; color: #718195; background: #fff; borde
 .license-details summary::-webkit-details-marker { display: none; }
 .license-details summary:hover, .license-details[open] summary { color: var(--brand); text-decoration-color: currentColor; }
 .license-popover { position: absolute; z-index: 6; bottom: calc(100% + 8px); top: auto; right: 0; width: min(300px, calc(100vw - 50px)); padding: 12px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 12px 32px rgb(23 40 61 / 16%); }
-.license-popover::after { position: absolute; right: 10px; bottom: -6px; width: 10px; height: 10px; background: var(--surface); border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); content: ""; transform: rotate(45deg); }
 .license-popover > strong { display: block; margin-bottom: 5px; color: var(--ink); font-size: 11px; }
 .license-popover > p { margin: 0 0 8px; color: var(--ink-soft); font-size: 11px; font-weight: 500; letter-spacing: 0; line-height: 1.5; text-transform: none; overflow-wrap: anywhere; }
 .license-popover > .license-note { margin: 8px 0 0; padding-top: 7px; color: var(--muted); border-top: 1px solid var(--line); font-size: 10px; }
@@ -192,10 +191,12 @@ html[lang="en"] .app-type { text-transform: none; }
 .app-details summary:hover { color: var(--brand-deep); background: var(--brand-soft); border-color: #b8d4ef; }
 .app-details[open] summary { color: var(--brand-deep); background: var(--brand-soft); border-color: #a7c8ec; }
 .app-details dl { position: absolute; z-index: 6; top: calc(100% + 8px); right: 0; width: min(280px, calc(100vw - 50px)); display: grid; gap: 9px; margin: 0; padding: 12px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 12px 32px rgb(23 40 61 / 16%); }
-.app-details dl::before { position: absolute; top: -6px; right: 6px; width: 10px; height: 10px; background: var(--surface); border-top: 1px solid var(--line); border-left: 1px solid var(--line); content: ""; transform: rotate(45deg); }
 .app-details dl > div { display: grid; grid-template-columns: 1fr; gap: 3px; }
 .app-details dt { color: #53677a; font-weight: 680; }
 .app-details dd { min-width: 0; margin: 0; color: var(--ink-soft); font-size: 11px; line-height: 1.5; overflow-wrap: anywhere; }
+.app-details dl, .license-popover { max-height: var(--popover-max-height, calc(100dvh - 100px)); overflow: auto; overscroll-behavior: contain; transform: translateX(var(--popover-shift-x, 0px)); }
+.card-popover[data-popover-side="above"] > :is(dl, .license-popover) { top: auto; bottom: calc(100% + 8px); }
+.card-popover[data-popover-side="below"] > :is(dl, .license-popover) { top: calc(100% + 8px); bottom: auto; }
 .license:hover { color: var(--brand); text-decoration: underline; }
 .app-links { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 12px; padding-top: 10px; border-top: 1px solid #edf1f6; }
 .app-links a { min-height: 30px; display: inline-flex; align-items: center; gap: 5px; padding: 0 8px; color: var(--link); background: transparent; border: 1px solid transparent; border-radius: 8px; font-size: 11px; font-weight: 650; white-space: nowrap; transition: color .16s ease, background .16s ease, border-color .16s ease, transform .16s ease; }
