@@ -86,7 +86,7 @@ export async function openPopover(page, id, kind) {
   await expect(details).toHaveAttribute("open", "");
   await expect.poll(async () => {
     const report = await details.evaluate(measurePopover);
-    return report.inside && report.textFits;
-  }, { message: `${id} ${kind} must fit inside the viewport`, intervals: [16, 32, 100] }).toBe(true);
+    return report;
+  }, { message: `${id} ${kind} must fit inside the viewport`, intervals: [16, 32, 100] }).toMatchObject({ inside: true, textFits: true });
   return details;
 }

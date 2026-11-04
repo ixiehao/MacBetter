@@ -52,6 +52,7 @@ python3 -m http.server 8000 --bind 127.0.0.1 --directory website
 `deploy-pages.yml` 在相关文件提交到 `main`、提交 PR 或手动运行时自动检查，只有主分支检查全部通过后才部署；PR 只检查，不发布。验证失败时保留当前线上版本。
 
 - Playwright 使用固定版本的 Chromium、WebKit；手机用例启用触屏与移动视口模拟，检查页面实际宽度。依赖由 `package-lock.json` 锁定，CI 使用 Node.js 24 与 Ubuntu 24.04。
+- CI 按浏览器与语言拆成六个并行任务，全部通过才发布。弹窗用例的执行时限随条目数量增长；每个弹窗的越界判定及单次操作超时不放宽。
 - 对每款软件检查英语、中文、日语，在 19 种桌面与手机尺寸下检测标题、标签、操作栏、卡片边界、控件重叠及单款软件的样式偏差。正常换行、简介行数限制与推荐语省略允许保留。
 - 在 820px 桌面宽度和 320px 手机宽度下，逐一打开所有软件的权限及许可证弹窗，检查边界和文字溢出；另检查短屏幕中的内部滚动、Tab、Escape、焦点返回和窗口调整。
 - 文案覆盖检查要求每款软件的英日简介、推荐语、功能标签、系统要求和权限说明齐全；测试数量跟随软件库增长，不固定为当前条目数。
@@ -59,7 +60,9 @@ python3 -m http.server 8000 --bind 127.0.0.1 --directory website
 
 本地运行方式见 [开发指南](DEVELOPMENT.md#验证)。可用 `MACBETTER_TEST_PORT` 更改默认测试端口 4173。测试服务器由 Playwright 启动和关闭，不复用正在运行的其他服务。
 
-在 GitHub 的 **Actions → Deploy GitHub Pages → 对应运行 → Artifacts** 下载 `layout-report-*`。报告保留 7 天，包含测试结果和每个失败用例的截图、trace；卡片问题还会附上软件 ID、语言、视口及越界原因。下载后运行 `npx playwright show-report <解压后的 playwright-report 目录>` 查看。报告不放进官网，公用 README 和本地维护记录仍只保存在本地。
+定位某个矩阵任务时，可运行 `MACBETTER_TEST_LANGUAGE=ja npm run test:layout -- --project=webkit`，只执行该语言与引擎；不设置语言变量时运行全部三语。
+
+在 GitHub 的 **Actions → Deploy GitHub Pages → 对应运行 → Artifacts** 下载 `layout-report-*`。每个浏览器和语言任务各有一份报告，保留 7 天。HTML 报告包含失败截图、trace 和定位附件，另存 JSON 结果摘要；卡片问题会标出软件 ID、语言、视口及越界原因。下载后运行 `npx playwright show-report <解压后的 playwright-report 目录>` 查看。报告不放进官网，公用 README 和本地维护记录仍只保存在本地。
 
 ## 部署
 

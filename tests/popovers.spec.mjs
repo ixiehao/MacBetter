@@ -5,7 +5,7 @@ for (const language of languages) for (const viewport of [{ width: 820, height: 
   test.describe(`${language} popovers ${viewport.width}px`, () => {
     test.use({ isMobile: viewport.width === 320, hasTouch: viewport.width === 320, deviceScaleFactor: viewport.width === 320 ? 2 : 1 });
     test(`${language} all permission and license popovers at ${viewport.width}px`, async ({ page }, testInfo) => {
-      test.setTimeout(120_000);
+      test.setTimeout(Math.max(120_000, apps.length * 2_000));
       await page.setViewportSize(viewport);
       await openCatalog(page, language);
       const reports = [];

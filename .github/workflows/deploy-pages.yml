@@ -32,9 +32,16 @@ concurrency:
 
 jobs:
   validate:
-    name: Validate languages and responsive layouts
+    name: Layout checks (${{ matrix.browser }}, ${{ matrix.language }})
     runs-on: ubuntu-24.04
     timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: [chromium, webkit]
+        language: [en, zh, ja]
+    env:
+      MACBETTER_TEST_LANGUAGE: ${{ matrix.language }}
     steps:
       - name: Check out source
         uses: actions/checkout@v6
@@ -48,17 +55,17 @@ jobs:
       - name: Validate catalog icons and scripts
         run: npm run check
       - name: Install test browsers
-        run: npx playwright install --with-deps chromium webkit
+        run: npx playwright install --with-deps ${{ matrix.browser }}
       - name: Check all cards in English, Chinese, and Japanese
-        run: npm run test:layout
+        run: npm run test:layout -- --project=${{ matrix.browser }}
       - name: Save layout reports and failure screenshots
         if: ${{ !cancelled() }}
         uses: actions/upload-artifact@v4
         with:
-          name: layout-report-${{ github.run_id }}-${{ github.run_attempt }}
+          name: layout-report-${{ matrix.browser }}-${{ matrix.language }}-${{ github.run_id }}-${{ github.run_attempt }}
           path: |
             playwright-report/
-            test-results/
+            test-results/report.json
           retention-days: 7
           if-no-files-found: ignore
   deploy:

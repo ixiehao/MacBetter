@@ -6,7 +6,10 @@ const source = readFileSync(new URL("../../website/app.js", import.meta.url), "u
 const boundary = source.indexOf("let activeLanguage");
 if (boundary < 0) throw new Error("Update the metadata reader after reorganizing app.js");
 export const metadata = runInNewContext(source.slice(0, boundary) + ";({ appCopy, copy, categories })", {}, { timeout: 1_000 });
-export const languages = ["en", "zh", "ja"];
+const allLanguages = ["en", "zh", "ja"];
+const selectedLanguage = process.env.MACBETTER_TEST_LANGUAGE;
+if (selectedLanguage && !allLanguages.includes(selectedLanguage)) throw new Error("Unknown MACBETTER_TEST_LANGUAGE");
+export const languages = selectedLanguage ? [selectedLanguage] : allLanguages;
 export const viewports = [
   [320, 568], [360, 780], [375, 812], [390, 844], [430, 932],
   [600, 900], [700, 900], [701, 900], [768, 1024], [819, 900],
