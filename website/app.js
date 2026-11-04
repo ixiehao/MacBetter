@@ -103,7 +103,7 @@ const copy = {
     detailsSummary: "系统要求与权限",
     compatibilityLabel: "系统要求",
     permissionsLabel: "权限与安全提示",
-    setupGuide: "设置指南",
+    setupGuide: "指南",
     setupGuideFor: "查看 {name} 的设置指南",
     licenseFor: "查看 {license} 许可证说明（{name}）",
     licenseNote: "通俗摘要，不构成法律意见。项目可能包含第三方组件；实际使用或分发时，请核对仓库中的 LICENSE，以及如有的 NOTICE 文件。",
@@ -113,6 +113,7 @@ const copy = {
     previewFor: "预览 {name} 的软件截图",
     previewLabel: "预览",
     projectSite: "项目主页",
+    projectSiteShort: "官网",
     download: "下载",
     status: {
       tested: { label: "io 实测", note: "已在 iXiehao 的实际使用环境中运行；不等同于安全审计，也不保证适配所有 macOS 版本。" }
@@ -200,7 +201,7 @@ const copy = {
     detailsSummary: "System requirements & permissions",
     compatibilityLabel: "System requirements",
     permissionsLabel: "Permissions & safety notes",
-    setupGuide: "Setup guide",
+    setupGuide: "Guide",
     setupGuideFor: "View the setup guide for {name}",
     licenseFor: "View the {license} license notes for {name}",
     licenseNote: "Plain-language summary, not legal advice. Projects may include third-party components; check the repository’s LICENSE and any NOTICE file for actual terms.",
@@ -210,6 +211,7 @@ const copy = {
     previewFor: "Preview a screenshot of {name}",
     previewLabel: "Preview",
     projectSite: "Project site",
+    projectSiteShort: "Site",
     download: "Download",
     status: {
       tested: { label: "Tested by io", note: "Personally used on iXiehao’s everyday Mac. This is not a security audit or a guarantee of compatibility with every macOS version." }
@@ -297,7 +299,7 @@ const copy = {
     detailsSummary: "システム要件と権限",
     compatibilityLabel: "システム要件",
     permissionsLabel: "権限・安全に関する注意",
-    setupGuide: "設定ガイド",
+    setupGuide: "ガイド",
     setupGuideFor: "{name} の設定ガイドを見る",
     licenseFor: "{name} の {license} ライセンス説明を見る",
     licenseNote: "平易な要約であり、法的助言ではありません。第三者のコードを含む場合があります。実際の条件はリポジトリの LICENSE と、NOTICE がある場合はその内容を確認してください。",
@@ -307,6 +309,7 @@ const copy = {
     previewFor: "{name}のスクリーンショットをプレビュー",
     previewLabel: "プレビュー",
     projectSite: "プロジェクトページ",
+    projectSiteShort: "公式",
     download: "ダウンロード",
     status: {
       tested: { label: "ioで使用確認済み", note: "iXiehaoの日常用Macで実際に使用しています。セキュリティ監査ではなく、すべてのmacOSバージョンでの動作を保証するものでもありません。" }
@@ -612,7 +615,8 @@ function escapeHTML(value) {
 }
 
 function link(url, text, className, accessibleName, iconName) {
-  return `<a class="${className}" href="${escapeHTML(url)}" aria-label="${escapeHTML(accessibleName)}" target="_blank" rel="noreferrer">${escapeHTML(text)}<svg class="ui-icon" aria-hidden="true"><use href="assets/tabler-icons.svg?v=f3f9ffa728c5#${iconName}"></use></svg></a>`;
+  const icon = iconName ? `<svg class="ui-icon" aria-hidden="true"><use href="assets/tabler-icons.svg?v=f3f9ffa728c5#${iconName}"></use></svg>` : "";
+  return `<a class="${className}" href="${escapeHTML(url)}" aria-label="${escapeHTML(accessibleName)}" target="_blank" rel="noreferrer">${escapeHTML(text)}${icon}</a>`;
 }
 
 function statusClass(level) {
@@ -698,8 +702,8 @@ function cardTemplate(app) {
   const compatibility = localized(app, "compatibility") || app.compatibility;
   const permissions = localized(app, "permissions") || app.permissions;
   const setupGuide = localized(app, "setupGuide");
-  const setupLink = setupGuide ? link(setupGuide, t("setupGuide"), "setup-link", t("setupGuideFor", { name: app.name }), "adjustments-horizontal") : "";
-  const downloadLink = link(app.download, t("download"), "download-link", t("downloadFor", { name: app.name }), "download");
+  const setupLink = setupGuide ? link(setupGuide, t("setupGuide"), "setup-link", t("setupGuideFor", { name: app.name })) : "";
+  const downloadLink = link(app.download, t("download"), "download-link", t("downloadFor", { name: app.name }), setupGuide ? null : "download");
   const compatibilityLanguage = appCopy[activeLanguage]?.[app.id]?.compatibility ? (activeLanguage === "ja" ? "ja" : "en") : "zh-CN";
   const permissionsLanguage = appCopy[activeLanguage]?.[app.id]?.permissions ? (activeLanguage === "ja" ? "ja" : "en") : "zh-CN";
   const licensePopover = `<details class="license-details card-popover"><summary class="license" aria-label="${escapeHTML(t("licenseFor", { license: app.license, name: app.name }))}" title="${escapeHTML(t("licenseFor", { license: app.license, name: app.name }))}" lang="en">${escapeHTML(app.license)}</summary><div class="license-popover"><strong lang="en">${escapeHTML(app.license)}</strong><p>${escapeHTML(licenseExplanation)}</p><p class="license-note">${escapeHTML(t("licenseNote"))}</p></div></details>`;
@@ -715,8 +719,8 @@ function cardTemplate(app) {
     <div class="tags" aria-label="${escapeHTML(t("metadataLabel"))}">
       ${(localized(app, "tags") || []).map(tag => `<span class="tag">${escapeHTML(tag)}</span>`).join("")}
     </div>
-    <div class="app-links">
-      ${link(app.homepage, t("projectSite"), "project-link", t("projectSiteFor", { name: app.name }), "world-www")}
+    <div class="app-links${setupGuide ? " has-setup-guide" : ""}">
+      ${link(app.homepage, t(setupGuide ? "projectSiteShort" : "projectSite"), "project-link", t("projectSiteFor", { name: app.name }), setupGuide ? null : "world-www")}
       ${previewButton}
       ${setupLink ? `<div class="download-actions">${downloadLink}${setupLink}</div>` : downloadLink}
       ${licensePopover}
