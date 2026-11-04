@@ -10,7 +10,7 @@
 - `.github/ISSUE_TEMPLATE/`：社区推荐入口。
 - `docs/`：开发与部署文档；`PROMOTION.md`：本项目公开推广说明。
 
-页面不需要 npm 安装或打包。预览方法见 [WEBSITE.md](WEBSITE.md)。
+页面本身不需要 npm 安装或打包。自动布局检查使用仅供开发的 Playwright；预览与检查方法见 [WEBSITE.md](WEBSITE.md)。
 
 ## 更新软件库
 
@@ -72,13 +72,24 @@ node -e 'const fs=require("node:fs"); const a=JSON.parse(fs.readFileSync("websit
 git diff --check
 ```
 
+首次运行自动浏览器检查：
+
+```sh
+npm ci --ignore-scripts
+npx playwright install chromium webkit
+npm run check
+npm run test:layout
+```
+
+检查自动读取软件库，覆盖所有条目的三语文案、统一卡片样式、手机横竖屏与桌面断点，以及每款软件的权限和许可证弹窗；新增条目无需手工加入测试名单。报告位于 `playwright-report/`，失败截图、定位数据与 trace 位于 `test-results/`，均已排除出 Git。可运行 `npm run test:layout:report` 查看本地报告。更详细的覆盖范围与 CI 发布门槛见 [官网维护](WEBSITE.md#自动检查与发布门槛)。
+
 然后检查中文、英文、日语下的搜索、分类、排序、许可证说明、推荐按钮、官方下载链接和窄屏换行。检查每个本地图标实际存在；来源页面可访问不代表安装包已实测。
 
 软件图标统一保存在 `website/assets/icons/`，目录数据使用本站相对路径。优先采用官方原始 SVG 或 128–256 像素 PNG，不重绘第三方标志；避免用开发者照片代替软件图标。保留原图字节，在 `SOURCES.md` 与 `sources.json` 同步记录来源、权利说明和 SHA-256；保留的旧素材若缺少原图地址，要如实标记。
 
 新增或替换图标时运行 `node scripts/check-icons.mjs`，再检查浏览器实际解码成功（`naturalWidth > 0`、没有 `data-icon-fallback`）。HTTP 200 不代表图片有效或允许跨站显示，应留意 `Cross-Origin-Resource-Policy`。加载失败时使用本站通用图标兜底；兜底不替代修复真实素材。
 
-Pages 工作流在上传站点前自动执行图标与脚本检查，阻止外链图标、缺失文件或来源校验值不一致的版本发布。
+Pages 工作流在上传站点前自动执行图标、脚本、三语文案和浏览器布局检查；任一项失败都不会发布。
 
 ## 发布边界
 

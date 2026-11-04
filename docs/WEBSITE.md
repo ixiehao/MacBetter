@@ -47,10 +47,24 @@ python3 -m http.server 8000 --bind 127.0.0.1 --directory website
 
 启用分类或实测筛选、或没有搜索结果时，结果行提供统一的“清除筛选条件”入口，恢复全部目录并清理相关 URL 参数。中文、日文输入法组词期间暂停筛选，避免 Escape 取消候选词时误清空搜索。悬停预览经 Escape 关闭后，同一卡片要移开再进入才重新触发。
 
+## 自动检查与发布门槛
+
+`deploy-pages.yml` 在相关文件提交到 `main`、提交 PR 或手动运行时自动检查，只有主分支检查全部通过后才部署；PR 只检查，不发布。验证失败时保留当前线上版本。
+
+- Playwright 使用固定版本的 Chromium、WebKit；手机用例启用触屏与移动视口模拟，检查页面实际宽度。依赖由 `package-lock.json` 锁定，CI 使用 Node.js 24 与 Ubuntu 24.04。
+- 对每款软件检查英语、中文、日语，在 19 种桌面与手机尺寸下检测标题、标签、操作栏、卡片边界、控件重叠及单款软件的样式偏差。正常换行、简介行数限制与推荐语省略允许保留。
+- 在 820px 桌面宽度和 320px 手机宽度下，逐一打开所有软件的权限及许可证弹窗，检查边界和文字溢出；另检查短屏幕中的内部滚动、Tab、Escape、焦点返回和窗口调整。
+- 文案覆盖检查要求每款软件的英日简介、推荐语、功能标签、系统要求和权限说明齐全；测试数量跟随软件库增长，不固定为当前条目数。
+- 测试通过 `/MacBetter/` 子路径访问本地站点，等待自托管字体加载，并屏蔽外部截图和下载请求；不依赖第三方网站在线状态。
+
+本地运行方式见 [开发指南](DEVELOPMENT.md#验证)。可用 `MACBETTER_TEST_PORT` 更改默认测试端口 4173。测试服务器由 Playwright 启动和关闭，不复用正在运行的其他服务。
+
+在 GitHub 的 **Actions → Deploy GitHub Pages → 对应运行 → Artifacts** 下载 `layout-report-*`。报告保留 7 天，包含测试结果和每个失败用例的截图、trace；卡片问题还会附上软件 ID、语言、视口及越界原因。下载后运行 `npx playwright show-report <解压后的 playwright-report 目录>` 查看。报告不放进官网，公用 README 和本地维护记录仍只保存在本地。
+
 ## 部署
 
 工作流上传 `website/` 为站点根目录，不上传根 README 或维护文档。
 
 Pages 发布来源现为 **GitHub Actions**，不再从 `main` 分支根目录直接发布。重建仓库或恢复设置时，在 **Settings → Pages → Build and deployment → Source** 中选择 **GitHub Actions**；仅新增工作流文件不会自动改动该设置。
 
-工作流监听 `website/**` 与自身配置，可手动触发。上线后核对图标、JSON、语言切换、canonical、分享图、robots、sitemap 和浏览器缓存；未确认线上新版本前不宣称完成发布。
+工作流监听 `website/**`、`scripts/**`、`tests/**`、Playwright 配置、测试依赖与自身配置，可手动触发。上线后核对图标、JSON、语言切换、canonical、分享图、robots、sitemap 和浏览器缓存；未确认线上新版本前不宣称完成发布。

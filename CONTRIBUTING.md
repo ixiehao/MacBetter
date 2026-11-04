@@ -15,3 +15,5 @@
 ## 修改网站或软件库
 
 官网源码在 `website/`，条目在 `website/data/apps.json`。请先读[文档索引](docs/README.md)，按[开发指南](docs/DEVELOPMENT.md)更新三语内容并验证，再按[官网维护说明](docs/WEBSITE.md)预览。不要把 `docs/` 当作官网源码目录。
+
+相关 PR 会自动检查三语内容、全部卡片和手机布局。新增软件需要补齐英日简介、推荐语、功能标签、系统要求及权限说明；测试会自动覆盖新条目。检查失败时不会发布，截图和定位报告可在对应 Actions 运行的 `layout-report-*` 附件中查看。

@@ -1,0 +1,12 @@
+{
+  "name": "macbetter-site-checks",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "check": "node --check website/app.js && node --check website/previews.js && node --check scripts/update-cache-keys.mjs && node scripts/check-icons.mjs",
+    "test:layout": "playwright test",
+    "test:layout:report": "playwright show-report"
+  },
+  "devDependencies": { "@playwright/test": "1.64.1" }
+}

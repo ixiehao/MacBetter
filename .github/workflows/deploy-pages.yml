@@ -5,33 +5,76 @@ on:
     branches: [main]
     paths:
       - 'website/**'
-      - 'scripts/check-icons.mjs'
+      - 'scripts/**'
+      - 'tests/**'
+      - 'playwright.config.mjs'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/deploy-pages.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'website/**'
+      - 'scripts/**'
+      - 'tests/**'
+      - 'playwright.config.mjs'
+      - 'package.json'
+      - 'package-lock.json'
       - '.github/workflows/deploy-pages.yml'
   workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: github-pages
-  cancel-in-progress: false
+  group: github-pages-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
+  validate:
+    name: Validate languages and responsive layouts
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v6
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+          cache: npm
+      - name: Install pinned test dependencies
+        run: npm ci --ignore-scripts
+      - name: Validate catalog icons and scripts
+        run: npm run check
+      - name: Install test browsers
+        run: npx playwright install --with-deps chromium webkit
+      - name: Check all cards in English, Chinese, and Japanese
+        run: npm run test:layout
+      - name: Save layout reports and failure screenshots
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: layout-report-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 7
+          if-no-files-found: ignore
   deploy:
+    needs: validate
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Check out source
         uses: actions/checkout@v6
-      - name: Validate catalog icons and scripts
-        run: |
-          node --check website/app.js
-          node --check website/previews.js
-          node scripts/check-icons.mjs
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
       - name: Upload website
