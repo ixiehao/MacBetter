@@ -196,8 +196,6 @@ html[lang="en"] .app-type { text-transform: none; }
 .app-details dl > div { display: grid; grid-template-columns: 1fr; gap: 3px; }
 .app-details dt { color: #53677a; font-weight: 680; }
 .app-details dd { min-width: 0; margin: 0; color: var(--ink-soft); font-size: 11px; line-height: 1.5; overflow-wrap: anywhere; }
-.app-details .setup-link { display: inline-flex; align-items: center; gap: 5px; color: var(--link); font-weight: 650; text-decoration: underline; text-underline-offset: 3px; }
-.app-details .setup-link .ui-icon { width: 13px; height: 13px; }
 .license:hover { color: var(--brand); text-decoration: underline; }
 .app-links { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 12px; padding-top: 10px; border-top: 1px solid #edf1f6; }
 .app-links a { min-height: 30px; display: inline-flex; align-items: center; gap: 5px; padding: 0 8px; color: var(--link); background: transparent; border: 1px solid transparent; border-radius: 8px; font-size: 11px; font-weight: 650; white-space: nowrap; transition: color .16s ease, background .16s ease, border-color .16s ease, transform .16s ease; }
@@ -206,6 +204,9 @@ html[lang="en"] .app-type { text-transform: none; }
 .app-links .project-link:hover { color: var(--link-hover); background: transparent; text-decoration: underline; }
 .app-links .download-link { color: var(--brand-deep); background: #edf4ff; border-color: transparent; }
 .app-links .download-link:hover { color: #fff; background: var(--brand); text-decoration: none; }
+.download-actions { display: inline-flex; align-items: center; gap: 6px; flex-shrink: 0; }
+.app-links .setup-link { border-color: var(--line); }
+.app-links .setup-link:hover { background: var(--brand-soft); border-color: #b8d1f3; text-decoration: none; }
 .app-links .license-details { flex: 0 0 auto; margin-left: auto; }
 .app-links .preview-trigger { flex-shrink: 0; width: 30px; height: 30px; }
 .preview-scrim { display: none; position: fixed; z-index: 60; inset: 0; background: rgb(0 0 0 / 42%); pointer-events: none; }
