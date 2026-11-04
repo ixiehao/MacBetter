@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-03",
+  "checkedAt": "2026-11-04",
   "icons": [
     {
       "id": "shotmap",
@@ -182,6 +182,18 @@
       "sha256": "96014f9f7bbf151e30d78dd483bb07e715efa058283b96fef901e1f3d6d05285",
       "bytes": 90619,
       "checkedAt": "2026-11-02"
+    },
+    {
+      "id": "ytdownloader",
+      "name": "ytDownloader",
+      "file": "assets/icons/ytdownloader.png",
+      "kind": "official-project-asset",
+      "source": "https://raw.githubusercontent.com/aandrew-me/ytDownloader/v4.0.1/assets/images/icon.png",
+      "sourcePage": "https://github.com/aandrew-me/ytDownloader/blob/v4.0.1/assets/images/icon.png",
+      "note": "Official application icon from v4.0.1, copied unchanged. Branding rights remain with the project.",
+      "sha256": "b3abd7abbaa1268b1bbbb3f5f8a0f864e3a9a6b635f1ee4b1c8ccaa11c4045f5",
+      "bytes": 20648,
+      "checkedAt": "2026-11-04"
     },
     {
       "id": "yt-dlp",

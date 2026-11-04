@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ytDownloader：直接读取 Chrome Cookies · MacBetter</title>
+<meta name="description" content="在 ytDownloader 中直接读取 Chrome 登录状态，并配置 macOS 27 的 Chrome 数据访问权限。MacBetter 实测设置指南。">
+<meta name="theme-color" content="#1769e0">
+<link rel="canonical" href="https://ixiehao.github.io/MacBetter/guides/ytdownloader.zh.html">
+<link rel="alternate" hreflang="en" href="https://ixiehao.github.io/MacBetter/guides/ytdownloader.html">
+<link rel="alternate" hreflang="zh-CN" href="https://ixiehao.github.io/MacBetter/guides/ytdownloader.zh.html">
+<link rel="alternate" hreflang="ja" href="https://ixiehao.github.io/MacBetter/guides/ytdownloader.ja.html">
+<link rel="alternate" hreflang="x-default" href="https://ixiehao.github.io/MacBetter/guides/ytdownloader.html">
+<link rel="icon" href="../assets/favicon.svg?v=a3cf2091a95f" type="image/svg+xml">
+<link rel="stylesheet" href="../styles.css?v=2a0298d13a14">
+<link rel="stylesheet" href="guides.css?v=9ee20efec1c8">
+</head>
+<body>
+<header class="guide-top"><div class="guide-top-inner"><a class="guide-back" href="../?category=download&amp;q=ytDownloader&amp;lang=zh#catalog"><svg class="ui-icon" aria-hidden="true"><use href="../assets/tabler-icons.svg?v=f3f9ffa728c5#apps"></use></svg> 返回下载工具</a><nav class="guide-languages" aria-label="语言"><a href="ytdownloader.html" lang="en">EN</a><a href="ytdownloader.zh.html" lang="zh-CN" aria-current="page">中</a><a href="ytdownloader.ja.html" lang="ja">日</a></nav></div></header>
+<main class="guide-main">
+<div class="guide-hero"><img src="../assets/icons/ytdownloader.png?v=b3abd7abbaa1" width="64" height="64" alt="ytDownloader"><div><p class="guide-eyebrow">MacBetter · 设置指南</p><h1>ytDownloader：直接读取 Chrome Cookies</h1><p class="guide-lead">使用 Chrome 当前的登录状态，减少反复导出、复制 Cookies。</p></div></div>
+<p class="guide-tested">io 实测 · 2026 年 11 月 4 日</p>
+<section aria-labelledby="setup"><h2 id="setup">一次设置，直接读取</h2><ol class="guide-steps"><li><h3>先确认 Chrome 可以播放视频</h3><p>在平时使用的 Chrome 个人资料中打开同一条 YouTube 视频。完成登录或网站要求的验证，确认可以正常播放。</p></li><li><h3>在 ytDownloader 中选择 Chrome</h3><p>打开“设置 → 高级工具”，将“选择 Cookie 来源”设为“浏览器”，再选择 Chrome。4.0.1 若只是默认显示 Chrome，可先选择其他浏览器，再切回 Chrome，确保选项真正保存。</p></li><li><h3>在 macOS 27 授权 Chrome 数据访问</h3><p>打开“系统设置 → 隐私与安全 → 文件与文件夹”，展开 YTDownloader，打开 Google Chrome 开关。如果尚未出现该项，先在 ytDownloader 尝试解析一次链接，再回到此处检查。</p></li><li><h3>重启 ytDownloader 后重新添加链接</h3><p>点击设置里的“重启应用程序”。回到首页重新粘贴视频链接，让新任务读取 Chrome 当前的登录状态。</p></li><li><h3>下载时确认同时包含画面和声音</h3><p>选择画质后下载。如果选择的是单独的视频流，还要选择一条音轨，不要保留“无音频”。等任务显示“打开文件”后再检查成品。</p></li></ol></section>
+<aside class="guide-permission"><h2>这项权限意味着什么</h2><p>Google Chrome 开关允许软件访问 Chrome 的应用数据，其中包含其他网站的登录 Cookies。仅在你信任该软件时开启。本次 macOS 27 实测只需要这个文件夹权限，无需开启“完全磁盘访问权限”。</p></aside>
+<section aria-labelledby="troubleshooting"><h2 id="troubleshooting">仍然失败时，按报错检查</h2><div class="guide-questions"><details><summary>提示“找不到 Chrome Cookies 数据库”</summary><p>先检查上述 Google Chrome 开关，再重启 ytDownloader。若使用多个 Chrome 个人资料或自定义数据目录，可能还需额外配置，参考官方 Cookies 文档。</p></details><details><summary>提示“登录以确认你不是机器人”</summary><p>确认已登录的 Chrome 个人资料可以播放同一视频，网站验证在 Chrome 中完成。Cookies 可能在标注的到期日前被轮换或拒绝；直接读取浏览器能减少手动复制，但不保证始终通过验证。</p></details><details><summary>下载的视频没有声音</summary><p>所选视频流可能不含音轨。重新选择音频格式，再创建下载任务。</p></details></div></section>
+<section class="guide-evidence" aria-labelledby="tested"><h2 id="tested">这次实际验证了什么</h2><p>ytDownloader 4.0.1 / macOS 27：授权访问 Chrome 数据后，任务确实使用 --cookies-from-browser chrome，成功下载含立体声音轨的 720p MP4，并通过全片解码检查。实测范围是这一工作流，不代表所有视频或未来的网站变化都能正常处理。</p></section>
+<section class="guide-sources" aria-labelledby="sources"><h2 id="sources">来源与进一步帮助</h2><ul><li><a href="https://github.com/aandrew-me/ytDownloader" target="_blank" rel="noreferrer">ytDownloader 项目及安装说明</a></li><li><a href="https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp" target="_blank" rel="noreferrer">yt-dlp：读取浏览器 Cookies</a></li><li><a href="https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies" target="_blank" rel="noreferrer">yt-dlp：YouTube 登录会话轮换</a></li><li><a href="https://support.apple.com/guide/mac-help/change-privacy-security-settings-on-mac-mchl211c911f/mac" target="_blank" rel="noreferrer">Apple：隐私与应用数据访问</a></li></ul><p>不要把 Cookies 的具体值粘贴到 Issue、公开文档或代码仓库。当前官方 Mac 版未签名，并需要 yt-dlp 等组件；首次安装请按项目说明操作。</p></section>
+<div class="guide-actions"><a href="https://github.com/aandrew-me/ytDownloader/releases/latest" target="_blank" rel="noreferrer">官方下载</a><a href="../?category=download&amp;q=ytDownloader&amp;lang=zh#catalog">返回下载工具</a></div>
+</main>
+</body>
+</html>

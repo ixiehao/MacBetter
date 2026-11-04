@@ -323,6 +323,30 @@
     "sortOrder": 16
   },
   {
+    "id": "ytdownloader",
+    "name": "ytDownloader",
+    "summary": "可视化下载 YouTube 等网站的视频、音频和播放列表，支持画质选择与批量任务。",
+    "recommendation": "粘贴链接，把视频存到本地。",
+    "category": "download",
+    "categories": ["download"],
+    "tags": ["视频下载", "播放列表", "音频提取"],
+    "homepage": "https://ytdn.netlify.app/",
+    "github": "https://github.com/aandrew-me/ytDownloader",
+    "download": "https://github.com/aandrew-me/ytDownloader/releases/latest",
+    "license": "GPL-3.0",
+    "status": { "level": "tested" },
+    "compatibility": "官方提供 Apple Silicon 与 Intel 安装包；macOS 27 实测。按项目说明准备 yt-dlp 等组件，当前 Mac 版未签名。",
+    "permissions": "读取 Chrome Cookies 需访问其应用数据；macOS 27 可在“文件与文件夹”中为 YTDownloader 开启 Google Chrome 权限。详见设置指南。",
+    "setupGuide": "guides/ytdownloader.zh.html",
+    "icon": "assets/icons/ytdownloader.png",
+    "preview": {
+      "image": "https://github.com/user-attachments/assets/89d484b0-9413-416c-9c3b-e322f6d93ca8",
+      "source": "https://github.com/aandrew-me/ytDownloader"
+    },
+    "featured": false,
+    "sortOrder": 110
+  },
+  {
     "id": "yt-dlp",
     "name": "yt-dlp",
     "summary": "功能完整的命令行音视频下载工具，适合需要可脚本化、可控参数的工作流。",

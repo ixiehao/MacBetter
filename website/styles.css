@@ -1,6 +1,6 @@
 @font-face { font-family: "Inter Site"; src: url("assets/fonts/InterVariable.woff2?v=693b77d4f32e") format("woff2"); font-style: normal; font-weight: 100 900; font-display: swap; }
-@font-face { font-family: "Noto Sans SC Site"; src: url("assets/fonts/NotoSansSC-subset.woff2?v=73f998d69259") format("woff2"); font-style: normal; font-weight: 100 900; font-display: swap; }
-@font-face { font-family: "Noto Sans JP Site"; src: url("assets/fonts/NotoSansJP-subset.woff2?v=adc8668133f4") format("woff2"); font-style: normal; font-weight: 100 900; font-display: swap; }
+@font-face { font-family: "Noto Sans SC Site"; src: url("assets/fonts/NotoSansSC-subset.woff2?v=dc837d58fbb4") format("woff2"); font-style: normal; font-weight: 100 900; font-display: swap; }
+@font-face { font-family: "Noto Sans JP Site"; src: url("assets/fonts/NotoSansJP-subset.woff2?v=46d827a63199") format("woff2"); font-style: normal; font-weight: 100 900; font-display: swap; }
 
 :root {
   color-scheme: light;
@@ -196,6 +196,8 @@ html[lang="en"] .app-type { text-transform: none; }
 .app-details dl > div { display: grid; grid-template-columns: 1fr; gap: 3px; }
 .app-details dt { color: #53677a; font-weight: 680; }
 .app-details dd { min-width: 0; margin: 0; color: var(--ink-soft); font-size: 11px; line-height: 1.5; overflow-wrap: anywhere; }
+.app-details .setup-link { display: inline-flex; align-items: center; gap: 5px; color: var(--link); font-weight: 650; text-decoration: underline; text-underline-offset: 3px; }
+.app-details .setup-link .ui-icon { width: 13px; height: 13px; }
 .license:hover { color: var(--brand); text-decoration: underline; }
 .app-links { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 12px; padding-top: 10px; border-top: 1px solid #edf1f6; }
 .app-links a { min-height: 30px; display: inline-flex; align-items: center; gap: 5px; padding: 0 8px; color: var(--link); background: transparent; border: 1px solid transparent; border-radius: 8px; font-size: 11px; font-weight: 650; white-space: nowrap; transition: color .16s ease, background .16s ease, border-color .16s ease, transform .16s ease; }

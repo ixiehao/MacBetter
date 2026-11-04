@@ -1,0 +1,37 @@
+.guide-top { border-bottom: 1px solid var(--line); background: var(--surface); }
+.guide-top-inner { max-width: 880px; margin: auto; padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+.guide-back { min-width: 0; display: inline-flex; align-items: center; gap: 6px; color: var(--link); font-size: 13px; font-weight: 650; }
+.guide-languages { display: flex; width: auto; min-height: 0; order: 0; flex-wrap: nowrap; gap: 3px; margin: 0; flex-shrink: 0; }
+.guide-languages a { display: grid; place-items: center; min-width: 38px; min-height: 36px; border-radius: 8px; color: var(--muted); font-size: 12px; font-weight: 650; }
+.guide-languages a[lang="zh-CN"] { font-family: "Noto Sans SC Site", sans-serif; }
+.guide-languages a[lang="ja"] { font-family: "Noto Sans JP Site", sans-serif; }
+.guide-languages a[aria-current="page"] { background: var(--brand-soft); color: var(--brand-deep); }
+.guide-main { max-width: 880px; margin: 0 auto; padding: 32px 24px 44px; font-size: 15px; line-height: 1.75; overflow-wrap: anywhere; }
+.guide-hero { display: flex; align-items: flex-start; gap: 18px; }
+.guide-hero img { flex-shrink: 0; margin-top: 4px; }
+.guide-main .guide-eyebrow { margin: 0 0 5px; color: var(--brand); font-size: 12px; font-weight: 700; }
+.guide-main h1 { margin: 0; font-size: clamp(25px, 4vw, 36px); line-height: 1.25; letter-spacing: -.035em; }
+.guide-lead { margin: 10px 0 0; color: var(--ink-soft); }
+.guide-main .guide-tested { display: inline-block; margin: 20px 0 4px; padding: 5px 10px; color: var(--tested-ink); background: var(--tested-bg); border-radius: 7px; font-size: 12px; font-weight: 650; }
+.guide-main section { margin-top: 26px; }
+.guide-main h2 { margin: 0 0 12px; font-size: 20px; line-height: 1.4; letter-spacing: -.02em; }
+.guide-main h3 { margin: 0 0 4px; font-size: 16px; line-height: 1.5; }
+.guide-main p { color: var(--ink-soft); }
+.guide-steps { margin: 0; padding-left: 26px; }
+.guide-steps li { padding-left: 7px; margin: 0 0 18px; }
+.guide-steps li::marker { color: var(--brand); font-weight: 750; }
+.guide-steps p { margin: 0; }
+.guide-permission { margin: 24px 0; padding: 18px 20px; background: var(--surface-subtle); border: 1px solid var(--line); border-radius: 12px; }
+.guide-permission p, .guide-evidence p { margin: 0; }
+.guide-questions { border-top: 1px solid var(--line); }
+.guide-questions details { padding: 13px 0; border-bottom: 1px solid var(--line); }
+.guide-questions summary { cursor: pointer; font-size: 14px; font-weight: 650; }
+.guide-questions p { margin: 9px 0 2px; font-size: 14px; }
+.guide-evidence { padding: 18px 20px; border-left: 3px solid var(--accent); background: var(--accent-soft); border-radius: 0 10px 10px 0; font-size: 14px; }
+.guide-sources { font-size: 13px; }
+.guide-sources ul { margin: 0; padding-left: 20px; }
+.guide-sources a { color: var(--link); text-decoration: underline; text-underline-offset: 3px; }
+.guide-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+.guide-actions a { padding: 8px 14px; border-radius: 8px; background: var(--brand-soft); color: var(--brand-deep); font-size: 13px; font-weight: 650; }
+.guide-main a:focus-visible, .guide-top a:focus-visible, .guide-questions summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 4px; }
+@media (max-width: 560px) { .guide-top-inner { padding: 9px 16px; } .guide-main { padding: 24px 16px 32px; font-size: 14px; } .guide-hero { gap: 12px; } .guide-hero img { width: 46px; height: 46px; } .guide-main h2 { font-size: 18px; } .guide-permission, .guide-evidence { padding: 14px 15px; } }

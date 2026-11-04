@@ -24,6 +24,7 @@ Names, logos, and trademarks remain with their respective owners. They identify 
 | Joplin | [joplin.png](joplin.png) | [Project (retained asset)](https://github.com/laurent22/joplin) |
 | IINA | [iina.png](iina.png) | [Project (retained asset)](https://github.com/iina/iina) |
 | HandBrake | [handbrake-256.png](handbrake-256.png) | [Original asset](https://raw.githubusercontent.com/HandBrake/HandBrake/master/macosx/HandBrake.icns) |
+| ytDownloader | [ytdownloader.png](ytdownloader.png) | [Official v4.0.1 asset](https://raw.githubusercontent.com/aandrew-me/ytDownloader/v4.0.1/assets/images/icon.png) |
 | yt-dlp | [yt-dlp.svg](yt-dlp.svg) | [Original asset](https://github.com/ixiehao/MacBetter/blob/1a893d4a1ead7d3754d27ff230f0770da029d848/website/assets/icons/yt-dlp.svg) |
 | MacShot | [macshot.svg](macshot.svg) | [Project (retained asset)](https://github.com/sw33tLie/macshot) |
 | ImageOptim | [imageoptim.png](imageoptim.png) | [Project (retained asset)](https://github.com/ImageOptim/ImageOptim) |
