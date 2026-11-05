@@ -1,3 +1,5 @@
+import { canonicalForLanguage, languageFromURL, markdownPages, schemaForCatalog } from "./seo.js?v=8375d93893d4";
+
 const categories = ["all", "office", "notes", "video", "player", "audio", "image", "capture", "browser", "download", "archives", "files", "launcher", "menu", "maintenance", "privacy", "productivity", "efficiency"];
 const categoryIcons = {
   all: "apps",
@@ -141,6 +143,7 @@ const copy = {
     },
     footerMaintained: "由 iXiehao 维护，欢迎通过 GitHub 一起完善。",
     footerRights: "第三方商标、名称和图标归各自权利人所有。",
+    textDirectory: "纯文本目录",
     footerSource: "查看源代码"
   },
   en: {
@@ -236,6 +239,7 @@ const copy = {
     },
     footerMaintained: "Maintained by iXiehao. Help improve it on GitHub.",
     footerRights: "All third-party names, trademarks, and icons belong to their respective owners.",
+    textDirectory: "Text directory",
     footerSource: "View source code"
   },
   ja: {
@@ -331,6 +335,7 @@ const copy = {
     },
     footerMaintained: "iXiehaoが継続して管理しています。GitHubで一緒に改善できます。",
     footerRights: "第三者の商標、名称、アイコンは各権利者に帰属します。",
+    textDirectory: "テキスト版",
     footerSource: "ソースコードを見る"
   }
 };
@@ -562,7 +567,7 @@ const appCopy = {
   }
 };
 
-let activeLanguage = new URLSearchParams(location.search).get("lang") || localStorage.getItem(languageStorageKey) || localStorage.getItem(legacyLanguageStorageKey) || defaultLanguage;
+let activeLanguage = languageFromURL(location.href, localStorage.getItem(languageStorageKey) || localStorage.getItem(legacyLanguageStorageKey) || defaultLanguage);
 if (!copy[activeLanguage]) activeLanguage = defaultLanguage;
 localStorage.setItem(languageStorageKey, activeLanguage);
 let activeCategory = new URLSearchParams(location.search).get("category") || "all";
@@ -573,7 +578,7 @@ const appGrid = document.querySelector("#app-grid");
 const essentialsBand = document.querySelector("#essentials");
 const essentialsGrid = document.querySelector("#essentials-grid");
 let searchTimer;
-let catalogKey = "";
+let catalogKey = appGrid.dataset.catalogLanguage ? `${appGrid.dataset.catalogLanguage}:${[...appGrid.querySelectorAll(":scope > .app-card")].map(card => card.id.slice(4)).join(",")}` : "";
 const filters = document.querySelector("#category-filters");
 const standardsList = document.querySelector("#standards-list");
 const searchInput = document.querySelector("#search-input");
@@ -667,8 +672,8 @@ function renderEssentials() {
   essentialsGrid.innerHTML = selected.map(app => {
     const url = new URL(location.href);
     for (const key of ["q", "category", "tested"]) url.searchParams.delete(key);
-    if (activeLanguage === defaultLanguage) url.searchParams.delete("lang");
-    else url.searchParams.set("lang", activeLanguage);
+    url.pathname = new URL(canonicalForLanguage(activeLanguage)).pathname;
+    url.searchParams.delete("lang");
     url.hash = `app-${app.id}`;
     const task = t(`essentialsTask.${app.id}`);
     return `<li><a class="essentials-item" href="${escapeHTML(url.pathname + url.search + url.hash)}" data-essential-app="${app.id}" aria-label="${escapeHTML(t("essentialsFor", { name: app.name, task }))}"><img class="essentials-icon" src="${escapeHTML(app.icon)}" alt="" width="44" height="44" loading="lazy" decoding="async" /><span class="essentials-task">${escapeHTML(task)}</span><span class="essentials-name" lang="en">${escapeHTML(app.name)}</span></a></li>`;
@@ -737,8 +742,8 @@ function updateURL() {
   else url.searchParams.delete("tested");
   if (searchInput.value.trim()) url.searchParams.set("q", searchInput.value.trim());
   else url.searchParams.delete("q");
-  if (activeLanguage === defaultLanguage) url.searchParams.delete("lang");
-  else url.searchParams.set("lang", activeLanguage);
+  url.pathname = new URL(canonicalForLanguage(activeLanguage)).pathname;
+  url.searchParams.delete("lang");
   history.replaceState({}, "", url);
 }
 
@@ -755,11 +760,13 @@ function renderCatalog() {
   const nextKey = `${activeLanguage}:${list.map(app => app.id).join(",")}`;
   if (nextKey !== catalogKey) {
     appGrid.innerHTML = list.map(cardTemplate).join("");
+    appGrid.dataset.catalogLanguage = activeLanguage;
     catalogKey = nextKey;
   }
   emptyState.hidden = list.length !== 0;
   clearFilters.hidden = activeCategory === "all" && !testedFilter.checked && list.length !== 0;
   resultCount.textContent = activeLanguage === "en" && list.length === 1 ? "1 app found" : t("foundCount", { count: list.length });
+  updateCatalogSchema(list);
   updateURL();
 }
 
@@ -768,7 +775,7 @@ function restoreURLState() {
   activeCategory = categories.includes(params.get("category")) ? params.get("category") : "all";
   searchInput.value = params.get("q") || "";
   testedFilter.checked = params.get("tested") === "1";
-  const requestedLanguage = params.get("lang") || localStorage.getItem(languageStorageKey) || localStorage.getItem(legacyLanguageStorageKey) || defaultLanguage;
+  const requestedLanguage = languageFromURL(location.href, localStorage.getItem(languageStorageKey) || localStorage.getItem(legacyLanguageStorageKey) || defaultLanguage);
   activeLanguage = copy[requestedLanguage] ? requestedLanguage : defaultLanguage;
   localStorage.setItem(languageStorageKey, activeLanguage);
   applyStaticCopy();
@@ -800,9 +807,7 @@ function setMetaContent(selector, value) {
 }
 
 function updateMetadata() {
-  const canonicalURL = new URL(siteURL);
-  if (activeLanguage !== defaultLanguage) canonicalURL.searchParams.set("lang", activeLanguage);
-  const canonical = canonicalURL.toString();
+  const canonical = canonicalForLanguage(activeLanguage);
   const title = t("pageTitle");
   const description = t("pageDescription");
   const siteName = activeLanguage === "en" ? "Make Your Mac Better" : activeLanguage === "ja" ? "Macアプリ集" : "让 Mac 更好用";
@@ -818,20 +823,15 @@ function updateMetadata() {
   setMetaContent('meta[name="twitter:description"]', description);
   setMetaContent('meta[name="twitter:image:alt"]', title);
 
+  document.querySelector('[data-directory-markdown]')?.setAttribute("href", markdownPages[activeLanguage]);
+  document.querySelector('link[type="text/markdown"]')?.setAttribute("href", new URL(markdownPages[activeLanguage], siteURL).href);
+}
+
+function updateCatalogSchema(list) {
   const schema = document.querySelector("#site-schema");
-  if (schema) {
-    schema.textContent = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "@id": `${siteURL}#website`,
-      url: siteURL,
-      name: siteName,
-      alternateName: ["让 Mac 更好用", "Make Your Mac Better", "Macアプリ集"],
-      description,
-      inLanguage: activeLanguage === "zh" ? "zh-CN" : activeLanguage,
-      publisher: { "@type": "Person", name: "iXiehao", url: "https://github.com/ixiehao" }
-    });
-  }
+  if (schema) schema.textContent = JSON.stringify(schemaForCatalog(list.map(app => ({ ...app, summary: localized(app, "summary") })), {
+    language: activeLanguage, title: t("pageTitle"), description: t("pageDescription"), categoryLabels: copy[activeLanguage].category
+  }));
 }
 
 function applyStaticCopy() {
@@ -844,7 +844,8 @@ function applyStaticCopy() {
   document.querySelectorAll("[data-i18n-aria-label]").forEach(element => { element.setAttribute("aria-label", t(element.dataset.i18nAriaLabel)); });
   searchClear.title = t("clearSearch");
   document.querySelectorAll("[data-language]").forEach(button => {
-    button.setAttribute("aria-pressed", String(button.dataset.language === activeLanguage));
+    if (button.dataset.language === activeLanguage) button.setAttribute("aria-current", "page");
+    else button.removeAttribute("aria-current");
     button.setAttribute("aria-label", t(`languageOption.${button.dataset.language}`));
     button.title = t(`languageOption.${button.dataset.language}`);
   });
@@ -865,7 +866,11 @@ function applyLanguage(language) {
 
 async function init() {
   applyStaticCopy();
-  document.querySelectorAll("[data-language]").forEach(button => button.addEventListener("click", () => applyLanguage(button.dataset.language)));
+  document.querySelectorAll("[data-language]").forEach(button => button.addEventListener("click", event => {
+    if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    applyLanguage(button.dataset.language);
+  }));
   try {
     const dataURL = new URL("data/apps.json", import.meta.url);
     dataURL.searchParams.set("v", "5eb44ffa6587");

@@ -4,13 +4,14 @@
 
 ## 目录职责
 
-- `website/index.html`、`styles.css`、`app.js`：页面结构、样式、交互及本地化。
+- `scripts/templates/index.html`：页面结构模板。`website/index.html`、`zh.html`、`ja.html` 由脚本生成，不直接手改。
+- `website/styles.css`、`app.js`、`seo.js`：样式、交互、本地化与 SEO 元数据。
 - `website/data/apps.json`：软件条目数据。
 - `website/assets/`：软件图标、字体和分享素材；保留各项来源与许可证。
 - `.github/ISSUE_TEMPLATE/`：社区推荐入口。
 - `docs/`：开发与部署文档；`PROMOTION.md`：本项目公开推广说明。
 
-页面本身不需要 npm 安装或打包。自动布局检查使用仅供开发的 Playwright；预览与检查方法见 [WEBSITE.md](WEBSITE.md)。
+已生成的官网可以直接静态托管。修改内容后使用仅供开发的 Node.js 工具重新生成三语 HTML、Markdown、结构化数据和 sitemap；浏览器不加载这些开发依赖。预览与检查方法见 [WEBSITE.md](WEBSITE.md)。
 
 ## 更新软件库
 
@@ -21,7 +22,7 @@
 - **获取软件新版**：卡片的“下载”链接通往官方 Releases、下载页或安装说明；使用者从官方入口选择当前版本。本站不托管安装包。
 - **更新已有条目**：检查官方 README、许可证、近期 Release、系统与芯片要求，再更新 `website/data/apps.json` 的中文条目，以及 `website/app.js` 中的英语、日语文案。图标变更还须同步 `assets/icons/sources.json` 与 `SOURCES.md`。不要仅凭 Star 或 Release 日期覆盖介绍。
 - **收录新软件**：访客可点“推荐一款软件”提交 Issue，也可提交 PR。维护者按下列清单复核后添加，`status.level` 默认用 `verified`；只有维护者确认实际使用过，才改为 `tested`。
-- **发布**：运行 `node scripts/update-cache-keys.mjs` 更新资源的内容哈希，再完成本页检查，提交并推送至 `main`。等待 Pages 工作流成功，再回读线上页面和资源；强制刷新浏览器不能替代发布。
+- **发布**：运行 `npm ci --ignore-scripts`、`npm run build:search` 更新缓存哈希和所有静态内容，再执行 `npm run check` 与布局检查，提交并推送至 `main`。等待 Pages 工作流成功，再回读线上页面和资源；强制刷新浏览器不能替代发布。
 
 公用 README 和本地维护记录不属于发布内容，不要上传。项目公开维护说明保存在本仓库 `docs/`。
 

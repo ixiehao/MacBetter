@@ -1,0 +1,16 @@
+# MacBetter
+
+> A community-maintained directory of free and open-source macOS apps, published in English, Simplified Chinese and Japanese.
+
+Entries distinguish apps tested by io from projects reviewed through public sources. This is not a security audit. Some apps offer optional paid features; current licensing, system requirements and availability come from the original projects.
+
+## Catalog
+
+- [English](https://ixiehao.github.io/MacBetter/index.md): Complete app directory with official, source and download links.
+- [简体中文](https://ixiehao.github.io/MacBetter/zh.md): 完整软件目录、许可证、系统与权限说明。
+- [日本語](https://ixiehao.github.io/MacBetter/ja.md): アプリ一覧、公式リンク、ライセンス、動作環境。
+
+## Optional
+
+- [Project source](https://github.com/ixiehao/MacBetter): Source and contribution instructions.
+- [Submission criteria](https://github.com/ixiehao/MacBetter/blob/main/CONTRIBUTING.md): Recommend an app or report incorrect information.

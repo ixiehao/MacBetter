@@ -26,9 +26,12 @@ function update(file, transform) {
 
 update("styles.css", source => source.replace(/url\((["'])([^"']+)\1\)/g, (_, quote, url) => `url(${quote}${version(url)}${quote})`));
 update("app.js", source => source
+  .replace(/from "\.\/seo\.js(?:\?v=[^"]+)?"/, `from "./seo.js?v=${digest("seo.js")}"`)
   .replace(/assets\/tabler-icons\.svg(?:\?v=[^"#]+)?#/g, `assets/tabler-icons.svg?v=${digest("assets/tabler-icons.svg")}#`)
   .replace(/dataURL\.searchParams\.set\("v", "[^"]+"\)/, `dataURL.searchParams.set("v", "${digest("data/apps.json")}")`));
-update("index.html", source => source.replace(/((?:href|src|content)=")([^"\n]+)(")/g, (match, open, url, close) => {
+const templatePath = resolve(website, "../scripts/templates/index.html");
+const template = readFileSync(templatePath, "utf8");
+writeFileSync(templatePath, template.replace(/((?:href|src|content)=")([^"\n]+)(")/g, (match, open, url, close) => {
   if (!url.includes("assets/") && !/^(?:styles\.css|app\.js|previews\.js|site\.webmanifest)(?:\?|$)/.test(url)) return match;
   return open + version(url) + close;
 }));

@@ -24,7 +24,7 @@
 
 ## 本地预览
 
-网站为静态页面，无需构建。在仓库根目录运行：
+已生成的网站可以直接静态托管。修改软件数据、译文或页面模板后，先运行 `npm ci --ignore-scripts` 和 `npm run build:search`，重新生成三语页面。在仓库根目录预览：
 
 ```sh
 python3 -m http.server 8000 --bind 127.0.0.1 --directory website
