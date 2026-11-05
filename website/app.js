@@ -891,6 +891,7 @@ async function init() {
     renderCatalog();
     renderStandards();
     focusLinkedApp();
+    document.documentElement.dataset.catalogReady = "true";
   } catch (error) {
     resultCount.innerHTML = `${escapeHTML(t("dataError"))} ${link("https://github.com/ixiehao/MacBetter/tree/main/website/data", t("dataErrorLink"), "data-error-link")}`;
     console.error(error);
