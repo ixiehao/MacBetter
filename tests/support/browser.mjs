@@ -16,6 +16,7 @@ export { expect };
 
 export async function openCatalog(page, language) {
   await page.goto(`./?lang=${language}#catalog`);
+  await expect(page.locator("html")).toHaveAttribute("data-catalog-ready", "true");
   await expect(page.locator("#app-grid > .app-card")).toHaveCount(apps.length);
   await expect(page.locator("html")).toHaveAttribute("lang", language === "zh" ? "zh-CN" : language);
   await page.evaluate(() => document.fonts.ready.then(() => undefined));

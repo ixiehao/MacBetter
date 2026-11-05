@@ -11,9 +11,9 @@
 
 ## 语言
 
-- 官网默认英语；初始 HTML、元数据、manifest 与无语言参数的标准 URL 均以英语为准。
-- 语言优先级：URL 中的 `lang` → 已保存的语言选择 → 英语。不按浏览器语言自动切换；不支持的语言回退到英语。
-- 中文直达链接为 `?lang=zh`，日语为 `?lang=ja`；旧版 `?lang=en` 链接继续可用。语言按钮顺序为 EN、中、日。
+- 官网默认英语；`index.html`、`zh.html`、`ja.html` 均包含完整的本地化目录和元数据，不执行 JavaScript 也可阅读和下载。
+- 语言优先级：旧链接中的显式 `lang` → `zh.html` / `ja.html` 路径 → 已保存的语言选择 → 英语。不按浏览器语言自动切换；不支持的语言回退到英语。
+- 中文标准链接为 `zh.html`，日语为 `ja.html`；旧版 `?lang=en/zh/ja` 继续可用，交互初始化后保留搜索、分类和锚点并规范为语言页面。语言链接顺序为 EN、中、日，关闭 JavaScript 后也可切换。
 - 回复社区投稿人（Issue / PR）时优先使用英语；需要时补充中文或日语说明。
 
 ## 网页图标
@@ -57,12 +57,26 @@ python3 -m http.server 8000 --bind 127.0.0.1 --directory website
 - 在 820px 桌面宽度和 320px 手机宽度下，逐一打开所有软件的权限及许可证弹窗，检查边界和文字溢出；另检查短屏幕中的内部滚动、Tab、Escape、焦点返回和窗口调整。
 - 文案覆盖检查要求每款软件的英日简介、推荐语、功能标签、系统要求和权限说明齐全；测试数量跟随软件库增长，不固定为当前条目数。
 - 测试通过 `/MacBetter/` 子路径访问本地站点，等待自托管字体加载，并屏蔽外部截图和下载请求；不依赖第三方网站在线状态。
+- `npm run check` 拒绝过期的三语 HTML、Markdown、schema 和 sitemap，避免更新条目后只更新交互页面。新增浏览器用例覆盖无 JavaScript 手机阅读、真实语言链接及旧查询链接的兼容性。
 
 本地运行方式见 [开发指南](DEVELOPMENT.md#验证)。可用 `MACBETTER_TEST_PORT` 更改默认测试端口 4173。测试服务器由 Playwright 启动和关闭，不复用正在运行的其他服务。
 
 定位某个矩阵任务时，可运行 `MACBETTER_TEST_LANGUAGE=ja npm run test:layout -- --project=webkit`，只执行该语言与引擎；不设置语言变量时运行全部三语。
 
 在 GitHub 的 **Actions → Deploy GitHub Pages → 对应运行 → Artifacts** 下载 `layout-report-*`。每个浏览器和语言任务各有一份报告，保留 7 天。HTML 报告包含失败截图、trace 和定位附件，另存 JSON 结果摘要；卡片问题会标出软件 ID、语言、视口及越界原因。下载后运行 `npx playwright show-report <解压后的 playwright-report 目录>` 查看。报告不放进官网，公用 README 和本地维护记录仍只保存在本地。
+
+## SEO 与 AI 抓取维护
+
+运行 `npm run build:search`，脚本复用 `app.js` 的同一套卡片、分类、实测标记和许可证渲染器，生成三语 HTML、`index.md` / `zh.md` / `ja.md`、`llms.txt` 和 `sitemap.xml`。页面模板在 `scripts/templates/index.html`，不要手改生成文件。`npm run check` 在 CI 检查生成结果；它不会替你覆盖旧文件。
+
+- 三个语言页面分别有正确的 title、description、canonical、Open Graph 和双向 hreflang。筛选和搜索参数不进入 canonical 或 sitemap，不为每个查询生成重复页面。
+- `WebSite`、`CollectionPage`、`ItemList` 和 `SoftwareApplication` 描述页面实际内容；不虚构评分、评论、版本号、免费付费范围或发布日期。交互筛选后 schema 随当前可见列表更新。
+- 页面与 Markdown 向访客和所有抓取工具输出相同事实。`llms.txt` 是可选的机器阅读入口，不能保证模型使用、收录或引用；Google 的 AI 搜索仍依赖可抓取、可索引、有帮助的正文，详见[官方说明](https://developers.google.com/search/docs/appearance/ai-features)。
+- **robots 的生效位置是域名根目录** <https://ixiehao.github.io/robots.txt>，由个人主页仓库维护。本站的 `/MacBetter/robots.txt` 不是独立规则入口。根文件允许抓取并列出本站 sitemap；不以修改子目录 robots 冒充 AI 开放配置。AI 搜索与训练机器人用途不同，本次保持已有开放规则。
+- Pages 发布成功后，独立的 **Notify search engines** 任务通过 [IndexNow](https://www.indexnow.org/documentation) 提交三个标准页面。`website/indexnow-key.txt` 是公开的站点归属验证文件，范围仅覆盖 `/MacBetter/`，不是统计或账户登录凭据。没有增加访客追踪。
+- 通知步骤先回读线上 key；传播延迟、网络或服务失败会显示 warning，已发布的官网不回滚。可以稍后运行 `npm run notify:search` 重试。HTTP 200 表示已接收；202 表示已接收、归属验证待完成。两者都不代表已收录。Google 不使用 IndexNow；本次没有登录 Search Console / Bing Webmaster 或声称完成手动提交。
+
+回读时检查原始 HTML（不要只看执行 JavaScript 后的 DOM），确认三语各有完整卡片与正确 canonical，再检查 sitemap、Markdown、llms.txt 和 key 的 HTTP 响应。不得把 `llms.txt`、schema 或更新通知宣传成收录保证。
 
 ## 部署
 

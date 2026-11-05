@@ -1,0 +1,1215 @@
+# 让 Mac 更好用 · MacBetter
+
+> 由社区共同维护的免费开源 macOS 软件目录。部分项目有可选付费功能；可用性、权限和许可可能变化，以项目官方说明为准。收录与实测不等于安全审计。
+
+[软件目录](https://ixiehao.github.io/MacBetter/zh.html) · [GitHub](https://github.com/ixiehao/MacBetter)
+
+## LumaView
+
+轻量浏览本地图片与 PDF，支持文件夹翻图、EXIF 信息、缩放旋转和打印。
+
+- 分类: 图片与设计
+- 许可证: MIT
+- io 实测
+- 系统要求: macOS 12 及以上 · Intel 与 Apple Silicon
+- 权限与说明: 本地文件访问：读取你打开的图片、PDF 及授权的文件夹。
+- [项目主页](https://ixiehao.github.io/LumaView/) · [源代码](https://github.com/ixiehao/LumaView) · [下载](https://github.com/ixiehao/LumaView/releases)
+
+## ShotMap
+
+智能选帧并手动微调，把本地视频批量拼成分镜图，导出 PNG / JPG。
+
+- 分类: 视频处理
+- 许可证: MIT
+- io 实测
+- 系统要求: macOS 13 及以上 · Intel 与 Apple Silicon
+- 权限与说明: 本地文件访问：仅处理你选择的视频。
+- [项目主页](https://ixiehao.github.io/ShotMap/) · [源代码](https://github.com/ixiehao/ShotMap) · [下载](https://github.com/ixiehao/ShotMap/releases)
+
+## MP4Flow
+
+批量转 MP4、剪切合并、调整画面，并可选择音轨、字幕和目标体积。
+
+- 分类: 视频处理
+- 许可证: MIT
+- io 实测
+- 系统要求: macOS 13 及以上 · Intel 与 Apple Silicon · 需本机 FFmpeg / ffprobe
+- 权限与说明: 本地文件访问：仅处理你选择的视频。
+- [项目主页](https://ixiehao.github.io/MP4Flow/) · [源代码](https://github.com/ixiehao/MP4Flow) · [下载](https://github.com/ixiehao/MP4Flow/releases)
+
+## HandBrake
+
+成熟的开源视频转码器，可把常见视频格式转换为适合存档、播放或交付的预设。
+
+- 分类: 视频处理
+- 许可证: GPL-2.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 项目提供 macOS Release；请以当前版本的系统要求为准
+- 权限与说明: 仅处理你选定的本地媒体文件；转码前留意输出位置与文件覆盖设置。
+- [项目主页](https://handbrake.fr/) · [源代码](https://github.com/HandBrake/HandBrake) · [下载](https://github.com/HandBrake/HandBrake/releases)
+
+## LosslessCut
+
+基于关键帧快速裁切、拼接和提取音视频，尽量避免重编码。
+
+- 分类: 视频处理
+- 许可证: GPL-2.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 当前版本不再支持 macOS 11；Release 提供 Apple Silicon 与 Intel 安装包
+- 权限与说明: 本地媒体处理；只会读取你选择打开或导入的媒体文件。
+- [项目主页](https://losslesscut.app/) · [源代码](https://github.com/mifi/lossless-cut) · [下载](https://github.com/mifi/lossless-cut/releases)
+
+## Subler
+
+面向 MP4/M4V 的原生封装与元数据工具，可整理字幕、音轨、封面和媒体信息。
+
+- 分类: 视频处理
+- 许可证: GPL-2.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 项目 Release 提供 macOS 压缩包；请以发布页系统要求为准
+- 权限与说明: 仅修改你选定的媒体文件；操作前保留原始文件副本。
+- [项目主页](https://github.com/SublerApp/Subler) · [源代码](https://github.com/SublerApp/Subler) · [下载](https://github.com/SublerApp/Subler/releases)
+
+## MediaInfo
+
+快速读取视频、音频与容器文件的编码、码率、轨道、色彩与字幕等技术信息。
+
+- 分类: 视频处理
+- 许可证: BSD-2-Clause
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 官网提供 macOS 安装包；请按设备架构选择对应版本
+- 权限与说明: 只读取你打开的媒体文件及其技术元数据。
+- [项目主页](https://mediaarea.net/en/MediaInfo) · [源代码](https://github.com/MediaArea/MediaInfo) · [下载](https://mediaarea.net/en/MediaInfo/Download/Mac_OS)
+
+## Subtitle Edit
+
+制作、校对、翻译和同步字幕的完整编辑器，支持波形、频谱和多种字幕格式。
+
+- 分类: 视频处理
+- 许可证: MIT
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 项目 Release 提供 Apple Silicon 与 Intel 的 macOS .dmg 安装包
+- 权限与说明: 处理你选择的媒体与字幕文件；语音识别、翻译等在线功能按实际使用授权。
+- [项目主页](https://github.com/SubtitleEdit/subtitleedit) · [源代码](https://github.com/SubtitleEdit/subtitleedit) · [下载](https://github.com/SubtitleEdit/subtitleedit/releases)
+
+## IINA
+
+为 macOS 设计的开源媒体播放器，支持常见音视频格式、播放列表与字幕。
+
+- 分类: 影音播放
+- 许可证: GPL-3.0
+- io 实测
+- 系统要求: 项目提供 macOS Release；请以当前版本的系统要求为准
+- 权限与说明: 本地播放不需要额外敏感权限；打开网络流或扩展时，请确认来源。
+- [项目主页](https://iina.io/) · [源代码](https://github.com/iina/iina) · [下载](https://github.com/iina/iina/releases)
+
+## VLC media player
+
+经典的全格式媒体播放器，能播放本地文件、光盘、网络流与各种不太常见的编码。
+
+- 分类: 影音播放
+- 许可证: GPL-2.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 官方提供 macOS Universal 安装包；兼容性以当前 VideoLAN 发布页为准
+- 权限与说明: 播放本地文件和网络流；只打开可信的网络地址与播放列表。
+- [项目主页](https://www.videolan.org/vlc/) · [源代码](https://github.com/videolan/vlc) · [下载](https://www.videolan.org/vlc/download-macosx.html)
+
+## mpv
+
+界面克制的音视频播放器，支持字幕、脚本和细致的播放参数，也适合命令行使用。
+
+- 分类: 影音播放
+- 许可证: GPL-2.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: macOS 可通过官方安装说明选择 Homebrew、MacPorts 或预编译包；Homebrew 版不附带 .app。不同构建的系统要求不同。默认 GPLv2+，禁用 GPL 组件的构建可采用 LGPLv2.1+。
+- 权限与说明: 读取所选媒体、字幕和配置；网络播放与第三方脚本按需访问网络。
+- [项目主页](https://mpv.io/) · [源代码](https://github.com/mpv-player/mpv) · [下载](https://mpv.io/installation/)
+
+## Kodi
+
+把本地与网络中的电影、剧集、音乐整理成媒体库，适合大屏和遥控操作。
+
+- 分类: 影音播放
+- 许可证: GPL-2.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 官方稳定版提供 Intel 与 Apple Silicon 安装包，要求 macOS 10.14 及以上。
+- 权限与说明: 读取你添加的媒体目录；刮削海报、网络媒体和插件会联网，第三方插件单独授权。
+- [项目主页](https://kodi.tv/) · [源代码](https://github.com/xbmc/xbmc) · [下载](https://kodi.tv/download/macos/)
+
+## Jellyfin Desktop
+
+连接自建 Jellyfin 媒体库，播放电影、音乐与剧集；原名 Jellyfin Media Player。
+
+- 分类: 影音播放
+- 许可证: GPL-2.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 稳定版 v1.12 需 macOS 13 及以上；安装包仍以 Jellyfin Media Player 命名。需连接 Jellyfin 服务端。
+- 权限与说明: 连接服务器时会访问你填写的地址和媒体账户；仅连接自己信任的服务器。
+- [项目主页](https://jellyfin.org/) · [源代码](https://github.com/jellyfin/jellyfin-desktop) · [下载](https://github.com/jellyfin/jellyfin-desktop/releases)
+
+## Cog
+
+原生 Mac 音乐播放器，支持常见无损格式、CUE、游戏音乐和播放列表，无须先导入音乐库。
+
+- 分类: 影音播放
+- 许可证: GPL-2.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 当前官网直装版要求 macOS 12 及以上，支持 Sparkle 更新；另有 App Store 版。
+- 权限与说明: 读取授权的音乐文件夹；在线歌词和 Last.fm、ListenBrainz 记录功能会按设置联网。
+- [项目主页](https://cog.losno.co/) · [源代码](https://github.com/losnoco/Cog) · [下载](https://cog.losno.co/)
+
+## Feishin
+
+连接 Navidrome、Jellyfin 等自建音乐服务器，浏览专辑、播放列表和同步歌词。
+
+- 分类: 影音播放
+- 许可证: GPL-3.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: Release 提供 Intel 与 Apple Silicon 的 macOS 安装包；需要兼容的音乐服务器，不是独立的本地文件播放器。
+- 权限与说明: 连接你配置的音乐服务器；在线歌词会访问外部服务，媒体键控制可能请求辅助功能权限。
+- [项目主页](https://feishin.vercel.app/) · [源代码](https://github.com/jeffvli/feishin) · [下载](https://github.com/jeffvli/feishin/releases/latest)
+
+## YesPlayMusic
+
+第三方网易云音乐客户端，以歌单、专辑和歌词为中心，支持账号登录与深浅主题。
+
+- 分类: 影音播放
+- 许可证: MIT
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 最新正式版 v0.4.11（2026-10-10）提供 Intel、Apple Silicon 与 Universal Mac 包。近期仍有登录受阻报告，未确认是 Mac 专属问题；可用性受平台接口、账号与曲目授权影响。 在线演示站本次访问不可用，安装请用官方 Release。
+- 权限与说明: 登录与歌单功能会访问网易云或第三方音乐接口；可选额外音源会连接其他服务。
+- [项目主页](https://github.com/qier222/YesPlayMusic) · [源代码](https://github.com/qier222/YesPlayMusic) · [下载](https://github.com/qier222/YesPlayMusic/releases/latest)
+
+## Audacity
+
+成熟的多轨音频编辑器，适合录音、剪辑、降噪和格式转换。
+
+- 分类: 音频与音乐
+- 许可证: GPL-3.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 项目 Release 提供 macOS 安装包；请以当前版本系统要求为准
+- 权限与说明: 录音时需要按系统提示授权麦克风；处理文件时请确认导入来源。
+- [项目主页](https://www.audacityteam.org/) · [源代码](https://github.com/audacity/audacity) · [下载](https://github.com/audacity/audacity/releases)
+
+## Mixxx
+
+自由开源的 DJ 软件，支持多轨混音、控制器映射、节拍同步与音乐库管理。
+
+- 分类: 音频与音乐
+- 许可证: GPL-2.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 从官网下载 macOS 安装包；GitHub 当前稳定版发布页未附安装包。控制器支持请查官方列表。
+- 权限与说明: 可访问你选定的音乐库；接入控制器或麦克风时按需授权。
+- [项目主页](https://mixxx.org/) · [源代码](https://github.com/mixxxdj/mixxx) · [下载](https://mixxx.org/download/)
+
+## MuseScore Studio
+
+创作、编辑和排版五线谱的软件，支持 MIDI、乐谱导入导出和完整的制谱工作流。
+
+- 分类: 音频与音乐
+- 许可证: GPL-3.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 项目 Release 提供 macOS .dmg 安装包；请以发布页系统要求为准
+- 权限与说明: 访问你打开或导出的乐谱与音频设备；安装扩展前请确认来源。
+- [项目主页](https://musescore.org/) · [源代码](https://github.com/musescore/MuseScore) · [下载](https://github.com/musescore/MuseScore/releases)
+
+## FineTune
+
+分别调节每个应用的音量，将声音送到不同设备，并用均衡器调整音色。
+
+- 分类: 音频与音乐
+- 许可证: GPL-3.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: macOS 15 及以上
+- 权限与说明: 需要“屏幕与系统音频录制”权限，以捕获和调节各应用的声音。
+- [项目主页](https://github.com/ronitsingh10/FineTune) · [源代码](https://github.com/ronitsingh10/FineTune) · [下载](https://github.com/ronitsingh10/FineTune/releases)
+
+## Background Music
+
+分别控制每个应用的音量，也可用于录制系统声音。
+
+- 分类: 音频与音乐
+- 许可证: GPL-2.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: macOS 10.13 及以上
+- 权限与说明: 会安装音频驱动；录音时还可能需要按系统提示授权麦克风。
+- [项目主页](https://github.com/kyleneideck/BackgroundMusic) · [源代码](https://github.com/kyleneideck/BackgroundMusic) · [下载](https://github.com/kyleneideck/BackgroundMusic/releases)
+
+## ImageOptim
+
+在本地压缩和移除图片冗余数据，适合在上传网页或交付前减小体积。
+
+- 分类: 图片与设计
+- 许可证: GPL-2.0
+- io 实测
+- 系统要求: macOS 原生应用；请以项目官网与当前版本要求为准
+- 权限与说明: 仅处理拖入或选择的图片；建议保留原文件以便回退。
+- [项目主页](https://imageoptim.com/mac) · [源代码](https://github.com/ImageOptim/ImageOptim) · [下载](https://imageoptim.com/mac)
+
+## darktable
+
+面向 RAW 照片管理与非破坏性调色的开源暗房工作流。
+
+- 分类: 图片与设计
+- 许可证: GPL-3.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 当前 5.6.2 官方 Mac 安装包仅提供 Apple Silicon 版；系统要求请核对下载页，Intel 用户需查找旧版。
+- 权限与说明: 只会处理导入的照片目录；建议先保留原始文件备份。
+- [项目主页](https://www.darktable.org/) · [源代码](https://github.com/darktable-org/darktable) · [下载](https://github.com/darktable-org/darktable/releases)
+
+## RawTherapee
+
+高质量 RAW 显影工具，提供细致的曝光、锐化与色彩控制。
+
+- 分类: 图片与设计
+- 许可证: GPL-3.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 当前 macOS 发行包为 Universal ZIP；安装前请核对下载页的系统版本要求。
+- 权限与说明: 只读取你导入的照片；建议保留原片和输出文件的独立目录。
+- [项目主页](https://rawtherapee.com/) · [源代码](https://github.com/RawTherapee/RawTherapee) · [下载](https://github.com/RawTherapee/RawTherapee/releases)
+
+## Krita
+
+面向插画、绘画与概念设计的自由开源创作软件，提供丰富笔刷和图层能力。
+
+- 分类: 图片与设计
+- 许可证: GPL-3.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 项目提供 macOS 下载；请以官网当前系统要求为准
+- 权限与说明: 常规创作软件；导入来自陌生来源的资源包和脚本前请先确认来源。
+- [项目主页](https://krita.org/) · [源代码](https://github.com/KDE/krita) · [下载](https://krita.org/en/download/krita-desktop/)
+
+## draw.io Desktop
+
+离线绘制流程图、架构图、UML 与各类图表，可导入导出常见格式。
+
+- 分类: 图片与设计
+- 许可证: GPL-3.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 项目 Release 提供 macOS Universal 安装包
+- 权限与说明: 常规图表工具；打开外部模板或配置文件前请确认来源。
+- [项目主页](https://www.drawio.com/) · [源代码](https://github.com/jgraph/drawio-desktop) · [下载](https://github.com/jgraph/drawio-desktop/releases)
+
+## Blender
+
+从建模、材质、动画到渲染与视频剪辑的一体化 3D 创作套件，功能完整且持续演进。
+
+- 分类: 图片与设计
+- 许可证: GPL-3.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: Blender 5.x 的 Mac 版仅支持 Apple Silicon；Intel Mac 请选 4.5 LTS 并核对硬件要求。
+- 权限与说明: 仅访问你打开、导入或导出的项目文件；启用插件与在线资源前请确认来源。
+- [项目主页](https://www.blender.org/) · [源代码](https://github.com/blender/blender) · [下载](https://www.blender.org/download/)
+
+## FreeCAD
+
+参数化 3D 建模工具，适合零件设计、工程图和可反复修改的模型。
+
+- 分类: 图片与设计
+- 许可证: LGPL-2.1
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 项目 Release 提供 Apple Silicon 与 Intel 的 macOS .dmg 安装包
+- 权限与说明: 只处理你打开或导出的设计文件；外部工作台与宏脚本请审查来源。
+- [项目主页](https://www.freecad.org/) · [源代码](https://github.com/FreeCAD/FreeCAD) · [下载](https://github.com/FreeCAD/FreeCAD/releases)
+
+## Godot
+
+完整而轻量的开源游戏引擎，可在 Mac 上制作 2D、3D 与交互式作品。
+
+- 分类: 图片与设计
+- 许可证: MIT
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 项目 Release 提供 macOS Universal 安装包
+- 权限与说明: 打开第三方项目会执行其构建脚本或导入资源；只运行可信项目。
+- [项目主页](https://godotengine.org/) · [源代码](https://github.com/godotengine/godot) · [下载](https://github.com/godotengine/godot/releases)
+
+## MacShot
+
+原生 macOS 截图与录屏工具，支持标注、滚动长图、OCR、翻译与隐私信息遮盖。
+
+- 分类: 截图与录屏
+- 许可证: GPL-3.0
+- io 实测
+- 系统要求: 项目提供原生 macOS Release；请以当前版本要求为准
+- 权限与说明: 截取屏幕或录屏时，macOS 会要求授予“屏幕录制”权限。
+- [项目主页](https://macshot.io/) · [源代码](https://github.com/sw33tLie/macshot) · [下载](https://github.com/sw33tLie/macshot/releases)
+
+## Flameshot
+
+截取区域后直接画箭头、加文字、标记重点和遮挡信息，支持复制、保存及可选上传。
+
+- 分类: 截图与录屏
+- 许可证: GPL-3.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 当前 14.x Mac 包要求 macOS 15+，分别提供 Intel 与 Apple Silicon DMG；首次运行可能遇到签名校验提示。
+- 权限与说明: 截图需屏幕录制权限；保存与复制可在本地完成，使用上传功能时图片会发送到配置的服务。
+- [项目主页](https://flameshot.org/) · [源代码](https://github.com/flameshot-org/flameshot) · [下载](https://github.com/flameshot-org/flameshot/releases/latest)
+
+## BetterCapture
+
+原生菜单栏录屏工具，同时录制系统声音与麦克风，并提供 H.264、HEVC、ProRes 等编码。
+
+- 分类: 截图与录屏
+- 许可证: MIT
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 官方要求 macOS 15.2+；当前 Release 仅提供 Apple Silicon DMG，未提供 Intel 安装包。
+- 权限与说明: 录屏需屏幕与系统音频录制权限；麦克风、摄像头仅在使用相应功能时授权，录像默认保存在本地。
+- [项目主页](https://bettercapture.app/) · [源代码](https://github.com/jsattler/BetterCapture) · [下载](https://github.com/jsattler/BetterCapture/releases/latest)
+
+## Kap
+
+专为 macOS 设计的轻量录屏工具，适合快速录制并导出清晰的演示片段。
+
+- 分类: 截图与录屏
+- 许可证: MIT
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 项目 Release 提供 Apple Silicon 与 Intel 的 macOS 安装包
+- 权限与说明: 录制屏幕需要 macOS 的屏幕录制权限；录音时按需授予麦克风权限。
+- [项目主页](https://getkap.co/) · [源代码](https://github.com/wulkano/Kap) · [下载](https://github.com/wulkano/Kap/releases)
+
+## OpenScreen
+
+把录屏继续做成演示视频，提供自动缩放、光标效果、摄像头叠层、剪辑和 MP4/GIF 导出。
+
+- 分类: 截图与录屏
+- 许可证: MIT
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 官方提供 Intel 与 Apple Silicon DMG。录屏与剪辑免费，项目仍在快速开发，工程格式可能变化；可选云端 AI 需自备 API 密钥，服务商可能收费。
+- 权限与说明: 按需授予屏幕录制、辅助功能、麦克风和摄像头权限；启用自备密钥的 AI 时，请求会发往所选服务商。
+- [项目主页](https://getopenscreen.com/) · [源代码](https://github.com/getopenscreen/openscreen) · [下载](https://github.com/getopenscreen/openscreen/releases/latest)
+
+## OBS Studio
+
+开源直播与录制工作站，支持多场景、来源混合、音频控制与本地录制。
+
+- 分类: 截图与录屏
+- 许可证: GPL-2.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: Release 同时提供 Apple Silicon 与 Intel 的 macOS 安装包
+- 权限与说明: 录制屏幕时需要系统的“屏幕录制”权限；仅按需授予摄像头与麦克风权限。
+- [项目主页](https://obsproject.com/) · [源代码](https://github.com/obsproject/obs-studio) · [下载](https://github.com/obsproject/obs-studio/releases)
+
+## Screenity
+
+在 Chrome 扩展中录制网页或桌面，边录边标注，并剪切、裁剪和导出视频。
+
+- 分类: 截图与录屏
+- 许可证: GPL-3.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: Chrome/Chromium 扩展，非独立 Mac App。免费扩展可录制并本地导出；Screenity Pro 云平台为另一项付费服务。
+- 权限与说明: 按选择采集标签页、桌面、麦克风或摄像头；云盘保存、Pro 分享等云功能会联网并上传相应内容。
+- [项目主页](https://screenity.io/) · [源代码](https://github.com/alyssaxuu/screenity) · [下载](https://chromewebstore.google.com/detail/screenity/kbbdabhdfibnancpjfhlkhafgdilcnji)
+
+## Firefox
+
+成熟可靠的开源浏览器，兼顾多设备同步、扩展生态、隐私设置与开发者工具。
+
+- 分类: 网络浏览
+- 许可证: MPL-2.0
+- io 实测
+- 系统要求: 官方提供 macOS .dmg 安装包；请在下载页确认当前系统要求
+- 权限与说明: 摄像头、麦克风、定位和通知等由访问的网站按需请求；只向可信站点授予。
+- [项目主页](https://www.firefox.com/) · [源代码](https://github.com/mozilla-firefox/firefox) · [下载](https://www.firefox.com/en-US/download/mac/)
+
+## Waterfox
+
+基于 Firefox 的独立浏览器，保留熟悉的扩展生态，并提供自己的隐私与界面设置。
+
+- 分类: 网络浏览
+- 许可证: MPL-2.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 官网当前提供 macOS 10.15 及以上的 Universal DMG，兼容 Intel 与 Apple Silicon；GitHub Release 主要记录版本说明。
+- 权限与说明: 网页和扩展按授权访问相应功能；同步与其他联网服务按你的设置启用。
+- [项目主页](https://www.waterfox.com/) · [源代码](https://github.com/BrowserWorks/waterfox) · [下载](https://www.waterfox.com/download/)
+
+## Floorp
+
+基于 Firefox，提供工作区、侧栏和丰富的界面自定义，适合在浏览器中处理多项任务。
+
+- 分类: 网络浏览
+- 许可证: MPL-2.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 官方文档要求 macOS 10.15 及以上；Release 提供 Intel 与 Apple Silicon 通用的 Universal DMG。
+- 权限与说明: 网站与扩展按需请求权限；同步、推荐扩展和其他网络功能由设置控制。
+- [项目主页](https://floorp.app/) · [源代码](https://github.com/Floorp-Projects/Floorp) · [下载](https://github.com/Floorp-Projects/Floorp/releases/latest)
+
+## Zen Browser
+
+基于 Firefox 的开源浏览器，突出工作区、分屏和标签整理，适合长时间多任务浏览。
+
+- 分类: 网络浏览
+- 许可证: MPL-2.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 项目 Release 提供适用于 Apple Silicon 与 Intel 的 Universal macOS .dmg
+- 权限与说明: 摄像头、麦克风、定位和通知等由访问的网站按需请求；只向可信站点授予。
+- [项目主页](https://zen-browser.app/) · [源代码](https://github.com/zen-browser/desktop) · [下载](https://zen-browser.app/download/)
+
+## Brave
+
+基于 Chromium，兼容 Chrome 扩展，并内置广告与追踪拦截、同步和隐私控制。
+
+- 分类: 网络浏览
+- 许可证: MPL-2.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 当前正式版要求 macOS 13+，提供 Intel、Apple Silicon 和 Universal 包。请选择 Brave-Browser；Brave Origin 为另一个付费版本。基础浏览器免费，VPN、部分 AI 等服务另收费。
+- 权限与说明: 网站按需请求摄像头、麦克风等权限；同步、Rewards、AI 等联网功能由各自设置与服务条款管理。
+- [项目主页](https://brave.com/) · [源代码](https://github.com/brave/brave-browser) · [下载](https://github.com/brave/brave-browser/releases/latest)
+
+## Helium
+
+仍处于 Beta 的 Chromium 浏览器，提供简洁界面、内容拦截、垂直标签和 Chrome 扩展支持。
+
+- 分类: 网络浏览
+- 许可证: GPL-3.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: macOS 13+，提供 Intel 与 Apple Silicon DMG。项目明确仍为 Beta，可能出现异常；启用 Helium 服务时支持自动更新。
+- 权限与说明: 扩展代理、过滤列表、更新等 Helium 服务会按你的选择联网；第三方素材保留各自许可。
+- [项目主页](https://helium.computer/) · [源代码](https://github.com/imputnet/helium) · [下载](https://github.com/imputnet/helium-macos/releases/latest)
+
+## NetNewsWire
+
+轻快、本地优先的 RSS 阅读器，把网站、博客与订阅放回一个安静的收件箱。
+
+- 分类: 网络浏览
+- 许可证: MIT
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 项目 Release 提供 macOS 安装包
+- 权限与说明: 常规阅读器；订阅源会按你的选择联网更新。
+- [项目主页](https://netnewswire.com/) · [源代码](https://github.com/Ranchero-Software/NetNewsWire) · [下载](https://github.com/Ranchero-Software/NetNewsWire/releases)
+
+## AB Download Manager
+
+提供多连接下载、断点续传、任务分类和定时队列，并可通过扩展接管浏览器下载。
+
+- 分类: 下载工具
+- 许可证: Apache-2.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 官方 Release 提供 Intel 与 Apple Silicon 的 macOS DMG；浏览器集成为可选扩展，续传需下载服务器支持。
+- 权限与说明: 读取下载链接并写入所选目录；安装浏览器扩展后，可按授权接收网页的下载请求。
+- [项目主页](https://abdownloadmanager.com/) · [源代码](https://github.com/amir1376/ab-download-manager) · [下载](https://github.com/amir1376/ab-download-manager/releases/latest)
+
+## Gopeed
+
+管理 HTTP、HTTPS、BT 与磁力下载，支持任务队列、浏览器集成和扩展。
+
+- 分类: 下载工具
+- 许可证: GPL-3.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 正式版提供 Intel、Apple Silicon 与 Universal macOS 安装包；2.0 仍有测试版，下载入口指向最新正式版。
+- 权限与说明: 联网下载并写入所选目录；BT 任务会与其他节点交换数据，安装扩展后会增加相应网络功能。
+- [项目主页](https://gopeed.com/) · [源代码](https://github.com/GopeedLab/gopeed) · [下载](https://github.com/GopeedLab/gopeed/releases/latest)
+
+## aria2
+
+支持 HTTP、FTP、SFTP、BT 与 Metalink 的命令行下载器，可批量执行并通过 RPC 控制。
+
+- 分类: 下载工具
+- 许可证: GPL-2.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: macOS 可按项目说明通过 Homebrew 或 MacPorts 安装；没有图形界面。稳定版本发布较慢，适合需要脚本化下载的人。
+- 权限与说明: 按给定地址联网并写入下载目录；BT 会与节点互传数据，RPC 需按使用范围配置认证。
+- [项目主页](https://aria2.github.io/) · [源代码](https://github.com/aria2/aria2) · [下载](https://aria2.github.io/)
+
+## ytDownloader
+
+可视化下载 YouTube 等网站的视频、音频和播放列表，支持画质选择与批量任务。
+
+- 分类: 下载工具
+- 许可证: GPL-3.0
+- io 实测
+- 系统要求: 官方提供 Apple Silicon 与 Intel 安装包；macOS 27 实测。按项目说明准备 yt-dlp 等组件，当前 Mac 版未签名。
+- 权限与说明: 读取 Chrome Cookies 需访问其应用数据；macOS 27 可在“文件与文件夹”中为 YTDownloader 开启 Google Chrome 权限。
+- [项目主页](https://ytdn.netlify.app/) · [源代码](https://github.com/aandrew-me/ytDownloader) · [下载](https://github.com/aandrew-me/ytDownloader/releases/latest)
+
+## yt-dlp
+
+功能完整的命令行音视频下载工具，适合需要可脚本化、可控参数的工作流。
+
+- 分类: 下载工具
+- 许可证: Unlicense
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 可通过 Python 或包管理器在 macOS 使用；按项目文档安装
+- 权限与说明: 只获取你有权保存的内容，并遵守平台条款、著作权与所在地法律。
+- [项目主页](https://github.com/yt-dlp/yt-dlp) · [源代码](https://github.com/yt-dlp/yt-dlp) · [下载](https://github.com/yt-dlp/yt-dlp/releases)
+
+## Transmission
+
+原生 Mac BT 客户端，用简洁界面管理种子、磁力链接、速度限制和分享比例。
+
+- 分类: 下载工具
+- 许可证: GPL-2.0 / GPL-3.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 当前官方 Mac 版要求 macOS 12 及以上，提供原生 .dmg；不同于其他平台的 Qt 界面。
+- 权限与说明: BT 任务会向其他节点上传和下载数据；可选远程访问会开放管理接口。
+- [项目主页](https://transmissionbt.com/) · [源代码](https://github.com/transmission/transmission) · [下载](https://github.com/transmission/transmission/releases/latest)
+
+## qBittorrent
+
+无广告的 BT 与磁力下载客户端，提供队列、文件选择、限速和远程 Web 管理。
+
+- 分类: 下载工具
+- 许可证: GPL-3.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 官网 Mac 版当前为 5.2.3，要求 macOS 13+；其他平台版本可能更新。官方说明 macOS 维护人力有限。源码为 GPLv2+，发行包为 GPLv3+。
+- 权限与说明: BT 下载会与节点互传数据；远程 Web 管理为可选功能，启用后应配置认证。
+- [项目主页](https://www.qbittorrent.org/) · [源代码](https://github.com/qbittorrent/qBittorrent) · [下载](https://www.qbittorrent.org/download)
+
+## Cyberduck
+
+用原生界面管理 SFTP、WebDAV、S3 与多种云存储，支持书签和文件传输。
+
+- 分类: 下载工具
+- 许可证: GPL-3.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 官网提供 macOS 安装包；连接协议与服务端兼容性以官方说明为准
+- 权限与说明: 会保存你选择的服务器书签与凭据；使用密钥或系统钥匙串并保护好访问令牌。
+- [项目主页](https://cyberduck.io/) · [源代码](https://github.com/iterate-ch/cyberduck) · [下载](https://cyberduck.io/download/)
+
+## Launchpad_Back
+
+还原经典 Launchpad 的网格、分页、文件夹、拖放与搜索体验。
+
+- 分类: 窗口与启动
+- 许可证: GPL-3.0
+- io 实测
+- 系统要求: 项目说明：macOS 15.6 及以上
+- 权限与说明: 项目发布包未公证；按项目说明通过 Gatekeeper 后再打开。
+- [项目主页](https://github.com/EricYang801/Launchpad_Back) · [源代码](https://github.com/EricYang801/Launchpad_Back) · [下载](https://github.com/EricYang801/Launchpad_Back/releases)
+
+## Loop
+
+用拖拽、快捷键和悬浮菜单快速整理窗口，适合分屏与多任务工作。
+
+- 分类: 窗口与启动
+- 许可证: GPL-3.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: macOS 13 及以上 · Intel 与 Apple Silicon
+- 权限与说明: 需要“辅助功能”权限，才能移动和调整其他应用的窗口。
+- [项目主页](https://github.com/MrKai77/Loop) · [源代码](https://github.com/MrKai77/Loop) · [下载](https://github.com/MrKai77/Loop/releases)
+
+## Rectangle
+
+通过快捷键、拖拽和吸附区域移动或调整窗口，让常用分屏布局更快完成。
+
+- 分类: 窗口与启动
+- 许可证: MIT
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 最新版需 macOS 14 及以上；macOS 10.15–13 可使用 1.100。
+- 权限与说明: 为移动和调整其他应用窗口，需要“辅助功能”权限。
+- [项目主页](https://rectangleapp.com/) · [源代码](https://github.com/rxhanson/Rectangle) · [下载](https://github.com/rxhanson/Rectangle/releases)
+
+## AltTab
+
+把窗口而不是应用作为切换对象，支持缩略图、最小化窗口与多屏场景。
+
+- 分类: 窗口与启动
+- 许可证: GPL-3.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: macOS 12 及以上 · 窗口切换等核心功能免费；搜索和部分外观功能属于付费 Pro。
+- 权限与说明: 需要“辅助功能”权限以读取与切换窗口。
+- [项目主页](https://alt-tab.app/) · [源代码](https://github.com/lwouis/alt-tab-macos) · [下载](https://github.com/lwouis/alt-tab-macos/releases)
+
+## AeroSpace
+
+受 i3 启发的 macOS 平铺窗口管理器，用键盘快速编排工作区与窗口。
+
+- 分类: 窗口与启动
+- 许可证: MIT
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 项目提供 macOS 安装说明；请先阅读当前限制与配置文档
+- 权限与说明: 为管理其他应用窗口，需要“辅助功能”权限。
+- [项目主页](https://nikitabobko.github.io/AeroSpace/guide) · [源代码](https://github.com/nikitabobko/AeroSpace) · [下载](https://nikitabobko.github.io/AeroSpace/guide#installation)
+
+## Amethyst
+
+更易上手的 macOS 自动平铺窗口管理器，支持多种布局与快捷键。
+
+- 分类: 窗口与启动
+- 许可证: MIT
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: macOS 10.15 及以上
+- 权限与说明: 需要“辅助功能”权限以读取和排列其他应用的窗口。
+- [项目主页](https://ianyh.com/amethyst/) · [源代码](https://github.com/ianyh/Amethyst) · [下载](https://github.com/ianyh/Amethyst/releases)
+
+## Ice
+
+把菜单栏图标分区、隐藏或始终显示，减少顶栏被工具挤满的时刻。
+
+- 分类: 菜单栏与硬件
+- 许可证: GPL-3.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: macOS 14 及以上 · Intel 与 Apple Silicon
+- 权限与说明: 按功能与系统版本授权；安装前查看项目的权限说明。
+- [项目主页](https://icemenubar.app/) · [源代码](https://github.com/jordanbaird/Ice) · [下载](https://github.com/jordanbaird/Ice/releases)
+
+## Thaw
+
+整理、隐藏和搜索菜单栏图标，让顶栏在图标很多时仍然好用。
+
+- 分类: 菜单栏与硬件
+- 许可证: GPL-3.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 稳定版 2.1 仅支持 macOS 26；3.x 测试版需 macOS 27。旧系统请在 Releases 中查找适配版本。
+- 权限与说明: 菜单栏管理功能可能按系统版本请求辅助功能等权限。
+- [项目主页](https://www.getthaw.app/) · [源代码](https://github.com/thaw-app/Thaw) · [下载](https://github.com/thaw-app/Thaw/releases)
+
+## Stats
+
+在菜单栏查看 CPU、内存、磁盘、网络、电池与传感器等系统状态。
+
+- 分类: 菜单栏与硬件
+- 许可证: MIT
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: macOS 12 及以上 · Intel 与 Apple Silicon
+- 权限与说明: 查看 Wi‑Fi 名称时可能请求定位权限；其余功能按系统提示授权。
+- [项目主页](https://mac-stats.com/) · [源代码](https://github.com/exelban/stats) · [下载](https://github.com/exelban/stats/releases)
+
+## MonitorControl
+
+通过 DDC/CI 调整外接显示器亮度与音量，并可与键盘媒体键联动。
+
+- 分类: 菜单栏与硬件
+- 许可证: MIT
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 需要显示器支持 DDC/CI；项目页提供兼容说明
+- 权限与说明: 使用键盘原生亮度键控制外屏时，需要“辅助功能”权限。
+- [项目主页](https://monitorcontrol.app/) · [源代码](https://github.com/MonitorControl/MonitorControl) · [下载](https://github.com/MonitorControl/MonitorControl/releases)
+
+## LayoutKeeper
+
+记住外接屏上的窗口位置，重新连接后一键或自动恢复；还可联动亮度和防休眠。
+
+- 分类: 菜单栏与硬件
+- 许可证: GPL-3.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: macOS 14 及以上 · Intel 与 Apple Silicon。跨桌面恢复需 macOS 26 及以上；硬件亮度调节需 Apple Silicon 与支持 DDC 的显示器。
+- 权限与说明: 需要“辅助功能”权限，无需屏幕录制或输入监控。发行包自签名，未经 Apple 公证。
+- [项目主页](https://github.com/tumingke0/LayoutKeeper) · [源代码](https://github.com/tumingke0/LayoutKeeper) · [下载](https://github.com/tumingke0/LayoutKeeper/releases)
+
+## LinearMouse
+
+让每只外接鼠标和触控板拥有独立的滚动、指针与加速手感。
+
+- 分类: 菜单栏与硬件
+- 许可证: MIT
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 项目 Release 提供 macOS 安装包
+- 权限与说明: 需要“辅助功能”权限，以应用输入设备相关设置。
+- [项目主页](https://linearmouse.app/) · [源代码](https://github.com/linearmouse/linearmouse) · [下载](https://github.com/linearmouse/linearmouse/releases)
+
+## Karabiner-Elements
+
+深度自定义 macOS 键盘行为，可重映射按键、设备规则和复杂快捷操作。
+
+- 分类: 菜单栏与硬件
+- 许可证: Unlicense
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 项目提供 macOS 安装包；请按官网说明确认系统支持范围
+- 权限与说明: 需要“输入监控”权限并安装系统扩展，才可重映射键盘输入。
+- [项目主页](https://karabiner-elements.pqrs.org/) · [源代码](https://github.com/pqrs-org/Karabiner-Elements) · [下载](https://github.com/pqrs-org/Karabiner-Elements/releases)
+
+## OnlySwitch
+
+把隐藏文件、深浅色、低电量模式等常用 macOS 开关放进菜单栏。
+
+- 分类: 菜单栏与硬件
+- 许可证: MIT
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 项目 Release 提供 macOS .dmg 安装包；开关可用性取决于系统版本
+- 权限与说明: 少数功能会调用系统服务或要求授权；只启用自己理解的项目。
+- [项目主页](https://onlyswitch.click/) · [源代码](https://github.com/jacklandrin/OnlySwitch) · [下载](https://github.com/jacklandrin/OnlySwitch/releases)
+
+## KeepingYouAwake
+
+在设定时段内防止 Mac 自动休眠，适合下载、演示和长时间传输。
+
+- 分类: 菜单栏与硬件
+- 许可证: MIT
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: macOS 10.13 及以上
+- 权限与说明: 不需要读取个人文件；按需使用系统的防休眠能力。
+- [项目主页](https://keepingyouawake.app/) · [源代码](https://github.com/newmarcel/KeepingYouAwake) · [下载](https://github.com/newmarcel/KeepingYouAwake/releases)
+
+## LibreOffice
+
+免费开源的文档、表格与演示文稿套件，适合作为 Office 文件查看、轻编辑与转换的备用方案。
+
+- 分类: 办公与学习
+- 许可证: MPL-2.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 请以 LibreOffice 官方 macOS 下载页的当前系统要求为准
+- 权限与说明: 常规文档软件；打开含宏或外部链接的陌生文件时应保持谨慎。
+- [项目主页](https://www.libreoffice.org/) · [源代码](https://github.com/LibreOffice/core) · [下载](https://www.libreoffice.org/download/download-libreoffice/)
+
+## ONLYOFFICE Desktop Editors
+
+离线编辑 DOCX、XLSX、PPTX 和 PDF，兼顾常见 Office 格式与 PDF 表单。
+
+- 分类: 办公与学习
+- 许可证: AGPL-3.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: macOS 10.13 及以上 · 提供 Intel 与 Apple Silicon 安装包
+- 权限与说明: 常规文档软件；陌生文件中的宏、外链与嵌入内容应谨慎打开。
+- [项目主页](https://www.onlyoffice.com/desktop) · [源代码](https://github.com/ONLYOFFICE/DesktopEditors) · [下载](https://github.com/ONLYOFFICE/DesktopEditors/releases)
+
+## Thunderbird
+
+开源桌面邮件客户端，集中管理多个邮箱，并整合日历、通讯录、RSS 与本地搜索。
+
+- 分类: 办公与学习
+- 许可证: MPL-2.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 官方提供 macOS 安装包；请在下载页确认当前系统要求
+- 权限与说明: 需要登录你的邮件与日历账户；按需配置服务器、OAuth 授权和本地邮件存储。
+- [项目主页](https://www.thunderbird.net/) · [源代码](https://github.com/thunderbird/thunderbird-desktop) · [下载](https://www.thunderbird.net/en-US/download/)
+
+## Koodo Reader
+
+离线阅读 EPUB、PDF、MOBI 等电子书，支持标注、笔记与本地书库管理。
+
+- 分类: 办公与学习
+- 许可证: AGPL-3.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: Release 提供 Apple Silicon 与 Intel 的 macOS 安装包
+- 权限与说明: 本地阅读器；导入和同步的书籍与笔记由你选择。
+- [项目主页](https://koodoreader.com/) · [源代码](https://github.com/koodo-reader/koodo-reader) · [下载](https://github.com/koodo-reader/koodo-reader/releases)
+
+## Anki
+
+用间隔重复和卡片模板建立长期记忆，可跨设备同步自己的学习资料。
+
+- 分类: 办公与学习
+- 许可证: AGPL-3.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 项目 Release 提供 Apple Silicon 与 Intel 的 macOS .dmg 安装包
+- 权限与说明: 可选同步服务会上传你主动同步的牌组与媒体；敏感资料请先了解同步设置。
+- [项目主页](https://apps.ankiweb.net/) · [源代码](https://github.com/ankitects/anki) · [下载](https://github.com/ankitects/anki/releases)
+
+## Zettlr
+
+面向 Markdown、学术写作与知识整理的桌面编辑器，支持引用、导出与项目管理。
+
+- 分类: 笔记与知识
+- 许可证: GPL-3.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 请以项目当前 Release 的 macOS 系统要求为准
+- 权限与说明: 常规文档软件；打开来自陌生来源的文件与脚本时应保持谨慎。
+- [项目主页](https://www.zettlr.com/) · [源代码](https://github.com/Zettlr/Zettlr) · [下载](https://github.com/Zettlr/Zettlr/releases)
+
+## QOwnNotes
+
+以普通 Markdown 文件为核心的笔记工具，可搭配文件夹或 Nextcloud 使用。
+
+- 分类: 笔记与知识
+- 许可证: GPL-2.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 项目 Release 提供 macOS 安装包
+- 权限与说明: 仅访问你指定的笔记文件夹；同步服务由你自行配置。
+- [项目主页](https://www.qownnotes.org/) · [源代码](https://github.com/pbek/QOwnNotes) · [下载](https://github.com/pbek/QOwnNotes/releases)
+
+## Joplin
+
+支持 Markdown、端到端加密同步与多端使用的开源笔记应用。
+
+- 分类: 笔记与知识
+- 许可证: AGPL-3.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 项目提供 macOS 桌面版；请以当前 Release 要求为准
+- 权限与说明: 同步目标、加密口令与第三方插件由你自行配置；使用前请核对同步服务与插件来源。
+- [项目主页](https://joplinapp.org/) · [源代码](https://github.com/laurent22/joplin) · [下载](https://github.com/laurent22/joplin/releases)
+
+## Logseq
+
+用大纲、块引用和双向链接组织笔记、任务与知识；当前 2.x 为数据库测试版。
+
+- 分类: 笔记与知识
+- 许可证: AGPL-3.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 2.x 数据库版为 Beta；旧 Markdown / Org 文件库已移至 Logseq OG。迁移前备份。
+- 权限与说明: 常规笔记软件；使用同步、插件或外部服务前，请先阅读其数据与权限说明。
+- [项目主页](https://logseq.com/) · [源代码](https://github.com/logseq/logseq) · [下载](https://github.com/logseq/logseq/releases)
+
+## AppFlowy
+
+本地优先的文档、数据库与项目工作区，可按需连接协作与同步服务。
+
+- 分类: 笔记与知识
+- 许可证: AGPL-3.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 当前 macOS Release 提供 Apple Silicon、Intel 与 Universal 安装包
+- 权限与说明: 常规文档工具；连接云端工作区前请确认同步与共享范围。
+- [项目主页](https://appflowy.com/) · [源代码](https://github.com/AppFlowy-IO/AppFlowy) · [下载](https://github.com/AppFlowy-IO/AppFlowy/releases)
+
+## Super Productivity
+
+把待办、时间记录、番茄钟和项目节奏放在一个本地优先的工作台。
+
+- 分类: 效率与自动化
+- 许可证: MIT
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 项目 Release 提供 Universal、Apple Silicon 与 Intel 的 macOS .dmg 安装包
+- 权限与说明: 本地使用无需账户；如连接第三方任务服务，请按需授权。
+- [项目主页](https://super-productivity.com/) · [源代码](https://github.com/super-productivity/super-productivity) · [下载](https://github.com/super-productivity/super-productivity/releases)
+
+## Maccy
+
+轻量的 macOS 剪贴板历史管理器，可快速搜索和重新使用复制过的内容。
+
+- 分类: 效率与自动化
+- 许可证: MIT
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: macOS 14 及以上
+- 权限与说明: 会保存剪贴板历史；不要复制密码、密钥等不应留存的敏感内容。
+- [项目主页](https://maccy.app/) · [源代码](https://github.com/p0deje/Maccy) · [下载](https://github.com/p0deje/Maccy/releases)
+
+## Espanso
+
+用短语触发模板文本、日期和常用片段，减少重复输入。
+
+- 分类: 效率与自动化
+- 许可证: GPL-3.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 项目 Release 提供 macOS Universal 安装包
+- 权限与说明: 为监听键盘输入需要按项目说明授予相应权限；不要把敏感内容写进不可信模板。
+- [项目主页](https://espanso.org/) · [源代码](https://github.com/espanso/espanso) · [下载](https://github.com/espanso/espanso/releases)
+
+## Hammerspoon
+
+用 Lua 脚本把快捷键、窗口、菜单栏和系统动作串成自己的工作流。
+
+- 分类: 效率与自动化
+- 许可证: MIT
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 项目 Release 提供 macOS 安装包；请以当前版本系统要求为准
+- 权限与说明: 自动化脚本可能请求辅助功能、文件或网络权限；只运行自己审查过的配置。
+- [项目主页](https://www.hammerspoon.org/) · [源代码](https://github.com/Hammerspoon/hammerspoon) · [下载](https://github.com/Hammerspoon/hammerspoon/releases)
+
+## SwiftBar
+
+把脚本输出变成菜单栏小工具，适合展示状态、提醒与自定义快捷操作。
+
+- 分类: 效率与自动化
+- 许可证: MIT
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: macOS 12 及以上
+- 权限与说明: 会运行你启用的脚本；只添加来源可信、内容可审查的插件。
+- [项目主页](https://swiftbar.app/) · [源代码](https://github.com/swiftbar/SwiftBar) · [下载](https://github.com/swiftbar/SwiftBar/releases)
+
+## MacPacker
+
+原生压缩包管理器，支持 ZIP、7z 压缩，以及 RAR 等格式的浏览、预览和按需提取。
+
+- 分类: 压缩与解压
+- 许可证: GPL-3.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 当前版本要求 macOS 14.6 及以上，支持 Intel 与 Apple Silicon。官方提供签名、公证的 DMG / ZIP；macOS 13 仅支持旧版至 v0.14.1。
+- 权限与说明: 访问你选择的压缩包与输出目录；Finder 与 Quick Look 扩展按需启用。
+- [项目主页](https://macpacker.app/) · [源代码](https://github.com/sarensw/MacPacker) · [下载](https://github.com/sarensw/MacPacker/releases)
+
+## PeaZip
+
+跨平台压缩包管理器，可创建 ZIP、7z、TAR，解压 RAR，并提供加密、分卷和校验工具。
+
+- 分类: 压缩与解压
+- 许可证: LGPL-3.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 官方分别提供 Intel 与 Apple Silicon 的 macOS 安装包。Mac 版未使用 Developer ID 签名，首次启动可能受到系统拦截；安装步骤见官方说明。
+- 权限与说明: 读写所选文件和目标目录；Finder 右键服务可选安装。压缩、解压与 RAR 解压免费，不提供 RAR 创建。
+- [项目主页](https://peazip.github.io/peazip-macos.html) · [源代码](https://github.com/peazip/PeaZip) · [下载](https://github.com/peazip/PeaZip/releases)
+
+## MacRAR
+
+原生压缩包管理器，可创建 ZIP、7z、TAR，解压 RAR，支持加密、分卷与 Finder 右键操作。
+
+- 分类: 压缩与解压
+- 许可证: MIT
+- io 实测
+- 系统要求: macOS 13 及以上，Universal 安装包支持 Intel 与 Apple Silicon。GitHub 版官方提供签名、公证的 DMG / ZIP；ZIP、7z、TAR 压缩和 RAR 解压免费。
+- 权限与说明: 读写所选文件和输出目录；Finder 快速操作按需启用。创建或修改 RAR 需自行安装 RARLAB 的付费 rar 工具（提供试用），不包含在免费功能内。MIT 仅覆盖 MacRAR 源码，7-Zip 等组件保留各自许可。
+- [项目主页](https://github.com/mstcvk/MacRAR) · [源代码](https://github.com/mstcvk/MacRAR) · [下载](https://github.com/mstcvk/MacRAR/releases)
+
+## LocalSend
+
+不经过云端，在同一网络内直接传送文件、文本和剪贴板内容。
+
+- 分类: 文件与备份
+- 许可证: Apache-2.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 项目 Release 提供 macOS 安装包
+- 权限与说明: 使用局域网发现与传输；只接收你确认的设备和文件。
+- [项目主页](https://localsend.org/) · [源代码](https://github.com/localsend/localsend) · [下载](https://github.com/localsend/localsend/releases)
+
+## OpenMTP
+
+在 Mac 与 Android / MTP 设备之间直接浏览、拖拽和传送文件。
+
+- 分类: 文件与备份
+- 许可证: MIT
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: macOS 11 及以上
+- 权限与说明: 只访问你通过 USB 连接并授权的设备与选择的本地文件。
+- [项目主页](https://openmtp.ganeshrvel.com/) · [源代码](https://github.com/ganeshrvel/openmtp) · [下载](https://github.com/ganeshrvel/openmtp/releases)
+
+## Syncthing
+
+让多台设备直接同步指定文件夹，不必把文件交给第三方云盘。
+
+- 分类: 文件与备份
+- 许可证: MPL-2.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 官方 macOS 发行包为命令行程序压缩包，通过浏览器界面配置；请按芯片选择版本。
+- 权限与说明: 同步范围由你选择；请为每个共享文件夹核对设备与版本保留设置。
+- [项目主页](https://syncthing.net/) · [源代码](https://github.com/syncthing/syncthing) · [下载](https://github.com/syncthing/syncthing/releases)
+
+## Kopia
+
+带快照、去重与加密能力的备份工具，可选择本地或多种远端存储。
+
+- 分类: 文件与备份
+- 许可证: Apache-2.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: Release 提供 Apple Silicon 与 Intel 的 macOS 安装包
+- 权限与说明: 需要读取你选定的备份源和写入备份目的地；首次使用应先做一次恢复演练。
+- [项目主页](https://kopia.io/) · [源代码](https://github.com/kopia/kopia) · [下载](https://github.com/kopia/kopia/releases)
+
+## PureMac
+
+查看磁盘占用，清理应用与开发缓存、卸载应用，并在操作前检查待清理项目。
+
+- 分类: Mac 优化与维护
+- 许可证: MIT
+- io 实测
+- 系统要求: macOS 13 及以上
+- 权限与说明: 清理工具可能请求更多文件访问；执行前请逐项查看将处理的路径。
+- [项目主页](https://www.moamenbasel.com/PureMac/) · [源代码](https://github.com/momenbasel/PureMac) · [下载](https://github.com/momenbasel/PureMac/releases)
+
+## Purge
+
+扫描缓存、开发残留和大文件，确认后再清理；普通文件默认移入废纸篓。
+
+- 分类: Mac 优化与维护
+- 许可证: MIT
+- io 实测
+- 系统要求: macOS 13 及以上
+- 权限与说明: 完整磁盘访问是可选项；仅在需要扫描更多目录时考虑授予。
+- [项目主页](https://purgemac.com/) · [源代码](https://github.com/jithin-sabu/purge-app) · [下载](https://github.com/jithin-sabu/purge-app/releases)
+
+## MangoDisk
+
+用空间分析、重复文件、卸载与可回收清理整理磁盘。
+
+- 分类: Mac 优化与维护
+- 许可证: GPL-3.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 请以项目当前 Release 与 macOS 系统要求为准
+- 权限与说明: 磁盘分析与清理可能需要额外文件访问；删除前应逐项确认结果。
+- [项目主页](https://mangodisk.app/) · [源代码](https://github.com/harry0703/MangoDisk) · [下载](https://github.com/harry0703/MangoDisk/releases)
+
+## dupeGuru
+
+按文件名、内容或图片相似度查找重复文件，适合在删除前先建立清晰候选列表。
+
+- 分类: Mac 优化与维护
+- 许可证: GPL-3.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 项目提供 macOS 下载；请以官网当前版本说明为准
+- 权限与说明: 扫描与删除前请逐项复核结果；任何重复项都可能有不同的业务用途。
+- [项目主页](https://dupeguru.voltaicideas.net/) · [源代码](https://github.com/arsenetar/dupeguru) · [下载](https://github.com/arsenetar/dupeguru/releases)
+
+## Latest
+
+集中检查并更新支持 Sparkle 或来自 Mac App Store 的已安装应用。
+
+- 分类: Mac 优化与维护
+- 许可证: GPL-3.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: macOS 10.15 及以上
+- 权限与说明: 读取本机应用信息以检查更新；更新仍由你确认。
+- [项目主页](https://max.codes/latest/) · [源代码](https://github.com/mangerlahn/Latest) · [下载](https://github.com/mangerlahn/Latest/releases)
+
+## Applite
+
+用图形界面安装、更新和卸载 Homebrew Cask 应用，可自动准备 Homebrew。
+
+- 分类: Mac 优化与维护
+- 许可证: MIT
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: macOS 14 及以上 · Intel 与 Apple Silicon · 无需预装 Homebrew
+- 权限与说明: 下载安装软件时需要网络；安装部分应用时可能请求管理员授权。可复用已有 Homebrew。
+- [项目主页](https://applite.app/) · [源代码](https://github.com/milanvarady/Applite) · [下载](https://github.com/milanvarady/Applite/releases)
+
+## Sloth
+
+显示哪些进程正在打开文件、监听端口或维持网络连接，定位异常占用更直观。
+
+- 分类: Mac 优化与维护
+- 许可证: BSD-3-Clause
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 项目 Release 提供 macOS 压缩包；请以发布页系统要求为准
+- 权限与说明: 读取进程与连接信息；在受管理设备上请先遵循组织的安全规则。
+- [项目主页](https://sveinbjorn.org/sloth) · [源代码](https://github.com/sveinbjornt/Sloth) · [下载](https://github.com/sveinbjornt/Sloth/releases)
+
+## Signal
+
+开源的私密通讯桌面端，支持消息、通话与已链接手机的消息记录迁移。
+
+- 分类: 隐私与安全
+- 许可证: AGPL-3.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 官方提供 macOS 客户端；首次使用须先在手机上安装 Signal 并完成关联
+- 权限与说明: 通话或发送媒体时会按功能请求麦克风、摄像头与本地文件访问；只按需授予。
+- [项目主页](https://signal.org/) · [源代码](https://github.com/signalapp/Signal-Desktop) · [下载](https://signal.org/download/macos/)
+
+## KeePassXC
+
+把密码库保存在自己掌控的加密文件中，可离线使用并支持浏览器集成。
+
+- 分类: 隐私与安全
+- 许可证: GPL-2.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 项目 Release 提供 Apple Silicon 与 Intel 的 macOS .dmg 安装包
+- 权限与说明: 浏览器自动填充需要安装官方扩展并授权连接；请妥善保管主密码与密钥文件。
+- [项目主页](https://keepassxc.org/) · [源代码](https://github.com/keepassxreboot/keepassxc) · [下载](https://github.com/keepassxreboot/keepassxc/releases)
+
+## Cryptomator
+
+把文件同步到云盘之前先在本地加密，密钥由你自己保管。
+
+- 分类: 隐私与安全
+- 许可证: GPL-3.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: Release 提供 Apple Silicon 与 Intel 的 macOS 安装包
+- 权限与说明: 需访问你选定的保险库与同步目录；请妥善保存恢复密钥和密码。
+- [项目主页](https://cryptomator.org/) · [源代码](https://github.com/cryptomator/cryptomator) · [下载](https://github.com/cryptomator/cryptomator/releases)
+
+## LuLu
+
+监控并按规则允许或拦截应用的出站网络连接。
+
+- 分类: 隐私与安全
+- 许可证: GPL-3.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 项目 Release 提供 macOS 安装包；请以当前版本系统要求为准
+- 权限与说明: 会安装网络过滤系统扩展并请求管理员授权；安装前阅读项目说明。
+- [项目主页](https://objective-see.org/products/lulu.html) · [源代码](https://github.com/objective-see/LuLu) · [下载](https://github.com/objective-see/LuLu/releases)
+
+## GitHub Desktop
+
+用可视化方式完成提交、分支、比较和拉取请求，降低 Git 的日常操作门槛。
+
+- 分类: 开发工具
+- 许可证: MIT
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 项目 Release 提供 Apple Silicon 与 Intel 的 macOS 安装包
+- 权限与说明: 可访问你添加的本地仓库和已登录 GitHub 账号；提交前仍应检查变更内容。
+- [项目主页](https://github.com/apps/desktop) · [源代码](https://github.com/desktop/desktop) · [下载](https://github.com/desktop/desktop/releases)
+
+## VSCodium
+
+由社区构建的开源代码编辑器发行版，提供熟悉的扩展和调试工作流。
+
+- 分类: 开发工具
+- 许可证: MIT
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: macOS 12 及以上
+- 权限与说明: 扩展可访问项目文件与网络；只安装可信扩展并查看其权限说明。
+- [项目主页](https://vscodium.com/) · [源代码](https://github.com/VSCodium/vscodium) · [下载](https://github.com/VSCodium/vscodium/releases)
+
+## Zed
+
+响应极快的原生代码编辑器，专注协作、语言工具和流畅的日常编码体验。
+
+- 分类: 开发工具
+- 许可证: GPL-3.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 项目 Release 提供 Apple Silicon 与 Intel 的 macOS .dmg 安装包
+- 权限与说明: 打开项目、启用扩展或协作时可能访问文件与网络；请检查工作区和扩展来源。
+- [项目主页](https://zed.dev/) · [源代码](https://github.com/zed-industries/zed) · [下载](https://github.com/zed-industries/zed/releases)
+
+## CodeEdit
+
+开发中的原生 Mac 代码编辑器，提供项目浏览、语法高亮、终端与 Git 集成，适合尝鲜。
+
+- 分类: 开发工具
+- 许可证: MIT
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 当前仍在开发中；官方暂不建议用于生产工作，请按发布页确认系统要求。
+- 权限与说明: 只访问你打开的项目文件；语言服务与插件的额外访问范围需单独确认。
+- [项目主页](https://www.codeedit.app/) · [源代码](https://github.com/CodeEditApp/CodeEdit) · [下载](https://github.com/CodeEditApp/CodeEdit/releases)
+
+## Xcodes
+
+集中下载、切换和管理多个 Xcode 版本，适合维护不同系统与项目的开发环境。
+
+- 分类: 开发工具
+- 许可证: MIT
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: macOS 13 及以上；下载 Xcode 需要 Apple 账户。
+- 权限与说明: 会管理 Xcode 文件与 Apple 开发者登录状态；只从官方源下载并妥善保护账号。
+- [项目主页](https://www.xcodes.app/) · [源代码](https://github.com/XcodesOrg/XcodesApp) · [下载](https://github.com/XcodesOrg/XcodesApp/releases)
+
+## Alacritty
+
+响应迅速、配置清晰的跨平台终端模拟器，适合长期使用命令行的人。
+
+- 分类: 开发工具
+- 许可证: Apache-2.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 项目 Release 提供 macOS .dmg 安装包
+- 权限与说明: 终端执行的命令拥有与你账户相同的权限；只运行理解的命令。
+- [项目主页](https://alacritty.org/) · [源代码](https://github.com/alacritty/alacritty) · [下载](https://github.com/alacritty/alacritty/releases)
+
+## DBeaver Community
+
+覆盖多种数据库的通用客户端，适合查询、结构浏览和数据导入导出。
+
+- 分类: 开发工具
+- 许可证: Apache-2.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 项目 Release 提供 Apple Silicon 与 Intel 的 macOS .dmg 安装包
+- 权限与说明: 会保存你建立的数据库连接；避免在不安全网络中保存高权限凭据。
+- [项目主页](https://dbeaver.io/) · [源代码](https://github.com/dbeaver/dbeaver) · [下载](https://github.com/dbeaver/dbeaver/releases)
+
+## TablePro
+
+原生 Mac 数据库客户端，浏览、编辑和查询 SQL 与 NoSQL 数据库，支持数据导入导出。
+
+- 分类: 开发工具
+- 许可证: AGPL-3.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: macOS 13 及以上
+- 权限与说明: 连接数据库前请确认主机、账号与网络范围，只使用受信任的连接配置。
+- [项目主页](https://tablepro.app/) · [源代码](https://github.com/TableProApp/TablePro) · [下载](https://github.com/TableProApp/TablePro/releases)
+
+## Bruno
+
+开源、离线优先的 API 客户端；请求集合保存在本地文件中，也方便纳入 Git 管理。
+
+- 分类: 开发工具
+- 许可证: MIT
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 项目 Release 提供 Apple Silicon 与 Intel 的 macOS .dmg 和 .pkg 安装包
+- 权限与说明: 会向你配置的 API 地址发起网络请求并读取本地集合；不要把密钥写进共享仓库。
+- [项目主页](https://www.usebruno.com/) · [源代码](https://github.com/usebruno/bruno) · [下载](https://github.com/usebruno/bruno/releases)
+
+## Kilobat CLI
+
+在终端排查网络连接、延迟与 DNS，输出 JSON，并可作为本地 MCP 服务。
+
+- 分类: 开发工具
+- 许可证: GPL-3.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: macOS 14 及以上；通过 Homebrew 从源码安装需 Xcode 16 及以上。这里收录免费开源 CLI；另行分发的桌面应用不是开源软件，部分功能付费。
+- 权限与说明: 诊断会访问网络；部分 Wi-Fi 名称、过滤状态和预算信息依赖另装桌面应用及定位授权。更改系统设置的命令可能需确认或管理员授权。
+- [项目主页](https://github.com/seifip/kilobat-cli) · [源代码](https://github.com/seifip/kilobat-cli) · [下载](https://github.com/seifip/kilobat-cli#install-with-homebrew)
+
+## UTM
+
+通过 QEMU 与 Apple 虚拟化框架在 Mac 上运行其他系统，支持虚拟化及跨架构模拟。
+
+- 分类: 开发工具
+- 许可证: Apache-2.0
+- 已核对公开项目信息，未标记为 io 实测
+- 系统要求: 项目 Release 提供 UTM.dmg；虚拟系统支持范围取决于 Mac 架构与镜像
+- 权限与说明: 虚拟机可访问你主动挂载的目录与网络；避免向陌生镜像暴露个人文件。
+- [项目主页](https://getutm.app/) · [源代码](https://github.com/utmapp/UTM) · [下载](https://github.com/utmapp/UTM/releases)

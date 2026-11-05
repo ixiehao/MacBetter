@@ -91,3 +91,23 @@ jobs:
       - name: Deploy GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+  notify-search:
+    name: Notify search engines
+    needs: deploy
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v6
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      - name: Submit published canonical URLs to IndexNow
+        id: indexnow
+        continue-on-error: true
+        run: node scripts/submit-indexnow.mjs --submit
+      - name: Report retry instructions
+        if: steps.indexnow.outcome == 'failure'
+        run: echo '::warning::Pages is published, but IndexNow notification failed. Retry node scripts/submit-indexnow.mjs --submit after propagation. Notification does not guarantee indexing.'

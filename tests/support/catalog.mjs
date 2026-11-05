@@ -1,11 +1,8 @@
 import { readFileSync } from "node:fs";
-import { runInNewContext } from "node:vm";
+import { readCatalogMetadata } from "../../scripts/catalog-content.mjs";
 
 export const apps = JSON.parse(readFileSync(new URL("../../website/data/apps.json", import.meta.url), "utf8"));
-const source = readFileSync(new URL("../../website/app.js", import.meta.url), "utf8");
-const boundary = source.indexOf("let activeLanguage");
-if (boundary < 0) throw new Error("Update the metadata reader after reorganizing app.js");
-export const metadata = runInNewContext(source.slice(0, boundary) + ";({ appCopy, copy, categories })", {}, { timeout: 1_000 });
+export const metadata = readCatalogMetadata();
 const allLanguages = ["en", "zh", "ja"];
 const selectedLanguage = process.env.MACBETTER_TEST_LANGUAGE;
 if (selectedLanguage && !allLanguages.includes(selectedLanguage)) throw new Error("Unknown MACBETTER_TEST_LANGUAGE");

@@ -2,11 +2,18 @@
   "name": "macbetter-site-checks",
   "private": true,
   "type": "module",
-  "engines": { "node": ">=22" },
-  "scripts": {
-    "check": "node --check website/app.js && node --check website/previews.js && node --check scripts/update-cache-keys.mjs && node scripts/check-icons.mjs",
-    "test:layout": "playwright test",
-    "test:layout:report": "playwright show-report"
+  "engines": {
+    "node": ">=22"
   },
-  "devDependencies": { "@playwright/test": "1.64.1" }
+  "scripts": {
+    "check": "node --check website/app.js && node --check website/previews.js && node --check website/seo.js && node --check scripts/update-cache-keys.mjs && node scripts/check-icons.mjs && node scripts/build-search-content.mjs --check && node --test scripts/tests/search-content.test.mjs",
+    "test:layout": "playwright test",
+    "test:layout:report": "playwright show-report",
+    "build:search": "node scripts/update-cache-keys.mjs && node scripts/build-search-content.mjs",
+    "notify:search": "node scripts/submit-indexnow.mjs --submit"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.1",
+    "linkedom": "0.18.12"
+  }
 }

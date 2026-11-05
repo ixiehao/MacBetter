@@ -4,7 +4,7 @@
 
 A community-curated directory of free, open-source macOS tools. Find an app for the task, check its requirements, and go straight to the official project.
 
-**[Browse the directory](https://ixiehao.github.io/MacBetter/?lang=en)** · **[Recommend an app](https://github.com/ixiehao/MacBetter/issues/new?template=recommend-an-app.yml)**
+**[Browse the directory](https://ixiehao.github.io/MacBetter/)** · **[Recommend an app](https://github.com/ixiehao/MacBetter/issues/new?template=recommend-an-app.yml)**
 
 ## What you’ll find
 
@@ -24,7 +24,7 @@ Found an outdated link or description? [Open an issue](https://github.com/ixieha
 
 ## Run locally
 
-The site is static; no build step is required. From the repository root:
+The published site is static. After editing catalog data, translations, or the page template, run `npm ci --ignore-scripts` and `npm run build:search` to regenerate all three language editions. Preview from the repository root:
 
 ```sh
 python3 -m http.server 8000 --bind 127.0.0.1 --directory website

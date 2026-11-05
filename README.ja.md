@@ -4,7 +4,7 @@
 
 無料で使えるオープンソースのMac用ツールを、コミュニティで紹介するディレクトリです。用途に合うアプリを探し、動作要件を確認して、公式サイトへ進めます。
 
-**[アプリ一覧を見る](https://ixiehao.github.io/MacBetter/?lang=ja)** · **[おすすめのアプリを紹介する](https://github.com/ixiehao/MacBetter/issues/new?template=recommend-an-app.yml)**
+**[アプリ一覧を見る](https://ixiehao.github.io/MacBetter/ja.html)** · **[おすすめのアプリを紹介する](https://github.com/ixiehao/MacBetter/issues/new?template=recommend-an-app.yml)**
 
 ## このサイトでできること
 
@@ -24,7 +24,7 @@
 
 ## ローカルで表示する
 
-静的サイトのため、ビルドは不要です。リポジトリのルートで実行します。
+生成済みのサイトは静的に配信できます。アプリ情報・翻訳・ページテンプレートを編集したら、`npm ci --ignore-scripts` と `npm run build:search` で3言語版を再生成してください。リポジトリのルートでプレビューします。
 
 ```sh
 python3 -m http.server 8000 --bind 127.0.0.1 --directory website
