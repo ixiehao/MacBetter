@@ -4,7 +4,7 @@
 
 由社区共同维护的免费开源 macOS 软件目录。按用途找工具，了解使用要求，直达官方项目。
 
-**[浏览软件目录](https://ixiehao.github.io/MacBetter/)** · **[推荐一款软件](https://github.com/ixiehao/MacBetter/issues/new?template=recommend-an-app.yml)**
+**[浏览软件目录](https://ixiehao.github.io/MacBetter/zh.html)** · **[推荐一款软件](https://github.com/ixiehao/MacBetter/issues/new?template=recommend-an-app.yml)**
 
 ## 这里有什么
 

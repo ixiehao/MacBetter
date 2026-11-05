@@ -33,6 +33,7 @@ for (const language of Object.keys(languagePages)) {
       assert.equal(card.querySelector(".download-link").getAttribute("href"), app.download);
       assert.ok(document.querySelector('link[type="text/markdown"]'));
     }
+    assert.equal(document.querySelectorAll("[data-language]").length, 3);
     for (const [alternate] of Object.entries(languagePages)) {
       const hreflang = alternate === "zh" ? "zh-CN" : alternate;
       assert.equal(document.querySelector(`link[hreflang="${hreflang}"]`).getAttribute("href"), canonicalForLanguage(alternate));
