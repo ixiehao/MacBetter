@@ -639,6 +639,12 @@ function buildSearchIndex(app) {
   ].filter(Boolean).join(" ");
 }
 
+function matchesSearch(app, query) {
+  if (!query) return true;
+  if (!app.searchIndex) app.searchIndex = buildSearchIndex(app).toLowerCase();
+  return app.searchIndex.includes(query);
+}
+
 function compareApps(a, b, category = "all") {
   const featuredDifference = Number(Boolean(b.featured)) - Number(Boolean(a.featured));
   if (featuredDifference) return featuredDifference;
@@ -755,18 +761,18 @@ function renderCatalog() {
     const appCategories = appCategoryIds(app);
     const categoryMatch = activeCategory === "all" || appCategories.includes(activeCategory);
     const testedMatch = !testedFilter.checked || app.status.level === "tested";
-    return categoryMatch && testedMatch && app.searchIndex.includes(query);
+    return categoryMatch && testedMatch && matchesSearch(app, query);
   }).sort((a, b) => compareApps(a, b, activeCategory));
   const nextKey = `${activeLanguage}:${list.map(app => app.id).join(",")}`;
   if (nextKey !== catalogKey) {
     appGrid.innerHTML = list.map(cardTemplate).join("");
     appGrid.dataset.catalogLanguage = activeLanguage;
     catalogKey = nextKey;
+    updateCatalogSchema(list);
   }
   emptyState.hidden = list.length !== 0;
   clearFilters.hidden = activeCategory === "all" && !testedFilter.checked && list.length !== 0;
   resultCount.textContent = activeLanguage === "en" && list.length === 1 ? "1 app found" : t("foundCount", { count: list.length });
-  updateCatalogSchema(list);
   updateURL();
 }
 
@@ -877,7 +883,6 @@ async function init() {
     const response = await fetch(dataURL);
     if (!response.ok) throw new Error("Unable to load app data");
     apps = await response.json();
-    apps.forEach(app => { app.searchIndex = buildSearchIndex(app).toLowerCase(); });
     apps.sort(compareApps);
     const params = new URLSearchParams(location.search);
     const requestedCategory = params.get("category");
@@ -888,7 +893,10 @@ async function init() {
     document.querySelector("#category-total").textContent = String(categories.length - 1);
     renderEssentials();
     renderFilters();
-    renderCatalog();
+    // The build already shipped complete, localized cards and schema. Keep that
+    // first view intact; render only when the URL or selected language differs.
+    const staticCatalogMatches = appGrid.dataset.catalogLanguage === activeLanguage && !location.search;
+    if (!staticCatalogMatches) renderCatalog();
     renderStandards();
     focusLinkedApp();
     document.documentElement.dataset.catalogReady = "true";
