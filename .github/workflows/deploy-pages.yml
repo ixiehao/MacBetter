@@ -44,9 +44,9 @@ jobs:
       MACBETTER_TEST_LANGUAGE: ${{ matrix.language }}
     steps:
       - name: Check out source
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - name: Set up Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: '24'
           cache: npm
@@ -60,7 +60,7 @@ jobs:
         run: npm run test:layout -- --project=${{ matrix.browser }}
       - name: Save layout reports and failure screenshots
         if: ${{ !cancelled() }}
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: layout-report-${{ matrix.browser }}-${{ matrix.language }}-${{ github.run_id }}-${{ github.run_attempt }}
           path: |
@@ -81,16 +81,16 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Check out source
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
       - name: Upload website
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v5
         with:
           path: website
       - name: Deploy GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
   notify-search:
     name: Notify search engines
     needs: deploy
@@ -99,9 +99,9 @@ jobs:
     timeout-minutes: 3
     steps:
       - name: Check out source
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - name: Set up Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: '24'
       - name: Submit published canonical URLs to IndexNow
