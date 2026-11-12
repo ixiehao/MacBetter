@@ -13,7 +13,7 @@
     "notify:search": "node scripts/submit-indexnow.mjs --submit"
   },
   "devDependencies": {
-    "@playwright/test": "1.64.1",
+    "@playwright/test": "1.65.0",
     "linkedom": "0.18.15"
   }
 }
