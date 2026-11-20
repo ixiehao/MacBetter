@@ -24,10 +24,10 @@ const categoryIcons = {
 const licenseOrder = ["MIT", "Zlib", "GPL-2.0", "GPL-3.0", "GPL-2.0 / GPL-3.0", "AGPL-3.0", "MPL-2.0", "Apache-2.0", "Unlicense", "LGPL-2.1", "LGPL-3.0", "BSD-2-Clause", "BSD-3-Clause"];
 const categoryOrder = ["video", "player", "audio", "image", "capture", "browser", "download", "launcher", "menu", "office", "notes", "productivity", "archives", "files", "maintenance", "privacy", "efficiency"];
 const workflowOrder = {
-  video: ["shotmap", "mp4flow", "handbrake", "lossless-cut", "subler", "mediainfo", "subtitle-edit", "openscreen", "blender"],
+  video: ["shotmap", "mp4flow", "any2webp", "handbrake", "lossless-cut", "subler", "mediainfo", "subtitle-edit", "openscreen", "blender"],
   player: ["iina", "vlc", "mpv", "kodi", "jellyfin-media-player", "cog", "feishin", "yesplaymusic"],
   audio: ["cog", "feishin", "audacity", "mixxx", "musescore", "finetune", "background-music", "yesplaymusic"],
-  image: ["lumaview", "shotmap", "macshot", "flameshot", "imageoptim", "darktable", "rawtherapee", "krita", "drawio-desktop", "blender", "freecad", "godot"],
+  image: ["lumaview", "shotmap", "macshot", "flameshot", "imageoptim", "any2webp", "darktable", "rawtherapee", "krita", "drawio-desktop", "blender", "freecad", "godot"],
   capture: ["macshot", "flameshot", "bettercapture", "kap", "openscreen", "obs-studio", "screenity"],
   browser: ["firefox", "waterfox", "floorp", "zen-browser", "brave", "helium", "netnewswire"],
   download: ["ab-download-manager", "gopeed", "aria2", "ytdownloader", "yt-dlp", "transmission", "qbittorrent", "cyberduck"],
@@ -368,6 +368,7 @@ const appCopy = {
     "yt-dlp": {"summary": "A command-line downloader for audio and video from many supported sites.", "recommendation": "Automate permitted downloads with control.", "tags": ["Command line","Media download","Automation"], "compatibility": "Available on macOS through Python or a package manager. Follow the project’s installation instructions.", "permissions": "Save only content you are entitled to download, and follow the platform’s terms, copyright rules, and local law."},
     "macshot": {"summary": "A native macOS capture tool for screenshots, screen recording, annotation, OCR, scrolling capture, and GIF export.", "recommendation": "Capture, annotate, and share in one pass.", "tags": ["Screenshots","Screen recording","Scrolling capture"], "permissions": "Requires Screen Recording. macOS may also ask for Microphone, Accessibility, or Input Monitoring when you use relevant features.", "compatibility": "Native macOS releases are available. Check the requirements for the current version."},
     "imageoptim": {"summary": "A macOS image optimizer that reduces file size through a simple drag-and-drop workflow.", "recommendation": "Make images lighter before publishing.", "tags": ["Image optimization","Compression","Drag and drop"], "compatibility": "A native macOS app. Check the official site for current system requirements.", "permissions": "Processes only images you drop into the app or select. Keep the originals so you can restore them."},
+    "any2webp": {"summary": "Batch-convert images and video clips to WebP or GIF locally; combine images and edit animations.", "recommendation": "Convert a batch of images and clips in one go.", "tags": ["WebP", "Animated GIF", "Batch conversion"], "compatibility": "v0.2.28 preview · Apple Silicon only · macOS 26+. Current build is ad-hoc signed and not notarized by Apple.", "permissions": "Processes only the local files you select. Video input requires local FFmpeg and ffprobe; check or install them in Help → Video Dependencies."},
     "krita": {"summary": "A free, open-source digital painting app for illustration, concept art, comics, and animation.", "recommendation": "A real canvas for serious drawing.", "tags": ["Digital painting","Illustration","Animation"], "compatibility": "A macOS download is available. Check the official site for current system requirements.", "permissions": "Check the source before importing unfamiliar asset packs or scripts."},
     rectangle: { summary: "Snap, move, and resize macOS windows with keyboard shortcuts, edge gestures, and custom layouts.", recommendation: "Give every window a predictable place.", tags: ["Window management", "Keyboard shortcuts", "Snap layouts"], permissions: "Requires Accessibility permission to move and resize other apps’ windows.", compatibility: "The latest version requires macOS 14+. Version 1.100 supports macOS 10.15–13." },
     "aerospace": {"summary": "An i3-style tiling window manager for macOS, driven by keyboard shortcuts and a plain-text configuration file.", "recommendation": "Make window layout a keyboard habit.", "tags": ["Tiling window manager","Keyboard-first","Config file"], "permissions": "Requires Accessibility permission to control windows. The project is not notarized; review its official installation instructions before opening it.", "compatibility": "macOS installation instructions are available. Read the current limitations and configuration guide first."},
@@ -481,6 +482,7 @@ const appCopy = {
     "yt-dlp": {"summary": "多数の対応サイトから動画・音声を取得できる、機能豊富なコマンドラインツールです。", "recommendation": "許可された保存を、きちんと自動化。", "tags": ["コマンドライン","動画・音声","ダウンロード"], "compatibility": "Pythonまたはパッケージ管理ツールでmacOSに導入できます。公式の手順に従ってください。", "permissions": "保存する権利のあるコンテンツだけを取得し、サービスの利用規約、著作権、地域の法律に従ってください。"},
     "macshot": {"summary": "注釈、スクロールキャプチャ、OCR、画面収録、簡易編集を一つにまとめたネイティブのキャプチャツールです。", "recommendation": "撮影から注釈まで、これ一つで。", "tags": ["スクリーンショット","画面収録","スクロールキャプチャ"], "permissions": "撮影・録画には「画面収録」許可が必要です。音声録音では「マイク」、グローバル操作では必要に応じて「アクセシビリティ」または「入力監視」を求めます。", "compatibility": "ネイティブのmacOS版があります。現在のバージョンの動作要件を確認してください。"},
     "imageoptim": {"summary": "画像をドラッグ＆ドロップで最適化し、見た目を保ちながらファイルサイズを小さくします。", "recommendation": "公開前の画像を、軽く整える。", "tags": ["画像圧縮","最適化","ドラッグ＆ドロップ"], "compatibility": "macOSネイティブアプリです。現在の動作要件は公式サイトで確認してください。", "permissions": "ドラッグまたは選択した画像だけを処理します。元に戻せるよう、原本を残しておくことをおすすめします。"},
+    "any2webp": {"summary": "画像や動画をMac上でWebP・GIFに一括変換。複数画像の合成やアニメーション編集にも対応。", "recommendation": "画像も動画も、まとめて一括変換。", "tags": ["WebP", "GIFアニメ", "一括変換"], "compatibility": "v0.2.28 プレビュー版 · Apple Silicon専用 · macOS 26以降。現行ビルドはアドホック署名で、Appleの公証はありません。", "permissions": "選択したローカルファイルだけを処理します。動画の読み込みにはFFmpegとffprobeが必要です。「ヘルプ → 動画の依存ツール」から確認・導入できます。"},
     "krita": {"summary": "イラスト、コンセプトアート、コミック制作に対応する、機能豊富なデジタルペイントソフトです。", "recommendation": "描くための道具が、ここにある。", "tags": ["デジタルペイント","イラスト","PSD"], "compatibility": "macOS版を配布しています。現在の動作要件は公式サイトで確認してください。", "permissions": "出所が不明な素材集やスクリプトを読み込む前に、提供元を確認してください。"},
     rectangle: { summary: "ショートカットやスナップ領域でウインドウを移動・リサイズし、画面を素早く整えます。", recommendation: "ウインドウの置き場所を、迷わず決める。", tags: ["ウインドウ整列", "ショートカット", "スナップ"], permissions: "ほかのアプリのウインドウを操作するため、「アクセシビリティ」へのアクセスが必要です。", compatibility: "最新版はmacOS 14以降が必要です。macOS 10.15〜13では1.100を利用できます。" },
     "aerospace": {"summary": "i3のようなキーボード中心の操作で、ウインドウをタイル状に配置するmacOS向けウインドウマネージャです。", "recommendation": "キーボードで、ウインドウを整列。", "tags": ["タイル型WM","キーボード操作","ワークスペース"], "permissions": "ウインドウ操作に「アクセシビリティ」へのアクセスが必要です。公式バイナリは未公証と明記されているため、配布元と更新情報を確認して導入してください。", "compatibility": "macOS向けの導入手順があります。現在の制限事項と設定方法を先に確認してください。"},
@@ -884,7 +886,7 @@ async function init() {
   }));
   try {
     const dataURL = new URL("data/apps.json", import.meta.url);
-    dataURL.searchParams.set("v", "42525d1983dc");
+    dataURL.searchParams.set("v", "95cd80412586");
     const response = await fetch(dataURL);
     if (!response.ok) throw new Error("Unable to load app data");
     apps = await response.json();

@@ -1237,6 +1237,18 @@
       "sha256": "c34767164911c549d0e67b78d04e888ae4b4dbee11a734b99dfe65e6ba16102a",
       "bytes": 42453,
       "checkedAt": "2026-11-03"
+    },
+    {
+      "id": "any2webp",
+      "name": "Any2WebP",
+      "file": "assets/icons/any2webp.png",
+      "kind": "official-project-asset",
+      "source": "https://raw.githubusercontent.com/ixiehao/Any2WebP/main/src-tauri/icons/icon.png",
+      "sourcePage": "https://github.com/ixiehao/Any2WebP/tree/main/src-tauri/icons",
+      "note": "Official 1024px app icon from the Any2WebP source repository.",
+      "sha256": "d384fd14eebf15007f0a35768c27cb242855f03415ea5f2215796be51a5edb13",
+      "bytes": 770480,
+      "checkedAt": "2026-11-20"
     }
   ]
 }

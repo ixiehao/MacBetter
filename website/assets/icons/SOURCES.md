@@ -119,3 +119,4 @@ Names, logos, and trademarks remain with their respective owners. They identify 
 | PeaZip | [peazip.png](peazip.png) | [Original asset](https://raw.githubusercontent.com/peazip/PeaZip/sources/peazip-sources/res/share/icons/peazip.png) |
 | MacRAR | [macrar.png](macrar.png) | [Original asset](https://raw.githubusercontent.com/mstcvk/MacRAR/v1.4.4/docs/icon.png) |
 | Nigate | [nigate.png](nigate.png) | [Original ICNS](https://raw.githubusercontent.com/hoochanlon/Free-NTFS-for-Mac/main/macos/Sources/Nigate/Resources/AppIcon.icns) |
+| Any2WebP | [any2webp.png](any2webp.png) | [Official app icon](https://raw.githubusercontent.com/ixiehao/Any2WebP/main/src-tauri/icons/icon.png) |

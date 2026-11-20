@@ -246,6 +246,17 @@ A macOS image optimizer that reduces file size through a simple drag-and-drop wo
 - Permissions / notes: Processes only images you drop into the app or select. Keep the originals so you can restore them.
 - [Official site](https://imageoptim.com/mac) · [Source](https://github.com/ImageOptim/ImageOptim) · [Download](https://imageoptim.com/mac)
 
+## Any2WebP
+
+Batch-convert images and video clips to WebP or GIF locally; combine images and edit animations.
+
+- Category: Images & Design
+- License: MIT
+- Tested by io
+- System: v0.2.28 preview · Apple Silicon only · macOS 26+. Current build is ad-hoc signed and not notarized by Apple.
+- Permissions / notes: Processes only the local files you select. Video input requires local FFmpeg and ffprobe; check or install them in Help → Video Dependencies.
+- [Official site](https://ixiehao.github.io/Any2WebP/) · [Source](https://github.com/ixiehao/Any2WebP) · [Download](https://github.com/ixiehao/Any2WebP/releases/latest)
+
 ## darktable
 
 An open-source darkroom workflow for RAW photo management and non-destructive editing.

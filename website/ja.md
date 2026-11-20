@@ -246,6 +246,17 @@ MIDI、読み書き、出力を備えた本格的なワークフローで、楽�
 - 権限・注意点: ドラッグまたは選択した画像だけを処理します。元に戻せるよう、原本を残しておくことをおすすめします。
 - [公式サイト](https://imageoptim.com/mac) · [ソースコード](https://github.com/ImageOptim/ImageOptim) · [ダウンロード](https://imageoptim.com/mac)
 
+## Any2WebP
+
+画像や動画をMac上でWebP・GIFに一括変換。複数画像の合成やアニメーション編集にも対応。
+
+- カテゴリ: 画像・デザイン
+- ライセンス: MIT
+- io が使用確認済み
+- 動作環境: v0.2.28 プレビュー版 · Apple Silicon専用 · macOS 26以降。現行ビルドはアドホック署名で、Appleの公証はありません。
+- 権限・注意点: 選択したローカルファイルだけを処理します。動画の読み込みにはFFmpegとffprobeが必要です。「ヘルプ → 動画の依存ツール」から確認・導入できます。
+- [公式サイト](https://ixiehao.github.io/Any2WebP/) · [ソースコード](https://github.com/ixiehao/Any2WebP) · [ダウンロード](https://github.com/ixiehao/Any2WebP/releases/latest)
+
 ## darktable
 
 RAW写真の管理と非破壊編集に向く、オープンソースの暗室ワークフローです。

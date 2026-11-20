@@ -246,6 +246,17 @@
 - 权限与说明: 仅处理拖入或选择的图片；建议保留原文件以便回退。
 - [项目主页](https://imageoptim.com/mac) · [源代码](https://github.com/ImageOptim/ImageOptim) · [下载](https://imageoptim.com/mac)
 
+## Any2WebP
+
+在 Mac 本地批量将图片与视频片段转成 WebP 或 GIF，也支持多图合成和动图编辑。
+
+- 分类: 图片与设计
+- 许可证: MIT
+- io 实测
+- 系统要求: v0.2.28 预览版；仅支持 Apple Silicon 与 macOS 26.0 及以上。当前版本为临时签名，未经 Apple 公证。
+- 权限与说明: 转换在本机完成，只处理你选择的文件。视频输入需本地 FFmpeg 和 ffprobe，可在“帮助 → 视频依赖”中检查或安装。
+- [项目主页](https://ixiehao.github.io/Any2WebP/) · [源代码](https://github.com/ixiehao/Any2WebP) · [下载](https://github.com/ixiehao/Any2WebP/releases/latest)
+
 ## darktable
 
 面向 RAW 照片管理与非破坏性调色的开源暗房工作流。

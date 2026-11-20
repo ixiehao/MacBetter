@@ -406,6 +406,26 @@
     "sortOrder": 19
   },
   {
+    "id": "any2webp",
+    "name": "Any2WebP",
+    "preview": {"image": "https://ixiehao.github.io/Any2WebP/assets/workspace-en.png", "source": "https://ixiehao.github.io/Any2WebP/"},
+    "summary": "在 Mac 本地批量将图片与视频片段转成 WebP 或 GIF，也支持多图合成和动图编辑。",
+    "recommendation": "图片、动图和视频，一次批量转。",
+    "category": "image",
+    "categories": ["image", "video"],
+    "tags": ["WebP", "GIF 动图", "批量转换"],
+    "homepage": "https://ixiehao.github.io/Any2WebP/",
+    "github": "https://github.com/ixiehao/Any2WebP",
+    "download": "https://github.com/ixiehao/Any2WebP/releases/latest",
+    "license": "MIT",
+    "status": { "level": "tested" },
+    "compatibility": "v0.2.28 预览版；仅支持 Apple Silicon 与 macOS 26.0 及以上。当前版本为临时签名，未经 Apple 公证。",
+    "permissions": "转换在本机完成，只处理你选择的文件。视频输入需本地 FFmpeg 和 ffprobe，可在“帮助 → 视频依赖”中检查或安装。",
+    "icon": "assets/icons/any2webp.png",
+    "featured": false,
+    "sortOrder": 111
+  },
+  {
     "id": "krita",
     "name": "Krita",
     "preview": {"image": "https://krita.org/images/pages/application-screenshot.webp", "source": "https://krita.org/en/features/"},
