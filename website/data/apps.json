@@ -948,6 +948,25 @@
     "sortOrder": 46
   },
   {
+    "id": "nigate",
+    "name": "Nigate",
+    "summary": "支持 NTFS 移动硬盘读写、自动挂载和磁盘管理。",
+    "recommendation": "批量拷小文件，亲测稳定。",
+    "category": "files",
+    "categories": ["files"],
+    "tags": ["NTFS 读写", "移动硬盘", "自动挂载"],
+    "homepage": "https://github.com/hoochanlon/Free-NTFS-for-Mac",
+    "github": "https://github.com/hoochanlon/Free-NTFS-for-Mac",
+    "download": "https://github.com/hoochanlon/Free-NTFS-for-Mac/releases",
+    "license": "Zlib",
+    "status": { "level": "tested" },
+    "compatibility": "v1.8.0：macOS 14 及以上 · Apple Silicon；Intel Mac 需使用旧版 v1.4.5。",
+    "permissions": "挂载需管理员认证。默认后端依赖 MacFUSE 与 ntfs-3g；可选 FSKit 后端需 macOS 15.4 及以上。写入前请备份重要数据。",
+    "icon": "assets/icons/nigate.png",
+    "featured": false,
+    "sortOrder": 110
+  },
+  {
     "id": "kopia",
     "name": "Kopia",
     "summary": "带快照、去重与加密能力的备份工具，可选择本地或多种远端存储。",

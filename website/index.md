@@ -950,6 +950,17 @@ Browse, drag, and transfer files directly between a Mac and Android or other MTP
 - Permissions / notes: Accesses the USB device you connect and authorize, and the local files you select.
 - [Official site](https://openmtp.ganeshrvel.com/) · [Source](https://github.com/ganeshrvel/openmtp) · [Download](https://github.com/ganeshrvel/openmtp/releases)
 
+## Nigate
+
+Read and write NTFS drives, with automatic mounting and disk management.
+
+- Category: Files & Backup
+- License: Zlib
+- Tested by io
+- System: v1.8.0: macOS 14+ · Apple Silicon. Intel Macs need the older v1.4.5 release.
+- Permissions / notes: Mounting requires administrator authentication. The default backend uses MacFUSE and ntfs-3g; an optional FSKit backend requires macOS 15.4+. Back up important data before writing.
+- [Official site](https://github.com/hoochanlon/Free-NTFS-for-Mac) · [Source](https://github.com/hoochanlon/Free-NTFS-for-Mac) · [Download](https://github.com/hoochanlon/Free-NTFS-for-Mac/releases)
+
 ## Syncthing
 
 Sync chosen folders directly between devices without handing files to a third-party cloud.

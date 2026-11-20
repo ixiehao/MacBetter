@@ -950,6 +950,17 @@ MacとAndroidなどのMTP機器の間で、ファイルを直接ブラウズ、�
 - 権限・注意点: USBで接続して許可した端末と、選択したローカルファイルにアクセスします。
 - [公式サイト](https://openmtp.ganeshrvel.com/) · [ソースコード](https://github.com/ganeshrvel/openmtp) · [ダウンロード](https://github.com/ganeshrvel/openmtp/releases)
 
+## Nigate
+
+NTFSドライブの読み書きに対応し、自動マウントとディスク管理も行えます。
+
+- カテゴリ: ファイル・バックアップ
+- ライセンス: Zlib
+- io が使用確認済み
+- 動作環境: v1.8.0：macOS 14以降 · Apple Silicon。Intel Macでは旧版v1.4.5を使用します。
+- 権限・注意点: マウントには管理者認証が必要です。標準バックエンドはMacFUSEとntfs-3gを使用します。任意のFSKitバックエンドはmacOS 15.4以降が必要です。書き込み前に重要なデータをバックアップしてください。
+- [公式サイト](https://github.com/hoochanlon/Free-NTFS-for-Mac) · [ソースコード](https://github.com/hoochanlon/Free-NTFS-for-Mac) · [ダウンロード](https://github.com/hoochanlon/Free-NTFS-for-Mac/releases)
+
 ## Syncthing
 
 指定したフォルダを端末同士で直接同期。第三者のクラウドにファイルを預ける必要はありません。

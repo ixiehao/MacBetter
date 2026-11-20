@@ -21,7 +21,7 @@ const categoryIcons = {
   productivity: "bolt",
   efficiency: "code"
 };
-const licenseOrder = ["MIT", "GPL-2.0", "GPL-3.0", "GPL-2.0 / GPL-3.0", "AGPL-3.0", "MPL-2.0", "Apache-2.0", "Unlicense", "LGPL-2.1", "LGPL-3.0", "BSD-2-Clause", "BSD-3-Clause"];
+const licenseOrder = ["MIT", "Zlib", "GPL-2.0", "GPL-3.0", "GPL-2.0 / GPL-3.0", "AGPL-3.0", "MPL-2.0", "Apache-2.0", "Unlicense", "LGPL-2.1", "LGPL-3.0", "BSD-2-Clause", "BSD-3-Clause"];
 const categoryOrder = ["video", "player", "audio", "image", "capture", "browser", "download", "launcher", "menu", "office", "notes", "productivity", "archives", "files", "maintenance", "privacy", "efficiency"];
 const workflowOrder = {
   video: ["shotmap", "mp4flow", "handbrake", "lossless-cut", "subler", "mediainfo", "subtitle-edit", "openscreen", "blender"],
@@ -37,7 +37,7 @@ const workflowOrder = {
   notes: ["zettlr", "qownnotes", "joplin", "logseq", "appflowy"],
   productivity: ["super-productivity", "maccy", "espanso", "hammerspoon", "swiftbar"],
   archives: ["macpacker", "peazip", "macrar"],
-  files: ["macpacker", "peazip", "macrar", "localsend", "openmtp", "cyberduck", "syncthing", "kopia"],
+  files: ["macpacker", "peazip", "macrar", "localsend", "openmtp", "nigate", "cyberduck", "syncthing", "kopia"],
   maintenance: ["puremac", "purge", "mangodisk", "dupeguru", "latest", "applite", "sloth"],
   privacy: ["signal", "keepassxc", "cryptomator", "lulu"],
   efficiency: ["github-desktop", "vscodium", "zed", "codeedit", "xcodes", "alacritty", "dbeaver", "tablepro", "bruno", "kilobat-cli", "utm", "hammerspoon", "swiftbar"]
@@ -121,6 +121,7 @@ const copy = {
     permission: { accessibility: "辅助功能", files: "文件访问", fullDiskOptional: "完整磁盘访问（可选）", screenRecording: "屏幕录制", inputMonitoring: "输入监控" },
     license: {
       MIT: "MIT：个人或商业使用、修改和再发布都可以；分发时保留许可证与版权声明即可，通常不要求公开自己的修改版源码。",
+      Zlib: "Zlib：宽松许可，允许商用、修改和再发布；需保留版权与许可声明，并标明修改版本，不提供保证。",
       "GPL-2.0": "GPL-2.0：可自由使用和修改；若向他人分发程序或修改版，须按 GPL-2.0 提供对应源码，并保留许可与版权声明。",
       "GPL-3.0": "GPL-3.0：可自由使用和修改；分发程序或修改版时，须按 GPL-3.0 提供对应源码。它还包含明确的专利条款。",
       "GPL-2.0 / GPL-3.0": "GPL-2.0 / GPL-3.0：项目允许选择 GPLv2 或 GPLv3；发布时遵守所选版本，并提供对应源码，保留适用的例外与组件声明。",
@@ -217,6 +218,7 @@ const copy = {
     permission: { accessibility: "Accessibility", files: "File access", fullDiskOptional: "Full Disk Access (optional)", screenRecording: "Screen Recording", inputMonitoring: "Input Monitoring" },
     license: {
       MIT: "MIT: Free to use, modify, and redistribute, including commercially. Keep the license and copyright notice; it generally does not require publishing your own modified source.",
+      Zlib: "Zlib: A permissive license that allows commercial use, modification, and redistribution. Keep the copyright and license notice, mark modified versions, and note that it comes without warranty.",
       "GPL-2.0": "GPL-2.0: You may use and modify it. If you distribute the program or a modified version, provide the corresponding source under GPL-2.0 and preserve its notices.",
       "GPL-3.0": "GPL-3.0: You may use and modify it. Distribution of the program or a modified version requires corresponding source under GPL-3.0; it also includes express patent terms.",
       "GPL-2.0 / GPL-3.0": "GPL-2.0 / GPL-3.0: Choose GPLv2 or GPLv3 as the project permits. Follow that version when distributing the software and its source, including applicable exceptions and component notices.",
@@ -313,6 +315,7 @@ const copy = {
     permission: { accessibility: "アクセシビリティ", files: "ファイルアクセス", fullDiskOptional: "フルディスクアクセス（任意）", screenRecording: "画面収録", inputMonitoring: "入力監視" },
     license: {
       MIT: "MIT：商用を含め、自由に利用・改変・再配布できます。ライセンスと著作権表示を残します。通常、独自の改変ソースを公開する義務はありません。",
+      Zlib: "Zlib：商用利用・改変・再配布が可能な寛容なライセンスです。著作権・ライセンス表示を残し、改変版を明示します。無保証です。",
       "GPL-2.0": "GPL-2.0：利用・改変は自由です。プログラムや改変版を配布する場合、GPL-2.0で対応するソースコードを提供し、表示を保持する必要があります。",
       "GPL-3.0": "GPL-3.0：利用・改変は自由です。プログラムや改変版の配布時はGPL-3.0で対応するソースコードを提供します。特許に関する条項も含まれます。",
       "GPL-2.0 / GPL-3.0": "GPL-2.0 / GPL-3.0：プロジェクトの条件に従ってGPLv2またはGPLv3を選べます。配布時は選んだ版でソースを提供し、適用される例外や各部品の表示も保ちます。",
@@ -393,6 +396,7 @@ const appCopy = {
     layoutkeeper: { summary: "Restore saved window layouts when you reconnect a monitor, with optional brightness sync and keep-awake modes.", recommendation: "Reconnect. Restore your windows.", tags: ["External display", "Window layout", "Stay awake"], compatibility: "macOS 14+ · Intel and Apple Silicon. Restoring windows across Spaces requires macOS 26+. Hardware brightness control needs Apple Silicon and a compatible DDC display.", permissions: "Requires Accessibility. No Screen Recording or Input Monitoring is needed. Release builds are self-signed, not notarized by Apple." },
     "localsend": {"summary": "Send files, text, and clipboard content directly over the local network, without a cloud relay.", "recommendation": "Send a file without uploading it first.", "tags": ["Local transfer","Cross-platform","No cloud"], "compatibility": "Official project releases include a macOS installer.", "permissions": "Uses local-network discovery and transfers. Accept only devices and files you recognize."},
     "openmtp": {"summary": "Browse, drag, and transfer files directly between a Mac and Android or other MTP devices.", "recommendation": "Move files between your Mac and Android with ease.", "tags": ["Android","MTP","File transfer"], "compatibility": "macOS 11+", "permissions": "Accesses the USB device you connect and authorize, and the local files you select."},
+    "nigate": {"summary": "Read and write NTFS drives, with automatic mounting and disk management.", "recommendation": "Small-file batch transfers stayed stable in my tests.", "tags": ["NTFS read/write", "External drives", "Auto-mount"], "compatibility": "v1.8.0: macOS 14+ · Apple Silicon. Intel Macs need the older v1.4.5 release.", "permissions": "Mounting requires administrator authentication. The default backend uses MacFUSE and ntfs-3g; an optional FSKit backend requires macOS 15.4+. Back up important data before writing."},
     "kopia": {"summary": "A backup tool with snapshots, deduplication, and encryption for local or remote destinations.", "recommendation": "A backup only counts when it restores.", "tags": ["Backup","Snapshots","Encryption"], "compatibility": "Official releases include macOS builds for Apple Silicon and Intel.", "permissions": "Reads selected backup sources and writes to the backup destination. Test a restore before relying on it."},
     "syncthing": {"summary": "Sync chosen folders directly between devices without handing files to a third-party cloud.", "recommendation": "Sync files without giving them away.", "tags": ["File sync","End-to-end","Decentralized"], "compatibility": "Official macOS archives contain a command-line program configured through a browser interface. Choose the build for your chip.", "permissions": "You choose the sync scope. Review the devices and version-retention settings for each shared folder."},
     "cryptomator": {"summary": "Encrypt files locally before they reach a cloud drive; you keep control of the keys.", "recommendation": "Lock files before they go to the cloud.", "tags": ["Encryption","Cloud drives","Privacy"], "compatibility": "Official releases include macOS builds for Apple Silicon and Intel.", "permissions": "Accesses the vaults and sync folders you select. Keep recovery keys and passwords safe."},
@@ -505,6 +509,7 @@ const appCopy = {
     layoutkeeper: { summary: "外付けディスプレイの再接続時にウィンドウ配置を復元。明るさ連動やスリープ防止にも対応します。", recommendation: "つなぎ直して、元の配置へ。", tags: ["外付けディスプレイ", "ウィンドウ配置", "スリープ防止"], compatibility: "macOS 14以降 · Intel / Apple Silicon。Spaces間の復元はmacOS 26以降が必要です。ハードウェア輝度調整はApple SiliconとDDC対応ディスプレイが必要です。", permissions: "「アクセシビリティ」が必要です。画面収録・入力監視は不要です。配布版は自己署名で、Appleの公証を受けていません。" },
     "localsend": {"summary": "クラウドを経由せず、同じネットワーク内でファイル、テキスト、クリップボードを直接送れます。", "recommendation": "送る前に、アップロードしなくていい。", "tags": ["ローカル転送","クロスプラットフォーム","クラウド不要"], "compatibility": "プロジェクトの公式リリースでmacOS版を配布しています。", "permissions": "ローカルネットワークで端末を検出し、ファイルを転送します。確認できる端末とファイルだけを受け入れてください。"},
     "openmtp": {"summary": "MacとAndroidなどのMTP機器の間で、ファイルを直接ブラウズ、ドラッグ、転送できます。", "recommendation": "Androidとのファイル転送も、Macから手軽に。", "tags": ["Android","MTP","ファイル転送"], "compatibility": "macOS 11以降", "permissions": "USBで接続して許可した端末と、選択したローカルファイルにアクセスします。"},
+    "nigate": {"summary": "NTFSドライブの読み書きに対応し、自動マウントとディスク管理も行えます。", "recommendation": "小さなファイルの一括コピーも、実測で安定。", "tags": ["NTFS読み書き", "外付けドライブ", "自動マウント"], "compatibility": "v1.8.0：macOS 14以降 · Apple Silicon。Intel Macでは旧版v1.4.5を使用します。", "permissions": "マウントには管理者認証が必要です。標準バックエンドはMacFUSEとntfs-3gを使用します。任意のFSKitバックエンドはmacOS 15.4以降が必要です。書き込み前に重要なデータをバックアップしてください。"},
     "kopia": {"summary": "スナップショット、重複排除、暗号化を備え、ローカルや各種リモート保存先にバックアップできます。", "recommendation": "バックアップは、復元できて初めて役に立つ。", "tags": ["バックアップ","スナップショット","暗号化"], "compatibility": "公式リリースにApple Silicon用とIntel用のmacOS版があります。", "permissions": "選択したバックアップ元を読み取り、保存先に書き込みます。本格的な運用前に復元を試してください。"},
     "syncthing": {"summary": "指定したフォルダを端末同士で直接同期。第三者のクラウドにファイルを預ける必要はありません。", "recommendation": "同期しても、ファイルを手放さない。", "tags": ["ファイル同期","エンドツーエンド","分散型"], "compatibility": "公式macOS版はコマンドラインプログラムの圧縮ファイルで、設定はブラウザから行います。CPUに合う版を選んでください。", "permissions": "同期する範囲は自分で選択します。共有フォルダごとに接続端末とバージョンの保存設定を確認してください。"},
     "cryptomator": {"summary": "クラウドドライブへ送る前にファイルをローカルで暗号化。鍵は自分で管理します。", "recommendation": "クラウドへ行く前に、ファイルをロック。", "tags": ["暗号化","クラウドドライブ","プライバシー"], "compatibility": "公式リリースにApple Silicon用とIntel用のmacOS版があります。", "permissions": "選択した保管庫と同期フォルダにアクセスします。復旧キーとパスワードを安全に保管してください。"},
@@ -879,7 +884,7 @@ async function init() {
   }));
   try {
     const dataURL = new URL("data/apps.json", import.meta.url);
-    dataURL.searchParams.set("v", "5eb44ffa6587");
+    dataURL.searchParams.set("v", "42525d1983dc");
     const response = await fetch(dataURL);
     if (!response.ok) throw new Error("Unable to load app data");
     apps = await response.json();

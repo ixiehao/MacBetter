@@ -1216,6 +1216,18 @@
       "checkedAt": "2026-11-03"
     },
     {
+      "id": "nigate",
+      "name": "Nigate",
+      "file": "assets/icons/nigate.png",
+      "kind": "official-project-asset",
+      "source": "https://raw.githubusercontent.com/hoochanlon/Free-NTFS-for-Mac/main/macos/Sources/Nigate/Resources/AppIcon.icns",
+      "sourcePage": "https://github.com/hoochanlon/Free-NTFS-for-Mac/tree/main/macos/Sources/Nigate/Resources",
+      "note": "Official AppIcon.icns converted to PNG for local hosting without redrawing.",
+      "sha256": "de4ff6bd2e5740861a063cf8c63a26aa13298724c80989f8fc03b569d7dcdc50",
+      "bytes": 101005,
+      "checkedAt": "2026-11-20"
+    },
+    {
       "id": "macrar",
       "name": "MacRAR",
       "file": "assets/icons/macrar.png",

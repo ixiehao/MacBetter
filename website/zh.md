@@ -950,6 +950,17 @@
 - 权限与说明: 只访问你通过 USB 连接并授权的设备与选择的本地文件。
 - [项目主页](https://openmtp.ganeshrvel.com/) · [源代码](https://github.com/ganeshrvel/openmtp) · [下载](https://github.com/ganeshrvel/openmtp/releases)
 
+## Nigate
+
+支持 NTFS 移动硬盘读写、自动挂载和磁盘管理。
+
+- 分类: 文件与备份
+- 许可证: Zlib
+- io 实测
+- 系统要求: v1.8.0：macOS 14 及以上 · Apple Silicon；Intel Mac 需使用旧版 v1.4.5。
+- 权限与说明: 挂载需管理员认证。默认后端依赖 MacFUSE 与 ntfs-3g；可选 FSKit 后端需 macOS 15.4 及以上。写入前请备份重要数据。
+- [项目主页](https://github.com/hoochanlon/Free-NTFS-for-Mac) · [源代码](https://github.com/hoochanlon/Free-NTFS-for-Mac) · [下载](https://github.com/hoochanlon/Free-NTFS-for-Mac/releases)
+
 ## Syncthing
 
 让多台设备直接同步指定文件夹，不必把文件交给第三方云盘。
