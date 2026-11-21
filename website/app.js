@@ -888,7 +888,7 @@ async function init() {
   }));
   try {
     const dataURL = new URL("data/apps.json", import.meta.url);
-    dataURL.searchParams.set("v", "d470f0f8d471");
+    dataURL.searchParams.set("v", "376844697fc2");
     const response = await fetch(dataURL);
     if (!response.ok) throw new Error("Unable to load app data");
     apps = await response.json();

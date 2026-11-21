@@ -408,7 +408,7 @@
   {
     "id": "any2webp",
     "name": "Any2WebP",
-    "preview": {"image": "https://ixiehao.github.io/Any2WebP/assets/workspace-en.png", "source": "https://ixiehao.github.io/Any2WebP/"},
+    "preview": {"image": "https://ixiehao.github.io/Any2WebP/assets/workspace-en.png?v=hummingbird", "source": "https://ixiehao.github.io/Any2WebP/", "images": {"en": "https://ixiehao.github.io/Any2WebP/assets/workspace-en.png?v=hummingbird", "zh": "https://ixiehao.github.io/Any2WebP/assets/workspace-zh.png?v=hummingbird", "ja": "https://ixiehao.github.io/Any2WebP/assets/workspace-ja.png?v=hummingbird"}},
     "summary": "在 Mac 本地批量将图片与视频片段转成 WebP 或 GIF，也支持多图合成和动图编辑。",
     "recommendation": "图片、动图和视频，一次批量转。",
     "category": "image",
