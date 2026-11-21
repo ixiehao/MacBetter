@@ -972,6 +972,17 @@
 - 权限与说明: 挂载需管理员认证。默认后端依赖 MacFUSE 与 ntfs-3g；可选 FSKit 后端需 macOS 15.4 及以上。写入前请备份重要数据。
 - [项目主页](https://github.com/hoochanlon/Free-NTFS-for-Mac) · [源代码](https://github.com/hoochanlon/Free-NTFS-for-Mac) · [下载](https://github.com/hoochanlon/Free-NTFS-for-Mac/releases)
 
+## ezNTFS
+
+在 Mac 上读写 NTFS 硬盘，支持自动挂载、安全弹出和 SHA-256 校验复制。
+
+- 分类: 文件与备份
+- 许可证: MIT
+- io 实测
+- 系统要求: v0.5.0 · macOS 14 及以上 · Apple Silicon；需安装 macFUSE 5.5.0。PKG 未签名、未公证。
+- 权限与说明: 安装 App、系统挂载服务与 NTFS-3G 驱动需管理员授权；macOS 可能还要求为挂载服务开启“完全磁盘访问”。NTFS-3G 含 GPL-2.0 / LGPL-2.0 组件，macFUSE 适用其自身许可。
+- [项目主页](https://ixiehao.github.io/ezNTFS/) · [源代码](https://github.com/ixiehao/ezNTFS) · [下载](https://github.com/ixiehao/ezNTFS/releases/latest)
+
 ## Syncthing
 
 让多台设备直接同步指定文件夹，不必把文件交给第三方云盘。

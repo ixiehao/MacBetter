@@ -987,6 +987,26 @@
     "sortOrder": 110
   },
   {
+    "id": "ezntfs",
+    "name": "ezNTFS",
+    "preview": {"image": "https://ixiehao.github.io/ezNTFS/assets/ezntfs-en.png", "source": "https://ixiehao.github.io/ezNTFS/", "images": {"en": "https://ixiehao.github.io/ezNTFS/assets/ezntfs-en.png", "zh": "https://ixiehao.github.io/ezNTFS/assets/ezntfs-zh-Hans.png", "ja": "https://ixiehao.github.io/ezNTFS/assets/ezntfs-ja.png"}},
+    "summary": "在 Mac 上读写 NTFS 硬盘，支持自动挂载、安全弹出和 SHA-256 校验复制。",
+    "recommendation": "NTFS 硬盘接上 Mac，也能读写。",
+    "category": "files",
+    "categories": ["files"],
+    "tags": ["NTFS 读写", "自动挂载", "校验复制"],
+    "homepage": "https://ixiehao.github.io/ezNTFS/",
+    "github": "https://github.com/ixiehao/ezNTFS",
+    "download": "https://github.com/ixiehao/ezNTFS/releases/latest",
+    "license": "MIT",
+    "status": { "level": "tested" },
+    "compatibility": "v0.5.0 · macOS 14 及以上 · Apple Silicon；需安装 macFUSE 5.5.0。PKG 未签名、未公证。",
+    "permissions": "安装 App、系统挂载服务与 NTFS-3G 驱动需管理员授权；macOS 可能还要求为挂载服务开启“完全磁盘访问”。NTFS-3G 含 GPL-2.0 / LGPL-2.0 组件，macFUSE 适用其自身许可。",
+    "icon": "assets/icons/ezntfs.svg",
+    "featured": false,
+    "sortOrder": 112
+  },
+  {
     "id": "kopia",
     "name": "Kopia",
     "summary": "带快照、去重与加密能力的备份工具，可选择本地或多种远端存储。",

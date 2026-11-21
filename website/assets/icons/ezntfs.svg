@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="plate" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#568FF1"/>
+      <stop offset="1" stop-color="#2054BC"/>
+    </linearGradient>
+    <linearGradient id="face" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#DCEBFF"/>
+    </linearGradient>
+  </defs>
+  <rect x="96" y="96" width="832" height="832" rx="185" fill="url(#plate)"/>
+  <rect x="98" y="98" width="828" height="828" rx="183" fill="none" stroke="#DCEBFF" stroke-width="4" stroke-opacity=".35"/>
+  <path d="M216 477 282 355Q295 332 325 332H699Q729 332 742 355L808 477Z" fill="#F0F7FF"/>
+  <rect x="202" y="458" width="620" height="258" rx="65" fill="#AFC9EF"/>
+  <rect x="202" y="445" width="620" height="237" rx="65" fill="url(#face)"/>
+  <!-- Custom outlines keep the NTFS lettering independent of fonts at export. -->
+  <g fill="#17488F">
+    <path d="M282 629V503H307L359 577V503H384V629H359L307 555V629Z"/>
+    <path d="M398 503H501V527H463V629H436V527H398Z"/>
+    <path d="M516 503H605V527H543V556H595V580H543V629H516Z"/>
+    <path d="M617 609 634 592Q650 608 673 608 696 608 696 594 696 586 686 582L652 572Q622 563 622 537 622 500 669 500 697 500 718 517L703 536Q688 523 667 523 649 523 649 536 649 544 661 548L690 557Q723 567 723 592 723 632 675 632 640 632 617 609Z"/>
+  </g>
+  <circle cx="765" cy="619" r="13" fill="#3E78D5"/>
+</svg>

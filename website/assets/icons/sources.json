@@ -1249,6 +1249,18 @@
       "sha256": "d384fd14eebf15007f0a35768c27cb242855f03415ea5f2215796be51a5edb13",
       "bytes": 770480,
       "checkedAt": "2026-11-20"
+    },
+    {
+      "id": "ezntfs",
+      "name": "ezNTFS",
+      "file": "assets/icons/ezntfs.svg",
+      "kind": "official-project-asset",
+      "source": "https://raw.githubusercontent.com/ixiehao/ezNTFS/v0.5.0/Resources/Brand/AppIcon.svg",
+      "sourcePage": "https://github.com/ixiehao/ezNTFS/tree/v0.5.0/Resources/Brand",
+      "note": "Official SVG app icon from the v0.5.0 release tag, retained unchanged.",
+      "sha256": "c4646bd19237436202cc5f55757f17573f4207ce88a050077be274319df1c60d",
+      "bytes": 1486,
+      "checkedAt": "2026-11-21"
     }
   ]
 }

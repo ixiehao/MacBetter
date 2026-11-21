@@ -972,6 +972,17 @@ NTFSドライブの読み書きに対応し、自動マウントとディスク�
 - 権限・注意点: マウントには管理者認証が必要です。標準バックエンドはMacFUSEとntfs-3gを使用します。任意のFSKitバックエンドはmacOS 15.4以降が必要です。書き込み前に重要なデータをバックアップしてください。
 - [公式サイト](https://github.com/hoochanlon/Free-NTFS-for-Mac) · [ソースコード](https://github.com/hoochanlon/Free-NTFS-for-Mac) · [ダウンロード](https://github.com/hoochanlon/Free-NTFS-for-Mac/releases)
 
+## ezNTFS
+
+macOSでNTFSドライブを読み書き。自動マウント、安全な取り出し、SHA-256検証付きコピーにも対応します。
+
+- カテゴリ: ファイル・バックアップ
+- ライセンス: MIT
+- io が使用確認済み
+- 動作環境: v0.5.0 · macOS 14以降 · Apple Silicon。macFUSE 5.5.0が必要です。PKGは未署名・未公証です。
+- 権限・注意点: アプリ、マウントサービス、NTFS-3Gドライバーの導入には管理者の承認が必要です。macOSでサービスにフルディスクアクセスが必要な場合があります。NTFS-3GにはGPL-2.0 / LGPL-2.0のコンポーネントが含まれ、macFUSEには別のライセンスが適用されます。
+- [公式サイト](https://ixiehao.github.io/ezNTFS/) · [ソースコード](https://github.com/ixiehao/ezNTFS) · [ダウンロード](https://github.com/ixiehao/ezNTFS/releases/latest)
+
 ## Syncthing
 
 指定したフォルダを端末同士で直接同期。第三者のクラウドにファイルを預ける必要はありません。

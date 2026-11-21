@@ -972,6 +972,17 @@ Read and write NTFS drives, with automatic mounting and disk management.
 - Permissions / notes: Mounting requires administrator authentication. The default backend uses MacFUSE and ntfs-3g; an optional FSKit backend requires macOS 15.4+. Back up important data before writing.
 - [Official site](https://github.com/hoochanlon/Free-NTFS-for-Mac) · [Source](https://github.com/hoochanlon/Free-NTFS-for-Mac) · [Download](https://github.com/hoochanlon/Free-NTFS-for-Mac/releases)
 
+## ezNTFS
+
+Mount NTFS drives for read/write, with auto-mount, safe ejection, and SHA-256 verified copying.
+
+- Category: Files & Backup
+- License: MIT
+- Tested by io
+- System: v0.5.0 · macOS 14+ · Apple Silicon. Requires macFUSE 5.5.0. The PKG is unsigned and not notarized.
+- Permissions / notes: Installing the app, mount service, and NTFS-3G driver requires administrator approval. macOS may also require Full Disk Access for the mount service. NTFS-3G includes GPL-2.0 / LGPL-2.0 components; macFUSE has separate terms.
+- [Official site](https://ixiehao.github.io/ezNTFS/) · [Source](https://github.com/ixiehao/ezNTFS) · [Download](https://github.com/ixiehao/ezNTFS/releases/latest)
+
 ## Syncthing
 
 Sync chosen folders directly between devices without handing files to a third-party cloud.

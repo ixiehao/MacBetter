@@ -37,7 +37,7 @@ const workflowOrder = {
   notes: ["zettlr", "qownnotes", "joplin", "logseq", "appflowy"],
   productivity: ["super-productivity", "maccy", "espanso", "hammerspoon", "swiftbar"],
   archives: ["macpacker", "peazip", "macrar"],
-  files: ["macpacker", "peazip", "macrar", "localsend", "openmtp", "nigate", "cyberduck", "syncthing", "kopia"],
+  files: ["macpacker", "peazip", "macrar", "localsend", "openmtp", "nigate", "ezntfs", "cyberduck", "syncthing", "kopia"],
   maintenance: ["puremac", "purge", "mangodisk", "dupeguru", "latest", "applite", "sloth"],
   privacy: ["signal", "keepassxc", "cryptomator", "lulu"],
   efficiency: ["github-desktop", "vscodium", "zed", "codeedit", "xcodes", "alacritty", "dbeaver", "tablepro", "bruno", "kilobat-cli", "utm", "hammerspoon", "swiftbar"]
@@ -398,6 +398,7 @@ const appCopy = {
     "localsend": {"summary": "Send files, text, and clipboard content directly over the local network, without a cloud relay.", "recommendation": "Send a file without uploading it first.", "tags": ["Local transfer","Cross-platform","No cloud"], "compatibility": "Official project releases include a macOS installer.", "permissions": "Uses local-network discovery and transfers. Accept only devices and files you recognize."},
     "openmtp": {"summary": "Browse, drag, and transfer files directly between a Mac and Android or other MTP devices.", "recommendation": "Move files between your Mac and Android with ease.", "tags": ["Android","MTP","File transfer"], "compatibility": "macOS 11+", "permissions": "Accesses the USB device you connect and authorize, and the local files you select."},
     "nigate": {"summary": "Read and write NTFS drives, with automatic mounting and disk management.", "recommendation": "Small-file batch transfers stayed stable in my tests.", "tags": ["NTFS read/write", "External drives", "Auto-mount"], "compatibility": "v1.8.0: macOS 14+ · Apple Silicon. Intel Macs need the older v1.4.5 release.", "permissions": "Mounting requires administrator authentication. The default backend uses MacFUSE and ntfs-3g; an optional FSKit backend requires macOS 15.4+. Back up important data before writing."},
+    "ezntfs": {"summary": "Mount NTFS drives for read/write, with auto-mount, safe ejection, and SHA-256 verified copying.", "recommendation": "Write to NTFS drives right on your Mac.", "tags": ["NTFS read/write", "Auto-mount", "Verified copying"], "compatibility": "v0.5.0 · macOS 14+ · Apple Silicon. Requires macFUSE 5.5.0. The PKG is unsigned and not notarized.", "permissions": "Installing the app, mount service, and NTFS-3G driver requires administrator approval. macOS may also require Full Disk Access for the mount service. NTFS-3G includes GPL-2.0 / LGPL-2.0 components; macFUSE has separate terms."},
     "kopia": {"summary": "A backup tool with snapshots, deduplication, and encryption for local or remote destinations.", "recommendation": "A backup only counts when it restores.", "tags": ["Backup","Snapshots","Encryption"], "compatibility": "Official releases include macOS builds for Apple Silicon and Intel.", "permissions": "Reads selected backup sources and writes to the backup destination. Test a restore before relying on it."},
     "syncthing": {"summary": "Sync chosen folders directly between devices without handing files to a third-party cloud.", "recommendation": "Sync files without giving them away.", "tags": ["File sync","End-to-end","Decentralized"], "compatibility": "Official macOS archives contain a command-line program configured through a browser interface. Choose the build for your chip.", "permissions": "You choose the sync scope. Review the devices and version-retention settings for each shared folder."},
     "cryptomator": {"summary": "Encrypt files locally before they reach a cloud drive; you keep control of the keys.", "recommendation": "Lock files before they go to the cloud.", "tags": ["Encryption","Cloud drives","Privacy"], "compatibility": "Official releases include macOS builds for Apple Silicon and Intel.", "permissions": "Accesses the vaults and sync folders you select. Keep recovery keys and passwords safe."},
@@ -512,6 +513,7 @@ const appCopy = {
     "localsend": {"summary": "クラウドを経由せず、同じネットワーク内でファイル、テキスト、クリップボードを直接送れます。", "recommendation": "送る前に、アップロードしなくていい。", "tags": ["ローカル転送","クロスプラットフォーム","クラウド不要"], "compatibility": "プロジェクトの公式リリースでmacOS版を配布しています。", "permissions": "ローカルネットワークで端末を検出し、ファイルを転送します。確認できる端末とファイルだけを受け入れてください。"},
     "openmtp": {"summary": "MacとAndroidなどのMTP機器の間で、ファイルを直接ブラウズ、ドラッグ、転送できます。", "recommendation": "Androidとのファイル転送も、Macから手軽に。", "tags": ["Android","MTP","ファイル転送"], "compatibility": "macOS 11以降", "permissions": "USBで接続して許可した端末と、選択したローカルファイルにアクセスします。"},
     "nigate": {"summary": "NTFSドライブの読み書きに対応し、自動マウントとディスク管理も行えます。", "recommendation": "小さなファイルの一括コピーも、実測で安定。", "tags": ["NTFS読み書き", "外付けドライブ", "自動マウント"], "compatibility": "v1.8.0：macOS 14以降 · Apple Silicon。Intel Macでは旧版v1.4.5を使用します。", "permissions": "マウントには管理者認証が必要です。標準バックエンドはMacFUSEとntfs-3gを使用します。任意のFSKitバックエンドはmacOS 15.4以降が必要です。書き込み前に重要なデータをバックアップしてください。"},
+    "ezntfs": {"summary": "macOSでNTFSドライブを読み書き。自動マウント、安全な取り出し、SHA-256検証付きコピーにも対応します。", "recommendation": "NTFSドライブも、Macで読み書き。", "tags": ["NTFS読み書き", "自動マウント", "検証コピー"], "compatibility": "v0.5.0 · macOS 14以降 · Apple Silicon。macFUSE 5.5.0が必要です。PKGは未署名・未公証です。", "permissions": "アプリ、マウントサービス、NTFS-3Gドライバーの導入には管理者の承認が必要です。macOSでサービスにフルディスクアクセスが必要な場合があります。NTFS-3GにはGPL-2.0 / LGPL-2.0のコンポーネントが含まれ、macFUSEには別のライセンスが適用されます。"},
     "kopia": {"summary": "スナップショット、重複排除、暗号化を備え、ローカルや各種リモート保存先にバックアップできます。", "recommendation": "バックアップは、復元できて初めて役に立つ。", "tags": ["バックアップ","スナップショット","暗号化"], "compatibility": "公式リリースにApple Silicon用とIntel用のmacOS版があります。", "permissions": "選択したバックアップ元を読み取り、保存先に書き込みます。本格的な運用前に復元を試してください。"},
     "syncthing": {"summary": "指定したフォルダを端末同士で直接同期。第三者のクラウドにファイルを預ける必要はありません。", "recommendation": "同期しても、ファイルを手放さない。", "tags": ["ファイル同期","エンドツーエンド","分散型"], "compatibility": "公式macOS版はコマンドラインプログラムの圧縮ファイルで、設定はブラウザから行います。CPUに合う版を選んでください。", "permissions": "同期する範囲は自分で選択します。共有フォルダごとに接続端末とバージョンの保存設定を確認してください。"},
     "cryptomator": {"summary": "クラウドドライブへ送る前にファイルをローカルで暗号化。鍵は自分で管理します。", "recommendation": "クラウドへ行く前に、ファイルをロック。", "tags": ["暗号化","クラウドドライブ","プライバシー"], "compatibility": "公式リリースにApple Silicon用とIntel用のmacOS版があります。", "permissions": "選択した保管庫と同期フォルダにアクセスします。復旧キーとパスワードを安全に保管してください。"},
@@ -886,7 +888,7 @@ async function init() {
   }));
   try {
     const dataURL = new URL("data/apps.json", import.meta.url);
-    dataURL.searchParams.set("v", "95cd80412586");
+    dataURL.searchParams.set("v", "d470f0f8d471");
     const response = await fetch(dataURL);
     if (!response.ok) throw new Error("Unable to load app data");
     apps = await response.json();
