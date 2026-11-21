@@ -43,7 +43,7 @@ const workflowOrder = {
   efficiency: ["github-desktop", "vscodium", "zed", "codeedit", "xcodes", "alacritty", "dbeaver", "tablepro", "bruno", "kilobat-cli", "utm", "hammerspoon", "swiftbar"]
 };
 const siteURL = "https://ixiehao.github.io/MacBetter/";
-const essentialAppIds = ["lumaview", "iina", "macshot", "imageoptim", "macrar", "firefox", "launchpad-back", "purge"];
+const essentialAppIds = ["lumaview", "iina", "macshot", "ezntfs", "macrar", "firefox", "launchpad-back", "purge"];
 const defaultLanguage = "en";
 const languageStorageKey = "MacBetter-language";
 const legacyLanguageStorageKey = "mac-better-language";
@@ -54,7 +54,7 @@ const copy = {
     essentialsHeading: "新 Mac 必备工具",
     essentialsCopy: "日常刚需，一次配齐。",
     essentialsFor: "查看 {name}：{task}",
-    essentialsTask: { lumaview: "看图", iina: "看视频", macshot: "截屏", imageoptim: "压缩图片", macrar: "解压缩", firefox: "浏览网页", "launchpad-back": "启动应用", purge: "缓存清理" },
+    essentialsTask: { lumaview: "看图", iina: "看视频", macshot: "截屏", ezntfs: "硬盘读写", macrar: "解压缩", firefox: "浏览网页", "launchpad-back": "启动应用", purge: "缓存清理" },
     pageTitle: "让 Mac 更好用 · MAC免费开源软件",
     pageDescription: "一个由 Mac 用户共同维护的开源 macOS 软件目录：免费、开源、实用，并标明许可证、项目入口与关键权限。",
     htmlLang: "zh-CN",
@@ -151,7 +151,7 @@ const copy = {
     essentialsHeading: "New Mac essentials",
     essentialsCopy: "Everyday tasks, covered.",
     essentialsFor: "View {name}: {task}",
-    essentialsTask: { lumaview: "View images", iina: "Play video", macshot: "Take screenshots", imageoptim: "Compress images", macrar: "Open archives", firefox: "Browse the web", "launchpad-back": "Launch apps", purge: "Clear caches" },
+    essentialsTask: { lumaview: "View images", iina: "Play video", macshot: "Take screenshots", ezntfs: "NTFS read/write", macrar: "Open archives", firefox: "Browse the web", "launchpad-back": "Launch apps", purge: "Clear caches" },
     pageTitle: "Make Your Mac Better · Open-Source macOS Apps",
     pageDescription: "A maintained, practical directory of free and open-source macOS apps, with licenses, official links, and key permission notes.",
     htmlLang: "en",
@@ -248,7 +248,7 @@ const copy = {
     essentialsHeading: "新しいMacに、まずこのアプリ",
     essentialsCopy: "毎日の作業に、このセット。",
     essentialsFor: "{name}を見る：{task}",
-    essentialsTask: { lumaview: "画像を見る", iina: "動画を見る", macshot: "画面を撮る", imageoptim: "画像を圧縮", macrar: "圧縮・解凍", firefox: "Webを使う", "launchpad-back": "アプリを開く", purge: "Macを整理" },
+    essentialsTask: { lumaview: "画像を見る", iina: "動画を見る", macshot: "画面を撮る", ezntfs: "NTFSを読み書き", macrar: "圧縮・解凍", firefox: "Webを使う", "launchpad-back": "アプリを開く", purge: "Macを整理" },
     pageTitle: "Macを、もっと使いやすく。｜オープンソースアプリ集",
     pageDescription: "Macユーザーと育てる、無料・オープンソースのmacOSアプリ集。ライセンス、公式リンク、主な権限を確認できます。",
     htmlLang: "ja",
