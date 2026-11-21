@@ -95,6 +95,26 @@ html[lang="zh-CN"] h2, html[lang="ja"] h2 { letter-spacing: -.025em; line-height
 .contribution-steps li > span { color: #9a723f; font: 9px var(--sans); font-weight: 600; font-variant-numeric: tabular-nums; }
 .contribution-steps strong { color: #7b6a52; font-size: 10px; font-weight: 550; }
 
+.desktop-band { padding: 16px 0; background: var(--surface); border-bottom: 1px solid var(--line); }
+.desktop-download { display: grid; grid-template-columns: 64px minmax(0, 1fr) auto; align-items: center; gap: 12px 18px; }
+.desktop-logo { display: block; }
+.desktop-copy h2 { font-size: 22px; }
+.desktop-copy h2 span { margin-inline-start: 5px; color: var(--muted); font-size: 12px; font-weight: 650; letter-spacing: 0; }
+.desktop-copy p { margin: 4px 0 0; color: var(--ink-soft); font-size: 13px; }
+.desktop-copy .desktop-note { color: var(--muted); font-size: 11px; }
+.desktop-actions { display: grid; justify-items: end; gap: 5px; }
+.desktop-buttons { display: flex; flex-wrap: wrap; gap: 7px; }
+.desktop-button { display: inline-flex; min-height: 39px; align-items: center; justify-content: center; gap: 7px; padding: 6px 11px; border: 1px solid var(--line); border-radius: 9px; color: var(--brand-deep); font-size: 12px; font-weight: 700; }
+.desktop-button:hover, .desktop-button:focus-visible { background: var(--brand-soft); }
+.desktop-primary { color: #fff; border-color: var(--brand-deep); background: var(--brand-deep); }
+.desktop-primary:hover, .desktop-primary:focus-visible { color: #fff; background: #10469e; }
+.desktop-checksums { color: var(--ink-soft); padding: 4px 1px; font-size: 11px; text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 720px) {
+  .desktop-download { grid-template-columns: 48px minmax(0, 1fr); gap: 10px 12px; }
+  .desktop-logo { width: 48px; height: 48px; }
+  .desktop-actions { grid-column: 1 / -1; justify-items: start; }
+  .desktop-button { min-height: 44px; }
+}
 .essentials-band { padding: 22px 0; background: #f7faff; border-bottom: 1px solid var(--line); }
 .essentials-band[hidden] { display: none; }
 .essentials-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 14px; }
@@ -131,6 +151,7 @@ html[lang="zh-CN"] h2, html[lang="ja"] h2 { letter-spacing: -.025em; line-height
 kbd { min-width: 42px; padding: 4px 6px; color: #718195; background: #fff; border: 1px solid #dfe6ed; border-radius: 5px; font: 10px var(--sans); text-align: center; white-space: nowrap; }
 .status-filter { min-height: 32px; display: inline-flex; align-items: center; gap: 7px; color: var(--ink-soft); font-size: 12px; font-weight: 620; white-space: nowrap; cursor: pointer; }
 .status-filter input { width: 18px; height: 18px; margin: 0; accent-color: var(--brand); }
+.chip-filter { max-width: 100%; min-height: 34px; padding: 4px 7px; border: 1px solid var(--line); border-radius: 8px; color: var(--ink); background: var(--surface); font: inherit; font-size: 12px; }
 .status-dot { width: 7px; height: 7px; display: inline-block; border-radius: 50%; background: #3a9b71; }
 .filter-row { display: flex; flex-wrap: wrap; gap: 7px; padding: 1px 0 15px; }
 .filter { min-height: 36px; max-width: 100%; display: inline-flex; flex: 0 1 auto; align-items: center; gap: 6px; padding: 7px 12px; color: var(--ink-soft); background: #fff; border: 1px solid #e2e9f2; border-radius: 99px; font-size: 11px; font-weight: 620; line-height: 1.3; transition: color .16s ease, background .16s ease, border-color .16s ease; }
@@ -177,6 +198,8 @@ kbd { min-width: 42px; padding: 4px 6px; color: #718195; background: #fff; borde
 .license-popover > p { margin: 0 0 8px; color: var(--ink-soft); font-size: 11px; font-weight: 500; letter-spacing: 0; line-height: 1.5; text-transform: none; overflow-wrap: anywhere; }
 .license-popover > .license-note { margin: 8px 0 0; padding-top: 7px; color: var(--muted); border-top: 1px solid var(--line); font-size: 10px; }
 .app-type { display: block; margin: 0; color: var(--muted); font-size: 10px; font-weight: 580; letter-spacing: .01em; line-height: 1.4; overflow-wrap: anywhere; }
+.app-chip { display: block; margin-top: 3px; color: var(--ink-soft); font-size: 10px; line-height: 1.3; font-weight: 630; overflow-wrap: anywhere; }
+.chip-source { color: var(--brand-deep); text-decoration: underline; text-underline-offset: 2px; }
 html[lang="en"] .app-type { text-transform: none; }
 .card-summary { grid-column: 1 / -1; display: -webkit-box; min-height: 4.65em; margin: 13px 0 9px; overflow: hidden; color: var(--ink-soft); font-size: 13px; line-height: 1.55; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }
 .recommendation { grid-column: 1 / -1; margin: 0; padding-left: 8px; overflow: hidden; color: var(--ink); border-left: 2px solid var(--accent); font-size: 13px; font-weight: 650; line-height: 1.5; text-overflow: ellipsis; white-space: nowrap; }

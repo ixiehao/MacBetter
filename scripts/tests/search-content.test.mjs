@@ -20,6 +20,11 @@ for (const language of Object.keys(languagePages)) {
     assert.equal(document.querySelector('link[rel="canonical"]').getAttribute("href"), canonical);
     assert.equal(document.querySelector('meta[property="og:url"]').getAttribute("content"), canonical);
     assert.equal(document.querySelectorAll("#app-grid > .app-card").length, apps.length);
+    const version = document.querySelector("[data-desktop-version]").textContent.slice(1);
+    for (const architecture of ["arm64", "x86_64"]) {
+      assert.equal(document.querySelector(`[data-desktop-download="${architecture}"]`).href,
+        `https://github.com/ixiehao/MacBetter/releases/download/v${version}/MacBetter-${version}-${architecture}.dmg`);
+    }
     const graph = JSON.parse(document.querySelector("#site-schema").textContent)["@graph"];
     assert.equal(graph.find(node => node["@type"] === "CollectionPage").url, canonical);
     const list = graph.find(node => node["@type"] === "ItemList");
@@ -31,6 +36,9 @@ for (const language of Object.keys(languagePages)) {
       assert.ok(names.has(app.name));
       assert.equal(card.querySelector(".card-summary").textContent, appCopy[language]?.[app.id]?.summary ?? app.summary);
       assert.equal(card.querySelector(".download-link").getAttribute("href"), app.download);
+      assert.equal(card.dataset.chipSupport, app.architecture.support);
+      assert.ok(card.querySelector(".app-chip").textContent.trim());
+      assert.equal(card.querySelector(".chip-source").href, app.architecture.source);
       assert.ok(document.querySelector('link[type="text/markdown"]'));
     }
     assert.equal(document.querySelectorAll("[data-language]").length, 3);

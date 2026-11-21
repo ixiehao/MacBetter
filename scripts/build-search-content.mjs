@@ -1,11 +1,18 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { parseHTML } from "linkedom";
 import { renderStaticCatalog } from "./catalog-content.mjs";
+import { desktopCatalog } from "./desktop-catalog.mjs";
 import { canonicalForLanguage, publicSiteURL, languagePages, markdownPages, schemaForCatalog } from "../website/seo.js";
 
 const website = new URL("../website/", import.meta.url);
 const template = readFileSync(new URL("templates/index.html", import.meta.url), "utf8");
 const catalog = JSON.parse(readFileSync(new URL("data/apps.json", website), "utf8"));
+const desktopPlist = readFileSync(new URL("../desktop/Packaging/Info.plist", import.meta.url), "utf8");
+const desktopVersion = desktopPlist.match(/<key>CFBundleShortVersionString<\/key>\s*<string>(\d+\.\d+\.\d+)<\/string>/)?.[1];
+const desktopMinimum = desktopPlist.match(/<key>LSMinimumSystemVersion<\/key>\s*<string>(\d+(?:\.\d+)*)<\/string>/)?.[1];
+if (!desktopVersion || !desktopMinimum) throw new Error("MacBetter Desktop version or minimum macOS is missing");
+const releaseURL = `https://github.com/ixiehao/MacBetter/releases/tag/v${desktopVersion}`;
+const downloadRoot = `https://github.com/ixiehao/MacBetter/releases/download/v${desktopVersion}`;
 const check = process.argv.includes("--check");
 const stale = [];
 const write = (name, content) => {
@@ -20,10 +27,19 @@ const write = (name, content) => {
 const safeJSON = value => JSON.stringify(value).replace(/</g, "\\u003c");
 const line = value => String(value).replace(/[\r\n]+/g, " ");
 
+write("data/desktop-v1.json", desktopCatalog(catalog));
+write("assets/desktop-mark.svg", readFileSync(new URL("../desktop/Brand/macbetter-mark.svg", import.meta.url), "utf8"));
+
 for (const language of Object.keys(languagePages)) {
   const canonical = canonicalForLanguage(language);
   const { document } = parseHTML(template);
-  const { t, localized, apps, copy } = renderStaticCatalog(document, language, catalog, canonical);
+  const { t, localized, apps, copy, architectureLabels } = renderStaticCatalog(document, language, catalog, canonical);
+  document.querySelector("[data-desktop-version]").textContent = `v${desktopVersion}`;
+  document.querySelector("[data-desktop-minimum]").textContent = `macOS ${desktopMinimum.replace(/\.0$/, "")}+`;
+  document.querySelector("[data-desktop-release]").setAttribute("href", releaseURL);
+  document.querySelectorAll("[data-desktop-download]").forEach(link => {
+    link.setAttribute("href", `${downloadRoot}/MacBetter-${desktopVersion}-${link.dataset.desktopDownload}.dmg`);
+  });
   document.documentElement.lang = t("htmlLang");
   document.title = t("pageTitle");
   document.querySelectorAll("[data-i18n]").forEach(element => { element.textContent = t(element.getAttribute("data-i18n")); });
@@ -57,13 +73,19 @@ for (const language of Object.keys(languagePages)) {
     zh: { category: "分类", license: "许可证", tested: "io 实测", checked: "已核对公开项目信息，未标记为 io 实测", system: "系统要求", permissions: "权限与说明", site: "项目主页", source: "源代码", download: "下载", intro: "由社区共同维护的免费开源 macOS 软件目录。部分项目有可选付费功能；可用性、权限和许可可能变化，以项目官方说明为准。收录与实测不等于安全审计。" },
     ja: { category: "カテゴリ", license: "ライセンス", tested: "io が使用確認済み", checked: "公開情報を確認済み。io による使用確認の対象外", system: "動作環境", permissions: "権限・注意点", site: "公式サイト", source: "ソースコード", download: "ダウンロード", intro: "コミュニティで管理する無料・オープンソースのmacOSアプリ集です。一部に有料の追加機能があります。対応環境、権限、ライセンスの最新情報は各プロジェクトをご確認ください。掲載や使用確認はセキュリティ監査を意味しません。" }
   }[language];
-  const markdown = [`# ${t("communityHeading")} · MacBetter`, "", `> ${labels.intro}`, "", `[${t("catalogHeading")}](${canonical}) · [GitHub](https://github.com/ixiehao/MacBetter)`, ""];
+  const markdown = [`# ${t("communityHeading")} · MacBetter`, "", `> ${labels.intro}`, "", `[${t("catalogHeading")}](${canonical}) · [GitHub](https://github.com/ixiehao/MacBetter) · [${t("desktopNav")}](${canonical}#desktop)`, ""];
   for (const app of apps) {
+    const chip = architectureLabels[app.architecture?.support];
+    const sourceURL = URL.canParse(app.architecture?.source) ? new URL(app.architecture.source) : null;
+    if (!chip || sourceURL?.protocol !== "https:" || sourceURL.username || sourceURL.password) {
+      throw new Error(`Missing chip status or HTTPS source for ${app.id}`);
+    }
     markdown.push(`## ${line(app.name)}`, "", line(localized(app, "summary")), "",
       `- ${labels.category}: ${t(`category.${app.category}`)}`,
       `- ${labels.license}: ${app.license}`,
       `- ${app.status.level === "tested" ? labels.tested : labels.checked}`,
       `- ${labels.system}: ${line(localized(app, "compatibility"))}`,
+      `- ${t("chipLabel")}: ${chip[language]} · [${t("chipSource")}](${app.architecture.source})`,
       `- ${labels.permissions}: ${line(localized(app, "permissions"))}`,
       `- [${labels.site}](${app.homepage}) · [${labels.source}](${app.github}) · [${labels.download}](${app.download})`, "");
   }

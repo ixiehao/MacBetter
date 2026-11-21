@@ -39,7 +39,7 @@ export function measureCards() {
     row.bottoms.push(box.bottom);
     row.footers.push(card.querySelector('.app-links').getBoundingClientRect().bottom);
     if (card.querySelectorAll('.app-links a').length !== 2) issue(card, '.app-links', 'unexpected extra or missing card actions');
-    for (const element of card.querySelectorAll(".app-icon,.app-card-head,h3,.app-card-meta,.app-type,.card-summary,.recommendation,.tags,.tag,.app-links,.app-links > a,.preview-trigger,.license-details > summary")) {
+    for (const element of card.querySelectorAll(".app-icon,.app-card-head,h3,.app-card-meta,.app-type,.app-chip,.card-summary,.recommendation,.tags,.tag,.app-links,.app-links > a,.preview-trigger,.license-details > summary")) {
       const rect = element.getBoundingClientRect();
       if (!rect.width || !rect.height) continue;
       const label = element.className || element.tagName;
@@ -63,6 +63,13 @@ export function measureCards() {
   if (fingerprints.size > 1) violations.push({ reason: "inconsistent base card styles", groups: [...fingerprints.values()] });
   if (rows.some(row => Math.max(...row.bottoms) - Math.min(...row.bottoms) > 1 || Math.max(...row.footers) - Math.min(...row.footers) > 1)) violations.push({ reason: "cards or footers in a row are misaligned" });
   if (document.documentElement.scrollWidth > innerWidth) violations.push({ reason: "page overflows horizontally" });
+  const downloads = document.querySelector(".desktop-download").getBoundingClientRect();
+  for (const link of document.querySelectorAll("[data-desktop-download],[data-desktop-release]")) {
+    const box = link.getBoundingClientRect();
+    if (!box.width || box.left < downloads.left - 1 || box.right > downloads.right + 1 || box.bottom > downloads.bottom + 1) {
+      violations.push({ reason: "desktop download link is clipped", element: link.dataset.desktopDownload ?? "release" });
+    }
+  }
   if (document.documentElement.lang !== "zh-CN" && document.querySelector('.app-details dd[lang="zh-CN"]')) violations.push({ reason: "untranslated permission or compatibility text" });
   return { viewport: [innerWidth, innerHeight], columns: getComputedStyle(document.querySelector('#app-grid')).gridTemplateColumns.split(' ').length, language: document.documentElement.lang, ids: cards.map(card => card.id), violations };
 }

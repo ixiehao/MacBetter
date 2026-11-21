@@ -64,6 +64,16 @@ const copy = {
     navLabel: "主导航",
     navContribute: "推荐软件",
     navCatalog: "软件目录",
+    desktopNav: "桌面版",
+    desktopDescription: "离线浏览目录，识别本机已安装的软件并检查更新。",
+    desktopApple: "Apple Silicon 版",
+    desktopIntel: "Intel 版",
+    desktopChecksums: "发行说明与校验文件",
+    desktopSigning: "采用临时签名，未经 Apple 公证。",
+    chipLabel: "芯片兼容性",
+    chipSource: "芯片支持来源",
+    chipAll: "所有芯片",
+    chipApple: "Apple Silicon（原生）",
     navStandards: "开源说明",
     navGithub: "在 GitHub 共建",
     languageLabel: "选择语言",
@@ -161,6 +171,16 @@ const copy = {
     navLabel: "Page navigation",
     navContribute: "Recommend an app",
     navCatalog: "All apps",
+    desktopNav: "Desktop app",
+    desktopDescription: "Browse offline, find installed apps, and check for updates.",
+    desktopApple: "Apple Silicon DMG",
+    desktopIntel: "Intel DMG",
+    desktopChecksums: "Release notes and checksums",
+    desktopSigning: "Ad-hoc signed. Not notarized by Apple.",
+    chipLabel: "Chip compatibility",
+    chipSource: "Source for chip support",
+    chipAll: "All chips",
+    chipApple: "Apple Silicon (native)",
     navStandards: "Open-source guide",
     navGithub: "Contribute on GitHub",
     languageLabel: "Choose language",
@@ -258,6 +278,16 @@ const copy = {
     navLabel: "ページ内ナビゲーション",
     navContribute: "アプリを紹介",
     navCatalog: "すべてのアプリ",
+    desktopNav: "デスクトップ版",
+    desktopDescription: "オフラインでアプリを探し、インストール済みのアプリや更新を確認できます。",
+    desktopApple: "Apple Silicon 版",
+    desktopIntel: "Intel 版",
+    desktopChecksums: "リリースノートとチェックサム",
+    desktopSigning: "アドホック署名済み。Appleの公証は受けていません。",
+    chipLabel: "対応チップ",
+    chipSource: "対応チップの確認元",
+    chipAll: "すべてのチップ",
+    chipApple: "Apple Silicon（ネイティブ）",
     navStandards: "ライセンスガイド",
     navGithub: "GitHubで参加する",
     languageLabel: "言語を選択",
@@ -368,7 +398,7 @@ const appCopy = {
     "yt-dlp": {"summary": "A command-line downloader for audio and video from many supported sites.", "recommendation": "Automate permitted downloads with control.", "tags": ["Command line","Media download","Automation"], "compatibility": "Available on macOS through Python or a package manager. Follow the project’s installation instructions.", "permissions": "Save only content you are entitled to download, and follow the platform’s terms, copyright rules, and local law."},
     "macshot": {"summary": "A native macOS capture tool for screenshots, screen recording, annotation, OCR, scrolling capture, and GIF export.", "recommendation": "Capture, annotate, and share in one pass.", "tags": ["Screenshots","Screen recording","Scrolling capture"], "permissions": "Requires Screen Recording. macOS may also ask for Microphone, Accessibility, or Input Monitoring when you use relevant features.", "compatibility": "Native macOS releases are available. Check the requirements for the current version."},
     "imageoptim": {"summary": "A macOS image optimizer that reduces file size through a simple drag-and-drop workflow.", "recommendation": "Make images lighter before publishing.", "tags": ["Image optimization","Compression","Drag and drop"], "compatibility": "A native macOS app. Check the official site for current system requirements.", "permissions": "Processes only images you drop into the app or select. Keep the originals so you can restore them."},
-    "any2webp": {"summary": "Batch-convert images and video clips to WebP or GIF locally; combine images and edit animations.", "recommendation": "Convert a batch of images and clips in one go.", "tags": ["WebP", "Animated GIF", "Batch conversion"], "compatibility": "v0.2.28 preview · Apple Silicon only · macOS 26+. Current build is ad-hoc signed and not notarized by Apple.", "permissions": "Processes only the local files you select. Video input requires local FFmpeg and ffprobe; check or install them in Help → Video Dependencies."},
+    "any2webp": {"summary": "Batch-convert images and video clips to WebP or GIF locally; combine images and edit animations.", "recommendation": "Convert a batch of images and clips in one go.", "tags": ["WebP", "Animated GIF", "Batch conversion"], "compatibility": "v0.2.30 · Apple Silicon only · macOS 26+. Current build is ad-hoc signed and not notarized by Apple.", "permissions": "Processes only the local files you select. Video input requires local FFmpeg and ffprobe; check or install them in Help → Video Dependencies."},
     "krita": {"summary": "A free, open-source digital painting app for illustration, concept art, comics, and animation.", "recommendation": "A real canvas for serious drawing.", "tags": ["Digital painting","Illustration","Animation"], "compatibility": "A macOS download is available. Check the official site for current system requirements.", "permissions": "Check the source before importing unfamiliar asset packs or scripts."},
     rectangle: { summary: "Snap, move, and resize macOS windows with keyboard shortcuts, edge gestures, and custom layouts.", recommendation: "Give every window a predictable place.", tags: ["Window management", "Keyboard shortcuts", "Snap layouts"], permissions: "Requires Accessibility permission to move and resize other apps’ windows.", compatibility: "The latest version requires macOS 14+. Version 1.100 supports macOS 10.15–13." },
     "aerospace": {"summary": "An i3-style tiling window manager for macOS, driven by keyboard shortcuts and a plain-text configuration file.", "recommendation": "Make window layout a keyboard habit.", "tags": ["Tiling window manager","Keyboard-first","Config file"], "permissions": "Requires Accessibility permission to control windows. The project is not notarized; review its official installation instructions before opening it.", "compatibility": "macOS installation instructions are available. Read the current limitations and configuration guide first."},
@@ -397,8 +427,8 @@ const appCopy = {
     layoutkeeper: { summary: "Restore saved window layouts when you reconnect a monitor, with optional brightness sync and keep-awake modes.", recommendation: "Reconnect. Restore your windows.", tags: ["External display", "Window layout", "Stay awake"], compatibility: "macOS 14+ · Intel and Apple Silicon. Restoring windows across Spaces requires macOS 26+. Hardware brightness control needs Apple Silicon and a compatible DDC display.", permissions: "Requires Accessibility. No Screen Recording or Input Monitoring is needed. Release builds are self-signed, not notarized by Apple." },
     "localsend": {"summary": "Send files, text, and clipboard content directly over the local network, without a cloud relay.", "recommendation": "Send a file without uploading it first.", "tags": ["Local transfer","Cross-platform","No cloud"], "compatibility": "Official project releases include a macOS installer.", "permissions": "Uses local-network discovery and transfers. Accept only devices and files you recognize."},
     "openmtp": {"summary": "Browse, drag, and transfer files directly between a Mac and Android or other MTP devices.", "recommendation": "Move files between your Mac and Android with ease.", "tags": ["Android","MTP","File transfer"], "compatibility": "macOS 11+", "permissions": "Accesses the USB device you connect and authorize, and the local files you select."},
-    "nigate": {"summary": "Read and write NTFS drives, with automatic mounting and disk management.", "recommendation": "Small-file batch transfers stayed stable in my tests.", "tags": ["NTFS read/write", "External drives", "Auto-mount"], "compatibility": "v1.8.0: macOS 14+ · Apple Silicon. Intel Macs need the older v1.4.5 release.", "permissions": "Mounting requires administrator authentication. The default backend uses MacFUSE and ntfs-3g; an optional FSKit backend requires macOS 15.4+. Back up important data before writing."},
-    "ezntfs": {"summary": "Mount NTFS drives for read/write, with auto-mount, safe ejection, and SHA-256 verified copying.", "recommendation": "Write to NTFS drives right on your Mac.", "tags": ["NTFS read/write", "Auto-mount", "Verified copying"], "compatibility": "v0.5.0 · macOS 14+ · Apple Silicon. Requires macFUSE 5.5.0. The PKG is unsigned and not notarized.", "permissions": "Installing the app, mount service, and NTFS-3G driver requires administrator approval. macOS may also require Full Disk Access for the mount service. NTFS-3G includes GPL-2.0 / LGPL-2.0 components; macFUSE has separate terms."},
+    "nigate": {"summary": "Read and write NTFS drives, with automatic mounting and disk management.", "recommendation": "Small-file batch transfers stayed stable in my tests.", "tags": ["NTFS read/write", "External drives", "Auto-mount"], "compatibility": "v1.9.0: macOS 14+ · Apple Silicon. Intel Macs need the older v1.4.5 release.", "permissions": "Mounting requires administrator authentication. The default backend uses MacFUSE and ntfs-3g; an optional FSKit backend requires macOS 15.4+. Back up important data before writing."},
+    "ezntfs": {"summary": "Mount NTFS drives for read/write, with auto-mount, safe ejection, and SHA-256 verified copying.", "recommendation": "Write to NTFS drives right on your Mac.", "tags": ["NTFS read/write", "Auto-mount", "Verified copying"], "compatibility": "v0.5.1 · macOS 14+ · Apple Silicon. Requires macFUSE 5.5.0. The app is ad-hoc signed and the installer is not notarized by Apple.", "permissions": "Installing the app, mount service, and NTFS-3G driver requires administrator approval. macOS may also require Full Disk Access for the mount service. NTFS-3G includes GPL-2.0 / LGPL-2.0 components; macFUSE has separate terms."},
     "kopia": {"summary": "A backup tool with snapshots, deduplication, and encryption for local or remote destinations.", "recommendation": "A backup only counts when it restores.", "tags": ["Backup","Snapshots","Encryption"], "compatibility": "Official releases include macOS builds for Apple Silicon and Intel.", "permissions": "Reads selected backup sources and writes to the backup destination. Test a restore before relying on it."},
     "syncthing": {"summary": "Sync chosen folders directly between devices without handing files to a third-party cloud.", "recommendation": "Sync files without giving them away.", "tags": ["File sync","End-to-end","Decentralized"], "compatibility": "Official macOS archives contain a command-line program configured through a browser interface. Choose the build for your chip.", "permissions": "You choose the sync scope. Review the devices and version-retention settings for each shared folder."},
     "cryptomator": {"summary": "Encrypt files locally before they reach a cloud drive; you keep control of the keys.", "recommendation": "Lock files before they go to the cloud.", "tags": ["Encryption","Cloud drives","Privacy"], "compatibility": "Official releases include macOS builds for Apple Silicon and Intel.", "permissions": "Accesses the vaults and sync folders you select. Keep recovery keys and passwords safe."},
@@ -483,7 +513,7 @@ const appCopy = {
     "yt-dlp": {"summary": "多数の対応サイトから動画・音声を取得できる、機能豊富なコマンドラインツールです。", "recommendation": "許可された保存を、きちんと自動化。", "tags": ["コマンドライン","動画・音声","ダウンロード"], "compatibility": "Pythonまたはパッケージ管理ツールでmacOSに導入できます。公式の手順に従ってください。", "permissions": "保存する権利のあるコンテンツだけを取得し、サービスの利用規約、著作権、地域の法律に従ってください。"},
     "macshot": {"summary": "注釈、スクロールキャプチャ、OCR、画面収録、簡易編集を一つにまとめたネイティブのキャプチャツールです。", "recommendation": "撮影から注釈まで、これ一つで。", "tags": ["スクリーンショット","画面収録","スクロールキャプチャ"], "permissions": "撮影・録画には「画面収録」許可が必要です。音声録音では「マイク」、グローバル操作では必要に応じて「アクセシビリティ」または「入力監視」を求めます。", "compatibility": "ネイティブのmacOS版があります。現在のバージョンの動作要件を確認してください。"},
     "imageoptim": {"summary": "画像をドラッグ＆ドロップで最適化し、見た目を保ちながらファイルサイズを小さくします。", "recommendation": "公開前の画像を、軽く整える。", "tags": ["画像圧縮","最適化","ドラッグ＆ドロップ"], "compatibility": "macOSネイティブアプリです。現在の動作要件は公式サイトで確認してください。", "permissions": "ドラッグまたは選択した画像だけを処理します。元に戻せるよう、原本を残しておくことをおすすめします。"},
-    "any2webp": {"summary": "画像や動画をMac上でWebP・GIFに一括変換。複数画像の合成やアニメーション編集にも対応。", "recommendation": "画像も動画も、まとめて一括変換。", "tags": ["WebP", "GIFアニメ", "一括変換"], "compatibility": "v0.2.28 プレビュー版 · Apple Silicon専用 · macOS 26以降。現行ビルドはアドホック署名で、Appleの公証はありません。", "permissions": "選択したローカルファイルだけを処理します。動画の読み込みにはFFmpegとffprobeが必要です。「ヘルプ → 動画の依存ツール」から確認・導入できます。"},
+    "any2webp": {"summary": "画像や動画をMac上でWebP・GIFに一括変換。複数画像の合成やアニメーション編集にも対応。", "recommendation": "画像も動画も、まとめて一括変換。", "tags": ["WebP", "GIFアニメ", "一括変換"], "compatibility": "v0.2.30 · Apple Silicon専用 · macOS 26以降。現行ビルドはアドホック署名で、Appleの公証はありません。", "permissions": "選択したローカルファイルだけを処理します。動画の読み込みにはFFmpegとffprobeが必要です。「ヘルプ → 動画の依存ツール」から確認・導入できます。"},
     "krita": {"summary": "イラスト、コンセプトアート、コミック制作に対応する、機能豊富なデジタルペイントソフトです。", "recommendation": "描くための道具が、ここにある。", "tags": ["デジタルペイント","イラスト","PSD"], "compatibility": "macOS版を配布しています。現在の動作要件は公式サイトで確認してください。", "permissions": "出所が不明な素材集やスクリプトを読み込む前に、提供元を確認してください。"},
     rectangle: { summary: "ショートカットやスナップ領域でウインドウを移動・リサイズし、画面を素早く整えます。", recommendation: "ウインドウの置き場所を、迷わず決める。", tags: ["ウインドウ整列", "ショートカット", "スナップ"], permissions: "ほかのアプリのウインドウを操作するため、「アクセシビリティ」へのアクセスが必要です。", compatibility: "最新版はmacOS 14以降が必要です。macOS 10.15〜13では1.100を利用できます。" },
     "aerospace": {"summary": "i3のようなキーボード中心の操作で、ウインドウをタイル状に配置するmacOS向けウインドウマネージャです。", "recommendation": "キーボードで、ウインドウを整列。", "tags": ["タイル型WM","キーボード操作","ワークスペース"], "permissions": "ウインドウ操作に「アクセシビリティ」へのアクセスが必要です。公式バイナリは未公証と明記されているため、配布元と更新情報を確認して導入してください。", "compatibility": "macOS向けの導入手順があります。現在の制限事項と設定方法を先に確認してください。"},
@@ -512,8 +542,8 @@ const appCopy = {
     layoutkeeper: { summary: "外付けディスプレイの再接続時にウィンドウ配置を復元。明るさ連動やスリープ防止にも対応します。", recommendation: "つなぎ直して、元の配置へ。", tags: ["外付けディスプレイ", "ウィンドウ配置", "スリープ防止"], compatibility: "macOS 14以降 · Intel / Apple Silicon。Spaces間の復元はmacOS 26以降が必要です。ハードウェア輝度調整はApple SiliconとDDC対応ディスプレイが必要です。", permissions: "「アクセシビリティ」が必要です。画面収録・入力監視は不要です。配布版は自己署名で、Appleの公証を受けていません。" },
     "localsend": {"summary": "クラウドを経由せず、同じネットワーク内でファイル、テキスト、クリップボードを直接送れます。", "recommendation": "送る前に、アップロードしなくていい。", "tags": ["ローカル転送","クロスプラットフォーム","クラウド不要"], "compatibility": "プロジェクトの公式リリースでmacOS版を配布しています。", "permissions": "ローカルネットワークで端末を検出し、ファイルを転送します。確認できる端末とファイルだけを受け入れてください。"},
     "openmtp": {"summary": "MacとAndroidなどのMTP機器の間で、ファイルを直接ブラウズ、ドラッグ、転送できます。", "recommendation": "Androidとのファイル転送も、Macから手軽に。", "tags": ["Android","MTP","ファイル転送"], "compatibility": "macOS 11以降", "permissions": "USBで接続して許可した端末と、選択したローカルファイルにアクセスします。"},
-    "nigate": {"summary": "NTFSドライブの読み書きに対応し、自動マウントとディスク管理も行えます。", "recommendation": "小さなファイルの一括コピーも、実測で安定。", "tags": ["NTFS読み書き", "外付けドライブ", "自動マウント"], "compatibility": "v1.8.0：macOS 14以降 · Apple Silicon。Intel Macでは旧版v1.4.5を使用します。", "permissions": "マウントには管理者認証が必要です。標準バックエンドはMacFUSEとntfs-3gを使用します。任意のFSKitバックエンドはmacOS 15.4以降が必要です。書き込み前に重要なデータをバックアップしてください。"},
-    "ezntfs": {"summary": "macOSでNTFSドライブを読み書き。自動マウント、安全な取り出し、SHA-256検証付きコピーにも対応します。", "recommendation": "NTFSドライブも、Macで読み書き。", "tags": ["NTFS読み書き", "自動マウント", "検証コピー"], "compatibility": "v0.5.0 · macOS 14以降 · Apple Silicon。macFUSE 5.5.0が必要です。PKGは未署名・未公証です。", "permissions": "アプリ、マウントサービス、NTFS-3Gドライバーの導入には管理者の承認が必要です。macOSでサービスにフルディスクアクセスが必要な場合があります。NTFS-3GにはGPL-2.0 / LGPL-2.0のコンポーネントが含まれ、macFUSEには別のライセンスが適用されます。"},
+    "nigate": {"summary": "NTFSドライブの読み書きに対応し、自動マウントとディスク管理も行えます。", "recommendation": "小さなファイルの一括コピーも、実測で安定。", "tags": ["NTFS読み書き", "外付けドライブ", "自動マウント"], "compatibility": "v1.9.0：macOS 14以降 · Apple Silicon。Intel Macでは旧版v1.4.5を使用します。", "permissions": "マウントには管理者認証が必要です。標準バックエンドはMacFUSEとntfs-3gを使用します。任意のFSKitバックエンドはmacOS 15.4以降が必要です。書き込み前に重要なデータをバックアップしてください。"},
+    "ezntfs": {"summary": "macOSでNTFSドライブを読み書き。自動マウント、安全な取り出し、SHA-256検証付きコピーにも対応します。", "recommendation": "NTFSドライブも、Macで読み書き。", "tags": ["NTFS読み書き", "自動マウント", "検証コピー"], "compatibility": "v0.5.1 · macOS 14以降 · Apple Silicon。macFUSE 5.5.0が必要です。アプリはアドホック署名済みです。インストーラーはAppleの公証を受けていません。", "permissions": "アプリ、マウントサービス、NTFS-3Gドライバーの導入には管理者の承認が必要です。macOSでサービスにフルディスクアクセスが必要な場合があります。NTFS-3GにはGPL-2.0 / LGPL-2.0のコンポーネントが含まれ、macFUSEには別のライセンスが適用されます。"},
     "kopia": {"summary": "スナップショット、重複排除、暗号化を備え、ローカルや各種リモート保存先にバックアップできます。", "recommendation": "バックアップは、復元できて初めて役に立つ。", "tags": ["バックアップ","スナップショット","暗号化"], "compatibility": "公式リリースにApple Silicon用とIntel用のmacOS版があります。", "permissions": "選択したバックアップ元を読み取り、保存先に書き込みます。本格的な運用前に復元を試してください。"},
     "syncthing": {"summary": "指定したフォルダを端末同士で直接同期。第三者のクラウドにファイルを預ける必要はありません。", "recommendation": "同期しても、ファイルを手放さない。", "tags": ["ファイル同期","エンドツーエンド","分散型"], "compatibility": "公式macOS版はコマンドラインプログラムの圧縮ファイルで、設定はブラウザから行います。CPUに合う版を選んでください。", "permissions": "同期する範囲は自分で選択します。共有フォルダごとに接続端末とバージョンの保存設定を確認してください。"},
     "cryptomator": {"summary": "クラウドドライブへ送る前にファイルをローカルで暗号化。鍵は自分で管理します。", "recommendation": "クラウドへ行く前に、ファイルをロック。", "tags": ["暗号化","クラウドドライブ","プライバシー"], "compatibility": "公式リリースにApple Silicon用とIntel用のmacOS版があります。", "permissions": "選択した保管庫と同期フォルダにアクセスします。復旧キーとパスワードを安全に保管してください。"},
@@ -576,6 +606,16 @@ const appCopy = {
   }
 };
 
+const architectureLabels = {
+  both: { en: "Apple Silicon + Intel", zh: "Apple Silicon 与 Intel", ja: "Apple Silicon・Intel" },
+  "apple-silicon": { en: "Apple Silicon only", zh: "仅 Apple Silicon", ja: "Apple Silicon のみ" },
+  "intel-legacy": { en: "Apple Silicon · Intel in older releases", zh: "Apple Silicon · Intel 用旧版", ja: "Apple Silicon · Intel は旧版" },
+  intel: { en: "Intel build", zh: "Intel 版", ja: "Intel 版" },
+  rosetta: { en: "Intel · Apple Silicon via Rosetta", zh: "Intel · Apple Silicon 需 Rosetta", ja: "Intel · Apple Silicon は Rosetta 経由" },
+  browser: { en: "Depends on the browser", zh: "取决于浏览器", ja: "ブラウザーの対応環境に準拠" },
+  unverified: { en: "Chip support unverified", zh: "芯片支持待核实", ja: "対応チップ未確認" }
+};
+
 let activeLanguage = languageFromURL(location.href, localStorage.getItem(languageStorageKey) || localStorage.getItem(legacyLanguageStorageKey) || defaultLanguage);
 if (!copy[activeLanguage]) activeLanguage = defaultLanguage;
 localStorage.setItem(languageStorageKey, activeLanguage);
@@ -594,6 +634,7 @@ const searchInput = document.querySelector("#search-input");
 const searchClear = document.querySelector("#clear-search");
 let isSearchComposing = false;
 const testedFilter = document.querySelector("#tested-filter");
+const chipFilter = document.querySelector("#chip-filter");
 const resultCount = document.querySelector("#result-count");
 const emptyState = document.querySelector("#empty-state");
 const clearFilters = document.querySelector("#clear-filters");
@@ -686,7 +727,7 @@ function renderEssentials() {
   const selected = essentialAppIds.map(id => apps.find(app => app.id === id)).filter(Boolean);
   essentialsGrid.innerHTML = selected.map(app => {
     const url = new URL(location.href);
-    for (const key of ["q", "category", "tested"]) url.searchParams.delete(key);
+    for (const key of ["q", "category", "tested", "chip"]) url.searchParams.delete(key);
     url.pathname = new URL(canonicalForLanguage(activeLanguage)).pathname;
     url.searchParams.delete("lang");
     url.hash = `app-${app.id}`;
@@ -713,14 +754,16 @@ function cardTemplate(app) {
   const permissions = localized(app, "permissions") || app.permissions;
   const compatibilityLanguage = appCopy[activeLanguage]?.[app.id]?.compatibility ? (activeLanguage === "ja" ? "ja" : "en") : "zh-CN";
   const permissionsLanguage = appCopy[activeLanguage]?.[app.id]?.permissions ? (activeLanguage === "ja" ? "ja" : "en") : "zh-CN";
+  const architecture = (architectureLabels[app.architecture?.support] ?? architectureLabels.unverified)[activeLanguage];
+  const chipSource = app.architecture?.source ? ` · <a class="chip-source" href="${escapeHTML(app.architecture.source)}" target="_blank" rel="noreferrer">${escapeHTML(t("chipSource"))}</a>` : "";
   const licensePopover = `<details class="license-details card-popover"><summary class="license" aria-label="${escapeHTML(t("licenseFor", { license: app.license, name: app.name }))}" title="${escapeHTML(t("licenseFor", { license: app.license, name: app.name }))}" lang="en">${escapeHTML(app.license)}</summary><div class="license-popover" tabindex="0"><strong lang="en">${escapeHTML(app.license)}</strong><p>${escapeHTML(licenseExplanation)}</p><p class="license-note">${escapeHTML(t("licenseNote"))}</p></div></details>`;
-  const details = compatibility || permissions ? `<details class="app-details card-popover"><summary aria-label="${escapeHTML(t("detailsSummary"))}" title="${escapeHTML(t("detailsSummary"))}"><svg class="ui-icon" aria-hidden="true"><use href="assets/tabler-icons.svg?v=f3f9ffa728c5#info-circle"></use></svg></summary><dl tabindex="0">${compatibility ? `<div><dt>${escapeHTML(t("compatibilityLabel"))}</dt><dd lang="${compatibilityLanguage}">${escapeHTML(compatibility)}</dd></div>` : ""}${permissions ? `<div><dt>${escapeHTML(t("permissionsLabel"))}</dt><dd lang="${permissionsLanguage}">${escapeHTML(permissions)}</dd></div>` : ""}</dl></details>` : "";
+  const details = `<details class="app-details card-popover"><summary aria-label="${escapeHTML(t("detailsSummary"))}" title="${escapeHTML(t("detailsSummary"))}"><svg class="ui-icon" aria-hidden="true"><use href="assets/tabler-icons.svg?v=f3f9ffa728c5#info-circle"></use></svg></summary><dl tabindex="0"><div><dt>${escapeHTML(t("compatibilityLabel"))}${chipSource}</dt><dd lang="${compatibilityLanguage}">${escapeHTML(compatibility)}</dd></div>${permissions ? `<div><dt>${escapeHTML(t("permissionsLabel"))}</dt><dd lang="${permissionsLanguage}">${escapeHTML(permissions)}</dd></div>` : ""}</dl></details>`;
   const previewImage = app.preview?.images?.[activeLanguage] || app.preview?.image;
   const preview = app.preview ? ` data-app-name="${escapeHTML(app.name)}" data-preview-image="${escapeHTML(previewImage)}" data-preview-source="${escapeHTML(app.preview.source)}"` : "";
   const previewButton = app.preview ? `<button class="preview-trigger" type="button" aria-haspopup="dialog" aria-controls="app-preview-dialog" aria-label="${escapeHTML(t("previewFor", { name: app.name }))}" title="${escapeHTML(t("previewFor", { name: app.name }))}"><svg class="ui-icon" aria-hidden="true"><use href="assets/tabler-icons.svg?v=f3f9ffa728c5#photo"></use></svg><span class="preview-label">${escapeHTML(t("previewLabel"))}</span></button>` : "";
-  return `<article class="app-card" id="app-${escapeHTML(app.id)}" tabindex="-1"${preview}>
+  return `<article class="app-card" id="app-${escapeHTML(app.id)}" tabindex="-1" data-chip-support="${escapeHTML(app.architecture?.support ?? "unverified")}"${preview}>
     <img class="app-icon" src="${escapeHTML(app.icon)}" alt="${escapeHTML(t("iconAlt", { name: app.name }))}" width="46" height="46" loading="lazy" decoding="async" />
-    <div class="app-card-head"><div><h3 lang="en">${escapeHTML(app.name)}</h3><span class="app-type">${escapeHTML(categoryName(app.category))}</span></div><div class="app-card-meta" aria-label="${escapeHTML(t("metadataLabel"))}">${status ? `<span class="tag ${statusClass(app.status.level)}" aria-label="${escapeHTML(`${status.label}: ${status.note}`)}"><svg class="ui-icon status-check" aria-hidden="true"><use href="assets/tabler-icons.svg?v=f3f9ffa728c5#check"></use></svg>${escapeHTML(status.label)}</span>` : ""}<div class="card-tools">${details}</div></div></div>
+    <div class="app-card-head"><div><h3 lang="en">${escapeHTML(app.name)}</h3><span class="app-type">${escapeHTML(categoryName(app.category))}</span><span class="app-chip">${escapeHTML(architecture)}</span></div><div class="app-card-meta" aria-label="${escapeHTML(t("metadataLabel"))}">${status ? `<span class="tag ${statusClass(app.status.level)}" aria-label="${escapeHTML(`${status.label}: ${status.note}`)}"><svg class="ui-icon status-check" aria-hidden="true"><use href="assets/tabler-icons.svg?v=f3f9ffa728c5#check"></use></svg>${escapeHTML(status.label)}</span>` : ""}<div class="card-tools">${details}</div></div></div>
     <p class="card-summary">${escapeHTML(localized(app, "summary"))}</p>
     <p class="recommendation" title="${escapeHTML(localized(app, "recommendation"))}">${escapeHTML(localized(app, "recommendation"))}</p>
     <div class="tags" aria-label="${escapeHTML(t("metadataLabel"))}">
@@ -755,6 +798,8 @@ function updateURL() {
   else url.searchParams.set("category", activeCategory);
   if (testedFilter.checked) url.searchParams.set("tested", "1");
   else url.searchParams.delete("tested");
+  if (chipFilter.value !== "all") url.searchParams.set("chip", chipFilter.value);
+  else url.searchParams.delete("chip");
   if (searchInput.value.trim()) url.searchParams.set("q", searchInput.value.trim());
   else url.searchParams.delete("q");
   url.pathname = new URL(canonicalForLanguage(activeLanguage)).pathname;
@@ -770,7 +815,11 @@ function renderCatalog() {
     const appCategories = appCategoryIds(app);
     const categoryMatch = activeCategory === "all" || appCategories.includes(activeCategory);
     const testedMatch = !testedFilter.checked || app.status.level === "tested";
-    return categoryMatch && testedMatch && matchesSearch(app, query);
+    const chip = app.architecture?.support;
+    const chipMatch = chipFilter.value === "all" || chip === "both" ||
+      (chipFilter.value === "arm64" && ["apple-silicon", "intel-legacy"].includes(chip)) ||
+      (chipFilter.value === "x86_64" && ["intel", "rosetta"].includes(chip));
+    return categoryMatch && testedMatch && chipMatch && matchesSearch(app, query);
   }).sort((a, b) => compareApps(a, b, activeCategory));
   const nextKey = `${activeLanguage}:${list.map(app => app.id).join(",")}`;
   if (nextKey !== catalogKey) {
@@ -780,7 +829,7 @@ function renderCatalog() {
     updateCatalogSchema(list);
   }
   emptyState.hidden = list.length !== 0;
-  clearFilters.hidden = activeCategory === "all" && !testedFilter.checked && list.length !== 0;
+  clearFilters.hidden = activeCategory === "all" && !testedFilter.checked && chipFilter.value === "all" && list.length !== 0;
   resultCount.textContent = activeLanguage === "en" && list.length === 1 ? "1 app found" : t("foundCount", { count: list.length });
   updateURL();
 }
@@ -790,6 +839,7 @@ function restoreURLState() {
   activeCategory = categories.includes(params.get("category")) ? params.get("category") : "all";
   searchInput.value = params.get("q") || "";
   testedFilter.checked = params.get("tested") === "1";
+  readChipFilter(params);
   const requestedLanguage = languageFromURL(location.href, localStorage.getItem(languageStorageKey) || localStorage.getItem(legacyLanguageStorageKey) || defaultLanguage);
   activeLanguage = copy[requestedLanguage] ? requestedLanguage : defaultLanguage;
   localStorage.setItem(languageStorageKey, activeLanguage);
@@ -805,6 +855,7 @@ function resetFilters() {
   activeCategory = "all";
   searchInput.value = "";
   testedFilter.checked = false;
+  chipFilter.value = "all";
   renderFilters();
   renderCatalog();
   searchInput.focus({ preventScroll: true });
@@ -814,6 +865,11 @@ function clearSearchQuery() {
   searchInput.value = "";
   renderCatalog();
   searchInput.focus({ preventScroll: true });
+}
+
+function readChipFilter(params) {
+  const chip = params.get("chip");
+  chipFilter.value = ["arm64", "x86_64"].includes(chip) ? chip : "all";
 }
 
 function setMetaContent(selector, value) {
@@ -888,7 +944,7 @@ async function init() {
   }));
   try {
     const dataURL = new URL("data/apps.json", import.meta.url);
-    dataURL.searchParams.set("v", "376844697fc2");
+    dataURL.searchParams.set("v", "4c96db2881e1");
     const response = await fetch(dataURL);
     if (!response.ok) throw new Error("Unable to load app data");
     apps = await response.json();
@@ -898,6 +954,7 @@ async function init() {
     activeCategory = categories.includes(requestedCategory) ? requestedCategory : "all";
     searchInput.value = params.get("q") || "";
     testedFilter.checked = params.get("tested") === "1";
+    readChipFilter(params);
     document.querySelector("#app-total").textContent = String(apps.length);
     document.querySelector("#category-total").textContent = String(categories.length - 1);
     renderEssentials();
@@ -945,6 +1002,7 @@ searchInput.addEventListener("input", event => {
 });
 searchClear.addEventListener("click", clearSearchQuery);
 testedFilter.addEventListener("change", renderCatalog);
+chipFilter.addEventListener("change", renderCatalog);
 clearFilters.addEventListener("click", resetFilters);
 shareButton.addEventListener("click", shareDirectory);
 function handleIconError(event) {
@@ -964,6 +1022,7 @@ essentialsGrid.addEventListener("click", event => {
   activeCategory = "all";
   searchInput.value = "";
   testedFilter.checked = false;
+  chipFilter.value = "all";
   renderFilters();
   renderCatalog();
   focusLinkedApp();

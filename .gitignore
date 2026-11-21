@@ -1,3 +1,6 @@
 node_modules/
 playwright-report/
 test-results/
+desktop/.build/
+desktop/dist/
+.DS_Store

@@ -6,9 +6,11 @@
 
 **[アプリ一覧を見る](https://ixiehao.github.io/MacBetter/ja.html)** · **[おすすめのアプリを紹介する](https://github.com/ixiehao/MacBetter/issues/new?template=recommend-an-app.yml)**
 
+**[MacBetter デスクトップ版をダウンロード](https://ixiehao.github.io/MacBetter/ja.html#desktop)**。macOS 14以降のApple Silicon搭載MacとIntel搭載Macに対応。アプリ一覧をオフラインで閲覧し、対応アプリのインストール状況や更新を確認できます。
+
 ## このサイトでできること
 
-- 用途別の分類、検索、絞り込みでアプリを探す。
+- 用途、キーワード、対応チップ（Apple Silicon・Intel）でアプリを探す。
 - ホバーで画面例を確認し、タッチやキーボードでも拡大表示する。
 - 短い紹介文、おすすめポイント、ライセンス、公式の入手先を確認する。
 - 英語・中国語・日本語で読む。

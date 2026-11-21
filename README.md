@@ -6,9 +6,11 @@ A community-curated directory of free, open-source macOS tools. Find an app for 
 
 **[Browse the directory](https://ixiehao.github.io/MacBetter/)** · **[Recommend an app](https://github.com/ixiehao/MacBetter/issues/new?template=recommend-an-app.yml)**
 
+**[Download MacBetter for Mac](https://ixiehao.github.io/MacBetter/#desktop)** for Apple Silicon or Intel on macOS 14 or later. Browse the directory offline, see supported apps installed on your Mac, and check for updates.
+
 ## What you’ll find
 
-- Apps grouped by purpose, with search and filters.
+- Apps grouped by purpose, with search and filters for Apple Silicon and Intel.
 - Project screenshots on hover, with larger previews for touch and keyboard users.
 - Short descriptions, practical recommendations, licenses, and official installation links.
 - English, Chinese, and Japanese pages.

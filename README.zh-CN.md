@@ -6,9 +6,11 @@
 
 **[浏览软件目录](https://ixiehao.github.io/MacBetter/zh.html)** · **[推荐一款软件](https://github.com/ixiehao/MacBetter/issues/new?template=recommend-an-app.yml)**
 
+**[下载 MacBetter 桌面版](https://ixiehao.github.io/MacBetter/zh.html#desktop)**，提供 Apple 芯片版和 Intel 版，要求 macOS 14 或更新版本。可离线浏览目录、识别本机已安装的受支持软件并检查更新。
+
 ## 这里有什么
 
-- 按用途分类，支持搜索和筛选。
+- 按用途分类，支持搜索及 Apple Silicon、Intel 筛选。
 - 悬停查看项目截图，也可通过触屏或键盘打开大图。
 - 简短介绍、实用推荐语、许可证和官方安装入口。
 - 英文、中文、日文三种语言。

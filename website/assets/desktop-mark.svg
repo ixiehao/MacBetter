@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">MacBetter desktop mark</title>
+  <defs>
+    <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#234685"/>
+      <stop offset="1" stop-color="#121C41"/>
+    </linearGradient>
+    <clipPath id="letter">
+      <path d="M110 373Q98 373 98 361V150Q98 136 112 136H154Q164 136 171 144L256 244L341 144Q348 136 358 136H400Q414 136 414 150V361Q414 373 402 373H357Q345 373 345 361V239L268 331Q256 345 244 331L167 239V361Q167 373 155 373Z"/>
+    </clipPath>
+  </defs>
+  <rect x="28" y="28" width="456" height="456" rx="103" fill="url(#tile)"/>
+  <rect x="30" y="30" width="452" height="452" rx="101" fill="none" stroke="#94BAF9" stroke-opacity=".34" stroke-width="4"/>
+  <g clip-path="url(#letter)">
+    <rect x="98" y="136" width="316" height="237" fill="#ACEAFF"/>
+    <path d="M98 136H143L167 239V373H98Z" fill="#52C9EE"/>
+    <path d="M256 136H414V373H256Z" fill="#FFB56D"/>
+    <path d="M369 136H414V373H345V239Z" fill="#7B9CFF"/>
+  </g>
+</svg>

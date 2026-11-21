@@ -9,7 +9,7 @@ const renderBoundary = source.indexOf("function updateURL()");
 if (metadataBoundary < 0 || renderBoundary < metadataBoundary) throw new Error("Update the static renderer after reorganizing app.js");
 
 export function readCatalogMetadata() {
-  return runInNewContext(source.slice(0, metadataBoundary) + ";({ appCopy, copy, categories })", {}, { timeout: 1_000 });
+  return runInNewContext(source.slice(0, metadataBoundary) + ";({ appCopy, copy, categories, essentialAppIds })", {}, { timeout: 1_000 });
 }
 
 // Reuse the actual card, essentials and license renderers. Never maintain a second catalog.
@@ -23,7 +23,7 @@ export function renderStaticCatalog(document, language, catalog, url) {
     document.querySelector("#app-total").textContent = String(apps.length);
     document.querySelector("#category-total").textContent = String(categories.length - 1);
     resultCount.textContent = t("foundCount", { count: apps.length });
-    ({ t, localized, apps, copy });
+    ({ t, localized, apps, copy, architectureLabels });
   `, {
     document, language, catalog, location: new URL(url), URL, URLSearchParams, languageFromURL, canonicalForLanguage,
     localStorage: { getItem: () => null, setItem: () => {} }

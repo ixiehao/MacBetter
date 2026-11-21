@@ -2,7 +2,7 @@
 
 > A community-maintained directory of free and open-source macOS apps. Some projects offer optional paid features. Availability, permissions and licensing can change; follow the official project for current details. Listed status is not a security audit.
 
-[App directory](https://ixiehao.github.io/MacBetter/) · [GitHub](https://github.com/ixiehao/MacBetter)
+[App directory](https://ixiehao.github.io/MacBetter/) · [GitHub](https://github.com/ixiehao/MacBetter) · [Desktop app](https://ixiehao.github.io/MacBetter/#desktop)
 
 ## LumaView
 
@@ -12,6 +12,7 @@ Browse local images and PDFs in a lightweight viewer, with folder navigation, EX
 - License: MIT
 - Tested by io
 - System: macOS 12+ · Intel and Apple Silicon
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/ixiehao/LumaView/releases/tag/v1.3.5)
 - Permissions / notes: Local file access to images, PDFs, and folders you choose.
 - [Official site](https://ixiehao.github.io/LumaView/) · [Source](https://github.com/ixiehao/LumaView) · [Download](https://github.com/ixiehao/LumaView/releases)
 
@@ -23,6 +24,7 @@ Turn local videos into storyboard sheets with smart frame selection, manual adju
 - License: MIT
 - Tested by io
 - System: macOS 13+ · Intel and Apple Silicon
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/ixiehao/ShotMap/releases/tag/v0.2.20)
 - Permissions / notes: Local file access: processes only the videos you select.
 - [Official site](https://ixiehao.github.io/ShotMap/) · [Source](https://github.com/ixiehao/ShotMap) · [Download](https://github.com/ixiehao/ShotMap/releases)
 
@@ -34,6 +36,7 @@ Batch-convert videos to MP4, trim and merge clips, adjust the picture, and choos
 - License: MIT
 - Tested by io
 - System: macOS 13+ · Intel and Apple Silicon · Requires local FFmpeg / ffprobe
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/ixiehao/MP4Flow/releases/tag/v1.5.3)
 - Permissions / notes: Local file access: processes only the videos you select.
 - [Official site](https://ixiehao.github.io/MP4Flow/) · [Source](https://github.com/ixiehao/MP4Flow) · [Download](https://github.com/ixiehao/MP4Flow/releases)
 
@@ -45,6 +48,7 @@ An open-source video transcoder for converting supported video sources into prac
 - License: GPL-2.0
 - Public project details checked; not personally tested
 - System: Official macOS releases are available. Check the system requirements for the current version.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/HandBrake/HandBrake/releases/tag/1.11.2)
 - Permissions / notes: Processes the local media you select. Check the output folder and overwrite settings before converting.
 - [Official site](https://handbrake.fr/) · [Source](https://github.com/HandBrake/HandBrake) · [Download](https://github.com/HandBrake/HandBrake/releases)
 
@@ -56,6 +60,7 @@ Trim, join, and extract video or audio quickly around keyframes, avoiding re-enc
 - License: GPL-2.0
 - Public project details checked; not personally tested
 - System: The current version no longer supports macOS 11. Apple Silicon and Intel releases are available.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/mifi/lossless-cut/releases/tag/v3.70.2)
 - Permissions / notes: Processes local media and reads only the files you choose to open or import.
 - [Official site](https://losslesscut.app/) · [Source](https://github.com/mifi/lossless-cut) · [Download](https://github.com/mifi/lossless-cut/releases)
 
@@ -67,6 +72,7 @@ A native MP4/M4V packaging and metadata tool for organizing subtitles, audio tra
 - License: GPL-2.0
 - Public project details checked; not personally tested
 - System: Official releases include a macOS archive. Check the release page for system requirements.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/SublerApp/Subler/releases/tag/1.9.5)
 - Permissions / notes: Modifies only the media files you select. Keep a copy of the originals before making changes.
 - [Official site](https://github.com/SublerApp/Subler) · [Source](https://github.com/SublerApp/Subler) · [Download](https://github.com/SublerApp/Subler/releases)
 
@@ -78,6 +84,7 @@ Inspect codecs, bit rates, tracks, colour, subtitles, and other technical facts 
 - License: BSD-2-Clause
 - Public project details checked; not personally tested
 - System: Official macOS installers are available. Choose the build for your Mac’s architecture.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://mediaarea.net/en/MediaInfo/Download/Mac_OS)
 - Permissions / notes: Reads only the media files you open and their technical metadata.
 - [Official site](https://mediaarea.net/en/MediaInfo) · [Source](https://github.com/MediaArea/MediaInfo) · [Download](https://mediaarea.net/en/MediaInfo/Download/Mac_OS)
 
@@ -89,6 +96,7 @@ A complete subtitle editor for writing, proofreading, translating, and syncing s
 - License: MIT
 - Public project details checked; not personally tested
 - System: Official releases include macOS DMG installers for Apple Silicon and Intel.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/SubtitleEdit/subtitleedit/releases/tag/v5.4.0)
 - Permissions / notes: Processes selected media and subtitle files. Online speech recognition or translation may require additional access when used.
 - [Official site](https://github.com/SubtitleEdit/subtitleedit) · [Source](https://github.com/SubtitleEdit/subtitleedit) · [Download](https://github.com/SubtitleEdit/subtitleedit/releases)
 
@@ -100,6 +108,7 @@ A modern macOS media player built on mpv, with strong format support, playlists,
 - License: GPL-3.0
 - Tested by io
 - System: Official macOS releases are available. Check the system requirements for the current version.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/iina/iina/releases/tag/v1.5.1)
 - Permissions / notes: Local playback needs no additional sensitive permissions. Check the source before opening network streams or extensions.
 - [Official site](https://iina.io/) · [Source](https://github.com/iina/iina) · [Download](https://github.com/iina/iina/releases)
 
@@ -111,6 +120,7 @@ The classic play-anything media player for local files, discs, streams, and less
 - License: GPL-2.0
 - Public project details checked; not personally tested
 - System: An official Universal macOS installer is available. Check the current VideoLAN release for compatibility.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://www.videolan.org/vlc/download-macosx.html)
 - Permissions / notes: Plays local files and network streams. Open only network addresses and playlists you trust.
 - [Official site](https://www.videolan.org/vlc/) · [Source](https://github.com/videolan/vlc) · [Download](https://www.videolan.org/vlc/download-macosx.html)
 
@@ -122,6 +132,7 @@ A minimal media player with subtitles, scripts, detailed playback controls, and 
 - License: GPL-2.0
 - Public project details checked; not personally tested
 - System: Follow the official macOS install guide for Homebrew, MacPorts, or prebuilt packages. Homebrew does not include an .app bundle; requirements vary by build. GPLv2+ by default, or LGPLv2.1+ when GPL components are disabled.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/mpv-player/mpv/releases/tag/v0.42.0)
 - Permissions / notes: Reads selected media, subtitles, and configuration. Network playback and third-party scripts may access the internet.
 - [Official site](https://mpv.io/) · [Source](https://github.com/mpv-player/mpv) · [Download](https://mpv.io/installation/)
 
@@ -133,6 +144,7 @@ A media center for organizing local and network movies, shows, and music, with a
 - License: GPL-2.0
 - Public project details checked; not personally tested
 - System: Official stable installers support Intel and Apple Silicon on macOS 10.14 or later.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://kodi.tv/download/macos/)
 - Permissions / notes: Reads media folders you add. Artwork lookup, network media, and add-ons use the internet; third-party add-ons have separate terms.
 - [Official site](https://kodi.tv/) · [Source](https://github.com/xbmc/xbmc) · [Download](https://kodi.tv/download/macos/)
 
@@ -144,6 +156,7 @@ Play films, music, and TV from your own Jellyfin server. Previously named Jellyf
 - License: GPL-2.0
 - Public project details checked; not personally tested
 - System: Stable v1.12 requires macOS 13+. Its installers still use the Jellyfin Media Player name. Requires a Jellyfin server.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/jellyfin/jellyfin-desktop/releases/tag/v1.12.0)
 - Permissions / notes: Connects to the server address and media account you specify. Use only servers you trust.
 - [Official site](https://jellyfin.org/) · [Source](https://github.com/jellyfin/jellyfin-desktop) · [Download](https://github.com/jellyfin/jellyfin-desktop/releases)
 
@@ -155,6 +168,7 @@ A native Mac audio player for lossless files, cue sheets, game music, and playli
 - License: GPL-2.0
 - Public project details checked; not personally tested
 - System: The current direct download requires macOS 12 or later and updates through Sparkle. An App Store edition is also available.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://cog.losno.co/)
 - Permissions / notes: Reads authorized music folders. Online lyrics and Last.fm or ListenBrainz scrobbling connect when enabled.
 - [Official site](https://cog.losno.co/) · [Source](https://github.com/losnoco/Cog) · [Download](https://cog.losno.co/)
 
@@ -166,6 +180,7 @@ A desktop client for self-hosted music servers such as Navidrome and Jellyfin, w
 - License: GPL-3.0
 - Public project details checked; not personally tested
 - System: macOS releases include Intel and Apple Silicon installers. A compatible music server is required; this is not a standalone local-file player.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/jeffvli/feishin/releases/tag/v1.17.0)
 - Permissions / notes: Connects to your configured music server. Online lyrics use external services; media-key control may request Accessibility access.
 - [Official site](https://feishin.vercel.app/) · [Source](https://github.com/jeffvli/feishin) · [Download](https://github.com/jeffvli/feishin/releases/latest)
 
@@ -177,6 +192,7 @@ A third-party NetEase Cloud Music client centered on playlists, albums, lyrics, 
 - License: MIT
 - Public project details checked; not personally tested
 - System: Stable v0.4.11 (2026-10-10) offers Intel, Apple Silicon, and Universal Mac builds. Recent users report blocked logins, not established as Mac-specific. Availability depends on service APIs, account status, and track rights. The hosted demo was unavailable during this review; use the official releases for installation.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/qier222/YesPlayMusic/releases/tag/v0.4.11)
 - Permissions / notes: Login and playlists contact NetEase or third-party music APIs. Optional additional music sources connect to other services.
 - [Official site](https://github.com/qier222/YesPlayMusic) · [Source](https://github.com/qier222/YesPlayMusic) · [Download](https://github.com/qier222/YesPlayMusic/releases/latest)
 
@@ -188,6 +204,7 @@ A mature multitrack audio editor for recording, editing, noise reduction, and fo
 - License: GPL-3.0
 - Public project details checked; not personally tested
 - System: macOS installers are available in the project’s releases. Check the current system requirements.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/audacity/audacity/releases/tag/Audacity-4.0.2)
 - Permissions / notes: Recording requires microphone permission. Check the source of files you import.
 - [Official site](https://www.audacityteam.org/) · [Source](https://github.com/audacity/audacity) · [Download](https://github.com/audacity/audacity/releases)
 
@@ -199,6 +216,7 @@ Free DJ software with multiple decks, controller mappings, beat synchronization,
 - License: GPL-2.0
 - Public project details checked; not personally tested
 - System: Download the Mac installer from the official site; the current stable GitHub release has no installers attached. Check the supported-controller list.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://mixxx.org/download/)
 - Permissions / notes: Accesses your selected music library. Grant controller or microphone access when needed.
 - [Official site](https://mixxx.org/) · [Source](https://github.com/mixxxdj/mixxx) · [Download](https://mixxx.org/download/)
 
@@ -210,6 +228,7 @@ Create, edit, and engrave sheet music with MIDI, import/export, and a complete n
 - License: GPL-3.0
 - Public project details checked; not personally tested
 - System: Official releases include a macOS DMG. Check the release page for system requirements.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/musescore/MuseScore/releases/tag/v4.7.7)
 - Permissions / notes: Accesses scores you open or export and the audio devices you use. Check extension sources before installing.
 - [Official site](https://musescore.org/) · [Source](https://github.com/musescore/MuseScore) · [Download](https://github.com/musescore/MuseScore/releases)
 
@@ -221,6 +240,7 @@ Set each app’s volume, route audio to different output devices, and shape the 
 - License: GPL-3.0
 - Public project details checked; not personally tested
 - System: macOS 15+
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/ronitsingh10/FineTune/releases/tag/v1.9.0)
 - Permissions / notes: Requires Screen & System Audio Recording permission to capture and adjust app audio.
 - [Official site](https://github.com/ronitsingh10/FineTune) · [Source](https://github.com/ronitsingh10/FineTune) · [Download](https://github.com/ronitsingh10/FineTune/releases)
 
@@ -232,6 +252,7 @@ Control each app’s volume separately and optionally record system audio.
 - License: GPL-2.0
 - Public project details checked; not personally tested
 - System: macOS 10.13+
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/kyleneideck/BackgroundMusic/releases/tag/v0.5.0)
 - Permissions / notes: Installs an audio driver. Recording may also request Microphone permission.
 - [Official site](https://github.com/kyleneideck/BackgroundMusic) · [Source](https://github.com/kyleneideck/BackgroundMusic) · [Download](https://github.com/kyleneideck/BackgroundMusic/releases)
 
@@ -243,6 +264,7 @@ A macOS image optimizer that reduces file size through a simple drag-and-drop wo
 - License: GPL-2.0
 - Tested by io
 - System: A native macOS app. Check the official site for current system requirements.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://imageoptim.com/ImageOptim1.9.3.tar.xz)
 - Permissions / notes: Processes only images you drop into the app or select. Keep the originals so you can restore them.
 - [Official site](https://imageoptim.com/mac) · [Source](https://github.com/ImageOptim/ImageOptim) · [Download](https://imageoptim.com/mac)
 
@@ -253,7 +275,8 @@ Batch-convert images and video clips to WebP or GIF locally; combine images and 
 - Category: Images & Design
 - License: MIT
 - Tested by io
-- System: v0.2.28 preview · Apple Silicon only · macOS 26+. Current build is ad-hoc signed and not notarized by Apple.
+- System: v0.2.30 · Apple Silicon only · macOS 26+. Current build is ad-hoc signed and not notarized by Apple.
+- Chip compatibility: Apple Silicon only · [Source for chip support](https://github.com/ixiehao/Any2WebP/releases/tag/v0.2.30)
 - Permissions / notes: Processes only the local files you select. Video input requires local FFmpeg and ffprobe; check or install them in Help → Video Dependencies.
 - [Official site](https://ixiehao.github.io/Any2WebP/) · [Source](https://github.com/ixiehao/Any2WebP) · [Download](https://github.com/ixiehao/Any2WebP/releases/latest)
 
@@ -265,6 +288,7 @@ An open-source darkroom workflow for RAW photo management and non-destructive ed
 - License: GPL-3.0
 - Public project details checked; not personally tested
 - System: The current 5.6.2 Mac installer is Apple Silicon only. Check the download page for OS requirements; Intel users need an older build.
+- Chip compatibility: Apple Silicon · Intel in older releases · [Source for chip support](https://github.com/darktable-org/darktable/releases/tag/release-5.6.2)
 - Permissions / notes: Processes the photo folders you import. Keep a backup of the originals.
 - [Official site](https://www.darktable.org/) · [Source](https://github.com/darktable-org/darktable) · [Download](https://github.com/darktable-org/darktable/releases)
 
@@ -276,6 +300,7 @@ A high-quality RAW processor with deep control over exposure, sharpening, and co
 - License: GPL-3.0
 - Public project details checked; not personally tested
 - System: The current macOS release is a Universal ZIP archive. Check the download page for the required macOS version.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/RawTherapee/RawTherapee/releases/tag/5.13)
 - Permissions / notes: Reads the photos you import. Keep originals and exported files in separate folders.
 - [Official site](https://rawtherapee.com/) · [Source](https://github.com/RawTherapee/RawTherapee) · [Download](https://github.com/RawTherapee/RawTherapee/releases)
 
@@ -287,6 +312,7 @@ A free, open-source digital painting app for illustration, concept art, comics, 
 - License: GPL-3.0
 - Public project details checked; not personally tested
 - System: A macOS download is available. Check the official site for current system requirements.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://download.kde.org/stable/krita/5.3.4.1/)
 - Permissions / notes: Check the source before importing unfamiliar asset packs or scripts.
 - [Official site](https://krita.org/) · [Source](https://github.com/KDE/krita) · [Download](https://krita.org/en/download/krita-desktop/)
 
@@ -298,6 +324,7 @@ Create flowcharts, architecture diagrams, UML, and more offline, with import and
 - License: GPL-3.0
 - Public project details checked; not personally tested
 - System: Official releases include a Universal macOS installer.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/jgraph/drawio-desktop/releases/tag/v32.7.4)
 - Permissions / notes: Check the source before opening external templates or configuration files.
 - [Official site](https://www.drawio.com/) · [Source](https://github.com/jgraph/drawio-desktop) · [Download](https://github.com/jgraph/drawio-desktop/releases)
 
@@ -309,6 +336,7 @@ A complete 3D creation suite for modeling, materials, animation, rendering, and 
 - License: GPL-3.0
 - Public project details checked; not personally tested
 - System: Blender 5.x for Mac supports Apple Silicon only. Intel Mac users should choose 4.5 LTS and check its hardware requirements.
+- Chip compatibility: Apple Silicon · Intel in older releases · [Source for chip support](https://www.blender.org/download/requirements/)
 - Permissions / notes: Accesses projects you open, import, or export. Check the source before enabling add-ons or online assets.
 - [Official site](https://www.blender.org/) · [Source](https://github.com/blender/blender) · [Download](https://www.blender.org/download/)
 
@@ -320,6 +348,7 @@ Parametric 3D modeling for parts, technical drawings, and designs that need to c
 - License: LGPL-2.1
 - Public project details checked; not personally tested
 - System: Official releases include macOS DMG installers for Apple Silicon and Intel.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/FreeCAD/FreeCAD/releases/tag/1.1.4)
 - Permissions / notes: Processes the design files you open or export. Check the source of external workbenches and macros.
 - [Official site](https://www.freecad.org/) · [Source](https://github.com/FreeCAD/FreeCAD) · [Download](https://github.com/FreeCAD/FreeCAD/releases)
 
@@ -331,6 +360,7 @@ A complete, approachable open-source engine for making 2D, 3D, and interactive w
 - License: MIT
 - Public project details checked; not personally tested
 - System: Official releases include a Universal macOS installer.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/godotengine/godot/releases/tag/4.7.2-stable)
 - Permissions / notes: Opening third-party projects may run build scripts or import assets. Run only trusted projects.
 - [Official site](https://godotengine.org/) · [Source](https://github.com/godotengine/godot) · [Download](https://github.com/godotengine/godot/releases)
 
@@ -342,6 +372,7 @@ A native macOS capture tool for screenshots, screen recording, annotation, OCR, 
 - License: GPL-3.0
 - Tested by io
 - System: Native macOS releases are available. Check the requirements for the current version.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/sw33tLie/macshot/releases/tag/v4.4.0)
 - Permissions / notes: Requires Screen Recording. macOS may also ask for Microphone, Accessibility, or Input Monitoring when you use relevant features.
 - [Official site](https://macshot.io/) · [Source](https://github.com/sw33tLie/macshot) · [Download](https://github.com/sw33tLie/macshot/releases)
 
@@ -353,6 +384,7 @@ Capture a region, then add arrows, text, highlights, and redactions before copyi
 - License: GPL-3.0
 - Public project details checked; not personally tested
 - System: Current 14.x Mac packages require macOS 15+ and provide separate Intel and Apple Silicon DMGs. Signing checks may appear on first launch.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/flameshot-org/flameshot/releases/tag/v15.0.0)
 - Permissions / notes: Screenshots require Screen Recording permission. Saving and copying can stay local; upload actions send images to the configured service.
 - [Official site](https://flameshot.org/) · [Source](https://github.com/flameshot-org/flameshot) · [Download](https://github.com/flameshot-org/flameshot/releases/latest)
 
@@ -364,6 +396,7 @@ A native menu bar recorder for screen, system audio, and microphone, with H.264,
 - License: MIT
 - Public project details checked; not personally tested
 - System: The official requirement is macOS 15.2+. The current release provides an Apple Silicon DMG only, with no Intel installer.
+- Chip compatibility: Apple Silicon only · [Source for chip support](https://github.com/jsattler/BetterCapture/releases/tag/v2026.4)
 - Permissions / notes: Screen and system-audio recording require macOS permission. Microphone and camera access are granted when used; recordings are stored locally by default.
 - [Official site](https://bettercapture.app/) · [Source](https://github.com/jsattler/BetterCapture) · [Download](https://github.com/jsattler/BetterCapture/releases/latest)
 
@@ -375,6 +408,7 @@ A lightweight screen recorder made for macOS, ideal for quick, polished demonstr
 - License: MIT
 - Public project details checked; not personally tested
 - System: Official project releases include macOS installers for Apple Silicon and Intel.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/wulkano/Kap/releases/tag/v3.6.0)
 - Permissions / notes: Screen capture requires macOS Screen Recording permission. Allow microphone access when recording audio.
 - [Official site](https://getkap.co/) · [Source](https://github.com/wulkano/Kap) · [Download](https://github.com/wulkano/Kap/releases)
 
@@ -386,6 +420,7 @@ Turn a screen recording into a demo with auto-zoom, cursor effects, webcam overl
 - License: MIT
 - Public project details checked; not personally tested
 - System: Official DMGs support Intel and Apple Silicon. Recording and editing are free; development is active and formats may change. Optional cloud AI requires your own API key and may incur provider charges.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/getopenscreen/openscreen/releases/tag/v2.3.0)
 - Permissions / notes: Requests Screen Recording, Accessibility, microphone, and camera access as needed. Optional bring-your-own-key AI sends requests to the selected provider.
 - [Official site](https://getopenscreen.com/) · [Source](https://github.com/getopenscreen/openscreen) · [Download](https://github.com/getopenscreen/openscreen/releases/latest)
 
@@ -397,6 +432,7 @@ An open-source studio for recording and streaming, with scenes, sources, audio m
 - License: GPL-2.0
 - Public project details checked; not personally tested
 - System: Official releases include macOS installers for Apple Silicon and Intel.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/obsproject/obs-studio/releases/tag/33.0.2)
 - Permissions / notes: Screen Recording access is required to capture your display. Grant only the camera and microphone access you need.
 - [Official site](https://obsproject.com/) · [Source](https://github.com/obsproject/obs-studio) · [Download](https://github.com/obsproject/obs-studio/releases)
 
@@ -408,6 +444,7 @@ A Chrome extension for recording tabs or the desktop, annotating while recording
 - License: GPL-3.0
 - Public project details checked; not personally tested
 - System: A Chrome/Chromium extension, not a standalone Mac app. Free recording and local export are available; Screenity Pro is a separate paid cloud service.
+- Chip compatibility: Depends on the browser · [Source for chip support](https://chromewebstore.google.com/detail/screenity/kbbdabhdfibnancpjfhlkhafgdilcnji)
 - Permissions / notes: Captures the selected tab, desktop, microphone, or camera. Cloud saving and Pro sharing connect and upload the relevant content.
 - [Official site](https://screenity.io/) · [Source](https://github.com/alyssaxuu/screenity) · [Download](https://chromewebstore.google.com/detail/screenity/kbbdabhdfibnancpjfhlkhafgdilcnji)
 
@@ -419,6 +456,7 @@ A mature open-source browser with sync, extensions, privacy controls, and capabl
 - License: MPL-2.0
 - Tested by io
 - System: An official macOS DMG is available. Check the download page for current system requirements.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://www.mozilla.org/en-US/firefox/system-requirements/)
 - Permissions / notes: Websites request camera, microphone, location, or notification access as needed. Grant access only to sites you trust.
 - [Official site](https://www.firefox.com/) · [Source](https://github.com/mozilla-firefox/firefox) · [Download](https://www.firefox.com/en-US/download/mac/)
 
@@ -430,6 +468,7 @@ An independent Firefox-based browser with a familiar extension ecosystem and its
 - License: MPL-2.0
 - Public project details checked; not personally tested
 - System: The official site offers a Universal DMG for macOS 10.15+ on Intel and Apple Silicon. GitHub releases mainly provide version notes.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://www.waterfox.com/download/)
 - Permissions / notes: Websites and extensions use the access you grant. Sync and other online services depend on your settings.
 - [Official site](https://www.waterfox.com/) · [Source](https://github.com/BrowserWorks/waterfox) · [Download](https://www.waterfox.com/download/)
 
@@ -441,6 +480,7 @@ A Firefox-based browser with workspaces, a sidebar, and extensive interface cust
 - License: MPL-2.0
 - Public project details checked; not personally tested
 - System: Official documentation lists macOS 10.15 or later. Releases provide a Universal DMG for Intel and Apple Silicon.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/Floorp-Projects/Floorp/releases/tag/v12.21.2)
 - Permissions / notes: Sites and extensions request access as needed. Settings control sync, recommended extensions, and other network features.
 - [Official site](https://floorp.app/) · [Source](https://github.com/Floorp-Projects/Floorp) · [Download](https://github.com/Floorp-Projects/Floorp/releases/latest)
 
@@ -452,6 +492,7 @@ An open-source Firefox-based browser that emphasizes workspaces, split views, an
 - License: MPL-2.0
 - Public project details checked; not personally tested
 - System: Official releases include a Universal macOS DMG for Apple Silicon and Intel.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://zen-browser.app/download/)
 - Permissions / notes: Websites request camera, microphone, location, or notification access as needed. Grant access only to sites you trust.
 - [Official site](https://zen-browser.app/) · [Source](https://github.com/zen-browser/desktop) · [Download](https://zen-browser.app/download/)
 
@@ -463,6 +504,7 @@ A Chromium browser with Chrome extension support, built-in ad and tracker blocki
 - License: MPL-2.0
 - Public project details checked; not personally tested
 - System: The current stable release requires macOS 13+ and offers Intel, Apple Silicon, and Universal builds. Select Brave-Browser; Brave Origin is a separate paid edition. The core browser is free, with paid VPN and some AI services.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/brave/brave-browser/releases/tag/v1.100.58)
 - Permissions / notes: Sites request camera, microphone, and other access as needed. Sync, Rewards, AI, and other online features follow their own settings and service terms.
 - [Official site](https://brave.com/) · [Source](https://github.com/brave/brave-browser) · [Download](https://github.com/brave/brave-browser/releases/latest)
 
@@ -474,6 +516,7 @@ A Chromium browser in beta, with a minimal interface, content blocking, vertical
 - License: GPL-3.0
 - Public project details checked; not personally tested
 - System: macOS 13+; Intel and Apple Silicon DMGs are available. The project is explicitly in beta, so unexpected issues may occur. Auto-updates require Helium services to be enabled.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://helium.computer/download)
 - Permissions / notes: Helium services for extension proxying, filter lists, and updates connect according to your choices. Third-party assets retain their own licenses.
 - [Official site](https://helium.computer/) · [Source](https://github.com/imputnet/helium) · [Download](https://github.com/imputnet/helium-macos/releases/latest)
 
@@ -485,6 +528,7 @@ A fast, local-first RSS reader that brings sites, blogs, and subscriptions into 
 - License: MIT
 - Public project details checked; not personally tested
 - System: Official project releases include a macOS installer.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/Ranchero-Software/NetNewsWire/releases/tag/mac-7.3.1)
 - Permissions / notes: Feeds connect to the network for updates according to your settings.
 - [Official site](https://netnewswire.com/) · [Source](https://github.com/Ranchero-Software/NetNewsWire) · [Download](https://github.com/Ranchero-Software/NetNewsWire/releases)
 
@@ -496,6 +540,7 @@ Multi-connection downloads with resuming, categories, scheduled queues, and opti
 - License: Apache-2.0
 - Public project details checked; not personally tested
 - System: Official releases include Intel and Apple Silicon DMGs. Browser integration uses an optional extension; resuming requires server support.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/amir1376/ab-download-manager/releases/tag/v1.11.4)
 - Permissions / notes: Reads download URLs and writes to selected folders. The optional browser extension receives download requests within its granted access.
 - [Official site](https://abdownloadmanager.com/) · [Source](https://github.com/amir1376/ab-download-manager) · [Download](https://github.com/amir1376/ab-download-manager/releases/latest)
 
@@ -507,6 +552,7 @@ A download manager for HTTP, HTTPS, torrents, and magnets, with queues, browser 
 - License: GPL-3.0
 - Public project details checked; not personally tested
 - System: Stable macOS releases offer Intel, Apple Silicon, and Universal installers. Version 2.0 also has beta builds; the download link selects the latest stable release.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/GopeedLab/gopeed/releases/tag/v1.9.3)
 - Permissions / notes: Downloads to selected folders. Torrent tasks exchange data with peers; installed extensions add their own network functions.
 - [Official site](https://gopeed.com/) · [Source](https://github.com/GopeedLab/gopeed) · [Download](https://github.com/GopeedLab/gopeed/releases/latest)
 
@@ -518,6 +564,7 @@ A command-line downloader for HTTP, FTP, SFTP, BitTorrent, and Metalink, with ba
 - License: GPL-2.0
 - Public project details checked; not personally tested
 - System: Follow the project instructions for Homebrew or MacPorts on macOS. There is no GUI; stable releases are infrequent and the tool suits scripted workflows.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://packages.macports.org/aria2/)
 - Permissions / notes: Connects to supplied URLs and writes downloads. Torrents exchange data with peers; configure RPC authentication for its intended scope.
 - [Official site](https://aria2.github.io/) · [Source](https://github.com/aria2/aria2) · [Download](https://aria2.github.io/)
 
@@ -529,6 +576,7 @@ Download videos, audio, and playlists from YouTube and other sites, with quality
 - License: GPL-3.0
 - Tested by io
 - System: Official Apple Silicon and Intel builds; tested on macOS 27. Follow the project instructions for yt-dlp and other components. The Mac release is unsigned.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/aandrew-me/ytDownloader/releases/tag/v4.1.0)
 - Permissions / notes: Reading Chrome Cookies requires access to Chrome app data. On macOS 27, enable Google Chrome under YTDownloader in Files & Folders.
 - [Official site](https://ytdn.netlify.app/) · [Source](https://github.com/aandrew-me/ytDownloader) · [Download](https://github.com/aandrew-me/ytDownloader/releases/latest)
 
@@ -540,6 +588,7 @@ A command-line downloader for audio and video from many supported sites.
 - License: Unlicense
 - Public project details checked; not personally tested
 - System: Available on macOS through Python or a package manager. Follow the project’s installation instructions.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/yt-dlp/yt-dlp/releases/tag/2026.10.26)
 - Permissions / notes: Save only content you are entitled to download, and follow the platform’s terms, copyright rules, and local law.
 - [Official site](https://github.com/yt-dlp/yt-dlp) · [Source](https://github.com/yt-dlp/yt-dlp) · [Download](https://github.com/yt-dlp/yt-dlp/releases)
 
@@ -551,6 +600,7 @@ A native Mac torrent client with a simple interface for magnets, speed limits, a
 - License: GPL-2.0 / GPL-3.0
 - Public project details checked; not personally tested
 - System: The current official Mac app requires macOS 12 or later and ships as a DMG. It uses a native interface rather than the Qt interface on other platforms.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/transmission/transmission/releases/tag/4.1.4)
 - Permissions / notes: Torrent tasks upload and download data with peers. Optional remote access exposes a management interface.
 - [Official site](https://transmissionbt.com/) · [Source](https://github.com/transmission/transmission) · [Download](https://github.com/transmission/transmission/releases/latest)
 
@@ -562,6 +612,7 @@ An ad-free torrent and magnet client with queues, file selection, speed limits, 
 - License: GPL-3.0
 - Public project details checked; not personally tested
 - System: The official Mac download is currently 5.2.3 for macOS 13+. Other platforms may be newer; the project notes limited macOS maintenance. Source is GPLv2+; distributed binaries are GPLv3+.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://sourceforge.net/projects/qbittorrent/files/qbittorrent-mac/)
 - Permissions / notes: Torrent downloads exchange data with peers. Remote Web management is optional and should be authenticated when enabled.
 - [Official site](https://www.qbittorrent.org/) · [Source](https://github.com/qbittorrent/qBittorrent) · [Download](https://www.qbittorrent.org/download)
 
@@ -573,6 +624,7 @@ A native client for SFTP, WebDAV, S3, and many cloud stores, with bookmarks and 
 - License: GPL-3.0
 - Public project details checked; not personally tested
 - System: A macOS installer is available on the official site. Check its notes for protocol and server compatibility.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/iterate-ch/cyberduck/releases/tag/release-9-6-0)
 - Permissions / notes: Stores the server bookmarks and credentials you choose. Use keys or Keychain, and protect access tokens.
 - [Official site](https://cyberduck.io/) · [Source](https://github.com/iterate-ch/cyberduck) · [Download](https://cyberduck.io/download/)
 
@@ -584,6 +636,7 @@ Restores the familiar Launchpad experience: grid, pages, folders, drag and drop,
 - License: GPL-3.0
 - Tested by io
 - System: Project requirements: macOS 15.6 or later.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/EricYang801/Launchpad_Back)
 - Permissions / notes: The project release is not notarized. Follow the project’s Gatekeeper instructions before opening it.
 - [Official site](https://github.com/EricYang801/Launchpad_Back) · [Source](https://github.com/EricYang801/Launchpad_Back) · [Download](https://github.com/EricYang801/Launchpad_Back/releases)
 
@@ -595,6 +648,7 @@ Arrange windows quickly with drag and drop, shortcuts, and a floating menu—ide
 - License: GPL-3.0
 - Public project details checked; not personally tested
 - System: macOS 13+ · Intel and Apple Silicon
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/mrkai77/Loop/releases/tag/1.4.2)
 - Permissions / notes: Requires Accessibility permission to move and resize other apps’ windows.
 - [Official site](https://github.com/MrKai77/Loop) · [Source](https://github.com/MrKai77/Loop) · [Download](https://github.com/MrKai77/Loop/releases)
 
@@ -606,6 +660,7 @@ Snap, move, and resize macOS windows with keyboard shortcuts, edge gestures, and
 - License: MIT
 - Public project details checked; not personally tested
 - System: The latest version requires macOS 14+. Version 1.100 supports macOS 10.15–13.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/rxhanson/Rectangle/releases/tag/v2.0.5)
 - Permissions / notes: Requires Accessibility permission to move and resize other apps’ windows.
 - [Official site](https://rectangleapp.com/) · [Source](https://github.com/rxhanson/Rectangle) · [Download](https://github.com/rxhanson/Rectangle/releases)
 
@@ -617,6 +672,7 @@ Switch between windows—not just apps—with thumbnails, minimized windows, and
 - License: GPL-3.0
 - Public project details checked; not personally tested
 - System: macOS 12+ · Core window switching is free; search and some visual options require paid Pro.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/lwouis/alt-tab-macos/releases/tag/v11.10.2)
 - Permissions / notes: Requires Accessibility permission to read and switch windows.
 - [Official site](https://alt-tab.app/) · [Source](https://github.com/lwouis/alt-tab-macos) · [Download](https://github.com/lwouis/alt-tab-macos/releases)
 
@@ -628,6 +684,7 @@ An i3-style tiling window manager for macOS, driven by keyboard shortcuts and a 
 - License: MIT
 - Public project details checked; not personally tested
 - System: macOS installation instructions are available. Read the current limitations and configuration guide first.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/nikitabobko/AeroSpace/releases/tag/v0.21.3-Beta)
 - Permissions / notes: Requires Accessibility permission to control windows. The project is not notarized; review its official installation instructions before opening it.
 - [Official site](https://nikitabobko.github.io/AeroSpace/guide) · [Source](https://github.com/nikitabobko/AeroSpace) · [Download](https://nikitabobko.github.io/AeroSpace/guide#installation)
 
@@ -639,6 +696,7 @@ An approachable automatic tiling window manager for macOS, with layouts and shor
 - License: MIT
 - Public project details checked; not personally tested
 - System: macOS 10.15+
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/ianyh/Amethyst/releases/tag/v0.25.0)
 - Permissions / notes: Requires Accessibility permission to read and arrange other apps’ windows.
 - [Official site](https://ianyh.com/amethyst/) · [Source](https://github.com/ianyh/Amethyst) · [Download](https://github.com/ianyh/Amethyst/releases)
 
@@ -650,6 +708,7 @@ Group, hide, or always show menu bar icons so utility apps stop crowding the top
 - License: GPL-3.0
 - Public project details checked; not personally tested
 - System: macOS 14+ · Intel and Apple Silicon
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/jordanbaird/Ice/releases/tag/0.11.12)
 - Permissions / notes: Required permissions depend on the feature and macOS version. Check the project’s permission notes before installing.
 - [Official site](https://icemenubar.app/) · [Source](https://github.com/jordanbaird/Ice) · [Download](https://github.com/jordanbaird/Ice/releases)
 
@@ -661,6 +720,7 @@ Organize, hide, and search menu bar icons so the top of your screen stays usable
 - License: GPL-3.0
 - Public project details checked; not personally tested
 - System: Stable 2.1 supports macOS 26 only; the 3.x beta requires macOS 27. Use Releases to find builds for older systems.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/thaw-app/Thaw/releases/tag/2.1.0)
 - Permissions / notes: Menu bar management may require Accessibility or other permissions, depending on macOS.
 - [Official site](https://www.getthaw.app/) · [Source](https://github.com/thaw-app/Thaw) · [Download](https://github.com/thaw-app/Thaw/releases)
 
@@ -672,6 +732,7 @@ Monitor CPU, memory, storage, network, battery, sensors, and more from the menu 
 - License: MIT
 - Public project details checked; not personally tested
 - System: macOS 12+ · Intel and Apple Silicon
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/exelban/stats/releases/tag/v3.1.0)
 - Permissions / notes: Displaying the Wi-Fi network name may require Location Services. Grant other permissions as prompted.
 - [Official site](https://mac-stats.com/) · [Source](https://github.com/exelban/stats) · [Download](https://github.com/exelban/stats/releases)
 
@@ -683,6 +744,7 @@ Control an external display’s brightness and volume via DDC/CI, including with
 - License: MIT
 - Public project details checked; not personally tested
 - System: Requires a display with DDC/CI support. See the project’s compatibility notes.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/MonitorControl/MonitorControl/releases/tag/v4.4.0)
 - Permissions / notes: Using the native brightness keys with external displays requires Accessibility permission.
 - [Official site](https://monitorcontrol.app/) · [Source](https://github.com/MonitorControl/MonitorControl) · [Download](https://github.com/MonitorControl/MonitorControl/releases)
 
@@ -694,6 +756,7 @@ Restore saved window layouts when you reconnect a monitor, with optional brightn
 - License: GPL-3.0
 - Public project details checked; not personally tested
 - System: macOS 14+ · Intel and Apple Silicon. Restoring windows across Spaces requires macOS 26+. Hardware brightness control needs Apple Silicon and a compatible DDC display.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/tumingke0/LayoutKeeper/releases/tag/v0.6.16)
 - Permissions / notes: Requires Accessibility. No Screen Recording or Input Monitoring is needed. Release builds are self-signed, not notarized by Apple.
 - [Official site](https://github.com/tumingke0/LayoutKeeper) · [Source](https://github.com/tumingke0/LayoutKeeper) · [Download](https://github.com/tumingke0/LayoutKeeper/releases)
 
@@ -705,6 +768,7 @@ Give each external mouse and trackpad its own scrolling, pointer, and accelerati
 - License: MIT
 - Public project details checked; not personally tested
 - System: Official project releases include a macOS installer.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/linearmouse/linearmouse/releases/tag/v0.13.0)
 - Permissions / notes: Requires Accessibility permission to apply input-device settings.
 - [Official site](https://linearmouse.app/) · [Source](https://github.com/linearmouse/linearmouse) · [Download](https://github.com/linearmouse/linearmouse/releases)
 
@@ -716,6 +780,7 @@ A powerful macOS keyboard customizer for remapping keys, building complex rules,
 - License: Unlicense
 - Public project details checked; not personally tested
 - System: A macOS installer is available. Check the official site for supported system versions.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/pqrs-org/Karabiner-Elements#supported-systems)
 - Permissions / notes: Requires Input Monitoring and a system extension, and may request Accessibility and background-service approval. Review these elevated system changes before installing.
 - [Official site](https://karabiner-elements.pqrs.org/) · [Source](https://github.com/pqrs-org/Karabiner-Elements) · [Download](https://github.com/pqrs-org/Karabiner-Elements/releases)
 
@@ -727,6 +792,7 @@ Put common macOS controls—such as hidden files, appearance, and low-power mode
 - License: MIT
 - Public project details checked; not personally tested
 - System: Official releases include a macOS DMG. Available switches depend on the macOS version.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/jacklandrin/OnlySwitch/releases/tag/release_3.7.0)
 - Permissions / notes: Some features use system services or request permission. Enable only features you understand.
 - [Official site](https://onlyswitch.click/) · [Source](https://github.com/jacklandrin/OnlySwitch) · [Download](https://github.com/jacklandrin/OnlySwitch/releases)
 
@@ -738,6 +804,7 @@ Prevent your Mac from sleeping for a set time—handy for downloads, demos, and 
 - License: MIT
 - Public project details checked; not personally tested
 - System: macOS 10.13+
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/newmarcel/KeepingYouAwake/releases/tag/1.6.8)
 - Permissions / notes: Uses the system’s keep-awake function as needed, without reading personal files.
 - [Official site](https://keepingyouawake.app/) · [Source](https://github.com/newmarcel/KeepingYouAwake) · [Download](https://github.com/newmarcel/KeepingYouAwake/releases)
 
@@ -749,6 +816,7 @@ A free, open-source suite for documents, spreadsheets, and presentations—usefu
 - License: MPL-2.0
 - Public project details checked; not personally tested
 - System: Check the current macOS requirements on the official LibreOffice download page.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://www.libreoffice.org/download/download-libreoffice/)
 - Permissions / notes: Take care when opening unfamiliar documents containing macros or external links.
 - [Official site](https://www.libreoffice.org/) · [Source](https://github.com/LibreOffice/core) · [Download](https://www.libreoffice.org/download/download-libreoffice/)
 
@@ -760,6 +828,7 @@ Edit documents, spreadsheets, presentations, and PDFs offline, with support for 
 - License: AGPL-3.0
 - Public project details checked; not personally tested
 - System: macOS 10.13+ · Intel and Apple Silicon downloads available
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/ONLYOFFICE/DesktopEditors/releases/tag/v10.0.0)
 - Permissions / notes: Take care with macros, external links, and embedded content in unfamiliar documents.
 - [Official site](https://www.onlyoffice.com/desktop) · [Source](https://github.com/ONLYOFFICE/DesktopEditors) · [Download](https://github.com/ONLYOFFICE/DesktopEditors/releases)
 
@@ -771,6 +840,7 @@ An open-source desktop email client that brings multiple accounts, calendars, co
 - License: MPL-2.0
 - Public project details checked; not personally tested
 - System: An official macOS installer is available. Check the download page for current requirements.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://www.thunderbird.net/en-US/thunderbird/145.0/system-requirements/)
 - Permissions / notes: Signs in to your email and calendar accounts. Configure servers, OAuth access, and local mail storage as needed.
 - [Official site](https://www.thunderbird.net/) · [Source](https://github.com/thunderbird/thunderbird-desktop) · [Download](https://www.thunderbird.net/en-US/download/)
 
@@ -782,6 +852,7 @@ Read EPUB, PDF, MOBI, and more offline, with annotations, notes, and a local lib
 - License: AGPL-3.0
 - Public project details checked; not personally tested
 - System: Official releases include macOS builds for Apple Silicon and Intel.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/koodo-reader/koodo-reader/releases/tag/v2.4.7)
 - Permissions / notes: You choose which books and notes to import or sync.
 - [Official site](https://koodoreader.com/) · [Source](https://github.com/koodo-reader/koodo-reader) · [Download](https://github.com/koodo-reader/koodo-reader/releases)
 
@@ -793,6 +864,7 @@ Build durable knowledge with spaced repetition, flexible card templates, and opt
 - License: AGPL-3.0
 - Public project details checked; not personally tested
 - System: Official releases include macOS DMG installers for Apple Silicon and Intel.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/ankitects/anki/releases/tag/26.09.4)
 - Permissions / notes: Optional sync uploads the decks and media you choose. Review sync settings before including sensitive material.
 - [Official site](https://apps.ankiweb.net/) · [Source](https://github.com/ankitects/anki) · [Download](https://github.com/ankitects/anki/releases)
 
@@ -804,6 +876,7 @@ A Markdown writing workspace for notes, citations, and long-form projects.
 - License: GPL-3.0
 - Public project details checked; not personally tested
 - System: Check the macOS requirements for the current project release.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/Zettlr/Zettlr/releases/tag/v4.10.0)
 - Permissions / notes: Take care when opening files or scripts from unfamiliar sources.
 - [Official site](https://www.zettlr.com/) · [Source](https://github.com/Zettlr/Zettlr) · [Download](https://github.com/Zettlr/Zettlr/releases)
 
@@ -815,6 +888,7 @@ A Markdown notes app built around ordinary files, with folder and Nextcloud work
 - License: GPL-2.0
 - Public project details checked; not personally tested
 - System: Official project releases include a macOS installer.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://www.qownnotes.org/installation/macos.html)
 - Permissions / notes: Accesses only the notes folder you specify. You configure any sync service.
 - [Official site](https://www.qownnotes.org/) · [Source](https://github.com/pbek/QOwnNotes) · [Download](https://github.com/pbek/QOwnNotes/releases)
 
@@ -826,6 +900,7 @@ A Markdown notes app with notebooks, end-to-end encrypted sync options, and an o
 - License: AGPL-3.0
 - Public project details checked; not personally tested
 - System: A macOS desktop app is available. Check the current release requirements.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/laurent22/joplin/releases/tag/v3.7.24)
 - Permissions / notes: You configure the sync service, encryption password, and third-party plugins. Check the service and plugin sources before use.
 - [Official site](https://joplinapp.org/) · [Source](https://github.com/laurent22/joplin) · [Download](https://github.com/laurent22/joplin/releases)
 
@@ -837,6 +912,7 @@ Organize notes, tasks, and knowledge with outlines, block references, and backli
 - License: AGPL-3.0
 - Public project details checked; not personally tested
 - System: The 2.x database edition is in beta. Legacy Markdown / Org file graphs moved to Logseq OG. Back up before migrating.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/logseq/logseq/releases/tag/2.0.2)
 - Permissions / notes: Read the data and permission notes before using sync, plugins, or external services.
 - [Official site](https://logseq.com/) · [Source](https://github.com/logseq/logseq) · [Download](https://github.com/logseq/logseq/releases)
 
@@ -848,6 +924,7 @@ A local-first workspace for documents, databases, and projects, with optional co
 - License: AGPL-3.0
 - Public project details checked; not personally tested
 - System: macOS downloads include Apple Silicon, Intel, and Universal builds.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/AppFlowy-IO/AppFlowy/releases/tag/0.15.1)
 - Permissions / notes: Check the sync and sharing scope before connecting a cloud workspace.
 - [Official site](https://appflowy.com/) · [Source](https://github.com/AppFlowy-IO/AppFlowy) · [Download](https://github.com/AppFlowy-IO/AppFlowy/releases)
 
@@ -859,6 +936,7 @@ A local-first workspace for tasks, time tracking, Pomodoro sessions, and project
 - License: MIT
 - Public project details checked; not personally tested
 - System: Official releases include Universal, Apple Silicon, and Intel macOS DMGs.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/super-productivity/super-productivity/releases/tag/v20.0.0)
 - Permissions / notes: No account is needed for local use. Grant access as needed when connecting third-party task services.
 - [Official site](https://super-productivity.com/) · [Source](https://github.com/super-productivity/super-productivity) · [Download](https://github.com/super-productivity/super-productivity/releases)
 
@@ -870,6 +948,7 @@ A lightweight menu-bar clipboard manager that keeps a searchable history of what
 - License: MIT
 - Public project details checked; not personally tested
 - System: macOS 14+
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/p0deje/Maccy/releases/tag/2.8.0)
 - Permissions / notes: Stores clipboard history. Avoid copying passwords, keys, or other sensitive content you do not want retained.
 - [Official site](https://maccy.app/) · [Source](https://github.com/p0deje/Maccy) · [Download](https://github.com/p0deje/Maccy/releases)
 
@@ -881,6 +960,7 @@ Expand short phrases into templates, dates, and reusable text to avoid repetitiv
 - License: GPL-3.0
 - Public project details checked; not personally tested
 - System: Official releases include a Universal macOS installer.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/espanso/espanso/releases/tag/v2.4.1)
 - Permissions / notes: Keyboard monitoring requires the permissions described by the project. Do not put sensitive content in untrusted templates.
 - [Official site](https://espanso.org/) · [Source](https://github.com/espanso/espanso) · [Download](https://github.com/espanso/espanso/releases)
 
@@ -892,6 +972,7 @@ Use Lua to connect shortcuts, windows, menu-bar items, and system actions into y
 - License: MIT
 - Public project details checked; not personally tested
 - System: macOS installers are available in the project’s releases. Check the current system requirements.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/Hammerspoon/hammerspoon/releases/tag/1.1.1)
 - Permissions / notes: Automation scripts can request Accessibility, file, or network access. Run only configurations you have reviewed.
 - [Official site](https://www.hammerspoon.org/) · [Source](https://github.com/Hammerspoon/hammerspoon) · [Download](https://github.com/Hammerspoon/hammerspoon/releases)
 
@@ -903,6 +984,7 @@ Turn script output into menu-bar tools for status, reminders, and custom quick a
 - License: MIT
 - Public project details checked; not personally tested
 - System: macOS 12+
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/swiftbar/SwiftBar/releases/tag/v2.1.1)
 - Permissions / notes: Runs the scripts you enable. Add only trusted plugins whose contents you can review.
 - [Official site](https://swiftbar.app/) · [Source](https://github.com/swiftbar/SwiftBar) · [Download](https://github.com/swiftbar/SwiftBar/releases)
 
@@ -914,6 +996,7 @@ Browse and preview archives in a native Mac interface. Create ZIP and 7z files, 
 - License: GPL-3.0
 - Public project details checked; not personally tested
 - System: The current release requires macOS 14.6+ and supports Intel and Apple Silicon. Official DMG / ZIP builds are signed and notarized; macOS 13 support ended at v0.14.1.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/sarensw/MacPacker/releases/tag/v1.3.0)
 - Permissions / notes: Accesses selected archives and output folders. Enable Finder and Quick Look extensions when needed.
 - [Official site](https://macpacker.app/) · [Source](https://github.com/sarensw/MacPacker) · [Download](https://github.com/sarensw/MacPacker/releases)
 
@@ -925,6 +1008,7 @@ A cross-platform archive manager for ZIP, 7z, TAR, and RAR extraction, with encr
 - License: LGPL-3.0
 - Public project details checked; not personally tested
 - System: Separate official macOS packages are available for Intel and Apple Silicon. Mac builds lack Developer ID signing and may be blocked on first launch; see the official installation notes.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/peazip/PeaZip/releases/tag/11.4.0)
 - Permissions / notes: Reads selected files and writes to the chosen destination. Finder services are optional. Compression and RAR extraction are free; RAR creation is not supported.
 - [Official site](https://peazip.github.io/peazip-macos.html) · [Source](https://github.com/peazip/PeaZip) · [Download](https://github.com/peazip/PeaZip/releases)
 
@@ -936,6 +1020,7 @@ A native archive manager with ZIP, 7z, and TAR creation, RAR extraction, encrypt
 - License: MIT
 - Tested by io
 - System: macOS 13+; Universal builds support Intel and Apple Silicon. Official GitHub DMG / ZIP builds are signed and notarized. ZIP, 7z, and TAR creation and RAR extraction are free.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/mstcvk/MacRAR/releases/tag/v1.4.4)
 - Permissions / notes: Reads selected files and writes to the chosen destination; enable Finder Quick Actions as needed. Creating or modifying RAR requires your own paid RARLAB rar tool (a trial is available). MIT covers MacRAR source only; 7-Zip and other components retain their own terms.
 - [Official site](https://github.com/mstcvk/MacRAR) · [Source](https://github.com/mstcvk/MacRAR) · [Download](https://github.com/mstcvk/MacRAR/releases)
 
@@ -947,6 +1032,7 @@ Send files, text, and clipboard content directly over the local network, without
 - License: Apache-2.0
 - Public project details checked; not personally tested
 - System: Official project releases include a macOS installer.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/localsend/localsend/releases/tag/v1.18.2)
 - Permissions / notes: Uses local-network discovery and transfers. Accept only devices and files you recognize.
 - [Official site](https://localsend.org/) · [Source](https://github.com/localsend/localsend) · [Download](https://github.com/localsend/localsend/releases)
 
@@ -958,6 +1044,7 @@ Browse, drag, and transfer files directly between a Mac and Android or other MTP
 - License: MIT
 - Public project details checked; not personally tested
 - System: macOS 11+
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/ganeshrvel/openmtp/releases/tag/v3.3.0)
 - Permissions / notes: Accesses the USB device you connect and authorize, and the local files you select.
 - [Official site](https://openmtp.ganeshrvel.com/) · [Source](https://github.com/ganeshrvel/openmtp) · [Download](https://github.com/ganeshrvel/openmtp/releases)
 
@@ -968,7 +1055,8 @@ Read and write NTFS drives, with automatic mounting and disk management.
 - Category: Files & Backup
 - License: Zlib
 - Tested by io
-- System: v1.8.0: macOS 14+ · Apple Silicon. Intel Macs need the older v1.4.5 release.
+- System: v1.9.0: macOS 14+ · Apple Silicon. Intel Macs need the older v1.4.5 release.
+- Chip compatibility: Apple Silicon · Intel in older releases · [Source for chip support](https://github.com/hoochanlon/Free-NTFS-for-Mac/releases/tag/v1.9.0)
 - Permissions / notes: Mounting requires administrator authentication. The default backend uses MacFUSE and ntfs-3g; an optional FSKit backend requires macOS 15.4+. Back up important data before writing.
 - [Official site](https://github.com/hoochanlon/Free-NTFS-for-Mac) · [Source](https://github.com/hoochanlon/Free-NTFS-for-Mac) · [Download](https://github.com/hoochanlon/Free-NTFS-for-Mac/releases)
 
@@ -979,7 +1067,8 @@ Mount NTFS drives for read/write, with auto-mount, safe ejection, and SHA-256 ve
 - Category: Files & Backup
 - License: MIT
 - Tested by io
-- System: v0.5.0 · macOS 14+ · Apple Silicon. Requires macFUSE 5.5.0. The PKG is unsigned and not notarized.
+- System: v0.5.1 · macOS 14+ · Apple Silicon. Requires macFUSE 5.5.0. The app is ad-hoc signed and the installer is not notarized by Apple.
+- Chip compatibility: Apple Silicon only · [Source for chip support](https://github.com/ixiehao/ezNTFS/releases/tag/v0.5.1)
 - Permissions / notes: Installing the app, mount service, and NTFS-3G driver requires administrator approval. macOS may also require Full Disk Access for the mount service. NTFS-3G includes GPL-2.0 / LGPL-2.0 components; macFUSE has separate terms.
 - [Official site](https://ixiehao.github.io/ezNTFS/) · [Source](https://github.com/ixiehao/ezNTFS) · [Download](https://github.com/ixiehao/ezNTFS/releases/latest)
 
@@ -991,6 +1080,7 @@ Sync chosen folders directly between devices without handing files to a third-pa
 - License: MPL-2.0
 - Public project details checked; not personally tested
 - System: Official macOS archives contain a command-line program configured through a browser interface. Choose the build for your chip.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/syncthing/syncthing/releases/tag/v2.1.7)
 - Permissions / notes: You choose the sync scope. Review the devices and version-retention settings for each shared folder.
 - [Official site](https://syncthing.net/) · [Source](https://github.com/syncthing/syncthing) · [Download](https://github.com/syncthing/syncthing/releases)
 
@@ -1002,6 +1092,7 @@ A backup tool with snapshots, deduplication, and encryption for local or remote 
 - License: Apache-2.0
 - Public project details checked; not personally tested
 - System: Official releases include macOS builds for Apple Silicon and Intel.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/kopia/kopia/releases/tag/v0.23.1)
 - Permissions / notes: Reads selected backup sources and writes to the backup destination. Test a restore before relying on it.
 - [Official site](https://kopia.io/) · [Source](https://github.com/kopia/kopia) · [Download](https://github.com/kopia/kopia/releases)
 
@@ -1013,6 +1104,7 @@ Inspect disk usage, review app and development caches before cleaning, and remov
 - License: MIT
 - Tested by io
 - System: macOS 13+
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/momenbasel/PureMac/releases/tag/v3.3.0)
 - Permissions / notes: Cleanup tools may request broader file access. Review every path they will touch before proceeding.
 - [Official site](https://www.moamenbasel.com/PureMac/) · [Source](https://github.com/momenbasel/PureMac) · [Download](https://github.com/momenbasel/PureMac/releases)
 
@@ -1024,6 +1116,7 @@ Review caches, development leftovers, and large files before cleaning. Regular f
 - License: MIT
 - Tested by io
 - System: macOS 13+
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/jithin-sabu/purge-app/releases/tag/v1.17.0)
 - Permissions / notes: Full Disk Access is optional; grant it only when you need to scan additional locations.
 - [Official site](https://purgemac.com/) · [Source](https://github.com/jithin-sabu/purge-app) · [Download](https://github.com/jithin-sabu/purge-app/releases)
 
@@ -1035,6 +1128,7 @@ Inspect disk use, duplicates, and uninstallable apps before choosing what to rem
 - License: GPL-3.0
 - Public project details checked; not personally tested
 - System: Check the project’s current release and macOS requirements.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/harry0703/MangoDisk/releases/tag/v2.1.1)
 - Permissions / notes: Disk analysis and cleanup may require extra file access. Review each item before deleting it.
 - [Official site](https://mangodisk.app/) · [Source](https://github.com/harry0703/MangoDisk) · [Download](https://github.com/harry0703/MangoDisk/releases)
 
@@ -1046,6 +1140,7 @@ Finds duplicate files using filenames or file contents, with separate modes for 
 - License: GPL-3.0
 - Public project details checked; not personally tested
 - System: A macOS download is available. Check the current version notes on the official site.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/arsenetar/dupeguru/releases/tag/4.3.1)
 - Permissions / notes: Review every result before deleting files. Duplicate files may serve different purposes.
 - [Official site](https://dupeguru.voltaicideas.net/) · [Source](https://github.com/arsenetar/dupeguru) · [Download](https://github.com/arsenetar/dupeguru/releases)
 
@@ -1057,6 +1152,7 @@ Check for and install updates for supported apps from the Mac App Store or apps 
 - License: GPL-3.0
 - Public project details checked; not personally tested
 - System: macOS 10.15+
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/mangerlahn/Latest/releases/tag/0.11)
 - Permissions / notes: Reads installed app information to check for updates. You confirm updates before they run.
 - [Official site](https://max.codes/latest/) · [Source](https://github.com/mangerlahn/Latest) · [Download](https://github.com/mangerlahn/Latest/releases)
 
@@ -1068,6 +1164,7 @@ Install, update, and uninstall Homebrew Cask apps through a native interface. Ap
 - License: MIT
 - Public project details checked; not personally tested
 - System: macOS 14+ · Intel and Apple Silicon · No existing Homebrew installation required
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/milanvarady/Applite/releases/tag/v1.4.2)
 - Permissions / notes: Needs network access to download apps. Some installations may request administrator approval. Can reuse an existing Homebrew installation.
 - [Official site](https://applite.app/) · [Source](https://github.com/milanvarady/Applite) · [Download](https://github.com/milanvarady/Applite/releases)
 
@@ -1079,6 +1176,7 @@ See which processes hold files, listen on ports, or keep network connections ope
 - License: BSD-3-Clause
 - Public project details checked; not personally tested
 - System: Official releases include a macOS archive. Check the release page for system requirements.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://sveinbjorn.org/sloth)
 - Permissions / notes: Reads process and connection information. Follow your organization’s security rules on managed devices.
 - [Official site](https://sveinbjorn.org/sloth) · [Source](https://github.com/sveinbjornt/Sloth) · [Download](https://github.com/sveinbjornt/Sloth/releases)
 
@@ -1090,6 +1188,7 @@ An open-source private messenger for messages and calls, with optional history t
 - License: AGPL-3.0
 - Public project details checked; not personally tested
 - System: An official macOS app is available. First install Signal on your phone and link the desktop app.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://signal.org/download/macos/)
 - Permissions / notes: Calls and media sharing may request microphone, camera, and local file access. Grant only the access you need.
 - [Official site](https://signal.org/) · [Source](https://github.com/signalapp/Signal-Desktop) · [Download](https://signal.org/download/macos/)
 
@@ -1101,6 +1200,7 @@ Keep passwords in an encrypted database you control, with offline use and option
 - License: GPL-2.0
 - Public project details checked; not personally tested
 - System: Official releases include macOS DMG installers for Apple Silicon and Intel.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/keepassxreboot/keepassxc/releases/tag/2.8.0)
 - Permissions / notes: Browser autofill requires the official extension and connection approval. Keep your master password and key file safe.
 - [Official site](https://keepassxc.org/) · [Source](https://github.com/keepassxreboot/keepassxc) · [Download](https://github.com/keepassxreboot/keepassxc/releases)
 
@@ -1112,6 +1212,7 @@ Encrypt files locally before they reach a cloud drive; you keep control of the k
 - License: GPL-3.0
 - Public project details checked; not personally tested
 - System: Official releases include macOS builds for Apple Silicon and Intel.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/cryptomator/cryptomator/releases/tag/1.19.7)
 - Permissions / notes: Accesses the vaults and sync folders you select. Keep recovery keys and passwords safe.
 - [Official site](https://cryptomator.org/) · [Source](https://github.com/cryptomator/cryptomator) · [Download](https://github.com/cryptomator/cryptomator/releases)
 
@@ -1123,6 +1224,7 @@ Monitor and allow or block outbound network connections on a per-app basis.
 - License: GPL-3.0
 - Public project details checked; not personally tested
 - System: macOS installers are available in the project’s releases. Check the current system requirements.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/objective-see/LuLu/releases/tag/v4.5.7)
 - Permissions / notes: Installs a network-filtering system extension and requests administrator approval. Read the project’s instructions first.
 - [Official site](https://objective-see.org/products/lulu.html) · [Source](https://github.com/objective-see/LuLu) · [Download](https://github.com/objective-see/LuLu/releases)
 
@@ -1134,6 +1236,7 @@ Use a clear visual workflow for commits, branches, comparisons, and pull request
 - License: MIT
 - Public project details checked; not personally tested
 - System: Official project releases include macOS installers for Apple Silicon and Intel.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/desktop/desktop/releases/tag/release-3.6.11)
 - Permissions / notes: Accesses local repositories you add and your signed-in GitHub account. Review changes before committing.
 - [Official site](https://github.com/apps/desktop) · [Source](https://github.com/desktop/desktop) · [Download](https://github.com/desktop/desktop/releases)
 
@@ -1145,6 +1248,7 @@ A community-built, open-source code editor distribution with familiar extensions
 - License: MIT
 - Public project details checked; not personally tested
 - System: macOS 12+
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/VSCodium/vscodium/releases/tag/1.143.17232)
 - Permissions / notes: Extensions can access project files and the network. Install trusted extensions and read their permission notes.
 - [Official site](https://vscodium.com/) · [Source](https://github.com/VSCodium/vscodium) · [Download](https://github.com/VSCodium/vscodium/releases)
 
@@ -1156,6 +1260,7 @@ A fast native code editor focused on collaboration, language tooling, and a flui
 - License: GPL-3.0
 - Public project details checked; not personally tested
 - System: Official releases include macOS DMG installers for Apple Silicon and Intel.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/zed-industries/zed/releases/tag/v1.29.3)
 - Permissions / notes: Projects, extensions, and collaboration may access files and the network. Check workspace and extension sources.
 - [Official site](https://zed.dev/) · [Source](https://github.com/zed-industries/zed) · [Download](https://github.com/zed-industries/zed/releases)
 
@@ -1167,6 +1272,7 @@ A native Mac code editor in development, with project browsing, syntax highlight
 - License: MIT
 - Public project details checked; not personally tested
 - System: Still in development; the project does not yet recommend it for production work. Check each release for macOS requirements.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/CodeEditApp/CodeEdit/releases/tag/v0.3.6)
 - Permissions / notes: Accesses project files you open. Review any extra access needed by language services or plugins.
 - [Official site](https://www.codeedit.app/) · [Source](https://github.com/CodeEditApp/CodeEdit) · [Download](https://github.com/CodeEditApp/CodeEdit/releases)
 
@@ -1178,6 +1284,7 @@ Download, switch, and manage multiple Xcode versions in one place for different 
 - License: MIT
 - Public project details checked; not personally tested
 - System: macOS 13+ · An Apple Account is required to download Xcode.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/XcodesOrg/XcodesApp/releases/tag/v4.2.0b42)
 - Permissions / notes: Manages Xcode files and your Apple Developer sign-in. Use official download sources and protect your account.
 - [Official site](https://www.xcodes.app/) · [Source](https://github.com/XcodesOrg/XcodesApp) · [Download](https://github.com/XcodesOrg/XcodesApp/releases)
 
@@ -1189,6 +1296,7 @@ A fast, clearly configured cross-platform terminal for people who live in the co
 - License: Apache-2.0
 - Public project details checked; not personally tested
 - System: Official releases include a macOS DMG installer.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/alacritty/alacritty/releases/tag/v0.17.0)
 - Permissions / notes: Terminal commands run with your account’s permissions. Run only commands you understand.
 - [Official site](https://alacritty.org/) · [Source](https://github.com/alacritty/alacritty) · [Download](https://github.com/alacritty/alacritty/releases)
 
@@ -1200,6 +1308,7 @@ A universal database client for queries, schema browsing, and data import or exp
 - License: Apache-2.0
 - Public project details checked; not personally tested
 - System: Official releases include macOS DMG installers for Apple Silicon and Intel.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/dbeaver/dbeaver/releases/tag/26.2.5)
 - Permissions / notes: Stores database connections you create. Avoid saving privileged credentials on insecure networks.
 - [Official site](https://dbeaver.io/) · [Source](https://github.com/dbeaver/dbeaver) · [Download](https://github.com/dbeaver/dbeaver/releases)
 
@@ -1211,6 +1320,7 @@ A native Mac client for browsing, editing, and querying SQL and NoSQL databases,
 - License: AGPL-3.0
 - Public project details checked; not personally tested
 - System: macOS 13+
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/TableProApp/TablePro/releases/tag/v0.87.0)
 - Permissions / notes: Check the host, account, and network scope before connecting to a database. Use only trusted connection profiles.
 - [Official site](https://tablepro.app/) · [Source](https://github.com/TableProApp/TablePro) · [Download](https://github.com/TableProApp/TablePro/releases)
 
@@ -1222,6 +1332,7 @@ An open-source, offline-first API client that stores collections as local files 
 - License: MIT
 - Public project details checked; not personally tested
 - System: Official releases include macOS DMG and PKG installers for Apple Silicon and Intel.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/usebruno/bruno/releases/tag/v4.3.0)
 - Permissions / notes: Sends requests to the API endpoints you configure and reads local collections. Keep keys out of shared repositories.
 - [Official site](https://www.usebruno.com/) · [Source](https://github.com/usebruno/bruno) · [Download](https://github.com/usebruno/bruno/releases)
 
@@ -1233,6 +1344,7 @@ Diagnose network connections, latency, and DNS from Terminal. Get JSON output or
 - License: GPL-3.0
 - Public project details checked; not personally tested
 - System: macOS 14+; building through Homebrew requires Xcode 16+. This listing covers the free, open-source CLI. The separate desktop app is proprietary and has optional paid features.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://github.com/seifip/kilobat-cli/tree/v0.45.1#install-with-homebrew)
 - Permissions / notes: Diagnostics access the network. Some Wi-Fi names, filter status, and budget data require the separate desktop app and location permission. System-changing commands may need confirmation or administrator approval.
 - [Official site](https://github.com/seifip/kilobat-cli) · [Source](https://github.com/seifip/kilobat-cli) · [Download](https://github.com/seifip/kilobat-cli#install-with-homebrew)
 
@@ -1244,5 +1356,6 @@ Run other operating systems on your Mac using QEMU or Apple’s virtualization f
 - License: Apache-2.0
 - Public project details checked; not personally tested
 - System: Official releases include UTM.dmg. Guest-system support depends on the Mac architecture and system image.
+- Chip compatibility: Apple Silicon + Intel · [Source for chip support](https://getutm.app/)
 - Permissions / notes: Virtual machines can access folders you mount and their configured network. Avoid exposing personal files to untrusted images.
 - [Official site](https://getutm.app/) · [Source](https://github.com/utmapp/UTM) · [Download](https://github.com/utmapp/UTM/releases)

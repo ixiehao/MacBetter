@@ -5,6 +5,8 @@ on:
     branches: [main]
     paths:
       - 'website/**'
+      - 'desktop/Brand/macbetter-mark.svg'
+      - 'desktop/Packaging/Info.plist'
       - 'scripts/**'
       - 'tests/**'
       - 'playwright.config.mjs'
@@ -15,6 +17,8 @@ on:
     branches: [main]
     paths:
       - 'website/**'
+      - 'desktop/Brand/macbetter-mark.svg'
+      - 'desktop/Packaging/Info.plist'
       - 'scripts/**'
       - 'tests/**'
       - 'playwright.config.mjs'

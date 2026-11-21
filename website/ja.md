@@ -2,7 +2,7 @@
 
 > コミュニティで管理する無料・オープンソースのmacOSアプリ集です。一部に有料の追加機能があります。対応環境、権限、ライセンスの最新情報は各プロジェクトをご確認ください。掲載や使用確認はセキュリティ監査を意味しません。
 
-[アプリ一覧](https://ixiehao.github.io/MacBetter/ja.html) · [GitHub](https://github.com/ixiehao/MacBetter)
+[アプリ一覧](https://ixiehao.github.io/MacBetter/ja.html) · [GitHub](https://github.com/ixiehao/MacBetter) · [デスクトップ版](https://ixiehao.github.io/MacBetter/ja.html#desktop)
 
 ## LumaView
 
@@ -12,6 +12,7 @@
 - ライセンス: MIT
 - io が使用確認済み
 - 動作環境: macOS 12以降 · Intel / Apple Silicon
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/ixiehao/LumaView/releases/tag/v1.3.5)
 - 権限・注意点: 選択した画像・PDF・フォルダへのアクセスが必要です。
 - [公式サイト](https://ixiehao.github.io/LumaView/) · [ソースコード](https://github.com/ixiehao/LumaView) · [ダウンロード](https://github.com/ixiehao/LumaView/releases)
 
@@ -23,6 +24,7 @@
 - ライセンス: MIT
 - io が使用確認済み
 - 動作環境: macOS 13以降 · Intel / Apple Silicon
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/ixiehao/ShotMap/releases/tag/v0.2.20)
 - 権限・注意点: ローカルファイルへのアクセス：選択した動画だけを処理します。
 - [公式サイト](https://ixiehao.github.io/ShotMap/) · [ソースコード](https://github.com/ixiehao/ShotMap) · [ダウンロード](https://github.com/ixiehao/ShotMap/releases)
 
@@ -34,6 +36,7 @@
 - ライセンス: MIT
 - io が使用確認済み
 - 動作環境: macOS 13以降 · Intel / Apple Silicon · FFmpeg / ffprobeが別途必要
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/ixiehao/MP4Flow/releases/tag/v1.5.3)
 - 権限・注意点: ローカルファイルへのアクセス：選択した動画だけを処理します。
 - [公式サイト](https://ixiehao.github.io/MP4Flow/) · [ソースコード](https://github.com/ixiehao/MP4Flow) · [ダウンロード](https://github.com/ixiehao/MP4Flow/releases)
 
@@ -45,6 +48,7 @@
 - ライセンス: GPL-2.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 公式のmacOS版があります。必要な環境は現在のバージョンの案内を確認してください。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/HandBrake/HandBrake/releases/tag/1.11.2)
 - 権限・注意点: 選択したローカルメディアを処理します。変換前に保存先と上書き設定を確認してください。
 - [公式サイト](https://handbrake.fr/) · [ソースコード](https://github.com/HandBrake/HandBrake) · [ダウンロード](https://github.com/HandBrake/HandBrake/releases)
 
@@ -56,6 +60,7 @@
 - ライセンス: GPL-2.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 現行版はmacOS 11に対応していません。Apple Silicon用とIntel用の配布版があります。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/mifi/lossless-cut/releases/tag/v3.70.2)
 - 権限・注意点: ローカルメディアを処理し、開くか読み込むことを選んだファイルだけにアクセスします。
 - [公式サイト](https://losslesscut.app/) · [ソースコード](https://github.com/mifi/lossless-cut) · [ダウンロード](https://github.com/mifi/lossless-cut/releases)
 
@@ -67,6 +72,7 @@
 - ライセンス: GPL-2.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 公式リリースでmacOS版の圧縮ファイルを配布しています。動作要件はリリースページを確認してください。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/SublerApp/Subler/releases/tag/1.9.5)
 - 権限・注意点: 選択したメディアファイルだけを変更します。操作前に原本のコピーを残してください。
 - [公式サイト](https://github.com/SublerApp/Subler) · [ソースコード](https://github.com/SublerApp/Subler) · [ダウンロード](https://github.com/SublerApp/Subler/releases)
 
@@ -78,6 +84,7 @@
 - ライセンス: BSD-2-Clause
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 公式のmacOS版があります。Macのアーキテクチャに合う配布版を選んでください。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://mediaarea.net/en/MediaInfo/Download/Mac_OS)
 - 権限・注意点: 開いたメディアファイルと、その技術的なメタデータだけを読み取ります。
 - [公式サイト](https://mediaarea.net/en/MediaInfo) · [ソースコード](https://github.com/MediaArea/MediaInfo) · [ダウンロード](https://mediaarea.net/en/MediaInfo/Download/Mac_OS)
 
@@ -89,6 +96,7 @@
 - ライセンス: MIT
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 公式リリースでApple Silicon用とIntel用のmacOS DMGを配布しています。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/SubtitleEdit/subtitleedit/releases/tag/v5.4.0)
 - 権限・注意点: 選択したメディアと字幕ファイルを処理します。オンラインの音声認識や翻訳には、利用に応じて追加の許可が必要な場合があります。
 - [公式サイト](https://github.com/SubtitleEdit/subtitleedit) · [ソースコード](https://github.com/SubtitleEdit/subtitleedit) · [ダウンロード](https://github.com/SubtitleEdit/subtitleedit/releases)
 
@@ -100,6 +108,7 @@ macOS向けに設計された動画プレーヤー。字幕、プレイリスト
 - ライセンス: GPL-3.0
 - io が使用確認済み
 - 動作環境: 公式のmacOS版があります。必要な環境は現在のバージョンの案内を確認してください。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/iina/iina/releases/tag/v1.5.1)
 - 権限・注意点: ローカル再生に追加の機密性の高い権限は不要です。ネットワーク配信や拡張機能を使う際は提供元を確認してください。
 - [公式サイト](https://iina.io/) · [ソースコード](https://github.com/iina/iina) · [ダウンロード](https://github.com/iina/iina/releases)
 
@@ -111,6 +120,7 @@ macOS向けに設計された動画プレーヤー。字幕、プレイリスト
 - ライセンス: GPL-2.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 公式のmacOS Universal版があります。対応環境はVideoLANの現在のリリースで確認してください。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://www.videolan.org/vlc/download-macosx.html)
 - 権限・注意点: ローカルファイルとネットワーク配信を再生します。信頼できるURLとプレイリストだけを開いてください。
 - [公式サイト](https://www.videolan.org/vlc/) · [ソースコード](https://github.com/videolan/vlc) · [ダウンロード](https://www.videolan.org/vlc/download-macosx.html)
 
@@ -122,6 +132,7 @@ macOS向けに設計された動画プレーヤー。字幕、プレイリスト
 - ライセンス: GPL-2.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 公式のMac向け導入案内からHomebrew、MacPorts、ビルド済みパッケージを選べます。Homebrew版には.appがなく、必要なOSはビルドごとに異なります。標準はGPLv2+、GPL部品を無効にした構成はLGPLv2.1+です。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/mpv-player/mpv/releases/tag/v0.42.0)
 - 権限・注意点: 選択したメディア、字幕、設定を読み込みます。ネットワーク再生や外部スクリプトでは通信が発生します。
 - [公式サイト](https://mpv.io/) · [ソースコード](https://github.com/mpv-player/mpv) · [ダウンロード](https://mpv.io/installation/)
 
@@ -133,6 +144,7 @@ macOS向けに設計された動画プレーヤー。字幕、プレイリスト
 - ライセンス: GPL-2.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 公式安定版はmacOS 10.14以降に対応し、Intel用とApple Silicon用を配布しています。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://kodi.tv/download/macos/)
 - 権限・注意点: 追加したメディアフォルダーを読み込みます。作品情報の取得、ネットワーク再生、アドオンでは通信が発生し、外部アドオンには個別の利用条件があります。
 - [公式サイト](https://kodi.tv/) · [ソースコード](https://github.com/xbmc/xbmc) · [ダウンロード](https://kodi.tv/download/macos/)
 
@@ -144,6 +156,7 @@ macOS向けに設計された動画プレーヤー。字幕、プレイリスト
 - ライセンス: GPL-2.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 安定版v1.12はmacOS 13以降に対応。配布ファイル名はJellyfin Media Playerのままです。Jellyfinサーバーが必要です。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/jellyfin/jellyfin-desktop/releases/tag/v1.12.0)
 - 権限・注意点: 指定したサーバーとメディア用アカウントに接続します。信頼できるサーバーだけを利用してください。
 - [公式サイト](https://jellyfin.org/) · [ソースコード](https://github.com/jellyfin/jellyfin-desktop) · [ダウンロード](https://github.com/jellyfin/jellyfin-desktop/releases)
 
@@ -155,6 +168,7 @@ macOS向けに設計された動画プレーヤー。字幕、プレイリスト
 - ライセンス: GPL-2.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 現在の公式直接配布版はmacOS 12以降が必要で、Sparkleによる更新に対応します。App Store版もあります。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://cog.losno.co/)
 - 権限・注意点: 許可した音楽フォルダーを読み込みます。オンライン歌詞やLast.fm・ListenBrainzへの再生記録は、設定に応じて通信します。
 - [公式サイト](https://cog.losno.co/) · [ソースコード](https://github.com/losnoco/Cog) · [ダウンロード](https://cog.losno.co/)
 
@@ -166,6 +180,7 @@ NavidromeやJellyfinなどの音楽サーバーに接続し、アルバム、プ
 - ライセンス: GPL-3.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: Intel用とApple Silicon用のMac版を配布しています。対応する音楽サーバーが必要で、単体のローカルファイル再生用ではありません。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/jeffvli/feishin/releases/tag/v1.17.0)
 - 権限・注意点: 設定した音楽サーバーへ接続します。オンライン歌詞は外部サービスを利用し、メディアキー操作にはアクセシビリティ権限を求める場合があります。
 - [公式サイト](https://feishin.vercel.app/) · [ソースコード](https://github.com/jeffvli/feishin) · [ダウンロード](https://github.com/jeffvli/feishin/releases/latest)
 
@@ -177,6 +192,7 @@ NavidromeやJellyfinなどの音楽サーバーに接続し、アルバム、プ
 - ライセンス: MIT
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 安定版v0.4.11（2026-10-10）はIntel・Apple Silicon・UniversalのMac版を配布しています。最近もログイン制限の報告がありますが、Mac固有とは確認されていません。API、アカウント、楽曲の利用条件に左右されます。 確認時はWebデモが利用できなかったため、導入には公式Releaseを使ってください。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/qier222/YesPlayMusic/releases/tag/v0.4.11)
 - 権限・注意点: ログインやプレイリスト機能はNetEaseまたは外部の音楽APIへ接続します。任意の追加音源は別のサービスを利用します。
 - [公式サイト](https://github.com/qier222/YesPlayMusic) · [ソースコード](https://github.com/qier222/YesPlayMusic) · [ダウンロード](https://github.com/qier222/YesPlayMusic/releases/latest)
 
@@ -188,6 +204,7 @@ NavidromeやJellyfinなどの音楽サーバーに接続し、アルバム、プ
 - ライセンス: GPL-3.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: プロジェクトのリリースでmacOS版を配布しています。現在の動作要件を確認してください。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/audacity/audacity/releases/tag/Audacity-4.0.2)
 - 権限・注意点: 録音にはマイクの許可が必要です。読み込むファイルの提供元も確認してください。
 - [公式サイト](https://www.audacityteam.org/) · [ソースコード](https://github.com/audacity/audacity) · [ダウンロード](https://github.com/audacity/audacity/releases)
 
@@ -199,6 +216,7 @@ NavidromeやJellyfinなどの音楽サーバーに接続し、アルバム、プ
 - ライセンス: GPL-2.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: Mac用インストーラーは公式サイトから入手できます。現在のGitHub安定版には添付されていません。対応コントローラーは公式一覧を確認してください。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://mixxx.org/download/)
 - 権限・注意点: 選択した音楽ライブラリにアクセスします。コントローラーやマイクを使う場合は、必要な権限を許可してください。
 - [公式サイト](https://mixxx.org/) · [ソースコード](https://github.com/mixxxdj/mixxx) · [ダウンロード](https://mixxx.org/download/)
 
@@ -210,6 +228,7 @@ MIDI、読み書き、出力を備えた本格的なワークフローで、楽�
 - ライセンス: GPL-3.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 公式リリースでmacOS用のDMGを配布しています。動作要件はリリースページで確認してください。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/musescore/MuseScore/releases/tag/v4.7.7)
 - 権限・注意点: 開くか書き出すことを選んだ楽譜と、利用するオーディオ機器にアクセスします。拡張機能の導入前に提供元を確認してください。
 - [公式サイト](https://musescore.org/) · [ソースコード](https://github.com/musescore/MuseScore) · [ダウンロード](https://github.com/musescore/MuseScore/releases)
 
@@ -221,6 +240,7 @@ MIDI、読み書き、出力を備えた本格的なワークフローで、楽�
 - ライセンス: GPL-3.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: macOS 15以降
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/ronitsingh10/FineTune/releases/tag/v1.9.0)
 - 権限・注意点: アプリの音声を取得・調整するため、「画面収録とシステムオーディオ録音」の権限が必要です。
 - [公式サイト](https://github.com/ronitsingh10/FineTune) · [ソースコード](https://github.com/ronitsingh10/FineTune) · [ダウンロード](https://github.com/ronitsingh10/FineTune/releases)
 
@@ -232,6 +252,7 @@ MIDI、読み書き、出力を備えた本格的なワークフローで、楽�
 - ライセンス: GPL-2.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: macOS 10.13以降
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/kyleneideck/BackgroundMusic/releases/tag/v0.5.0)
 - 権限・注意点: オーディオドライバを導入します。録音では「マイク」許可を求めることがあります。
 - [公式サイト](https://github.com/kyleneideck/BackgroundMusic) · [ソースコード](https://github.com/kyleneideck/BackgroundMusic) · [ダウンロード](https://github.com/kyleneideck/BackgroundMusic/releases)
 
@@ -243,6 +264,7 @@ MIDI、読み書き、出力を備えた本格的なワークフローで、楽�
 - ライセンス: GPL-2.0
 - io が使用確認済み
 - 動作環境: macOSネイティブアプリです。現在の動作要件は公式サイトで確認してください。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://imageoptim.com/ImageOptim1.9.3.tar.xz)
 - 権限・注意点: ドラッグまたは選択した画像だけを処理します。元に戻せるよう、原本を残しておくことをおすすめします。
 - [公式サイト](https://imageoptim.com/mac) · [ソースコード](https://github.com/ImageOptim/ImageOptim) · [ダウンロード](https://imageoptim.com/mac)
 
@@ -253,7 +275,8 @@ MIDI、読み書き、出力を備えた本格的なワークフローで、楽�
 - カテゴリ: 画像・デザイン
 - ライセンス: MIT
 - io が使用確認済み
-- 動作環境: v0.2.28 プレビュー版 · Apple Silicon専用 · macOS 26以降。現行ビルドはアドホック署名で、Appleの公証はありません。
+- 動作環境: v0.2.30 · Apple Silicon専用 · macOS 26以降。現行ビルドはアドホック署名で、Appleの公証はありません。
+- 対応チップ: Apple Silicon のみ · [対応チップの確認元](https://github.com/ixiehao/Any2WebP/releases/tag/v0.2.30)
 - 権限・注意点: 選択したローカルファイルだけを処理します。動画の読み込みにはFFmpegとffprobeが必要です。「ヘルプ → 動画の依存ツール」から確認・導入できます。
 - [公式サイト](https://ixiehao.github.io/Any2WebP/) · [ソースコード](https://github.com/ixiehao/Any2WebP) · [ダウンロード](https://github.com/ixiehao/Any2WebP/releases/latest)
 
@@ -265,6 +288,7 @@ RAW写真の管理と非破壊編集に向く、オープンソースの暗室�
 - ライセンス: GPL-3.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 現行5.6.2の公式MacインストーラーはApple Silicon版のみです。OS要件はダウンロードページを確認し、Intelでは旧版を探してください。
+- 対応チップ: Apple Silicon · Intel は旧版 · [対応チップの確認元](https://github.com/darktable-org/darktable/releases/tag/release-5.6.2)
 - 権限・注意点: 読み込んだ写真フォルダを処理します。元の写真のバックアップを残しておくことをおすすめします。
 - [公式サイト](https://www.darktable.org/) · [ソースコード](https://github.com/darktable-org/darktable) · [ダウンロード](https://github.com/darktable-org/darktable/releases)
 
@@ -276,6 +300,7 @@ RAW写真の管理と非破壊編集に向く、オープンソースの暗室�
 - ライセンス: GPL-3.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 現行のmacOS版はUniversalのZIP形式です。必要なmacOSバージョンはダウンロードページで確認してください。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/RawTherapee/RawTherapee/releases/tag/5.13)
 - 権限・注意点: 読み込んだ写真にアクセスします。原本と書き出したファイルは別のフォルダに保存することをおすすめします。
 - [公式サイト](https://rawtherapee.com/) · [ソースコード](https://github.com/RawTherapee/RawTherapee) · [ダウンロード](https://github.com/RawTherapee/RawTherapee/releases)
 
@@ -287,6 +312,7 @@ RAW写真の管理と非破壊編集に向く、オープンソースの暗室�
 - ライセンス: GPL-3.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: macOS版を配布しています。現在の動作要件は公式サイトで確認してください。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://download.kde.org/stable/krita/5.3.4.1/)
 - 権限・注意点: 出所が不明な素材集やスクリプトを読み込む前に、提供元を確認してください。
 - [公式サイト](https://krita.org/) · [ソースコード](https://github.com/KDE/krita) · [ダウンロード](https://krita.org/en/download/krita-desktop/)
 
@@ -298,6 +324,7 @@ RAW写真の管理と非破壊編集に向く、オープンソースの暗室�
 - ライセンス: GPL-3.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 公式リリースでmacOS用のUniversal版を配布しています。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/jgraph/drawio-desktop/releases/tag/v32.7.4)
 - 権限・注意点: 外部のテンプレートや設定ファイルを開く前に、提供元を確認してください。
 - [公式サイト](https://www.drawio.com/) · [ソースコード](https://github.com/jgraph/drawio-desktop) · [ダウンロード](https://github.com/jgraph/drawio-desktop/releases)
 
@@ -309,6 +336,7 @@ RAW写真の管理と非破壊編集に向く、オープンソースの暗室�
 - ライセンス: GPL-3.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: Mac版Blender 5.xはApple Silicon専用です。Intel Macでは4.5 LTSを選び、動作要件を確認してください。
+- 対応チップ: Apple Silicon · Intel は旧版 · [対応チップの確認元](https://www.blender.org/download/requirements/)
 - 権限・注意点: 開く、読み込む、書き出すことを選んだプロジェクトにアクセスします。アドオンやオンライン素材を使う前に提供元を確認してください。
 - [公式サイト](https://www.blender.org/) · [ソースコード](https://github.com/blender/blender) · [ダウンロード](https://www.blender.org/download/)
 
@@ -320,6 +348,7 @@ RAW写真の管理と非破壊編集に向く、オープンソースの暗室�
 - ライセンス: LGPL-2.1
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 公式リリースでApple Silicon用とIntel用のmacOS DMGを配布しています。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/FreeCAD/FreeCAD/releases/tag/1.1.4)
 - 権限・注意点: 開くか書き出すことを選んだ設計ファイルを処理します。外部のワークベンチやマクロは提供元を確認してください。
 - [公式サイト](https://www.freecad.org/) · [ソースコード](https://github.com/FreeCAD/FreeCAD) · [ダウンロード](https://github.com/FreeCAD/FreeCAD/releases)
 
@@ -331,6 +360,7 @@ RAW写真の管理と非破壊編集に向く、オープンソースの暗室�
 - ライセンス: MIT
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 公式リリースでmacOS用のUniversal版を配布しています。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/godotengine/godot/releases/tag/4.7.2-stable)
 - 権限・注意点: 外部のプロジェクトを開くと、ビルドスクリプトの実行や素材の読み込みが行われる場合があります。信頼できるプロジェクトだけを実行してください。
 - [公式サイト](https://godotengine.org/) · [ソースコード](https://github.com/godotengine/godot) · [ダウンロード](https://github.com/godotengine/godot/releases)
 
@@ -342,6 +372,7 @@ RAW写真の管理と非破壊編集に向く、オープンソースの暗室�
 - ライセンス: GPL-3.0
 - io が使用確認済み
 - 動作環境: ネイティブのmacOS版があります。現在のバージョンの動作要件を確認してください。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/sw33tLie/macshot/releases/tag/v4.4.0)
 - 権限・注意点: 撮影・録画には「画面収録」許可が必要です。音声録音では「マイク」、グローバル操作では必要に応じて「アクセシビリティ」または「入力監視」を求めます。
 - [公式サイト](https://macshot.io/) · [ソースコード](https://github.com/sw33tLie/macshot) · [ダウンロード](https://github.com/sw33tLie/macshot/releases)
 
@@ -353,6 +384,7 @@ RAW写真の管理と非破壊編集に向く、オープンソースの暗室�
 - ライセンス: GPL-3.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 現在の14.x Mac版はmacOS 15以降が必要で、Intel用とApple Silicon用のDMGがあります。初回に署名の確認が出る場合があります。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/flameshot-org/flameshot/releases/tag/v15.0.0)
 - 権限・注意点: 撮影には画面収録の許可が必要です。保存やコピーはローカルで行えますが、アップロードを選ぶと設定したサービスへ画像を送信します。
 - [公式サイト](https://flameshot.org/) · [ソースコード](https://github.com/flameshot-org/flameshot) · [ダウンロード](https://github.com/flameshot-org/flameshot/releases/latest)
 
@@ -364,6 +396,7 @@ RAW写真の管理と非破壊編集に向く、オープンソースの暗室�
 - ライセンス: MIT
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 公式要件はmacOS 15.2以降です。現在の配布物はApple Silicon用DMGのみで、Intel用はありません。
+- 対応チップ: Apple Silicon のみ · [対応チップの確認元](https://github.com/jsattler/BetterCapture/releases/tag/v2026.4)
 - 権限・注意点: 画面とシステム音声の収録にはmacOSの許可が必要です。マイク・カメラは使用時に許可し、録画は標準でローカルへ保存します。
 - [公式サイト](https://bettercapture.app/) · [ソースコード](https://github.com/jsattler/BetterCapture) · [ダウンロード](https://github.com/jsattler/BetterCapture/releases/latest)
 
@@ -375,6 +408,7 @@ macOS向けの軽量な画面収録ツール。手早く見やすいデモを作
 - ライセンス: MIT
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: プロジェクトの公式リリースにApple Silicon用とIntel用のmacOS版があります。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/wulkano/Kap/releases/tag/v3.6.0)
 - 権限・注意点: 画面の録画にはmacOSの画面収録の許可が必要です。音声も録る場合はマイクのアクセスを許可してください。
 - [公式サイト](https://getkap.co/) · [ソースコード](https://github.com/wulkano/Kap) · [ダウンロード](https://github.com/wulkano/Kap/releases)
 
@@ -386,6 +420,7 @@ macOS向けの軽量な画面収録ツール。手早く見やすいデモを作
 - ライセンス: MIT
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: Intel用とApple Silicon用の公式DMGがあります。録画・編集は無料で、開発中のため形式が変わる場合があります。任意のクラウドAIには自分のAPIキーが必要で、提供元の料金が発生し得ます。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/getopenscreen/openscreen/releases/tag/v2.3.0)
 - 権限・注意点: 画面収録、アクセシビリティ、マイク、カメラを必要に応じて許可します。自分のキーでAIを使う場合は、選んだ提供元へリクエストを送信します。
 - [公式サイト](https://getopenscreen.com/) · [ソースコード](https://github.com/getopenscreen/openscreen) · [ダウンロード](https://github.com/getopenscreen/openscreen/releases/latest)
 
@@ -397,6 +432,7 @@ macOS向けの軽量な画面収録ツール。手早く見やすいデモを作
 - ライセンス: GPL-2.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 公式リリースでApple Silicon用とIntel用のmacOS版を配布しています。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/obsproject/obs-studio/releases/tag/33.0.2)
 - 権限・注意点: 画面を取り込むには「画面収録」が必要です。カメラとマイクは使う機能に応じて許可してください。
 - [公式サイト](https://obsproject.com/) · [ソースコード](https://github.com/obsproject/obs-studio) · [ダウンロード](https://github.com/obsproject/obs-studio/releases)
 
@@ -408,6 +444,7 @@ macOS向けの軽量な画面収録ツール。手早く見やすいデモを作
 - ライセンス: GPL-3.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: Chrome・Chromium用の拡張機能で、独立したMacアプリではありません。録画とローカル書き出しは無料で、Screenity Proは別の有料クラウドサービスです。
+- 対応チップ: ブラウザーの対応環境に準拠 · [対応チップの確認元](https://chromewebstore.google.com/detail/screenity/kbbdabhdfibnancpjfhlkhafgdilcnji)
 - 権限・注意点: 選んだタブ、デスクトップ、マイク、カメラを収録します。クラウド保存やProの共有機能では、該当コンテンツをアップロードします。
 - [公式サイト](https://screenity.io/) · [ソースコード](https://github.com/alyssaxuu/screenity) · [ダウンロード](https://chromewebstore.google.com/detail/screenity/kbbdabhdfibnancpjfhlkhafgdilcnji)
 
@@ -419,6 +456,7 @@ macOS向けの軽量な画面収録ツール。手早く見やすいデモを作
 - ライセンス: MPL-2.0
 - io が使用確認済み
 - 動作環境: 公式のmacOS用DMGがあります。現在の動作要件はダウンロードページで確認してください。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://www.mozilla.org/en-US/firefox/system-requirements/)
 - 権限・注意点: カメラ、マイク、位置情報、通知などの権限は、利用するサイトが必要に応じて要求します。信頼できるサイトにだけ許可してください。
 - [公式サイト](https://www.firefox.com/) · [ソースコード](https://github.com/mozilla-firefox/firefox) · [ダウンロード](https://www.firefox.com/en-US/download/mac/)
 
@@ -430,6 +468,7 @@ Firefoxをベースにした独立系ブラウザー。なじみのある拡張�
 - ライセンス: MPL-2.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 公式サイトはmacOS 10.15以降のIntel・Apple Silicon向けにUniversal DMGを配布しています。GitHubのReleaseは主に更新情報用です。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://www.waterfox.com/download/)
 - 権限・注意点: サイトと拡張機能は許可した範囲にアクセスします。同期などのオンラインサービスは設定に応じて動作します。
 - [公式サイト](https://www.waterfox.com/) · [ソースコード](https://github.com/BrowserWorks/waterfox) · [ダウンロード](https://www.waterfox.com/download/)
 
@@ -441,6 +480,7 @@ Firefoxベースで、ワークスペースやサイドバー、細かなUI変�
 - ライセンス: MPL-2.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 公式案内ではmacOS 10.15以降に対応し、IntelとApple Silicon向けのUniversal DMGを配布しています。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/Floorp-Projects/Floorp/releases/tag/v12.21.2)
 - 権限・注意点: サイトや拡張機能が必要な権限を要求します。同期、おすすめ拡張などのネットワーク機能は設定に従います。
 - [公式サイト](https://floorp.app/) · [ソースコード](https://github.com/Floorp-Projects/Floorp) · [ダウンロード](https://github.com/Floorp-Projects/Floorp/releases/latest)
 
@@ -452,6 +492,7 @@ Firefoxを基盤に、ワークスペース、分割表示、タブ整理に力�
 - ライセンス: MPL-2.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 公式リリースにApple SiliconとIntelに対応したmacOS Universal版のDMGがあります。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://zen-browser.app/download/)
 - 権限・注意点: カメラ、マイク、位置情報、通知などの権限は、利用するサイトが必要に応じて要求します。信頼できるサイトにだけ許可してください。
 - [公式サイト](https://zen-browser.app/) · [ソースコード](https://github.com/zen-browser/desktop) · [ダウンロード](https://zen-browser.app/download/)
 
@@ -463,6 +504,7 @@ Chrome拡張に対応するChromium系ブラウザー。広告・トラッカー
 - ライセンス: MPL-2.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 現在の安定版はmacOS 13以降が必要で、Intel、Apple Silicon、Universal版があります。Brave-Browserを選んでください。Brave Originは別の有料版です。基本ブラウザーは無料で、VPNや一部AIは有料です。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/brave/brave-browser/releases/tag/v1.100.58)
 - 権限・注意点: サイトが必要に応じてカメラやマイクなどを要求します。同期、Rewards、AIなどは個別の設定とサービス規約に従って通信します。
 - [公式サイト](https://brave.com/) · [ソースコード](https://github.com/brave/brave-browser) · [ダウンロード](https://github.com/brave/brave-browser/releases/latest)
 
@@ -474,6 +516,7 @@ Chrome拡張に対応するChromium系ブラウザー。広告・トラッカー
 - ライセンス: GPL-3.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: macOS 13以降向けにIntel用とApple Silicon用のDMGがあります。明確にベータ段階のため不具合の可能性があり、自動更新にはHeliumサービスの有効化が必要です。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://helium.computer/download)
 - 権限・注意点: 拡張のプロキシ、フィルター更新などのHeliumサービスは選択に応じて通信します。第三者の素材には各自のライセンスが適用されます。
 - [公式サイト](https://helium.computer/) · [ソースコード](https://github.com/imputnet/helium) · [ダウンロード](https://github.com/imputnet/helium-macos/releases/latest)
 
@@ -485,6 +528,7 @@ Chrome拡張に対応するChromium系ブラウザー。広告・トラッカー
 - ライセンス: MIT
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: プロジェクトの公式リリースでmacOS版を配布しています。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/Ranchero-Software/NetNewsWire/releases/tag/mac-7.3.1)
 - 権限・注意点: 設定に従ってネットワークに接続し、購読フィードを更新します。
 - [公式サイト](https://netnewswire.com/) · [ソースコード](https://github.com/Ranchero-Software/NetNewsWire) · [ダウンロード](https://github.com/Ranchero-Software/NetNewsWire/releases)
 
@@ -496,6 +540,7 @@ Chrome拡張に対応するChromium系ブラウザー。広告・トラッカー
 - ライセンス: Apache-2.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: Intel用とApple Silicon用の公式DMGがあります。ブラウザー連携は任意の拡張機能で、再開には配信サーバーの対応が必要です。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/amir1376/ab-download-manager/releases/tag/v1.11.4)
 - 権限・注意点: ダウンロードURLを読み、選んだフォルダーへ保存します。任意のブラウザー拡張は、許可の範囲でダウンロード要求を受け取ります。
 - [公式サイト](https://abdownloadmanager.com/) · [ソースコード](https://github.com/amir1376/ab-download-manager) · [ダウンロード](https://github.com/amir1376/ab-download-manager/releases/latest)
 
@@ -507,6 +552,7 @@ HTTP・HTTPS・BT・マグネットリンクをまとめて管理。キュー、
 - ライセンス: GPL-3.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: Mac安定版にはIntel、Apple Silicon、Universalのパッケージがあります。2.0にはベータ版もありますが、ダウンロード先は最新の安定版です。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/GopeedLab/gopeed/releases/tag/v1.9.3)
 - 権限・注意点: 選択したフォルダーへダウンロードします。BTでは他のピアとデータを交換し、拡張機能を入れると個別の通信機能が追加されます。
 - [公式サイト](https://gopeed.com/) · [ソースコード](https://github.com/GopeedLab/gopeed) · [ダウンロード](https://github.com/GopeedLab/gopeed/releases/latest)
 
@@ -518,6 +564,7 @@ HTTP・FTP・SFTP・BT・Metalinkに対応するコマンドラインツール�
 - ライセンス: GPL-2.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: Macでは公式案内に従ってHomebrewやMacPortsから導入できます。GUIはなく、安定版の更新間隔は長めです。スクリプト用途に向いています。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://packages.macports.org/aria2/)
 - 権限・注意点: 指定URLへ接続してファイルを保存します。BTは他のピアとデータを交換し、RPCには用途に応じた認証設定が必要です。
 - [公式サイト](https://aria2.github.io/) · [ソースコード](https://github.com/aria2/aria2) · [ダウンロード](https://aria2.github.io/)
 
@@ -529,6 +576,7 @@ YouTubeなどの動画・音声・再生リストを保存。画質の選択や�
 - ライセンス: GPL-3.0
 - io が使用確認済み
 - 動作環境: Apple Silicon用とIntel用の公式ビルドがあります。macOS 27で実使用を確認。yt-dlpなどは公式手順に沿って用意してください。Mac版は未署名です。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/aandrew-me/ytDownloader/releases/tag/v4.1.0)
 - 権限・注意点: ChromeのCookieを読むには、Chromeのアプリデータへのアクセスが必要です。macOS 27では「ファイルとフォルダ」のYTDownloaderでGoogle Chromeを有効にします。
 - [公式サイト](https://ytdn.netlify.app/) · [ソースコード](https://github.com/aandrew-me/ytDownloader) · [ダウンロード](https://github.com/aandrew-me/ytDownloader/releases/latest)
 
@@ -540,6 +588,7 @@ YouTubeなどの動画・音声・再生リストを保存。画質の選択や�
 - ライセンス: Unlicense
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: Pythonまたはパッケージ管理ツールでmacOSに導入できます。公式の手順に従ってください。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/yt-dlp/yt-dlp/releases/tag/2026.10.26)
 - 権限・注意点: 保存する権利のあるコンテンツだけを取得し、サービスの利用規約、著作権、地域の法律に従ってください。
 - [公式サイト](https://github.com/yt-dlp/yt-dlp) · [ソースコード](https://github.com/yt-dlp/yt-dlp) · [ダウンロード](https://github.com/yt-dlp/yt-dlp/releases)
 
@@ -551,6 +600,7 @@ MacネイティブのシンプルなBTクライアント。マグネットリン
 - ライセンス: GPL-2.0 / GPL-3.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 現在の公式Mac版はmacOS 12以降に対応し、DMGで配布されます。他OSのQt版とは異なるネイティブUIです。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/transmission/transmission/releases/tag/4.1.4)
 - 権限・注意点: BTのタスクは他のピアと送受信します。任意のリモート接続を有効にすると管理用インターフェースが開きます。
 - [公式サイト](https://transmissionbt.com/) · [ソースコード](https://github.com/transmission/transmission) · [ダウンロード](https://github.com/transmission/transmission/releases/latest)
 
@@ -562,6 +612,7 @@ MacネイティブのシンプルなBTクライアント。マグネットリン
 - ライセンス: GPL-3.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 現在の公式Mac版は5.2.3で、macOS 13以降が必要です。他OSとは版が異なる場合があり、Mac版の保守人員は限られています。ソースはGPLv2+、配布バイナリはGPLv3+です。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://sourceforge.net/projects/qbittorrent/files/qbittorrent-mac/)
 - 権限・注意点: BTでは他のピアとデータを交換します。Webによる遠隔管理は任意で、有効にする場合は認証を設定します。
 - [公式サイト](https://www.qbittorrent.org/) · [ソースコード](https://github.com/qbittorrent/qBittorrent) · [ダウンロード](https://www.qbittorrent.org/download)
 
@@ -573,6 +624,7 @@ SFTP、WebDAV、S3、各種クラウドストレージを、ブックマーク�
 - ライセンス: GPL-3.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 公式サイトでmacOS版を配布しています。プロトコルとサーバーの対応状況は公式の案内を確認してください。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/iterate-ch/cyberduck/releases/tag/release-9-6-0)
 - 権限・注意点: 選択したサーバーのブックマークと認証情報を保存します。鍵やキーチェーンを活用し、アクセストークンを安全に管理してください。
 - [公式サイト](https://cyberduck.io/) · [ソースコード](https://github.com/iterate-ch/cyberduck) · [ダウンロード](https://cyberduck.io/download/)
 
@@ -584,6 +636,7 @@ SFTP、WebDAV、S3、各種クラウドストレージを、ブックマーク�
 - ライセンス: GPL-3.0
 - io が使用確認済み
 - 動作環境: プロジェクトの要件：macOS 15.6以降。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/EricYang801/Launchpad_Back)
 - 権限・注意点: 配布版は公証されていません。起動前に、プロジェクトのGatekeeperに関する案内を確認してください。
 - [公式サイト](https://github.com/EricYang801/Launchpad_Back) · [ソースコード](https://github.com/EricYang801/Launchpad_Back) · [ダウンロード](https://github.com/EricYang801/Launchpad_Back/releases)
 
@@ -595,6 +648,7 @@ SFTP、WebDAV、S3、各種クラウドストレージを、ブックマーク�
 - ライセンス: GPL-3.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: macOS 13以降 · Intel / Apple Silicon
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/mrkai77/Loop/releases/tag/1.4.2)
 - 権限・注意点: ほかのアプリのウインドウを移動・リサイズするため、「アクセシビリティ」へのアクセスが必要です。
 - [公式サイト](https://github.com/MrKai77/Loop) · [ソースコード](https://github.com/MrKai77/Loop) · [ダウンロード](https://github.com/MrKai77/Loop/releases)
 
@@ -606,6 +660,7 @@ SFTP、WebDAV、S3、各種クラウドストレージを、ブックマーク�
 - ライセンス: MIT
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 最新版はmacOS 14以降が必要です。macOS 10.15〜13では1.100を利用できます。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/rxhanson/Rectangle/releases/tag/v2.0.5)
 - 権限・注意点: ほかのアプリのウインドウを操作するため、「アクセシビリティ」へのアクセスが必要です。
 - [公式サイト](https://rectangleapp.com/) · [ソースコード](https://github.com/rxhanson/Rectangle) · [ダウンロード](https://github.com/rxhanson/Rectangle/releases)
 
@@ -617,6 +672,7 @@ SFTP、WebDAV、S3、各種クラウドストレージを、ブックマーク�
 - ライセンス: GPL-3.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: macOS 12以降 · ウィンドウ切り替えなどの基本機能は無料。検索や一部の外観設定は有料のPro機能です。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/lwouis/alt-tab-macos/releases/tag/v11.10.2)
 - 権限・注意点: ウインドウの読み取りと切り替えに、「アクセシビリティ」へのアクセスが必要です。
 - [公式サイト](https://alt-tab.app/) · [ソースコード](https://github.com/lwouis/alt-tab-macos) · [ダウンロード](https://github.com/lwouis/alt-tab-macos/releases)
 
@@ -628,6 +684,7 @@ i3のようなキーボード中心の操作で、ウインドウをタイル状
 - ライセンス: MIT
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: macOS向けの導入手順があります。現在の制限事項と設定方法を先に確認してください。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/nikitabobko/AeroSpace/releases/tag/v0.21.3-Beta)
 - 権限・注意点: ウインドウ操作に「アクセシビリティ」へのアクセスが必要です。公式バイナリは未公証と明記されているため、配布元と更新情報を確認して導入してください。
 - [公式サイト](https://nikitabobko.github.io/AeroSpace/guide) · [ソースコード](https://github.com/nikitabobko/AeroSpace) · [ダウンロード](https://nikitabobko.github.io/AeroSpace/guide#installation)
 
@@ -639,6 +696,7 @@ i3のようなキーボード中心の操作で、ウインドウをタイル状
 - ライセンス: MIT
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: macOS 10.15以降
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/ianyh/Amethyst/releases/tag/v0.25.0)
 - 権限・注意点: ほかのアプリのウインドウを読み取り・整列するため、「アクセシビリティ」へのアクセスが必要です。
 - [公式サイト](https://ianyh.com/amethyst/) · [ソースコード](https://github.com/ianyh/Amethyst) · [ダウンロード](https://github.com/ianyh/Amethyst/releases)
 
@@ -650,6 +708,7 @@ i3のようなキーボード中心の操作で、ウインドウをタイル状
 - ライセンス: GPL-3.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: macOS 14以降 · Intel / Apple Silicon
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/jordanbaird/Ice/releases/tag/0.11.12)
 - 権限・注意点: 必要な権限は機能とmacOSのバージョンによって異なります。導入前に公式の権限説明を確認してください。
 - [公式サイト](https://icemenubar.app/) · [ソースコード](https://github.com/jordanbaird/Ice) · [ダウンロード](https://github.com/jordanbaird/Ice/releases)
 
@@ -661,6 +720,7 @@ i3のようなキーボード中心の操作で、ウインドウをタイル状
 - ライセンス: GPL-3.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 安定版2.1はmacOS 26専用。3.xベータ版はmacOS 27が必要です。古いOS向けはReleasesで対応版を確認してください。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/thaw-app/Thaw/releases/tag/2.1.0)
 - 権限・注意点: メニューバーの管理には、macOSのバージョンによってアクセシビリティなどの権限が必要な場合があります。
 - [公式サイト](https://www.getthaw.app/) · [ソースコード](https://github.com/thaw-app/Thaw) · [ダウンロード](https://github.com/thaw-app/Thaw/releases)
 
@@ -672,6 +732,7 @@ CPU、メモリ、ディスク、ネットワーク、バッテリー、セン�
 - ライセンス: MIT
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: macOS 12以降 · Intel / Apple Silicon
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/exelban/stats/releases/tag/v3.1.0)
 - 権限・注意点: Wi-Fiのネットワーク名を表示する際に、位置情報の許可が必要な場合があります。その他の権限はシステムの案内に従って設定します。
 - [公式サイト](https://mac-stats.com/) · [ソースコード](https://github.com/exelban/stats) · [ダウンロード](https://github.com/exelban/stats/releases)
 
@@ -683,6 +744,7 @@ DDC/CI対応ディスプレイの明るさと音量を調整。キーボード�
 - ライセンス: MIT
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: DDC/CI対応ディスプレイが必要です。対応機種はプロジェクトの案内を確認してください。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/MonitorControl/MonitorControl/releases/tag/v4.4.0)
 - 権限・注意点: 外部ディスプレイをキーボードの標準輝度キーで操作するには、「アクセシビリティ」へのアクセスが必要です。
 - [公式サイト](https://monitorcontrol.app/) · [ソースコード](https://github.com/MonitorControl/MonitorControl) · [ダウンロード](https://github.com/MonitorControl/MonitorControl/releases)
 
@@ -694,6 +756,7 @@ DDC/CI対応ディスプレイの明るさと音量を調整。キーボード�
 - ライセンス: GPL-3.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: macOS 14以降 · Intel / Apple Silicon。Spaces間の復元はmacOS 26以降が必要です。ハードウェア輝度調整はApple SiliconとDDC対応ディスプレイが必要です。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/tumingke0/LayoutKeeper/releases/tag/v0.6.16)
 - 権限・注意点: 「アクセシビリティ」が必要です。画面収録・入力監視は不要です。配布版は自己署名で、Appleの公証を受けていません。
 - [公式サイト](https://github.com/tumingke0/LayoutKeeper) · [ソースコード](https://github.com/tumingke0/LayoutKeeper) · [ダウンロード](https://github.com/tumingke0/LayoutKeeper/releases)
 
@@ -705,6 +768,7 @@ DDC/CI対応ディスプレイの明るさと音量を調整。キーボード�
 - ライセンス: MIT
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: プロジェクトの公式リリースでmacOS版を配布しています。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/linearmouse/linearmouse/releases/tag/v0.13.0)
 - 権限・注意点: 入力デバイスの設定を適用するため、「アクセシビリティ」へのアクセスが必要です。
 - [公式サイト](https://linearmouse.app/) · [ソースコード](https://github.com/linearmouse/linearmouse) · [ダウンロード](https://github.com/linearmouse/linearmouse/releases)
 
@@ -716,6 +780,7 @@ DDC/CI対応ディスプレイの明るさと音量を調整。キーボード�
 - ライセンス: Unlicense
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: macOS用のインストーラがあります。対応するOSの範囲は公式サイトで確認してください。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/pqrs-org/Karabiner-Elements#supported-systems)
 - 権限・注意点: キー入力を扱うため、「入力監視」と「アクセシビリティ」、システム拡張の許可が必要です。公式配布パッケージから導入し、設定内容を確認してください。
 - [公式サイト](https://karabiner-elements.pqrs.org/) · [ソースコード](https://github.com/pqrs-org/Karabiner-Elements) · [ダウンロード](https://github.com/pqrs-org/Karabiner-Elements/releases)
 
@@ -727,6 +792,7 @@ DDC/CI対応ディスプレイの明るさと音量を調整。キーボード�
 - ライセンス: MIT
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 公式リリースでmacOS用のDMGを配布しています。利用できるスイッチはmacOSのバージョンによって異なります。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/jacklandrin/OnlySwitch/releases/tag/release_3.7.0)
 - 権限・注意点: 一部の機能はシステムサービスを利用したり、権限を求めたりします。内容を理解できる機能だけを有効にしてください。
 - [公式サイト](https://onlyswitch.click/) · [ソースコード](https://github.com/jacklandrin/OnlySwitch) · [ダウンロード](https://github.com/jacklandrin/OnlySwitch/releases)
 
@@ -738,6 +804,7 @@ DDC/CI対応ディスプレイの明るさと音量を調整。キーボード�
 - ライセンス: MIT
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: macOS 10.13以降
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/newmarcel/KeepingYouAwake/releases/tag/1.6.8)
 - 権限・注意点: 個人ファイルは読み取らず、必要に応じてシステムのスリープ防止機能を使います。
 - [公式サイト](https://keepingyouawake.app/) · [ソースコード](https://github.com/newmarcel/KeepingYouAwake) · [ダウンロード](https://github.com/newmarcel/KeepingYouAwake/releases)
 
@@ -749,6 +816,7 @@ DDC/CI対応ディスプレイの明るさと音量を調整。キーボード�
 - ライセンス: MPL-2.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 現在のmacOS要件は、LibreOffice公式のダウンロードページで確認してください。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://www.libreoffice.org/download/download-libreoffice/)
 - 権限・注意点: 出所が不明な文書のマクロや外部リンクを開く際は注意してください。
 - [公式サイト](https://www.libreoffice.org/) · [ソースコード](https://github.com/LibreOffice/core) · [ダウンロード](https://www.libreoffice.org/download/download-libreoffice/)
 
@@ -760,6 +828,7 @@ DDC/CI対応ディスプレイの明るさと音量を調整。キーボード�
 - ライセンス: AGPL-3.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: macOS 10.13以降 · Intel / Apple Silicon向けを配布
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/ONLYOFFICE/DesktopEditors/releases/tag/v10.0.0)
 - 権限・注意点: 出所が不明な文書のマクロ、外部リンク、埋め込みコンテンツを開く際は注意してください。
 - [公式サイト](https://www.onlyoffice.com/desktop) · [ソースコード](https://github.com/ONLYOFFICE/DesktopEditors) · [ダウンロード](https://github.com/ONLYOFFICE/DesktopEditors/releases)
 
@@ -771,6 +840,7 @@ DDC/CI対応ディスプレイの明るさと音量を調整。キーボード�
 - ライセンス: MPL-2.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 公式のmacOS版があります。現在の動作要件はダウンロードページで確認してください。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://www.thunderbird.net/en-US/thunderbird/145.0/system-requirements/)
 - 権限・注意点: メールとカレンダーのアカウントにログインします。サーバー、OAuth認証、ローカルでのメール保存を必要に応じて設定してください。
 - [公式サイト](https://www.thunderbird.net/) · [ソースコード](https://github.com/thunderbird/thunderbird-desktop) · [ダウンロード](https://www.thunderbird.net/en-US/download/)
 
@@ -782,6 +852,7 @@ EPUB、PDF、MOBIなどをオフラインで読める電子書籍リーダー。
 - ライセンス: AGPL-3.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 公式リリースにApple Silicon用とIntel用のmacOS版があります。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/koodo-reader/koodo-reader/releases/tag/v2.4.7)
 - 権限・注意点: 読み込みや同期を行う書籍とノートは自分で選択します。
 - [公式サイト](https://koodoreader.com/) · [ソースコード](https://github.com/koodo-reader/koodo-reader) · [ダウンロード](https://github.com/koodo-reader/koodo-reader/releases)
 
@@ -793,6 +864,7 @@ EPUB、PDF、MOBIなどをオフラインで読める電子書籍リーダー。
 - ライセンス: AGPL-3.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 公式リリースでApple Silicon用とIntel用のmacOS DMGを配布しています。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/ankitects/anki/releases/tag/26.09.4)
 - 権限・注意点: 任意の同期機能は、選択したデッキとメディアをアップロードします。機密情報を含める前に同期設定を確認してください。
 - [公式サイト](https://apps.ankiweb.net/) · [ソースコード](https://github.com/ankitects/anki) · [ダウンロード](https://github.com/ankitects/anki/releases)
 
@@ -804,6 +876,7 @@ Markdown、引用管理、長文執筆を一つの作業環境にまとめる、
 - ライセンス: GPL-3.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: macOSの要件は、プロジェクトの最新リリースで確認してください。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/Zettlr/Zettlr/releases/tag/v4.10.0)
 - 権限・注意点: 出所が不明なファイルやスクリプトを開く際は注意してください。
 - [公式サイト](https://www.zettlr.com/) · [ソースコード](https://github.com/Zettlr/Zettlr) · [ダウンロード](https://github.com/Zettlr/Zettlr/releases)
 
@@ -815,6 +888,7 @@ Markdown、引用管理、長文執筆を一つの作業環境にまとめる、
 - ライセンス: GPL-2.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: プロジェクトの公式リリースでmacOS版を配布しています。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://www.qownnotes.org/installation/macos.html)
 - 権限・注意点: 指定したノートフォルダだけにアクセスします。同期サービスは自分で設定します。
 - [公式サイト](https://www.qownnotes.org/) · [ソースコード](https://github.com/pbek/QOwnNotes) · [ダウンロード](https://github.com/pbek/QOwnNotes/releases)
 
@@ -826,6 +900,7 @@ Markdown対応のノートアプリ。端末間同期やエンドツーエンド
 - ライセンス: AGPL-3.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: macOSデスクトップ版があります。必要な環境は最新リリースで確認してください。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/laurent22/joplin/releases/tag/v3.7.24)
 - 権限・注意点: 同期先、暗号化パスワード、外部プラグインは自分で設定します。利用前にサービスとプラグインの提供元を確認してください。
 - [公式サイト](https://joplinapp.org/) · [ソースコード](https://github.com/laurent22/joplin) · [ダウンロード](https://github.com/laurent22/joplin/releases)
 
@@ -837,6 +912,7 @@ Markdown対応のノートアプリ。端末間同期やエンドツーエンド
 - ライセンス: AGPL-3.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 2.xデータベース版はベータ版です。従来のMarkdown / Orgファイル版はLogseq OGへ移行しました。移行前にバックアップしてください。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/logseq/logseq/releases/tag/2.0.2)
 - 権限・注意点: 同期、プラグイン、外部サービスを使う前に、データの扱いと必要な権限を確認してください。
 - [公式サイト](https://logseq.com/) · [ソースコード](https://github.com/logseq/logseq) · [ダウンロード](https://github.com/logseq/logseq/releases)
 
@@ -848,6 +924,7 @@ Markdown対応のノートアプリ。端末間同期やエンドツーエンド
 - ライセンス: AGPL-3.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: macOS向けにApple Silicon・Intel・Universal版を配布しています。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/AppFlowy-IO/AppFlowy/releases/tag/0.15.1)
 - 権限・注意点: クラウドのワークスペースに接続する前に、同期と共有の範囲を確認してください。
 - [公式サイト](https://appflowy.com/) · [ソースコード](https://github.com/AppFlowy-IO/AppFlowy) · [ダウンロード](https://github.com/AppFlowy-IO/AppFlowy/releases)
 
@@ -859,6 +936,7 @@ Markdown対応のノートアプリ。端末間同期やエンドツーエンド
 - ライセンス: MIT
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 公式リリースにUniversal、Apple Silicon、Intel向けのmacOS DMGがあります。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/super-productivity/super-productivity/releases/tag/v20.0.0)
 - 権限・注意点: ローカルでの利用にアカウントは不要です。外部のタスク管理サービスに接続する場合は、必要な範囲だけ許可してください。
 - [公式サイト](https://super-productivity.com/) · [ソースコード](https://github.com/super-productivity/super-productivity) · [ダウンロード](https://github.com/super-productivity/super-productivity/releases)
 
@@ -870,6 +948,7 @@ Markdown対応のノートアプリ。端末間同期やエンドツーエンド
 - ライセンス: MIT
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: macOS 14以降
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/p0deje/Maccy/releases/tag/2.8.0)
 - 権限・注意点: クリップボードの履歴を保存します。保存したくないパスワードや鍵などの機密情報はコピーしないよう注意してください。
 - [公式サイト](https://maccy.app/) · [ソースコード](https://github.com/p0deje/Maccy) · [ダウンロード](https://github.com/p0deje/Maccy/releases)
 
@@ -881,6 +960,7 @@ Markdown対応のノートアプリ。端末間同期やエンドツーエンド
 - ライセンス: GPL-3.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 公式リリースでmacOS用のUniversal版を配布しています。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/espanso/espanso/releases/tag/v2.4.1)
 - 権限・注意点: キーボード入力の監視には、公式手順に沿った権限設定が必要です。信頼できないテンプレートに機密情報を入れないでください。
 - [公式サイト](https://espanso.org/) · [ソースコード](https://github.com/espanso/espanso) · [ダウンロード](https://github.com/espanso/espanso/releases)
 
@@ -892,6 +972,7 @@ Luaでショートカット、ウインドウ、メニューバー、システ�
 - ライセンス: MIT
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: プロジェクトのリリースでmacOS版を配布しています。現在の動作要件を確認してください。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/Hammerspoon/hammerspoon/releases/tag/1.1.1)
 - 権限・注意点: 自動化スクリプトは「アクセシビリティ」、ファイル、ネットワークへのアクセスを求めることがあります。確認済みの設定だけを実行してください。
 - [公式サイト](https://www.hammerspoon.org/) · [ソースコード](https://github.com/Hammerspoon/hammerspoon) · [ダウンロード](https://github.com/Hammerspoon/hammerspoon/releases)
 
@@ -903,6 +984,7 @@ Luaでショートカット、ウインドウ、メニューバー、システ�
 - ライセンス: MIT
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: macOS 12以降
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/swiftbar/SwiftBar/releases/tag/v2.1.1)
 - 権限・注意点: 有効にしたスクリプトを実行します。内容を確認でき、提供元を信頼できるプラグインだけを追加してください。
 - [公式サイト](https://swiftbar.app/) · [ソースコード](https://github.com/swiftbar/SwiftBar) · [ダウンロード](https://github.com/swiftbar/SwiftBar/releases)
 
@@ -914,6 +996,7 @@ Mac向けの圧縮ファイル管理アプリ。ZIP・7zの作成、RARなどの
 - ライセンス: GPL-3.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 現行版はmacOS 14.6以降が必要で、IntelとApple Siliconに対応。公式DMG・ZIPは署名・公証済みです。macOS 13対応は旧版v0.14.1までです。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/sarensw/MacPacker/releases/tag/v1.3.0)
 - 権限・注意点: 選択した圧縮ファイルと保存先にアクセスします。Finder・Quick Look拡張は必要に応じて有効にします。
 - [公式サイト](https://macpacker.app/) · [ソースコード](https://github.com/sarensw/MacPacker) · [ダウンロード](https://github.com/sarensw/MacPacker/releases)
 
@@ -925,6 +1008,7 @@ ZIP・7z・TARの作成やRARの解凍に対応する、クロスプラットフ
 - ライセンス: LGPL-3.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: Intel用とApple Silicon用の公式Mac版があります。Developer IDによる署名がないため、初回起動がブロックされる場合があります。導入手順は公式案内を確認してください。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/peazip/PeaZip/releases/tag/11.4.0)
 - 権限・注意点: 選択したファイルを読み書きし、指定先に保存します。Finderサービスの導入は任意です。圧縮とRARの解凍は無料で、RARの作成には対応していません。
 - [公式サイト](https://peazip.github.io/peazip-macos.html) · [ソースコード](https://github.com/peazip/PeaZip) · [ダウンロード](https://github.com/peazip/PeaZip/releases)
 
@@ -936,6 +1020,7 @@ ZIP・7z・TARの作成とRARの解凍に対応するMac向けアプリ。暗号
 - ライセンス: MIT
 - io が使用確認済み
 - 動作環境: macOS 13以降。Intel・Apple Silicon対応のUniversal版です。公式GitHubのDMG・ZIPは署名・公証済み。ZIP・7z・TARの作成とRARの解凍は無料です。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/mstcvk/MacRAR/releases/tag/v1.4.4)
 - 権限・注意点: 選択したファイルと保存先にアクセスし、Finderのクイックアクションは必要に応じて有効にします。RARの作成・変更には、別途有料のRARLAB製rarが必要です（試用あり）。MITはMacRARのソースコードに適用され、7-Zipなどの部品には各自のライセンスが適用されます。
 - [公式サイト](https://github.com/mstcvk/MacRAR) · [ソースコード](https://github.com/mstcvk/MacRAR) · [ダウンロード](https://github.com/mstcvk/MacRAR/releases)
 
@@ -947,6 +1032,7 @@ ZIP・7z・TARの作成とRARの解凍に対応するMac向けアプリ。暗号
 - ライセンス: Apache-2.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: プロジェクトの公式リリースでmacOS版を配布しています。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/localsend/localsend/releases/tag/v1.18.2)
 - 権限・注意点: ローカルネットワークで端末を検出し、ファイルを転送します。確認できる端末とファイルだけを受け入れてください。
 - [公式サイト](https://localsend.org/) · [ソースコード](https://github.com/localsend/localsend) · [ダウンロード](https://github.com/localsend/localsend/releases)
 
@@ -958,6 +1044,7 @@ MacとAndroidなどのMTP機器の間で、ファイルを直接ブラウズ、�
 - ライセンス: MIT
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: macOS 11以降
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/ganeshrvel/openmtp/releases/tag/v3.3.0)
 - 権限・注意点: USBで接続して許可した端末と、選択したローカルファイルにアクセスします。
 - [公式サイト](https://openmtp.ganeshrvel.com/) · [ソースコード](https://github.com/ganeshrvel/openmtp) · [ダウンロード](https://github.com/ganeshrvel/openmtp/releases)
 
@@ -968,7 +1055,8 @@ NTFSドライブの読み書きに対応し、自動マウントとディスク�
 - カテゴリ: ファイル・バックアップ
 - ライセンス: Zlib
 - io が使用確認済み
-- 動作環境: v1.8.0：macOS 14以降 · Apple Silicon。Intel Macでは旧版v1.4.5を使用します。
+- 動作環境: v1.9.0：macOS 14以降 · Apple Silicon。Intel Macでは旧版v1.4.5を使用します。
+- 対応チップ: Apple Silicon · Intel は旧版 · [対応チップの確認元](https://github.com/hoochanlon/Free-NTFS-for-Mac/releases/tag/v1.9.0)
 - 権限・注意点: マウントには管理者認証が必要です。標準バックエンドはMacFUSEとntfs-3gを使用します。任意のFSKitバックエンドはmacOS 15.4以降が必要です。書き込み前に重要なデータをバックアップしてください。
 - [公式サイト](https://github.com/hoochanlon/Free-NTFS-for-Mac) · [ソースコード](https://github.com/hoochanlon/Free-NTFS-for-Mac) · [ダウンロード](https://github.com/hoochanlon/Free-NTFS-for-Mac/releases)
 
@@ -979,7 +1067,8 @@ macOSでNTFSドライブを読み書き。自動マウント、安全な取り�
 - カテゴリ: ファイル・バックアップ
 - ライセンス: MIT
 - io が使用確認済み
-- 動作環境: v0.5.0 · macOS 14以降 · Apple Silicon。macFUSE 5.5.0が必要です。PKGは未署名・未公証です。
+- 動作環境: v0.5.1 · macOS 14以降 · Apple Silicon。macFUSE 5.5.0が必要です。アプリはアドホック署名済みです。インストーラーはAppleの公証を受けていません。
+- 対応チップ: Apple Silicon のみ · [対応チップの確認元](https://github.com/ixiehao/ezNTFS/releases/tag/v0.5.1)
 - 権限・注意点: アプリ、マウントサービス、NTFS-3Gドライバーの導入には管理者の承認が必要です。macOSでサービスにフルディスクアクセスが必要な場合があります。NTFS-3GにはGPL-2.0 / LGPL-2.0のコンポーネントが含まれ、macFUSEには別のライセンスが適用されます。
 - [公式サイト](https://ixiehao.github.io/ezNTFS/) · [ソースコード](https://github.com/ixiehao/ezNTFS) · [ダウンロード](https://github.com/ixiehao/ezNTFS/releases/latest)
 
@@ -991,6 +1080,7 @@ macOSでNTFSドライブを読み書き。自動マウント、安全な取り�
 - ライセンス: MPL-2.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 公式macOS版はコマンドラインプログラムの圧縮ファイルで、設定はブラウザから行います。CPUに合う版を選んでください。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/syncthing/syncthing/releases/tag/v2.1.7)
 - 権限・注意点: 同期する範囲は自分で選択します。共有フォルダごとに接続端末とバージョンの保存設定を確認してください。
 - [公式サイト](https://syncthing.net/) · [ソースコード](https://github.com/syncthing/syncthing) · [ダウンロード](https://github.com/syncthing/syncthing/releases)
 
@@ -1002,6 +1092,7 @@ macOSでNTFSドライブを読み書き。自動マウント、安全な取り�
 - ライセンス: Apache-2.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 公式リリースにApple Silicon用とIntel用のmacOS版があります。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/kopia/kopia/releases/tag/v0.23.1)
 - 権限・注意点: 選択したバックアップ元を読み取り、保存先に書き込みます。本格的な運用前に復元を試してください。
 - [公式サイト](https://kopia.io/) · [ソースコード](https://github.com/kopia/kopia) · [ダウンロード](https://github.com/kopia/kopia/releases)
 
@@ -1013,6 +1104,7 @@ macOSでNTFSドライブを読み書き。自動マウント、安全な取り�
 - ライセンス: MIT
 - io が使用確認済み
 - 動作環境: macOS 13以降
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/momenbasel/PureMac/releases/tag/v3.3.0)
 - 権限・注意点: クリーニング機能は追加のファイルアクセスを求めることがあります。実行前に対象パスを一つずつ確認してください。
 - [公式サイト](https://www.moamenbasel.com/PureMac/) · [ソースコード](https://github.com/momenbasel/PureMac) · [ダウンロード](https://github.com/momenbasel/PureMac/releases)
 
@@ -1024,6 +1116,7 @@ macOSでNTFSドライブを読み書き。自動マウント、安全な取り�
 - ライセンス: MIT
 - io が使用確認済み
 - 動作環境: macOS 13以降
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/jithin-sabu/purge-app/releases/tag/v1.17.0)
 - 権限・注意点: フルディスクアクセスは任意です。より多くのフォルダをスキャンする必要があるときだけ検討してください。
 - [公式サイト](https://purgemac.com/) · [ソースコード](https://github.com/jithin-sabu/purge-app) · [ダウンロード](https://github.com/jithin-sabu/purge-app/releases)
 
@@ -1035,6 +1128,7 @@ macOSでNTFSドライブを読み書き。自動マウント、安全な取り�
 - ライセンス: GPL-3.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: プロジェクトの最新リリースとmacOSの動作要件を確認してください。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/harry0703/MangoDisk/releases/tag/v2.1.1)
 - 権限・注意点: ディスクの分析や整理には、追加のファイルアクセス権限が必要な場合があります。削除前に各項目を確認してください。
 - [公式サイト](https://mangodisk.app/) · [ソースコード](https://github.com/harry0703/MangoDisk) · [ダウンロード](https://github.com/harry0703/MangoDisk/releases)
 
@@ -1046,6 +1140,7 @@ macOSでNTFSドライブを読み書き。自動マウント、安全な取り�
 - ライセンス: GPL-3.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: macOS版を配布しています。現在のバージョンの案内は公式サイトで確認してください。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/arsenetar/dupeguru/releases/tag/4.3.1)
 - 権限・注意点: 削除前に結果を一件ずつ確認してください。同じ内容のファイルでも、用途が異なる場合があります。
 - [公式サイト](https://dupeguru.voltaicideas.net/) · [ソースコード](https://github.com/arsenetar/dupeguru) · [ダウンロード](https://github.com/arsenetar/dupeguru/releases)
 
@@ -1057,6 +1152,7 @@ Mac App StoreのアプリやSparkle対応アプリの更新をまとめて確認
 - ライセンス: GPL-3.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: macOS 10.15以降
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/mangerlahn/Latest/releases/tag/0.11)
 - 権限・注意点: インストール済みアプリの情報を読み取って更新を確認します。更新の実行は自分で判断できます。
 - [公式サイト](https://max.codes/latest/) · [ソースコード](https://github.com/mangerlahn/Latest) · [ダウンロード](https://github.com/mangerlahn/Latest/releases)
 
@@ -1068,6 +1164,7 @@ Homebrew Caskのアプリを画面操作でインストール・更新・削除�
 - ライセンス: MIT
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: macOS 14以降 · Intel / Apple Silicon · Homebrewの事前インストールは不要
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/milanvarady/Applite/releases/tag/v1.4.2)
 - 権限・注意点: ダウンロード時にネット接続が必要です。一部のインストールでは管理者認証を求められます。既存のHomebrewも利用できます。
 - [公式サイト](https://applite.app/) · [ソースコード](https://github.com/milanvarady/Applite) · [ダウンロード](https://github.com/milanvarady/Applite/releases)
 
@@ -1079,6 +1176,7 @@ Homebrew Caskのアプリを画面操作でインストール・更新・削除�
 - ライセンス: BSD-3-Clause
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 公式リリースでmacOS版の圧縮ファイルを配布しています。動作要件はリリースページを確認してください。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://sveinbjorn.org/sloth)
 - 権限・注意点: プロセスと接続の情報を読み取ります。管理対象の端末では、組織のセキュリティ方針に従ってください。
 - [公式サイト](https://sveinbjorn.org/sloth) · [ソースコード](https://github.com/sveinbjornt/Sloth) · [ダウンロード](https://github.com/sveinbjornt/Sloth/releases)
 
@@ -1090,6 +1188,7 @@ Homebrew Caskのアプリを画面操作でインストール・更新・削除�
 - ライセンス: AGPL-3.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 公式のmacOS版があります。利用を始めるには、先にスマートフォンにSignalを入れ、デスクトップ版と連携してください。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://signal.org/download/macos/)
 - 権限・注意点: 通話やメディアの送信では、マイク、カメラ、ローカルファイルへのアクセスを求める場合があります。必要な範囲だけ許可してください。
 - [公式サイト](https://signal.org/) · [ソースコード](https://github.com/signalapp/Signal-Desktop) · [ダウンロード](https://signal.org/download/macos/)
 
@@ -1101,6 +1200,7 @@ Homebrew Caskのアプリを画面操作でインストール・更新・削除�
 - ライセンス: GPL-2.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 公式リリースでApple Silicon用とIntel用のmacOS DMGを配布しています。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/keepassxreboot/keepassxc/releases/tag/2.8.0)
 - 権限・注意点: ブラウザーの自動入力には、公式拡張機能の導入と接続の許可が必要です。マスターパスワードと鍵ファイルを安全に保管してください。
 - [公式サイト](https://keepassxc.org/) · [ソースコード](https://github.com/keepassxreboot/keepassxc) · [ダウンロード](https://github.com/keepassxreboot/keepassxc/releases)
 
@@ -1112,6 +1212,7 @@ Homebrew Caskのアプリを画面操作でインストール・更新・削除�
 - ライセンス: GPL-3.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 公式リリースにApple Silicon用とIntel用のmacOS版があります。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/cryptomator/cryptomator/releases/tag/1.19.7)
 - 権限・注意点: 選択した保管庫と同期フォルダにアクセスします。復旧キーとパスワードを安全に保管してください。
 - [公式サイト](https://cryptomator.org/) · [ソースコード](https://github.com/cryptomator/cryptomator) · [ダウンロード](https://github.com/cryptomator/cryptomator/releases)
 
@@ -1123,6 +1224,7 @@ Homebrew Caskのアプリを画面操作でインストール・更新・削除�
 - ライセンス: GPL-3.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: プロジェクトのリリースでmacOS版を配布しています。現在の動作要件を確認してください。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/objective-see/LuLu/releases/tag/v4.5.7)
 - 権限・注意点: ネットワークをフィルタリングするシステム拡張を導入し、管理者の承認を求めます。事前に公式の手順を確認してください。
 - [公式サイト](https://objective-see.org/products/lulu.html) · [ソースコード](https://github.com/objective-see/LuLu) · [ダウンロード](https://github.com/objective-see/LuLu/releases)
 
@@ -1134,6 +1236,7 @@ Homebrew Caskのアプリを画面操作でインストール・更新・削除�
 - ライセンス: MIT
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: プロジェクトの公式リリースにApple Silicon用とIntel用のmacOS版があります。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/desktop/desktop/releases/tag/release-3.6.11)
 - 権限・注意点: 追加したローカルリポジトリとログイン中のGitHubアカウントにアクセスします。コミット前に変更内容を確認してください。
 - [公式サイト](https://github.com/apps/desktop) · [ソースコード](https://github.com/desktop/desktop) · [ダウンロード](https://github.com/desktop/desktop/releases)
 
@@ -1145,6 +1248,7 @@ Homebrew Caskのアプリを画面操作でインストール・更新・削除�
 - ライセンス: MIT
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: macOS 12以降
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/VSCodium/vscodium/releases/tag/1.143.17232)
 - 権限・注意点: 拡張機能はプロジェクトのファイルやネットワークにアクセスできます。信頼できる拡張機能を選び、権限の説明を確認してください。
 - [公式サイト](https://vscodium.com/) · [ソースコード](https://github.com/VSCodium/vscodium) · [ダウンロード](https://github.com/VSCodium/vscodium/releases)
 
@@ -1156,6 +1260,7 @@ Homebrew Caskのアプリを画面操作でインストール・更新・削除�
 - ライセンス: GPL-3.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 公式リリースでApple Silicon用とIntel用のmacOS DMGを配布しています。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/zed-industries/zed/releases/tag/v1.29.3)
 - 権限・注意点: プロジェクト、拡張機能、共同作業ではファイルやネットワークにアクセスする場合があります。ワークスペースと拡張機能の提供元を確認してください。
 - [公式サイト](https://zed.dev/) · [ソースコード](https://github.com/zed-industries/zed) · [ダウンロード](https://github.com/zed-industries/zed/releases)
 
@@ -1167,6 +1272,7 @@ Homebrew Caskのアプリを画面操作でインストール・更新・削除�
 - ライセンス: MIT
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 現在も開発中で、公式はまだ実務での利用を推奨していません。macOSの要件は各リリースを確認してください。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/CodeEditApp/CodeEdit/releases/tag/v0.3.6)
 - 権限・注意点: 開いたプロジェクトのファイルにアクセスします。言語サービスやプラグインに追加のアクセスが必要な場合は、個別に確認してください。
 - [公式サイト](https://www.codeedit.app/) · [ソースコード](https://github.com/CodeEditApp/CodeEdit) · [ダウンロード](https://github.com/CodeEditApp/CodeEdit/releases)
 
@@ -1178,6 +1284,7 @@ Homebrew Caskのアプリを画面操作でインストール・更新・削除�
 - ライセンス: MIT
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: macOS 13以降 · XcodeのダウンロードにはApple Accountが必要です。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/XcodesOrg/XcodesApp/releases/tag/v4.2.0b42)
 - 権限・注意点: XcodeのファイルとApple Developerのログイン状態を管理します。公式の配布元を利用し、アカウントを安全に管理してください。
 - [公式サイト](https://www.xcodes.app/) · [ソースコード](https://github.com/XcodesOrg/XcodesApp) · [ダウンロード](https://github.com/XcodesOrg/XcodesApp/releases)
 
@@ -1189,6 +1296,7 @@ Homebrew Caskのアプリを画面操作でインストール・更新・削除�
 - ライセンス: Apache-2.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 公式リリースでmacOS用のDMGを配布しています。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/alacritty/alacritty/releases/tag/v0.17.0)
 - 権限・注意点: ターミナルのコマンドは、利用中のアカウントと同じ権限で実行されます。内容を理解できるコマンドだけを実行してください。
 - [公式サイト](https://alacritty.org/) · [ソースコード](https://github.com/alacritty/alacritty) · [ダウンロード](https://github.com/alacritty/alacritty/releases)
 
@@ -1200,6 +1308,7 @@ Homebrew Caskのアプリを画面操作でインストール・更新・削除�
 - ライセンス: Apache-2.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 公式リリースでApple Silicon用とIntel用のmacOS DMGを配布しています。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/dbeaver/dbeaver/releases/tag/26.2.5)
 - 権限・注意点: 作成したデータベース接続を保存します。安全でないネットワークでは、強い権限を持つ認証情報を保存しないよう注意してください。
 - [公式サイト](https://dbeaver.io/) · [ソースコード](https://github.com/dbeaver/dbeaver) · [ダウンロード](https://github.com/dbeaver/dbeaver/releases)
 
@@ -1211,6 +1320,7 @@ SQL・NoSQLデータベースの閲覧・編集・クエリ実行に対応する
 - ライセンス: AGPL-3.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: macOS 13以降
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/TableProApp/TablePro/releases/tag/v0.87.0)
 - 権限・注意点: データベースへの接続前に、ホスト、アカウント、ネットワーク範囲を確認してください。信頼できる接続設定だけを使ってください。
 - [公式サイト](https://tablepro.app/) · [ソースコード](https://github.com/TableProApp/TablePro) · [ダウンロード](https://github.com/TableProApp/TablePro/releases)
 
@@ -1222,6 +1332,7 @@ APIコレクションをローカルファイルとして保存し、Gitとも�
 - ライセンス: MIT
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 公式リリースにApple Silicon用とIntel用のmacOS DMG・PKGがあります。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/usebruno/bruno/releases/tag/v4.3.0)
 - 権限・注意点: 設定したAPIにリクエストを送り、ローカルのコレクションを読み取ります。共有リポジトリに鍵を書き込まないでください。
 - [公式サイト](https://www.usebruno.com/) · [ソースコード](https://github.com/usebruno/bruno) · [ダウンロード](https://github.com/usebruno/bruno/releases)
 
@@ -1233,6 +1344,7 @@ APIコレクションをローカルファイルとして保存し、Gitとも�
 - ライセンス: GPL-3.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: macOS 14以降。Homebrew経由のソースビルドにはXcode 16以降が必要です。掲載対象は無料・オープンソースのCLIです。別配布のデスクトップ版はオープンソースではなく、一部機能は有料です。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://github.com/seifip/kilobat-cli/tree/v0.45.1#install-with-homebrew)
 - 権限・注意点: 診断時にネットワークへ接続します。一部のWi-Fi名、フィルター状態、通信量の予算情報には別途デスクトップアプリと位置情報の許可が必要です。システム設定の変更には確認や管理者認証を求められる場合があります。
 - [公式サイト](https://github.com/seifip/kilobat-cli) · [ソースコード](https://github.com/seifip/kilobat-cli) · [ダウンロード](https://github.com/seifip/kilobat-cli#install-with-homebrew)
 
@@ -1244,5 +1356,6 @@ QEMUとAppleの仮想化フレームワークで別のOSを実行。仮想化に
 - ライセンス: Apache-2.0
 - 公開情報を確認済み。io による使用確認の対象外
 - 動作環境: 公式リリースでUTM.dmgを配布しています。利用できるゲストOSは、Macのアーキテクチャとシステムイメージによって異なります。
+- 対応チップ: Apple Silicon・Intel · [対応チップの確認元](https://getutm.app/)
 - 権限・注意点: 仮想マシンは、接続したフォルダと設定されたネットワークにアクセスできます。信頼できないイメージに個人ファイルを公開しないでください。
 - [公式サイト](https://getutm.app/) · [ソースコード](https://github.com/utmapp/UTM) · [ダウンロード](https://github.com/utmapp/UTM/releases)

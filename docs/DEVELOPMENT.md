@@ -33,6 +33,7 @@
 3. `io 实测` 只用于维护者确实使用过的软件；不要以来源检查代替实测。
 4. 将功能相近的软件排在一起，检查 `sortOrder`、分类筛选与多语言映射。
 5. 新许可证必须同步“开源说明”；权限信息按当前 UI 设计呈现，不重新塞回功能标签行。
+6. 填写 `architecture.support` 和 HTTPS `architecture.source`。优先参考当前官方安装包、官方系统要求或官方安装路径。文件名缺少架构时可读取包内主程序的 Mach-O 切片。Intel 只有旧版时使用 `intel-legacy`，仅通过 Rosetta 支持 Apple Silicon 时使用 `rosetta`，浏览器扩展使用 `browser`。证据不足时用 `unverified`。芯片筛选只纳入当前发行的原生支持，最低系统和组件限制仍由兼容性说明补充。
 
 ### 用途分类
 

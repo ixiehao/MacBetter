@@ -31,4 +31,28 @@ for (const language of languages) {
     await expect(page.locator("#app-grid > .app-card")).toHaveCount(apps.length);
     await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", "https://ixiehao.github.io/MacBetter/ja.html");
   });
+
+  test(`${language} chip selection survives reload and filters current native support`, async ({ page }) => {
+    await openCatalog(page, language);
+    const chip = page.locator("#chip-filter");
+    const cards = page.locator("#app-grid > .app-card");
+    await chip.selectOption("x86_64");
+    await expect(page).toHaveURL(/[?&]chip=x86_64/);
+    await expect(page.locator("#app-ezntfs")).toHaveCount(0);
+    await expect(page.locator("#app-macrar")).toBeVisible();
+    await page.reload();
+    await expect(chip).toHaveValue("x86_64");
+    await expect(cards).toHaveCount(apps.filter(app => ["both", "intel", "rosetta"].includes(app.architecture.support)).length);
+    await chip.selectOption("arm64");
+    await expect(page.locator("#app-ezntfs")).toBeVisible();
+    await expect(page.locator("#app-screenity")).toHaveCount(0);
+    await page.locator("#clear-filters").click();
+    await expect(page).not.toHaveURL(/[?&]chip=/);
+    await expect(cards).toHaveCount(apps.length);
+    await chip.selectOption("x86_64");
+    await page.locator('[data-essential-app="ezntfs"]').click();
+    await expect(page).toHaveURL(/#app-ezntfs$/);
+    await expect(chip).toHaveValue("all");
+    await expect(page.locator("#app-ezntfs")).toBeFocused();
+  });
 }
